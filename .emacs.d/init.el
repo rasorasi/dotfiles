@@ -1,0 +1,79 @@
+(set-language-environment "Japanese")
+(prefer-coding-system 'utf-8)
+(global-linum-mode t)
+(column-number-mode t)
+
+;;ファイルサイズを表示
+(size-indication-mode t)
+
+;;時刻
+;;(setq display-time-day-and-date t) ;曜日、月、日を表示
+(setq display-time-24hr-format 0) ; 24h
+(display-time-mode t)
+
+;; バッテリー
+(display-battery-mode t)
+
+(setq frame-title-format "%f")
+
+;;load-path
+(defun add-to-load-path (&rest paths)
+  (let (path)
+    (dolist (path paths paths)
+      (let ((default-directory
+	      (expand-file-name (concat user-emacs-directory path))))
+	(add-to-list 'load-path default-directory)
+	(if(fboundp 'normal-top-level-add-subdirs-to-load-path)
+	    (normal-top-level-add-subdirs-to-load-path))))))
+
+;;
+(add-to-load-path "elisp" "conf" "public_repos")
+
+;; C-m: newline-and-indent
+(define-key global-map (kbd "C-m") 'newline-and-indent)
+
+;;リージョンの背景
+;;(set-face-background 'region "blue")
+
+;; (when (require 'color-theme nil t)X1
+;; (color-theme-initialize)
+;; (color-theme-oswald))
+
+;; (global-set-key(kbd "C-c") 'color-theme-)
+;; (global-set-key(kbd "M-c") 'color-theme-oswald)
+
+;; 初期画面設定
+(setq inhibit-startup-message t)
+
+;; ひアクティブ時のウィンンドウカラー
+;;(require 'hiwin)
+;;(hiwin-activate)
+
+
+(setq custom-theme-directory "~/.emacs.d/themes/")
+
+(global-set-key (kbd "C-c 1") (lambda()(interactive)(load-theme 'molokai t)(setq ntheme 'molokai)))
+(global-set-key (kbd "C-c 2") (lambda()(interactive)(load-theme 'mytheme t)(setq ntheme 'mytheme)))
+
+(global-set-key (kbd "C-c 0")(lambda()(interactive)(disable-theme ntheme)))
+
+
+
+
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes (quote ("42c7f1aa7a3db4ab8efabf1d10c158c2f1414ac57cb207cde815eadad72170d2" "99a810bde7773d1b02e359686a5629fdae1321344c4e8954fecc78716fbeac63" default))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
+
+
+
