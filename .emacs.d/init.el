@@ -57,7 +57,7 @@
 (global-set-key (kbd"C-c <up>") 'windmove-up)
 (global-set-key (kbd"C-c <right>") 'windmove-right)
 (global-set-key (kbd"C-!")(lambda()(interactive)(find-file "/.emacs.d/init.el" t)))
-(global-set-key [f5] 'kmacro-end-and-call 
+(global-set-key [f5] 'kmacro-end-and-call)
    
 ;; 初期画面設定
 (setq inhibit-startup-message t)
@@ -98,8 +98,6 @@
 ;;when a file begins #!, I add +x and save it
 (add-hook 'after-save-hook
  	  'executable-make-buffer-file-executable-if-script-p)
-
-
 
 
 ;;auto-install
