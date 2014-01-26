@@ -1,0 +1,94 @@
+#include<stdio.h>
+#include<math.h>
+
+void cal_bit(int n, int b[32])
+{
+  int i;
+ 
+  for(i=0;i<32;i++){
+    if(n%2 == 1)
+      b[i] = 1;
+    else
+      b[i] = 0;
+
+    n = n/2;
+    
+  }
+}
+
+void print_bit(int b[32])
+{
+  int i;
+
+  for(i=0;i<32;i++)
+    printf("%d",b[31-i]);
+  putchar('\n');
+  
+
+}
+
+void cal_complement_bit(int b[32])
+{
+  int i;
+  for(i=0;i<32;i++){
+
+    if(b[i] == 1) b[i] = 0;
+    else b[i] = 1;
+
+  }
+  
+  for(i=0;i<32;i++){
+    if(b[i] == 0){
+      b[i] = 1;
+      break;
+    }
+    else
+      b[i] == 0;
+  }
+  
+}
+
+int print_cal_not(int n)
+{
+  int i;
+  int a=0;
+
+   for(i=0;i<8;i++)
+     if(n%2 == 0)
+       a += 1<<i;
+	
+   return a;
+}
+  
+int main()
+{
+  int x = 85;
+  int y = 15;
+  int bit_x[32],bit_y[32];
+  cal_bit(x,bit_x);
+  cal_bit(y,bit_y); 
+ puts("次の10進数を16進数、2進数に変換せよ");
+  printf("X(16) = %x\n",x);
+  printf("X(2) = "); print_bit(bit_x);
+  printf("Y(16) = %x\n",y);
+  printf("Y(2) = ");print_bit(bit_y);
+  
+  puts("次のビット演算を行い、10進数で答えよ(8ビットで計算)");
+  printf("X&Y = %d\n",x&y);
+  printf("X|Y = %d\n",x|y);
+  printf("X^Y = %d\n",x^y);
+  printf("~X = %d\n",print_cal_not(x));
+  printf("~Y = %d\n",print_cal_not(y));
+  printf("X<<1 = %d\n",x<<1);
+  printf("Y>>2 = %d\n",y>>2);
+
+  puts("-85,-15を2の歩数で表現せよ");
+  cal_complement_bit(bit_x);
+  cal_complement_bit(bit_y);
+  
+  printf("-85 => ");print_bit(bit_x);
+  printf("-15 => ");print_bit(bit_y);
+
+  
+  return 0;
+}

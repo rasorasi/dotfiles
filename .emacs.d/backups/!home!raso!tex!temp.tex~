@@ -1,0 +1,27 @@
+\documentclass[a4j,11pt]{jarticle}
+\setlength{\topmargin}{-20mm}
+\setlength{\textheight}{250mm}
+
+\title{プログラミング基礎実習　レポート}
+\author{t13f445a  加藤 匠}
+\date{\begin}
+\today{document}
+\maketitle
+
+\section{ソースファイル}
+\begin{verbatim}
+
+\end{verbatim}
+\section{実行結果}
+\begin{verbatim}
+
+
+\end{verbatim}
+\section{プログラムの説明}
+\begin{
+
+
+\section{考察}
+
+
+\end{document}

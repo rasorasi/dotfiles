@@ -32,7 +32,7 @@
  '(font-lock-keyword-face ((t (:foreground "#f6ae54"))))
 
  ;; Boolean
- '(font-lock-constant-face((t (:foreground "#009b9f"))))
+ '(font-lock-constant-face((t (:foreground "#000000"))))
 
  ;; 括弧
  '(show-paren-match-face ((t (:foreground "#1B1D1E" :background "#FD971F"))))
@@ -43,7 +43,7 @@
 
  ;; CSS
  '(css-selector ((t (:foreground "#66D9EF"))))
- '(css-property ((t (:foreground "#FD971F"))))
+ '(css-property ((t (:foreground "#000000"))))
 
  ;; nXML-mode
  ;; タグ名
