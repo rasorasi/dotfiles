@@ -1,24 +1,6 @@
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(column-number-mode t)
- '(cua-mode t nil (cua-base))
- '(display-time-mode t)
- '(global-linum-mode t)
- '(show-paren-mode t)
- '(size-indication-mode t)
- '(tool-bar-mode nil))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
 
-(setq initial-frame-alist
-      '((top . 10) (left . 1) (width . 98) (height . 52)))
+;(setq initial-frame-alist
+ ;     '((top . 10) (left . 1) (width . 99) (height . 52)))
 
 ;;load-pathを追加
 (defun add-to-load-path (&rest paths)
@@ -48,17 +30,16 @@
 (setq frame-title-format "%f")
 
 ;; keybinds
-(global-set-key (kbd "C-m") 'newline)
-(global-set-key (kbd "C-c <up>") 'windmove-up)
-(global-set-key (kbd "C-c <down>") 'windmove-down)
-(global-set-key (kbd "C-c <left>") 'windmove-left)
-(global-set-key (kbd "C-c <right>") 'windmove-right)
+(define-key global-map (kbd "C-m") 'newline-and-indent)
+(define-key global-map (kbd "RET") 'newline)
+(define-key global-map (kbd "C--") 'goto-line)
+(define-key global-map (kbd "M--") 'goto-char)
+(global-set-key (kbd"C-c <left>") 'windmove-left)
+(global-set-key (kbd"C-c <down>") 'windmove-down)
+(global-set-key (kbd"C-c <up>") 'windmove-up)
+(global-set-key (kbd"C-c <right>") 'windmove-right)
+(global-set-key (kbd"C-!")(lambda()(interactive)(find-file "~/projects/dotfiles/.emacs.d/init.el" t)))
 (global-set-key [f5] 'kmacro-end-and-call-macro)
-
-(keyboard-translate ?\C-h ?\C-?)
-(global-set-key (kbd "C-?") 'help-command)
-(global-set-key(kbd "M-+") 'goto-line)
-(keyboard-translate ?\C-i ?\M-+)
 
 ;; 初期画面設定
 (setq inhibit-startup-message t)
@@ -94,7 +75,7 @@
   ;hilight in paren
 (setq show-parenpstyle 'expression)
   ;change paren of face
-;(set-face-background 'show-paren-match-face "yellew")
+(set-face-background 'show-paren-match-face "yellow")
 
 ;;backup
 (setq make-back-files t)
@@ -116,6 +97,10 @@
 
 
 
+
+
+
+
 ;;redo+
 (when (require 'redo+ nil t)
    (global-set-key (kbd "C-'") 'redo))
@@ -130,28 +115,8 @@
 ;; colortheme ch
 
 ;;direx
-(require 'direx)
-(require 'direx-project)
-
-(defun my/dired-jump()
-  (interactive)
-  (cond (current-prefix-arg
-	 (dired-jump))
-	((not (one-window-p))
-	 (or (ignore-errors
-	       (direx-project:jump-to-project-root) t)
-	     (direx:jump-to-directory)))
-	(t
-	 (or (ignore-errors
-	       (direx-project:jump-to-project-root-other-windwo) t)
-	     (direx:jump-to-directory-other-window)))))
-
-(global-set-key (kbd "C-c C-j") 'my/dired-jump)
-
-(require 'popwin)
-(push '(direx:direx-mode :position left :windth 40 :dedicated t)
-      popwin:special-display-config)
-
+(when (require 'direx nil t)
+  (global-set-key (kbd "C-x C-j") 'direx:jump-to-directory-other-window))
 
 ;;anything
 (when (require 'anything nil t)
@@ -197,3 +162,21 @@
 ;; cua-mode
 (cua-mode t)
 (setq cua-enable-cua-keys nil)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(column-number-mode t)
+ '(cua-mode t nil (cua-base))
+ '(display-time-mode t)
+ '(global-linum-mode t)
+ '(show-paren-mode t)
+ '(size-indication-mode t)
+ '(tool-bar-mode nil))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

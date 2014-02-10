@@ -32,7 +32,7 @@
  '(font-lock-keyword-face ((t (:foreground "#f6ae54"))))
 
  ;; Boolean
- '(font-lock-constant-face((t (:foreground "#000000"))))
+ '(font-lock-constant-face((t (:foreground "#4d4398"))))
 
  ;; 括弧
  '(show-paren-match-face ((t (:foreground "#1B1D1E" :background "#FD971F"))))

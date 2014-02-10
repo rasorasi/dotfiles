@@ -1,0 +1,83 @@
+;; This buffer is for notes you don't want to save, and for Lisp evaluation.
+;; If you want to create a file, visit that file with C-x C-f,
+;; then enter the text in that file's own buffer.
+
+(+ 1 3)
+4
+(format-time-string "%Y/%m/%d %H:%M:%S" (current-time))
+"2014/02/08 17:08:20"
+
+"2014/02/08 17:07:1391846877"
+
+(message "ans = %d" (+ 3 4))
+"ans = 7"
+
+(defvar foo 1)
+foo
+(setq bar 10)
+10
+(let ((a 1)
+      (b 2))
+     (+ a b))
+3
+
+(defvar x 2)
+x
+
+(let ((x (+ x 2))(y (+ x 3))) (+ x y))
+9
+
+(let ((x 2)(y 3)) (+ x y))
+5
+
+
+
+(defun f() a)
+f
+(let ((a 12)) (f))
+12
+
+(+ 3 (buffer-size))
+581
+
+(require 'cl)
+cl
+(let ((a 0))
+  (incf a)
+  (incf a)
+  (decf a)
+  )
+1
+(concat "aaa" "bbb")
+"aaabbb"
+(string-width "あいうえお")
+10
+
+(setq ary '(1 2 3))
+(1 2 3)
+(pop ary)
+1
+ary
+(2 3)
+
+(push 5 ary)
+(5 2 3)
+
+(last ary)
+(3)
+ary
+(5 2 3)
+
+(car (last ary))
+3
+ary
+(5 2 3)
+(append ary 9)
+(5 2 3 . 9)
+ary
+(5 2 3)
+(append ary '(9))
+(5 2 3 9)
+ary
+(5 2 3)
+

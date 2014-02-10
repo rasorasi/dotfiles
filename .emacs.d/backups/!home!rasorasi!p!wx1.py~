@@ -1,0 +1,31 @@
+#! /usr/bin/env python
+# -*- codeing: utf-8 -*-
+
+class a:
+
+    f = 10
+    
+  #  def __init__(self):
+   
+    def a_yukkuri(self):
+        self.an = 3
+        print str(self.an)
+
+    def f_print(self):
+        print str(self.f)
+
+
+class b(a):
+    def b_yukkuri(self):
+        print str(self.an)
+
+    def b_print(self):
+        print str(self.f)
+    
+
+if __name__ == '__main__':
+    app = a()
+    bpp = b()
+    
+    bpp.a_yukkuri()
+    bpp.f_print()
