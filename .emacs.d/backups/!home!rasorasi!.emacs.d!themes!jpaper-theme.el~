@@ -1,35 +1,35 @@
-(deftheme mytheme
-  "Mytheme color theme")
+(deftheme jpaper
+  "Jpaper color theme")
 
 (custom-theme-set-faces
- 'mytheme
+ 'jpaper
  ;; 背景・文字・カーソル
- '(cursor ((t (:foreground "#F8F8F2"))))
- '(default ((t (:background "#141014" :foreground "#00ff00"))))
+ '(cursor ((t (:foreground "#180614"))))
+ '(default ((t (:background "#ffffdf" :foreground "#180614"))))
 
  ;; 選択範囲
- '(region ((t (:background "#403D3D"))))
+ '(region ((t (:background "#deb068"))))
 
  ;; モードライン
- '(mode-line ((t (:foreground "#9b72b0" :background "#7f1184"
-                  :box (:line-width 1 :color "#000000" :style released-button)))))
+ '(mode-line ((t (:foreground "#f8b862" :background "#762f07"
+                  :box (:line-width 1 :color "#f39800" :style released-button)))))
  '(mode-line-buffer-id ((t (:foreground nil :background nil))))
- '(mode-line-inactive ((t (:foreground "#7f1184" :background "#040004"
-                           :box (:line-width 1 :color "#7f1184")))))
+ '(mode-line-inactive ((t (:foreground "#bc763c" :background "#dcd3b2"
+                           :box (:line-width 1 :color "#bc763c")))))
 
  ;; ハイライト
 ;; '(highlight ((t (:background "#FFFFFF")))) ;:foreground "#30ff30" 
  '(hl-line ((t (:background "#120412"))))
 
  ;; 関数名
- '(font-lock-function-name-face ((t (:foreground "#00a1e9"))))
+ '(font-lock-function-name-face ((t (:foreground "#2ca9e1"))))
 
  ;; 変数名・変数の内容
- '(font-lock-variable-name-face ((t (:foreground "#a0d8ef"))))
- '(font-lock-string-face ((t (:foreground "#fad09e"))))
+ '(font-lock-variable-name-face ((t (:foreground "#008899"))))
+ '(font-lock-string-face ((t (:foreground "#ffd900"))))
 
  ;; 特定キーワード
- '(font-lock-keyword-face ((t (:foreground "#f6ae54"))))
+ '(font-lock-keyword-face ((t (:foreground "#e83929"))))
 
  ;; Boolean
  '(font-lock-constant-face((t (:foreground "#4d4398"))))
@@ -67,4 +67,4 @@
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
-(provide-theme 'mytheme)
+(provide-theme 'jpaper)

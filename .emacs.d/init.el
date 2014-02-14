@@ -49,26 +49,41 @@
 
 ;; keybinds
 (global-set-key (kbd "C-m") 'newline)
+(global-set-key (kbd "C-c p") 'windmove-up)
+(global-set-key (kbd "C-c n") 'windmove-down)
+(global-set-key (kbd "C-c b ") 'windmove-left)
+(global-set-key (kbd "C-c f") 'windmove-right)
+
 (global-set-key (kbd "C-c <up>") 'windmove-up)
 (global-set-key (kbd "C-c <down>") 'windmove-down)
-(global-set-key (kbd "C-c <left>") 'windmove-left)
+(global-set-key (kbd "C-c <left> ") 'windmove-left)
 (global-set-key (kbd "C-c <right>") 'windmove-right)
+
 (global-set-key [f5] 'kmacro-end-and-call-macro)
 
 (keyboard-translate ?\C-h ?\C-?)
 (global-set-key (kbd "C-?") 'help-command)
 (global-set-key(kbd "M-+") 'goto-line)
 (keyboard-translate ?\C-i ?\M-+)
+(keyboard-translate ?\C-o ?\C-f)
+(global-set-key (kbd "M-o") 'forward-word)
+(global-set-key (kbd "C-<tab>") 'dabbrev-expand)
+
+
 
 ;; 初期画面設定
 (setq inhibit-startup-message t)
 
 
-
 ;; change theme
 (setq custom-theme-directory "~/.emacs.d/themes/")
 (global-set-key (kbd "C-c 1") (lambda()(interactive)(load-theme 'molokai t)(setq ntheme 'molokai)))
-(global-set-key (kbd "C-c 2") (lambda()(interactive)(load-theme 'mytheme t)(setq ntheme 'mytheme)))
+(global-set-key (kbd "C-c 2") (lambda()(interactive)(load-theme 'patyu t)(setq ntheme 'patyu)))
+(global-set-key (kbd "C-c 3") (lambda()(interactive)(load-theme 'jpaper t)(setq ntheme 'jpaper)))
+(global-set-key (kbd "C-c 4") (lambda()(interactive)(load-theme 'black-on-gray t)(setq ntheme 'black-on-gray)))
+(global-set-key (kbd "C-c 5") (lambda()(interactive)(load-theme 'oswald t)(setq ntheme 'oswald)))
+
+
 ;;修正必要　
 (global-set-key (kbd "C-c 0")(lambda()(interactive)(disable-theme ntheme)))
 
@@ -142,17 +157,17 @@
 	       (direx-project:jump-to-project-root) t)
 	     (direx:jump-to-directory)))
 	(t
-	 (or (ignore-errors
-	       (direx-project:jump-to-project-root-other-windwo) t)
-	     (direx:jump-to-directory-other-window)))))
-
+ 	 (or (ignore-errors
+ 	       (direx-project:jump-to-project-root-other-windwo) t)
+ 	     (direx:jump-to-directory-other-window)))))
+ 
 (global-set-key (kbd "C-c C-j") 'my/dired-jump)
-
+ 
 (require 'popwin)
 (push '(direx:direx-mode :position left :windth 40 :dedicated t)
       popwin:special-display-config)
-
-
+ 
+ 
 ;;anything
 (when (require 'anything nil t)
   (setq
@@ -168,32 +183,40 @@
    anything-enable-shortcuts 'alphabet
    ;;
    )
-
+ 
   (when (require 'anything-config nil t)
     ;;
     ;;
     (setq anything-su-or-sudo "sudo"))
-
+ 
   (require 'anything-match-plugin nil t)
-
+ 
   (when (and (executable-find "cmigemo")
-	     (require 'migemo nil t))
+ 	     (require 'migemo nil t))
     (require 'anything-migemo nil t))
-
+ 
   (when (require 'anything-complete nil t)
     ;;
     (anything-lisp-complete-symbol-set-timer 150))
-
+ 
   (require 'anything-show-completion nil t)
-
+ 
   (when (require 'auto-install nil t)
       (require 'anything-auto-install nil t))
-
+ 
   (when (require 'descbinds-anything nil t)
     ;;
     (descbinds-anything-install)))
-
-
+ 
+ 
 ;; cua-mode
 (cua-mode t)
 (setq cua-enable-cua-keys nil)
+ 
+;;auto-complete
+(when (require 'auto-complete-config nil t)
+  (add-to-list 'ac-dictionary-directories
+ 	       "~/.emacs.d/elisp/ac-dict")
+  (global-set-key  (kbd "C-x C-a") 'auto-complete-mode)
+  (ac-config-default))
+ 

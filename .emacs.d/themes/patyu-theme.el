@@ -1,12 +1,12 @@
-(deftheme mytheme
-  "Mytheme color theme")
+(deftheme patyu
+  "Patyu color theme")
 
 (custom-theme-set-faces
- 'mytheme
+ 'patyu
  ;; 背景・文字・カーソル
  '(cursor ((t (:foreground "#F8F8F2"))))
  '(default ((t (:background "#141014" :foreground "#00ff00"))))
-
+ '(fringe ((t (:background "#201020"))))
  ;; 選択範囲
  '(region ((t (:background "#403D3D"))))
 
@@ -67,4 +67,4 @@
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
-(provide-theme 'mytheme)
+(provide-theme 'patyu)

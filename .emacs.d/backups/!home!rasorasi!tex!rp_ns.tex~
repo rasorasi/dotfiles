@@ -1,0 +1,28 @@
+%文献テーマの概要　①テーマの概要　②テーマの歴史・語源　③テーマの基本概念
+%テーマの構造説明　①テーマの構造　②テーマの構成要素説明　③主要議論紹介
+%調査テーマの考察　①主要議論の分析評価　②テーマに対する自分の考え
+%調査文献一覧
+%
+%
+
+
+
+\documentclass[a4j,11pt]{jarticle}
+\setlength{\topmargin}{-20mm}
+\setlength{\textheight}{250mm}
+
+\title{最先端技術を支える化学Ⅱ}
+\author{t13f445a 加藤 匠}
+\date{\today}
+
+\begin{document}
+ 
+\maketitle
+\section{}
+
+\subsection{次に}
+
+
+
+
+\end{document}
