@@ -18,7 +18,7 @@
  )
 
 (setq initial-frame-alist
-      '((top . 10) (left . 1) (width . 98) (height . 52)))
+      '((top . 10) (left . 1000) (width . 98) (height . 52)))
 
 ;;load-pathを追加
 (defun add-to-load-path (&rest paths)
@@ -212,7 +212,8 @@
 ;; cua-mode
 (cua-mode t)
 (setq cua-enable-cua-keys nil)
- 
+
+
 ;;auto-complete
 (when (require 'auto-complete-config nil t)
   (add-to-list 'ac-dictionary-directories

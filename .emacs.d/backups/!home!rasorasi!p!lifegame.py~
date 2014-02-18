@@ -1,0 +1,22 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+import sys
+from PyQt4 import QtGui
+
+def main():
+
+    bt1 = QtGui.QPushButton('test')
+    bt2 = QtGui.QPushButton('test2')
+    
+    layout = QtGui.QGridLayout()
+    layout.addWidget(bt1,0,0)
+    layout.addWidget(bt2,0,1)
+    
+    setCentralWidget(layout)
+
+    setGeometry(300,300,250,150)
+    show()
+
+if __init__ == '__main__':
+    main()
