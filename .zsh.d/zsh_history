@@ -1,0 +1,440 @@
+hsitory
+history
+history 1
+ls
+history
+history 4
+tar 
+cd p
+cd
+p
+python q8.py
+python q7.py
+python q9.py
+python lifegame.py
+python q1.py
+history
+14
+history
+mcd ~/.zsh.d/zsh_plugin/
+cd
+mkdir ~/.zsh.d/zsh_plugin/
+cd ~/.zsh.d/zsh_plugin/
+git clone git://github.com/zsh-users/zaw.git
+echo "source {PMD}/zaw/zaw.zsh" >> ~/.zsh.d/zshrc && exec $SHELL
+cd ..
+cat zshrc
+cd
+ls
+ei
+projects
+git add .
+git commit -m "toriaezu"
+dotfiles
+git add .
+git commit -m "toriaezu"
+git push origin master
+tex
+cd tex
+cd
+which rename
+rename tex d_tex
+ls
+cd tex
+platex tmp1.tex
+dvpd tmpq.dvi
+dvpd tmp1.dvi
+which ensi
+ensure
+evince tmp1.pdf
+platex tmp1.tex
+dvpd tmp1.dvi
+evince tmp1.pdf
+platex tmp1.tex
+dvpd tmp1.dvi
+evince tmp1.pdf
+platex tmp1.tex
+dvpd tmp1.dvi
+evince tmp1.pdf
+platex tmp1.tex
+dvpd tmp1.dvi
+evince tmp1.pdf
+platex tmp1.tex
+evince tmp1.pdf
+dvpd tmp1.dvi
+evince tmp1.pdf
+platex tmp1.tex
+dvpd tmp1.dvi
+evince tmp1.pdf
+platex tmp1.tex
+dvpd tmp1.dvi
+evince tmp1.pdf
+platex tmp1.tex
+dvpd tmp1.dvi
+evince tmp1.pdf
+platex tmp1.tex
+dvpd tmp1.dvi
+evince tmp1.pdf
+platex tmp1.tex
+dvpd tmp1.dvi
+evince tmp1.pdf
+platex tmp1.tex
+dvpd tmp1.dvi
+evince tmp1.pdf
+platex tmp1.tex
+dvpd tmp1.dvi
+evince tmp1.pdf
+platex tmp1.tex
+dvpd tmp1.dvi
+evince tmp1.pdf
+platex tmp1.tex
+dvpd tmp1.dvi
+evince tmp1.pdf
+platex tmp1.tex
+evince tmp1.pdf
+dvpd tmp1.dvi
+evince tmp1.pdf
+platex tmp1.tex
+dvpd tmp1.dvi
+evince tmp1.pdf
+platex tmp1.tex
+dvpd tmp1.dvi
+evince tmp1.pdf
+platex tmp1.tex
+dvpd tmp1.dvi
+evince tmp1.pdf
+platex tmp1.tex
+dvpd tmp1.dvi
+evince tmp1.pdf
+platex tmp1.tex
+dvpd tmp1.dvi
+evince tmp1.pdf
+rm memo.tex
+rm memo.txt
+ls
+rename tex texd
+mv tex texd
+texd
+cd texd
+cd
+cd -1
+history
+history -117
+man history
+evince tmp1.pdf
+history 118
+history 90
+history 90 95
+history --help
+man history
+history 'su'
+history ^s
+history^
+history ^
+man hisotry
+man histoyr
+man history
+history h
+history e
+history a 5
+history a
+history h a
+history h
+history -h
+history t
+history 16
+history 1 6
+history h 1 4
+history % 'en'
+history -% 'en'
+% 'en'
+% 'e'
+%
+platex tmp1.tex
+history]
+history
+texd
+cd
+history
+texd
+ps-fe
+ps
+ps -fe
+ps -f
+ps -e
+kill -9 2655
+kill -9 2626
+ps
+ps -e
+kill -9 2658
+cd .emacs.d
+ls -a
+rm session.10
+rm session.1012f570a831f98c713930443936495500000011610035
+rm session.10a7ca8775d43b2ce8139287469476559200000011600035
+rm session.10
+rm session.10b89d265db01d6f27139234651093605100000011590040
+rm session.10e
+rm session.10e5133d7d7809c0bb139192172950986200000011690046
+rm session.10e39edc7c707251a7139227359652476300000011990037 
+ls -a
+cd
+projects
+dotfiles
+git add .
+ls -a
+git add .
+git add .emacs.d
+cd
+projects
+git add .
+git commit -m "add saving scratch"
+git push origin master
+dotfiles
+git add .
+git add --ignore-removal .emacs.d/auto-save-list/.saves-2464-rasorasi-01\~
+history
+git commit -m "add saving scratch"
+git push origin master
+cd
+texd
+platex robocon.tex
+dvpd robocon.dvi
+evince robocon.pdf
+platex robocon.tex
+dvpd robocon.dvi
+evince robocon.pdf
+platex rp_ns.tex
+dvpd rp_ns.tex
+dvpd rp_ns.dvi
+evince rp_ns.pdf
+which wvinc
+which evince
+texd
+ls
+evince robocon.pdf
+cd Dropbox
+univ
+rm 1.txt
+cd
+his
+h
+platex robocon.tex
+texd
+platex robocon.tex
+dvpd robocon.dvi
+evince robocon.pdf
+platex robocon.tex
+evince robocon.pdf
+dvpd robocon.dvi
+evince robocon.pdf
+platex robocon.tex
+dvpd robocon.dvi
+evince robocon.pdf
+platex robocon.tex
+dvpd robocon.dvi
+evince robocon.pdf
+platex robocon.tex
+dvpd robocon.dvi
+evince robocon.pdf
+platex robocon.tex
+dvpd robocon.dvi
+evince robocon.pdf
+platex robocon.tex
+dvpd robocon.dvi
+evince robocon.pdf
+platex robocon.tex
+dvpd robocon.dvi
+evince robocon.pdf
+platex robocon.tex
+dvpd robocon.dvi
+evince robocon.pdf
+platex robocon.tex
+dvpd robocon.dvi
+evince robocon.pdf
+platex robocon.tex
+dvpd robocon.dvi
+evince robocon.pdf
+platex robocon.tex
+q
+platex robocon.tex
+dvpd robocon.dvi
+evince robocon.pdf
+man --mv
+man mv
+cp robocon.pdf UABMEMORY
+ls
+man cp
+cp q.log ~/
+cd
+ls
+USBMEMORY
+cd USBMEMORY
+cd /
+ls
+usr
+ls
+cd ..
+dev
+ls
+usb-devices
+cd usb-devices
+ls
+cd usb
+ls
+hiddev0
+cd hiddev0
+ls
+cat hiddev0
+ls -G
+ls -F
+ls -Gw
+ls -G -w
+ls -l
+df
+du
+man d
+man df
+df
+ls
+df
+man df
+df -l
+df ~/
+cd
+echo "test file"
+ls
+echo "test file" > file1 >file2
+cat file1
+rm file1
+rm file2
+mk
+mkdir tesdir
+cd tesdir
+echo "test" >file1
+< file1
+< file1 < file2
+echo "test" > file2
+< file1 < file2
+< file1
+cat > file1 > file3 > /dev/stdin
+cat file1 > file3 > /dev/stdin
+cd /dve
+ls
+cd
+cd /dev
+ls
+cat stdin
+cdf
+cd
+texd
+platex > dvpd > evince robocon.tex
+platex robocon.tex > dvpd > evince 
+platex robocon.?
+platex robocon
+for((count = 0.0; count < 1.0; count += 0.05))
+zsh
+# load math functions
+echo $(( sin(1) ))
+cd
+./for.zsh
+echo $(( 1 + 2 + 3 + 4 + 5))
+ls
+: 1393310672:0;ls -a
+: 1393310686:0;ls -af
+: 1393310698:0;ls -al
+: 1393310718:0;ls -a 
+: 1393310728:0;ls -a
+: 1393311029:0;cat .zshrc~
+: 1393311038:0;rm .zshrc~
+: 1393311074:0;run-help ls
+: 1393311126:0;ls 
+: 1393311133:0;ls -A
+: 1393311144:0;ls -o
+: 1393311218:0;ls -F
+: 1393311227:0;ls -aF
+: 1393311279:0;mv .zsh.d > .zshrc ~/projects/dotfiles
+: 1393312939:0;ls -aF
+: 1393312985:0;ln -s ~/projects/dotfiles/.zshrc ~/.zshrc
+: 1393312995:0;source
+: 1393313000:0;source .zshrc
+: 1393313028:0;rm .zsh.d
+: 1393313060:0;source .zhsrc
+: 1393313276:0;cat .zshrc
+: 1393313287:0;source .zshrc
+: 1393313301:0;ls -aF
+: 1393313316:7;emacs
+: 1393313327:7;emacs $
+: 1393313343:0;emacs &
+: 1393313462:0;ln ~/projects/dotfiles/.zsh.d ~/.zsh.d
+: 1393313473:0;ln -s ~/projects/dotfiles/.zsh.d ~/.zsh.d
+: 1393313480:0;source .zshrc
+: 1393313683:0;.zsh.d
+: 1393313685:0;ls -a
+: 1393313726:0;cd zsh_plugin
+: 1393313727:0;ls
+: 1393313732:0;cat zaw
+: 1393313740:0;zaw
+: 1393313741:0;ls
+: 1393313749:0;cd
+: 1393313828:0;emacs &
+: 1393313864:0;h
+: 1393313875:0;source .zshrc
+: 1393313894:0;h]
+: 1393313896:0;h
+: 1393313910:0;emacs &
+: 1393314145:0;source .zshrc
+: 1393314152:0;h
+: 1393314156:0;source .zshrc
+: 1393314166:0;ei
+: 1393314186:0;h
+: 1393314244:0;source .zshrc
+: 1393314247:0;h
+: 1393314258:0;kill-emacs
+: 1393314737:0;ls *e
+: 1393314749:0;ls *
+: 1393314776:0;ls *.e
+: 1393314795:0;find .emacs
+: 1393314811:0;find ".emacs.d"
+: 1393314819:0;find ".ema"
+: 1393314837:0;find -e  ".emacs.d"
+: 1393316054:0;ls Desktop Documents Downloads Dropbox em env examples.desktop gittest missfont.log Music p Pictures projects Public pxdvi q.log raso2791625 raso2791625.pub Templates tesdir texd Ubuntu\ One univ Videos wget-log wget-log.1 wget-log.2 wget-log.3 
+: 1393316066:0;texd
+: 1393316082:0;platex dvpd robocon
+: 1393316123:0;(platex dvpd) robocon
+: 1393316200:0;screen
+: 1393316207:0;_screen
+: 1393316417:0;echo "mssp" > file1.txt
+: 1393316436:0;lv file1.txt
+: 1393316442:0;lv
+: 1393316524:0;zsh_paper
+: 1393316947:0;source .zshrc
+: 1393316950:0;cd
+: 1393316955:0;source .zshrc
+: 1393316959:0;ctex
+: 1393316973:0;texd
+: 1393316987:0;ctex robocon
+: 1393317006:0;init
+: 1393317016:0;ini
+: 1393317098:0;cd
+: 1393317100:0;source .zshr 
+: 1393317103:0;source .zshrc
+: 1393317106:0;S
+: 1393317206:0;texd
+: 1393317212:0;ctex robocon
+: 1393317252:0;S
+: 1393317257:0;ctex robocon
+: 1393317291:0;S
+: 1393317299:0;i
+: 1393317323:0;S
+: 1393317324:0;i
+: 1393317332:0;ctex robocon
+: 1393318166:0;ls
+: 1393318207:0;ls -Fa
+: 1393318237:0;ls
+: 1393338025:0;projects/dotfiles
+: 1393338282:0;git add .
+: 1393338559:0;git gc
+: 1393338564:0;git add .
+: 1393338864:0;git status
+: 1393338891:0;git add --all

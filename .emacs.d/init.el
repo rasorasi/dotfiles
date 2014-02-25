@@ -273,3 +273,8 @@
 
 (read-scratch-data)
 
+(global-set-key (kbd "M-j") 'upcase-backward-word)
+(defun upcase-backward-word (arg)
+  "Convert previous word (or arg words) to upper case."
+  (interactive "p")
+  (upcase-word (- arg)))

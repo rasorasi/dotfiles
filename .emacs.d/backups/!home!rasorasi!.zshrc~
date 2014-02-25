@@ -1,5 +1,0 @@
-PS1="[%~]%% "
-alias dvpd='dvipdfmx'
-bindkey -e
-alias E='emacsclient -t'
-alias kill-emacs="emacsclient -e '(kill-emacs)'"
