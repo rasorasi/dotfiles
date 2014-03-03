@@ -1,0 +1,49 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+import sys
+from PyQt4 import QtGui ,QtCore
+
+class Example(QtGui.QWidget):
+
+    def __init__(self):
+        super(Example, self).__init__()
+
+        self.initUI()
+
+    def initUI(self):
+
+        grid = QtGui.QGridLayout()
+        
+        btn1 = QtGui.QPushButton('button1')
+        btn2 = QtGui.QPushButton('button2')
+
+        grid.addWidget(btn1, 0, 0)
+        grid.addWidget(btn2, 0, 1)
+
+        btn1.clicked.connect(self.buttonClicked)
+        btn2.clicked.connect(self.buttonClicked)
+
+        self.statusBar()
+
+        self.setLayout(grid)
+        
+        self.setGeometry(300, 300, 300, 150)
+
+        self.show()
+
+    def buttonClicked(self):
+        sender = self.sender()
+        self.statusBar().showMessage(sender.text() + ' was pressed')
+
+def main():
+
+    app = QtGui.QApplication(sys.argv)
+    ex = Example()
+    sys.exit(app.exec_())
+   
+
+
+if __name__ == '__main__':
+    main()
+

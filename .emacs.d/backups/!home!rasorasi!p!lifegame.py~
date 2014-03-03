@@ -13,10 +13,13 @@ def main():
     layout.addWidget(bt1,0,0)
     layout.addWidget(bt2,0,1)
     
-    setCentralWidget(layout)
+    main_window = QtGui.QMainWindow()
 
-    setGeometry(300,300,250,150)
-    show()
+    
+    main_window.setCentralWidget(layout)
 
-if __init__ == '__main__':
+    
+    main_window.show()
+
+if __name__ == '__main__':
     main()

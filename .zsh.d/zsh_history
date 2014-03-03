@@ -340,101 +340,212 @@ cd
 ./for.zsh
 echo $(( 1 + 2 + 3 + 4 + 5))
 ls
-: 1393310672:0;ls -a
-: 1393310686:0;ls -af
-: 1393310698:0;ls -al
-: 1393310718:0;ls -a 
-: 1393310728:0;ls -a
-: 1393311029:0;cat .zshrc~
-: 1393311038:0;rm .zshrc~
-: 1393311074:0;run-help ls
-: 1393311126:0;ls 
-: 1393311133:0;ls -A
-: 1393311144:0;ls -o
-: 1393311218:0;ls -F
-: 1393311227:0;ls -aF
-: 1393311279:0;mv .zsh.d > .zshrc ~/projects/dotfiles
-: 1393312939:0;ls -aF
-: 1393312985:0;ln -s ~/projects/dotfiles/.zshrc ~/.zshrc
-: 1393312995:0;source
-: 1393313000:0;source .zshrc
-: 1393313028:0;rm .zsh.d
-: 1393313060:0;source .zhsrc
-: 1393313276:0;cat .zshrc
-: 1393313287:0;source .zshrc
-: 1393313301:0;ls -aF
-: 1393313316:7;emacs
-: 1393313327:7;emacs $
-: 1393313343:0;emacs &
-: 1393313462:0;ln ~/projects/dotfiles/.zsh.d ~/.zsh.d
-: 1393313473:0;ln -s ~/projects/dotfiles/.zsh.d ~/.zsh.d
-: 1393313480:0;source .zshrc
-: 1393313683:0;.zsh.d
-: 1393313685:0;ls -a
-: 1393313726:0;cd zsh_plugin
-: 1393313727:0;ls
-: 1393313732:0;cat zaw
-: 1393313740:0;zaw
-: 1393313741:0;ls
-: 1393313749:0;cd
-: 1393313828:0;emacs &
-: 1393313864:0;h
-: 1393313875:0;source .zshrc
-: 1393313894:0;h]
-: 1393313896:0;h
-: 1393313910:0;emacs &
-: 1393314145:0;source .zshrc
-: 1393314152:0;h
-: 1393314156:0;source .zshrc
-: 1393314166:0;ei
-: 1393314186:0;h
-: 1393314244:0;source .zshrc
-: 1393314247:0;h
-: 1393314258:0;kill-emacs
-: 1393314737:0;ls *e
-: 1393314749:0;ls *
-: 1393314776:0;ls *.e
-: 1393314795:0;find .emacs
-: 1393314811:0;find ".emacs.d"
-: 1393314819:0;find ".ema"
-: 1393314837:0;find -e  ".emacs.d"
-: 1393316054:0;ls Desktop Documents Downloads Dropbox em env examples.desktop gittest missfont.log Music p Pictures projects Public pxdvi q.log raso2791625 raso2791625.pub Templates tesdir texd Ubuntu\ One univ Videos wget-log wget-log.1 wget-log.2 wget-log.3 
-: 1393316066:0;texd
-: 1393316082:0;platex dvpd robocon
-: 1393316123:0;(platex dvpd) robocon
-: 1393316200:0;screen
-: 1393316207:0;_screen
-: 1393316417:0;echo "mssp" > file1.txt
-: 1393316436:0;lv file1.txt
-: 1393316442:0;lv
-: 1393316524:0;zsh_paper
-: 1393316947:0;source .zshrc
-: 1393316950:0;cd
-: 1393316955:0;source .zshrc
-: 1393316959:0;ctex
-: 1393316973:0;texd
-: 1393316987:0;ctex robocon
-: 1393317006:0;init
-: 1393317016:0;ini
-: 1393317098:0;cd
-: 1393317100:0;source .zshr 
-: 1393317103:0;source .zshrc
-: 1393317106:0;S
-: 1393317206:0;texd
-: 1393317212:0;ctex robocon
-: 1393317252:0;S
-: 1393317257:0;ctex robocon
-: 1393317291:0;S
-: 1393317299:0;i
-: 1393317323:0;S
-: 1393317324:0;i
-: 1393317332:0;ctex robocon
-: 1393318166:0;ls
-: 1393318207:0;ls -Fa
-: 1393318237:0;ls
-: 1393338025:0;projects/dotfiles
-: 1393338282:0;git add .
-: 1393338559:0;git gc
-: 1393338564:0;git add .
-: 1393338864:0;git status
-: 1393338891:0;git add --all
+ls -a
+ls -af
+ls -al
+ls -a 
+ls -a
+cat .zshrc~
+rm .zshrc~
+run-help ls
+ls 
+ls -A
+ls -o
+ls -F
+ls -aF
+mv .zsh.d > .zshrc ~/projects/dotfiles
+ls -aF
+ln -s ~/projects/dotfiles/.zshrc ~/.zshrc
+source
+source .zshrc
+rm .zsh.d
+source .zhsrc
+cat .zshrc
+source .zshrc
+ls -aF
+emacs
+emacs $
+emacs &
+ln ~/projects/dotfiles/.zsh.d ~/.zsh.d
+ln -s ~/projects/dotfiles/.zsh.d ~/.zsh.d
+source .zshrc
+.zsh.d
+ls -a
+cd zsh_plugin
+ls
+cat zaw
+zaw
+ls
+cd
+emacs &
+h
+source .zshrc
+h]
+h
+emacs &
+source .zshrc
+h
+source .zshrc
+ei
+h
+source .zshrc
+h
+kill-emacs
+ls *e
+ls *
+ls *.e
+find .emacs
+find ".emacs.d"
+find ".ema"
+find -e  ".emacs.d"
+ls Desktop Documents Downloads Dropbox em env examples.desktop gittest missfont.log Music p Pictures projects Public pxdvi q.log raso2791625 raso2791625.pub Templates tesdir texd Ubuntu\ One univ Videos wget-log wget-log.1 wget-log.2 wget-log.3 
+texd
+platex dvpd robocon
+(platex dvpd) robocon
+screen
+_screen
+echo "mssp" > file1.txt
+lv file1.txt
+lv
+zsh_paper
+source .zshrc
+cd
+source .zshrc
+ctex
+texd
+ctex robocon
+init
+ini
+cd
+source .zshr 
+source .zshrc
+S
+texd
+ctex robocon
+S
+ctex robocon
+S
+i
+S
+i
+ctex robocon
+ls
+ls -Fa
+ls
+projects/dotfiles
+git add .
+git gc
+git add .
+git status
+git add --all
+git commit -m "zsh add"
+git push origin master
+p
+q9.py
+python q9.py
+python q10.py
+ps
+ps -a
+ps -f
+ps --all
+ps -l
+ps -v
+man ps
+ps -e
+kill 3015
+h
+kill 3015
+ps -e
+kill 2912
+kill 2971
+ps -e
+kill 2947
+python q10.py
+ps -e
+kill 3126
+kill 3125
+kill 3128
+python q10.py
+q
+p
+python q10.py
+p
+python q10.py
+p
+python q10.py
+p
+python python.py
+p
+ls -l
+less
+python
+python python.py
+p
+python python.py
+python
+python python.py
+watch wget
+watch make
+q
+p
+python python.py
+p
+python python.py
+p
+python python.py
+p
+py
+.zsh.d
+rm zshrc
+i
+py python.py
+wget https://gakumu-vpn.niigata-u.ac.jp
+make
+make index.html
+Downloads
+ls
+chmod a+x vpnsetup.sh
+./vpnsetup.sh
+sudo ./vpnsetup.sh
+cd
+p
+py python.py
+p
+py python.py
+py
+py python.py
+py
+py python.py
+.emacs.d/themes
+ls
+mv patyu-theme.el patchouli-theme.el
+ls
+p
+py python.py
+p
+py python.py
+sudo apt-get install python-numpy
+py python.py
+py lifegame.py
+wget shincho-mystery.jp/recommend/
+ls
+index.html.1
+p
+py q10.py
+py
+py q11.py
+: 1393826293:0;p
+: 1393826296:0;py q11.py
+: 1393827997:0;py q12.py
+: 1393832062:0;py q13.py
+: 1393833011:0;p
+: 1393833015:0;py q13.py
+: 1393836214:0;py q14.py
+: 1393840227:0;p
+: 1393840230:0;q14.py
+: 1393840239:0;py q14.py
+: 1393841831:0;py q15.py
+: 1393852205:0;cd
+: 1393852214:0;projects/dotfiles
+: 1393852216:0;git add .
+: 1393852239:0;git add --all
