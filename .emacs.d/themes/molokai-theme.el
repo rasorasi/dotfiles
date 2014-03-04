@@ -41,6 +41,10 @@
  ;; コメント
  '(font-lock-comment-face ((t (:foreground "#74715D"))))
 
+ ;;行番号
+ '(linum ((t (:foreground "#404040"))))
+
+
  ;; CSS
  '(css-selector ((t (:foreground "#66D9EF"))))
  '(css-property ((t (:foreground "#FD971F"))))

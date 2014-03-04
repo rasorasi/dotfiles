@@ -55,7 +55,6 @@
 (global-set-key (kbd "C-c f") 'windmove-right)
 (global-set-key (kbd "C-c o") 'windmove-right)
 
-
 (global-set-key (kbd "C-c <up>") 'windmove-up)
 (global-set-key (kbd "C-c <down>") 'windmove-down)
 (global-set-key (kbd "C-c <left> ") 'windmove-left)
@@ -67,7 +66,8 @@
 (global-set-key (kbd "C-?") 'help-command)
 (global-set-key(kbd "M-+") 'goto-line)
 (keyboard-translate ?\C-i ?\M-+)
-(keyboard-translate ?\C-o ?\C-f)
+(keyboard-translate ?\C-o ?\C-p)
+(keyboard-translate ?\C-p ?\C-f)
 (global-set-key (kbd "M-o") 'forward-word)
 (global-set-key (kbd "C-<tab>") 'dabbrev-expand)
 
@@ -75,7 +75,13 @@
 (global-set-key (kbd "C-m") 'newline)
 (global-set-key (kbd "M-#") 'newline-and-indent)
 (keyboard-translate ?\C-m ?\M-#)
+(global-set-key (kbd "C-x C-b") (lambda()(interactive)(ibuffer-list-buffers)(switch-to-buffer-other-window '"*Ibuffer*")))
 
+(global-set-key (kbd "C-t") 'query-replace)
+
+
+
+;(global-set-key (kbd "C-") 
 
 
 ;; 初期画面設定
@@ -93,6 +99,7 @@
 (global-set-key (kbd "C-c 1") (lambda()(interactive)(conf_theme 'molokai ntheme)(setq ntheme 'molokai)))
 (global-set-key (kbd "C-c 2") (lambda()(interactive)(conf_theme 'patchouli ntheme)(setq ntheme 'patchouli)))
 (global-set-key (kbd "C-c 3") (lambda()(interactive)(conf_theme 'jpaper ntheme)(setq ntheme 'jpaper)))
+(global-set-key (kbd "C-c 4") (lambda()(interactive)(conf_theme 'subdued ntheme)(setq ntheme 'subdued)))
 
 (global-set-key (kbd "C-c 0")(lambda()(interactive)(disable-theme ntheme)))
 
@@ -142,7 +149,7 @@
 
 ;;redo+
 (when (require 'redo+ nil t)
-   (global-set-key (kbd "C-'") 'redo))
+   (global-set-key (kbd "C-M-/") 'redo))
 
 ;;ELPA
 (when (require 'package nil t)
@@ -151,7 +158,7 @@
  (add-to-list 'package-archives '("ELPA"."http://tromey.com/elpa/"))
   (package-initialize))
 
-;; colortheme ch
+
 
 ;;direx
 (require 'direx)
@@ -171,7 +178,7 @@
  	     (direx:jump-to-directory-other-window)))))
  
 (global-set-key (kbd "C-c C-j") 'my/dired-jump)
- 
+
 (require 'popwin)
 (push '(direx:direx-mode :position left :windth 40 :dedicated t)
       popwin:special-display-config)
@@ -216,8 +223,21 @@
   (when (require 'descbinds-anything nil t)
     ;;
     (descbinds-anything-install)))
- 
- 
+
+(require 'color-moccur)
+
+(when (require 'anything-c-moccur nil t)
+  (setq
+   anything-c-moccur-anything-idle-delay 0.1
+   anything-c-moccur-higligt-info-line-flag t
+   anything-c-moccur-enable-auto-look-flag t
+   anything-c-moccur-enable-initial-pattern t))
+
+(global-set-key (kbd "C-x b") 'anything)
+(global-set-key (kbd "M-y") 'anything-show-kill-ring) 
+(global-set-key (kbd "C-z") 'anything-c-moccur-occur-by-moccur)
+
+
 ;; cua-mode
 (cua-mode t)
 (setq cua-enable-cua-keys nil)
@@ -229,8 +249,8 @@
  	       "~/.emacs.d/elisp/ac-dict")
   (global-set-key  (kbd "C-x C-a") 'auto-complete-mode)
   (ac-config-default))
-(auto-complete-mode)
  
+
 ;;recentf-ext
 (when (require 'recentf-ext nil t)
   (setq recentf-max-saved-items 2000)
@@ -239,13 +259,12 @@
   (setq recentf-auto-save-timer (run-with-idle-timer 30 t 'recentf-save-list))
   (recentf-mode 1))
 
-(global-set-key "\C-x\ \C-r" 'recentf-open-files)
-
 ;; 起動画面で recentf を開く
 (add-hook 'after-init-hook (lambda()
     (recentf-open-files)))
 
-;;; auto save and restore scratch buffer
+
+;; auto save and restore scratch buffer
 (defun save-scratch-data ()
   (let ((str (progn
                (set-buffer (get-buffer "*scratch*"))
@@ -281,3 +300,10 @@
   "Convert previous word (or arg words) to upper case."
   (interactive "p")
   (upcase-word (- arg)))
+
+(require 'point-undo)
+(global-set-key (kbd "C-;") 'point-undo)
+(global-set-key (kbd "C-M-;") 'point-redo)
+
+(when (require 'undo-tree nil t)
+  (global-undo-tree-mode))

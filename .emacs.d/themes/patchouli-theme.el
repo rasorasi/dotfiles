@@ -32,7 +32,7 @@
  '(font-lock-keyword-face ((t (:foreground "#f6ae54"))))
 
  ;; Boolean
- '(font-lock-constant-face((t (:foreground "#4d4398"))))
+ '(font-lock-constant-face((t (:foreground "#9079b6"))))
 
  ;; 括弧
  '(show-paren-match-face ((t (:foreground "#1B1D1E" :background "#FD971F"))))
@@ -40,6 +40,9 @@
 
  ;; コメント
  '(font-lock-comment-face ((t (:foreground "#618e34"))))
+
+ ;;行番号
+ '(linum ((t (:foreground "#47266e"))))
 
  ;; CSS
  '(css-selector ((t (:foreground "#66D9EF"))))

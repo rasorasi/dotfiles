@@ -534,18 +534,125 @@ p
 py q10.py
 py
 py q11.py
-: 1393826293:0;p
-: 1393826296:0;py q11.py
-: 1393827997:0;py q12.py
-: 1393832062:0;py q13.py
-: 1393833011:0;p
-: 1393833015:0;py q13.py
-: 1393836214:0;py q14.py
-: 1393840227:0;p
-: 1393840230:0;q14.py
-: 1393840239:0;py q14.py
-: 1393841831:0;py q15.py
-: 1393852205:0;cd
-: 1393852214:0;projects/dotfiles
-: 1393852216:0;git add .
-: 1393852239:0;git add --all
+p
+py q11.py
+py q12.py
+py q13.py
+p
+py q13.py
+py q14.py
+p
+q14.py
+py q14.py
+py q15.py
+cd
+projects/dotfiles
+git add .
+git add --all
+git commit -m "foo"
+git push origin master
+p
+q15.py
+py q15.py
+mkdir
+mkdir dwget
+dwget
+mv dwget wgetd
+cd
+cd dwget wgetd
+mv dwget wgetd
+wgetd
+wget http://howm.sourceforge.jp/a/howm-1.3.9.2.tar.gz
+ls
+tar vxf howm-1.3.9.2.tar.gz
+cd howm-1.3.9.2
+./configure
+make
+make install
+su make install
+sudo make install
+make uninstall
+sudo make uninstall
+ls
+lispdir
+man ./configure
+man ./
+./
+configure
+h
+./configure
+ls
+./configure --with-lispdir=~/.emacs.d/elisp --with-docdir=~/.emacs.d/share/howm --with-extdir=~/.emacs.d/bin
+cd
+.emacs.d/
+ls
+ls --all
+.
+cd .
+ls
+cd ..
+make EMACS=/Applications/Emacs.app/Contents/Linux/Emacs
+sudo make EMACS=/Applications/Emacs.app/Contents/Linux/Emacs
+make
+make -n install
+cd -4
+elisp
+ls
+make uninstall
+cd ..
+ls
+.emacs.d/themes
+wget https://github.com/emacs-jp/replace-colorthemes/blob/master/subdued-theme.el
+ls
+rm subdued-theme.el
+git clone https://github.com/emacs-jp/replace-colorthemes/blob/master/subdued-theme.el.git
+git clone https://github.com/emacs-jp/replace-colorthemes/blob/master/subdued-theme.el
+cd
+Downloads/
+ls
+replace-colorthemes-master.zip
+zip replace-colorthemes-master.zip
+unzip replace-colorthemes-master.zip
+replace-colorthemes-master
+mv subdued-theme.el ~/.emacs.d/themes
+: 1393909874:0;p
+: 1393910009:0;py py16.py
+: 1393910015:0;py q16.py
+: 1393910996:0;p
+: 1393911001:0;py q15.py
+: 1393911148:0;py q12.py
+: 1393911290:0;py q15.py
+: 1393914174:0;ps
+: 1393914178:0;ps -a
+: 1393914181:0;ps -v
+: 1393914185:0;ps -f
+: 1393914190:0;ps -s
+: 1393914199:0;ps -n
+: 1393914202:0;man ps
+: 1393914215:0;ps -e
+: 1393914226:0;kill 3219
+: 1393914260:0;kill -f 3219
+: 1393914266:0;kill -l 3219
+: 1393914277:0;kill -v 3219
+: 1393914282:0;ps
+: 1393914284:0;ps -e
+: 1393914298:0;kill 3293
+: 1393914311:0;py q12.py
+: 1393914345:0;py q15.py
+: 1393916092:0;py q17.py
+: 1393917582:0;py q18.py
+: 1393947565:0;.emacs.d/
+: 1393947566:0;ls
+: 1393947571:0;elisp
+: 1393947578:0;cd
+: 1393947595:0;wgetd
+: 1393947682:0;wget http://svn.coderepos.org/share/lang/elisp/anything-c-moccur/trunk/anything-c-moccur.el
+: 1393947692:0;ls
+: 1393947708:0;cat anything-c-moccur.el
+: 1393947714:0;cat anything-c-moccur.el 1
+: 1393947742:0;mv anything-c-moccur.el ~/.emacs.d/elisp
+: 1393950167:0;cd
+: 1393950171:0;ps -e
+: 1393950194:0;kill 2417
+: 1393950265:0;projects/dotfiles
+: 1393950272:0;git add .

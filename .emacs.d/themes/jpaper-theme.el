@@ -15,7 +15,7 @@
  '(mode-line ((t (:foreground "#f8b862" :background "#762f07"
                   :box (:line-width 1 :color "#f39800" :style released-button)))))
  '(mode-line-buffer-id ((t (:foreground nil :background nil))))
- '(mode-line-inactive ((t (:foreground "#bc763c" :background "#dcd3b2"
+ '(mode-line-inactive ((t (:foreground "#bc763c" :background "lidcd3b2"
                            :box (:line-width 1 :color "#bc763c")))))
 
  ;; ハイライト
@@ -41,6 +41,9 @@
 
  ;; コメント
  '(font-lock-comment-face ((t (:foreground "#595857"))))
+
+;;行番号
+ '(linum ((t (:foreground "#762f07"))))
 
  ;; CSS
  '(css-selector ((t (:foreground "#66D9EF"))))
