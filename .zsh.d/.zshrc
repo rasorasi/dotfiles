@@ -13,6 +13,7 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 PS1="%B%F{cyan}[%~]%f%b$ "
 
 alias dvpd='dvipdfmx' h='history' e='emacs &' E='emacsclient -t' i='source ~/.zshrc' py='python'
+alias mpic='python ~/p/q22.py'
 
 bindkey -e
 

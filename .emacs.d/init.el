@@ -31,7 +31,7 @@
 	    (normal-top-level-add-subdirs-to-load-path))))))
 
 ;;引数のディレクトリとそのサブディレクトリをload-pathに追加
-(add-to-load-path "elisp" "conf")
+(add-to-load-path "elisp" "conf" "elpa")
 
 ;;ファイルサイズを表示
 (size-indication-mode t)
@@ -66,8 +66,8 @@
 (global-set-key (kbd "C-?") 'help-command)
 (global-set-key(kbd "M-+") 'goto-line)
 (keyboard-translate ?\C-i ?\M-+)
-(keyboard-translate ?\C-o ?\C-p)
-(keyboard-translate ?\C-p ?\C-f)
+(global-set-key (kbd "C-o") 'forward-char)
+
 (global-set-key (kbd "M-o") 'forward-word)
 (global-set-key (kbd "C-<tab>") 'dabbrev-expand)
 
@@ -79,14 +79,11 @@
 
 (global-set-key (kbd "C-t") 'query-replace)
 
-
-
 ;(global-set-key (kbd "C-") 
 
 
 ;; 初期画面設定
 (setq inhibit-startup-message t)
-
 
 
 ;; change theme
@@ -307,3 +304,14 @@
 
 (when (require 'undo-tree nil t)
   (global-undo-tree-mode))
+
+(setq howm-menu-lang 'ja)
+(require 'howm-mode)
+(global-set-key (kbd "C-c , ,") 'howm-menu)
+(autoload 'howm-menu "howm-mode" "Hitori Otegaru Wiki Modoki" t)
+(defun howm-save-buffer-and-kill()
+    (save-buffer)
+    (kill-buffer nil)
+    (howm-menu))
+
+(define-key howm-mode-map (kbd "C-x C-s") 'howm-save-buffer-and-kill)

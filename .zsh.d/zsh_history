@@ -615,44 +615,237 @@ zip replace-colorthemes-master.zip
 unzip replace-colorthemes-master.zip
 replace-colorthemes-master
 mv subdued-theme.el ~/.emacs.d/themes
-: 1393909874:0;p
-: 1393910009:0;py py16.py
-: 1393910015:0;py q16.py
-: 1393910996:0;p
-: 1393911001:0;py q15.py
-: 1393911148:0;py q12.py
-: 1393911290:0;py q15.py
-: 1393914174:0;ps
-: 1393914178:0;ps -a
-: 1393914181:0;ps -v
-: 1393914185:0;ps -f
-: 1393914190:0;ps -s
-: 1393914199:0;ps -n
-: 1393914202:0;man ps
-: 1393914215:0;ps -e
-: 1393914226:0;kill 3219
-: 1393914260:0;kill -f 3219
-: 1393914266:0;kill -l 3219
-: 1393914277:0;kill -v 3219
-: 1393914282:0;ps
-: 1393914284:0;ps -e
-: 1393914298:0;kill 3293
-: 1393914311:0;py q12.py
-: 1393914345:0;py q15.py
-: 1393916092:0;py q17.py
-: 1393917582:0;py q18.py
-: 1393947565:0;.emacs.d/
-: 1393947566:0;ls
-: 1393947571:0;elisp
-: 1393947578:0;cd
-: 1393947595:0;wgetd
-: 1393947682:0;wget http://svn.coderepos.org/share/lang/elisp/anything-c-moccur/trunk/anything-c-moccur.el
-: 1393947692:0;ls
-: 1393947708:0;cat anything-c-moccur.el
-: 1393947714:0;cat anything-c-moccur.el 1
-: 1393947742:0;mv anything-c-moccur.el ~/.emacs.d/elisp
-: 1393950167:0;cd
-: 1393950171:0;ps -e
-: 1393950194:0;kill 2417
-: 1393950265:0;projects/dotfiles
-: 1393950272:0;git add .
+p
+py py16.py
+py q16.py
+p
+py q15.py
+py q12.py
+py q15.py
+ps
+ps -a
+ps -v
+ps -f
+ps -s
+ps -n
+man ps
+ps -e
+kill 3219
+kill -f 3219
+kill -l 3219
+kill -v 3219
+ps
+ps -e
+kill 3293
+py q12.py
+py q15.py
+py q17.py
+py q18.py
+.emacs.d/
+ls
+elisp
+cd
+wgetd
+wget http://svn.coderepos.org/share/lang/elisp/anything-c-moccur/trunk/anything-c-moccur.el
+ls
+cat anything-c-moccur.el
+cat anything-c-moccur.el 1
+mv anything-c-moccur.el ~/.emacs.d/elisp
+cd
+ps -e
+kill 2417
+projects/dotfiles
+git add .
+git add --ignore-removal .emacs.d/#init.el#
+git commit -m "anything"
+git push origin master
+Dropbox
+ls
+rm ÊÉ∂∞ÊΩüÂ§ßÂ≠¶„ÇÇ„ÅÆ„Å•„ÅÉØ„ÇÉ™„Ç¢„Ç§„É£Éß„Ç£„Ç¢Â±Éµ2013.pptx
+univ
+ls
+cd
+cd -1
+ls
+rm -rf „Ç¢„É£É∑„É£™
+„Ç´„É£°„É£©„Ç¢„É£É£„É£É∑„É£≠„É£º„É£É©
+ls
+rm *
+ls
+cd ..
+rm „Ç´„É£°„É£©„Ç¢„É£É£„É£É∑„É£≠„É£º„É£É©
+rm -rf „Ç´„É£°„É£©„Ç¢„É£É£„É£É∑„É£≠„É£º„É£É©
+ls
+pictures
+ictures
+Pictures
+ls
+cd ..
+ls
+cookies
+find google
+/
+find google
+find /* google
+/
+find answer
+answer
+cat answer
+cookies
+py
+p
+angou5.py
+py angou5.py
+dig
+dig ^awscloud-codeiq
+dig ^awscloud
+dig ^awscloud-codeiq
+dig amazonaws.com$
+dig test
+dig a
+dig https://dgame.codeiq.jp/#code/5/1
+dig amazonaws.com$ ^awascloud
+dig amazonaws.com$ awascloud
+dig amazonaws.com
+dig amazonaws.com codeiq
+dig amazonaws.com https://dgame.codeiq.jp
+dig @amazonaws.com$ awscloud-codeiq
+dig @amazonaws.com awscloud-codeiq
+dig @awscloud-codeiq
+dig @amazonaws.com
+dig @amazonaws
+dig @amazonaws.com
+dig @amazonaws.com$
+dig @amazonaws.com ^awscloud-codeiq
+dig @amazonaws.com awscloud-codeiq
+dig @amazonaws.com awscloud-codeiq any
+dig @1.3.9.3
+dig @1.3.9.3 amazonaws.com
+dig awscloud-codeiq
+dig @8669.291.1.3.9.3
+dig @291.1.3.9.3
+dig ^awscloud-codeiq
+dig ^awscloud-codeiq amazonaws.com$
+dig amazonaws.com
+dig @207.171.166.22 awscloud
+dig @207.171.166.22 
+dig amazonaws.com$
+dig amazonaws.com
+nslookup amazonaws.com
+dig @127.0.1.1
+nslookup amazonaws.com
+nslookup test
+dig @72.21.206.80
+find o.b
+grep o.b
+nslookup awscloud-codeiq
+nslookup amazonaws.com awscloud-codeiq
+nslookup dgame.codiq.jp
+nslookup dgame.codiq
+nslookup dgame
+nslook
+nslookup awscloud-codeiq
+nslookup amazonaws.com 
+dig @72.21.206.29
+man nolookup
+man nulookup
+man nslookup
+man dig
+dig -h amazonaws.com
+dig -q amazonaws.com
+dig -k amazonaws.com
+dig -f amazonaws.com
+dig -b amazonaws.com
+py
+p
+py q18.py
+py q19.py
+py q20.py
+p
+grep sender
+grep "sender" *.py
+py q20.py
+p
+py q21.py
+p
+grep "label" .py]
+grep "label" .py
+grep "label" *.py
+py q21.py
+cd
+ls
+Pictures
+ls
+watch Th105Patchouli.png
+ *.png
+ 3473216.png ANIME-PICTURES.NET_-_225748-1000x1414-original-taiki+ken-long+hair-tall+image-blush-open+mouth.png img_code5_2.png img_code5_3.png img_code5_4.png Th105Patchouli.png mv 3473216.py
+mv 3473216.png ~/p
+py q22.py
+cd ~/p
+py q22.py
+cp 3473216.png ~/Picture
+py q22.py
+py q22.py 3473216.png
+py q22.py
+py q22.py 3473216.png
+mpic 3473216.png
+source
+i
+mpic 3473216.png
+Pictures
+ls
+mpic e557aa74.jpg
+p
+py q23.py
+p
+grep "FrameShape" *.py
+py q23.py
+py q24.py
+py q23.py
+py q24.py
+py q24'.py
+py q245.py
+py q24.py
+: 1394423502:0;p
+: 1394423506:0;q24.py
+: 1394423512:0;py q24.py
+: 1394430084:0;p
+: 1394430088:0;py q25.py
+: 1394517992:0;p
+: 1394517996:0;py q25.py
+: 1394518151:0;py q25.py\\
+
+: 1394518163:0;py q25.py
+: 1394520668:0;wgetd
+: 1394520676:0;cd
+: 1394520682:0;cd Downloads
+: 1394520684:0;ls
+: 1394520704:0;mv howm-1.4.2.tar.gz ~/wgetd
+: 1394520708:0;cd
+: 1394520710:0;wgetd
+: 1394520713:0;ls
+: 1394520735:0;tar xvfz howm-1.4.2.tar.gz
+: 1394520748:0;cd howm-1.4.2
+: 1394520754:0;./configure
+: 1394520759:0;make
+: 1394520764:0;sudo make install
+: 1394520905:0;cd
+: 1394520914:0;usr/share
+: 1394520947:0;usr
+: 1394520953:0;cd /usr
+: 1394520961:0;share/emacs
+: 1394520964:0;ls
+: 1394520967:0;site-lisp
+: 1394520968:0;ls
+: 1394521580:0;howm
+: 1394521581:0;ls
+: 1394521589:0;cd ..
+: 1394521604:0;mv howm ~/.emacs.d/elisp
+: 1394521632:0;.emacs.d/elisp
+: 1394521632:0;ls
+: 1394521726:0;sudo mv howm ~/.emacs.d/elisp
+: 1394522081:0;ls
+: 1394523371:0;emacs 
+: 1394534431:0;emacs
+: 1394544337:0;projects/dotfiles
+: 1394544341:0;git add --all

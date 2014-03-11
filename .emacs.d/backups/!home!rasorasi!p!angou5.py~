@@ -1,0 +1,2 @@
+iti = u'一'
+print iti.encode('utf-8')
