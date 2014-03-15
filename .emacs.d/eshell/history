@@ -1,0 +1,8 @@
+ls
+py
+python
+grep "pas" 
+grep "python" .py
+grep "python" *.py
+grep -n "python" *.py
+ls

@@ -77,8 +77,8 @@
 (keyboard-translate ?\C-m ?\M-#)
 (global-set-key (kbd "C-x C-b") (lambda()(interactive)(ibuffer-list-buffers)(switch-to-buffer-other-window '"*Ibuffer*")))
 
-(global-set-key (kbd "C-t") 'query-replace)
-
+(global-set-key (kbd "C-t") 'query-replace-regexp)
+(global-set-key (kbd "M-z") 'term)
 ;(global-set-key (kbd "C-") 
 
 
@@ -232,7 +232,7 @@
 
 (global-set-key (kbd "C-x b") 'anything)
 (global-set-key (kbd "M-y") 'anything-show-kill-ring) 
-(global-set-key (kbd "C-z") 'anything-c-moccur-occur-by-moccur)
+(global-set-key (kbd "M-s") 'anything-c-moccur-occur-by-moccur)
 
 
 ;; cua-mode
@@ -309,9 +309,14 @@
 (require 'howm-mode)
 (global-set-key (kbd "C-c , ,") 'howm-menu)
 (autoload 'howm-menu "howm-mode" "Hitori Otegaru Wiki Modoki" t)
-(defun howm-save-buffer-and-kill()
-    (save-buffer)
-    (kill-buffer nil)
-    (howm-menu))
 
-(define-key howm-mode-map (kbd "C-x C-s") 'howm-save-buffer-and-kill)
+(define-key howm-mode-map (kbd "C-x C-s")
+  (lambda()(interactive) (save-buffer) (kill-buffer nil) (howm-menu)))
+
+
+(require 'tramp)
+(setq tramp-default-method "ssh")
+
+(require 'zlc)
+(setq zlc-select-completion-immediately t)
+

@@ -1,0 +1,3 @@
+= てすと
+[2014-03-15 23:23] >>> ~/projects/dotfiles/.emacs.d/init.el
+

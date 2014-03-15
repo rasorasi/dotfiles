@@ -145,7 +145,7 @@ as default of some variables; put (setq howm-compatible-to-ver1dot3 t)
   "Names of files and directories."
   :group 'howm)
 
-(howm-defcustom-risky howm-directory "~/howm/"
+(howm-defcustom-risky howm-directory "~/.emacs.d/elisp/howm/.howm.d/howm/"
   "*All files under this directory are scanned recursively."
   :type 'directory
   :group 'howm-files)
@@ -164,7 +164,7 @@ to its own file. You must guarantee (string< oldfile newfile)."
       :group 'howm-efficiency
       :group 'howm-files)))
 
-(howm-defcustom-risky howm-keyword-file "~/.howm-keys"
+(howm-defcustom-risky howm-keyword-file "~/.emacs.d/elisp/howm/.howm.d/.howm-keys"
   "*Keywords (WikiNames) are stored in this file."
   :type 'file
   :group 'howm-files)
@@ -699,7 +699,7 @@ only for matched keywords. "
   :group 'howm-devel
   :group 'howm-search)
 
-(howm-defcustom-risky howm-history-file "~/.howm-history"
+(howm-defcustom-risky howm-history-file "~/.emacs.d/elisp/howm/.howm.d/.howm-history"
   "*Search history is recorded to that file."
   :type 'file
   :group 'howm-files

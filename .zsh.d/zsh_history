@@ -806,46 +806,412 @@ py q24.py
 py q24'.py
 py q245.py
 py q24.py
-: 1394423502:0;p
-: 1394423506:0;q24.py
-: 1394423512:0;py q24.py
-: 1394430084:0;p
-: 1394430088:0;py q25.py
-: 1394517992:0;p
-: 1394517996:0;py q25.py
-: 1394518151:0;py q25.py\\
+p
+q24.py
+py q24.py
+p
+py q25.py
+p
+py q25.py
+py q25.py\\
 
-: 1394518163:0;py q25.py
-: 1394520668:0;wgetd
-: 1394520676:0;cd
-: 1394520682:0;cd Downloads
-: 1394520684:0;ls
-: 1394520704:0;mv howm-1.4.2.tar.gz ~/wgetd
-: 1394520708:0;cd
-: 1394520710:0;wgetd
-: 1394520713:0;ls
-: 1394520735:0;tar xvfz howm-1.4.2.tar.gz
-: 1394520748:0;cd howm-1.4.2
-: 1394520754:0;./configure
-: 1394520759:0;make
-: 1394520764:0;sudo make install
-: 1394520905:0;cd
-: 1394520914:0;usr/share
-: 1394520947:0;usr
-: 1394520953:0;cd /usr
-: 1394520961:0;share/emacs
-: 1394520964:0;ls
-: 1394520967:0;site-lisp
-: 1394520968:0;ls
-: 1394521580:0;howm
-: 1394521581:0;ls
-: 1394521589:0;cd ..
-: 1394521604:0;mv howm ~/.emacs.d/elisp
-: 1394521632:0;.emacs.d/elisp
-: 1394521632:0;ls
-: 1394521726:0;sudo mv howm ~/.emacs.d/elisp
-: 1394522081:0;ls
-: 1394523371:0;emacs 
-: 1394534431:0;emacs
-: 1394544337:0;projects/dotfiles
-: 1394544341:0;git add --all
+py q25.py
+wgetd
+cd
+cd Downloads
+ls
+mv howm-1.4.2.tar.gz ~/wgetd
+cd
+wgetd
+ls
+tar xvfz howm-1.4.2.tar.gz
+cd howm-1.4.2
+./configure
+make
+sudo make install
+cd
+usr/share
+usr
+cd /usr
+share/emacs
+ls
+site-lisp
+ls
+howm
+ls
+cd ..
+mv howm ~/.emacs.d/elisp
+.emacs.d/elisp
+ls
+sudo mv howm ~/.emacs.d/elisp
+ls
+emacs 
+emacs
+projects/dotfiles
+git add --all
+git commit -m "add howm"
+git push origin master
+wgetd
+wget fujimishobo.page-view.jp/MokushirokuAlic/pageview/pageview.html
+cd
+wgetd
+ls
+cat pageview.html
+p
+q26.py
+py q26.py
+py q27.py
+p
+q27.py
+py q27.py
+py q28.py
+p
+py q29.py
+py q30.py
+Downloads
+ls
+man
+man tar
+tar -xvfz
+tar --help
+man tar
+unzip CE322M\ SPI\ Master.zip
+ls
+py
+cd
+Downloads/
+ls
+*.c
+ls
+ls SPI_master.c
+vim SPI_master.c
+cat SPI_master.c
+ls
+emacs
+cd
+ls
+emacs
+ls
+cd
+ls
+cd
+ls
+py
+test
+ls
+test
+ls
+\
+
+cd
+ls
+.emacs.d/elisp
+ls
+rm multi-term.el*
+ls
+p
+cd
+ls
+ls -af
+ls -al
+ls -av
+ls -ap
+sudo apt-get install gnome-tweak-tool
+gnome-tweak-tool
+sudo gnome-tweak-tool
+gnome-tweak-tool
+sudo gnome-tweak-tool
+su
+sudo gnome-tweak-tool
+sudo zsh
+gnome-tweak-tool
+tweak-tool
+gnome-tweak-tool
+bash
+ sudo cp ~/.local/share/gnome-shell/extensions/user-theme@gnome-shell-extensions.gcampax.github.com/schemas/org.gnome.shell.extensions.user-theme.gschema.xml /usr/share/glib-2.0/schemas
+sudo glib-compile-schemas /usr/share/glib-2.0/schemas
+/usr/bin/gnome-tweak-tool
+sudo cp ~/.local/share/gnome-shell/extensions/user-theme@gnome-shell-extensions.gcampax.github.com/schemas/org.gnome.shell.extensions.user-theme.gschema.xml /usr/share/glib-2.0/schemas
+sudo glib-compile-schemas /usr/share/glib-2.0/schemas
+/usr/bin/gnome-tweak-tool
+sudo add-apt-repository ppa:tualatrix/ppa
+sudo apt-get update
+gnome-tweak-tool
+sudo apt-get install ubuntu-tweak
+ubuntu-tweak
+test
+cd
+uninstall terminater
+cd
+;s
+ls -as
+ls -aF
+rm .zshrc
+cd projects/dotfiles
+ls
+ls -a
+cat .zshrc
+rm .zshrc
+cd .zsh.d
+ls
+mv .zshrc ~/projects/dotfiles
+cd ..
+ls
+ls -a
+ln -s .zshrc ~/
+ls
+cd
+cat .zshrc
+ls
+emacs .zshrc
+ls 
+ls -a
+cat .zshrc
+rm .zshrc
+cd
+cd projects/dotfiles
+ls
+ls -a
+cat .zsh
+cat .zshrc
+ln -s .zshrc ~/.zshrc
+cd
+cat .zshrc
+cd
+rm .zshrc
+rm .zshrc
+ls -a
+ls -aF
+ln -s ~/projects/dotfiles/.zshrc ~/.zshrc
+ls -aF
+cat .zshrc
+ls
+source
+sources
+source ~/.zshrc
+ls
+ls -aF
+projects
+dotfiles/
+ls
+i
+test
+projects
+ls
+i
+ls
+i
+ls
+i
+ls
+cd
+ls
+i
+ls
+uname
+i
+ls
+i
+ls
+i
+l
+ls
+ls --color=auto
+hi
+his
+h
+ls -a --color=auto
+i
+ls
+i
+ls
+i
+ls
+i
+ls
+i
+ls
+sudo apt-get install command-not-found
+i
+ls
+i
+ls
+ls -a
+i
+ls
+i
+projects
+i
+su
+sudo
+su
+su -
+su root
+su raso
+su rasorasi
+cd
+sudo su -
+i
+p
+py q31.py
+p
+py q31.py
+: 1394890746:0;ls
+: 1394890764:0;emacs &
+: 1394890923:0;i
+: 1394890924:0;ls
+: 1394890927:0;ls -a
+: 1394890937:0;hi
+: 1394890950:0;1053
+: 1394891778:0;i
+: 1394892241:0;hi
+: 1394892250:0;1059
+: 1394892325:0;i
+: 1394892328:0;1059
+: 1394892340:0;i
+: 1394892358:0;hi
+: 1394892365:0;1059
+: 1394892392:0;i
+: 1394892396:0;1059
+: 1394892447:0;i
+: 1394892451:0;test
+: 1394893472:0;emacs &
+: 1394893603:0;.emacs.d
+: 1394893605:0;ls
+: 1394893611:0;elisp
+: 1394893612:0;ls
+: 1394893625:0;howm
+: 1394893627:0;ls
+: 1394893950:0;grep "/howm" *.el
+: 1394894071:0;grep "~/howm/" *.el
+: 1394894087:0;ls -a
+: 1394894118:0;ls -a | grep howm
+: 1394894189:0;.howm
+: 1394894202:0;grep "~/.howm" *.el
+: 1394894597:0;cd
+: 1394894668:0;mkdir test
+: 1394894670:0;test
+: 1394894674:0;cd test
+: 1394894686:0;touch test
+: 1394894687:0;ls
+: 1394894696:0;rm test
+: 1394894711:0;touch marisa
+: 1394894712:0;ls
+: 1394894718:0;chmod marisa
+: 1394894738:0;ls -l
+: 1394894774:0;chmod marisa -w
+: 1394894777:0;ls -l
+: 1394894815:0;ls
+: 1394894855:0;sudo chmod {howm-vars.el howm-common.el} +w
+: 1394894869:0;sudo chmod {howm-vars.el +w
+: 1394894893:0;sudo chmod howm-vars.el  +w
+: 1394894933:0;sudo chmod "howm-vars.el"  +w
+: 1394894952:0;chmod howm-view.el +w
+: 1394895000:0;chmod +w howm-view.el 
+: 1394895016:0;sudo chmod +w howm-view.el 
+: 1394895028:0;ls -l
+: 1394895177:0;ls
+: 1394895182:0;cd ..
+: 1394895183:0;ls
+: 1394895188:0;cd ..
+: 1394895189:0;ls
+: 1394895203:0;conf
+: 1394895205:0;ls
+: 1394895234:0;..
+: 1394895241:0;elisp/howm
+: 1394895263:0;mkdir .howm.d
+: 1394895338:0;mkdir howmd
+: 1394895349:0;sudo mkdir howmd
+: 1394895353:0;ls
+: 1394895375:0;sudo mv howmd .howm.d
+: 1394895377:0;ls
+: 1394895379:0;ls -a
+: 1394895382:0;.howm.d
+: 1394895430:0;mkdir .howm-keys
+: 1394895434:0;sudo mkdir .howm-keys
+: 1394895437:0;ls -a
+: 1394895550:0;sudo mkdir .howm-history
+: 1394895582:0;rm {.howm-keys .howm-history}
+: 1394895604:0;rm -rf [.howm-keys .howm-history]
+: 1394895612:0;rm -rf (.howm-keys .howm-history)
+: 1394895620:0;rm -rf .howm-keys
+: 1394895627:0;sudo rm -rf .howm-keys
+: 1394895632:0;sudo rm -rf .howm-history
+: 1394895635:0;ls -a
+: 1394895707:0;mv ~/.howm-keys ~/.emacs.d/elisp/howm/.howm.d/.howm-keys
+: 1394895711:0;sudo mv ~/.howm-keys ~/.emacs.d/elisp/howm/.howm.d/.howm-keys
+: 1394895715:0;ls -a
+: 1394895735:0;cd
+: 1394895751:0;ls -a | grep .howm
+: 1394895777:0;cd -9
+: 1394895785:0;hi
+: 1394895831:0;sudo mv ~/.howm-history ~/.emacs.d/elisp/howm/.howm.d/.howm-history
+: 1394895833:0;ls -a
+: 1394896003:0;..
+: 1394896044:0;hi
+: 1394896052:0;hi1134
+: 1394896055:0;hi 1134
+: 1394896064:0;hi 1120
+: 1394896074:0;hi 1120 1134
+: 1394896097:0;hi 100 1120 
+: 1394896101:0;hi 1000 1120 
+: 1394896117:0;hi grep
+: 1394896124:0;hi "grep"
+: 1394896180:0;hi -m 'grep'
+: 1394896186:0;hi -m 'grep *'
+: 1394896208:0;hi -m 'grep*'
+: 1394896219:0;hi -m '*grep*'
+: 1394896369:0;grep "~/howm/" *.el
+: 1394896502:0;ls
+: 1394896517:0;grep "~/howm" *.el
+: 1394896607:0;.howm.d
+: 1394896643:0;sudo mv ~/howm ./howm
+: 1394896648:0;ls
+: 1394896650:0;howm
+: 1394896652:0;ls
+: 1394896660:0;2014
+: 1394896662:0;ls
+: 1394896671:0;ls -a
+: 1394896678:0;03
+: 1394896678:0;ls
+: 1394896687:0;cd
+: 1394896895:0;emacs -Q -batch -f batch-byte-compile ~/.emacs.d/elisp/howm/*
+: 1394896912:0;emacs -Q -batch -f batch-byte-compile ~/.emacs.d/elisp/howm/*.el
+: 1394896927:0;emacs -Q -batch -f batch-byte-compile ~/.emacs.d/elisp/howm/*.el$
+: 1394896939:0;emacs -Q -batch -f batch-byte-compile ~/.emacs.d/elisp/howm/*.el
+: 1394897036:0;.emacs.d/elisp
+: 1394897038:0;ls
+: 1394897052:0;howm
+: 1394897055:0;ls -l
+: 1394897112:0;sudo emacs -Q -batch -f batch-byte-compile ~/.emacs.d/elisp/howm/*.el
+: 1394897130:0;ls -l
+: 1394897215:0;emacs -Q -batch -f batch-byte-compile ~/.emacs.d/elisp/howm/*.el
+: 1394897363:0;sudo chmod a+w howm-vars.el
+: 1394897366:0;ls -a
+: 1394897370:0;ls -l
+: 1394897402:0;emacs -Q -batch -f batch-byte-compile ~/.emacs.d/elisp/howm/*.el
+: 1394897413:0;ls -l
+: 1394897425:0;emacs -Q -batch -f batch-byte-compile ~/.emacs.d/elisp/howm/*.el
+: 1394897430:0;sudo emacs -Q -batch -f batch-byte-compile ~/.emacs.d/elisp/howm/*.el
+: 1394897435:0;ls -l
+: 1394897450:0;emacs &
+: 1394898050:0;ls -l
+: 1394898182:0;ls -l | grep howm-vars/elc
+: 1394898186:0;ls -l | grep howm-vars.elc
+: 1394898227:0;rm -rf *.elc
+: 1394898234:0;sudo rm -rf *.elc
+: 1394898239:0;ls
+: 1394898250:0;emacs &
+: 1394898488:0;cd
+: 1394898495:0;cd ~
+: 1394898620:0;i
+: 1394898625:0;hi
+: 1394898780:0;i
+: 1394898783:0;emacs &
+: 1394899087:0;ls -l
+: 1394899105:0;ls
+: 1394899243:0;cd
+: 1394899275:0;projects/dotfiles
+: 1394899282:0;git add *
+: 1394899286:0;git add .
+: 1394899296:0;git add --all

@@ -1,0 +1,3 @@
+= waiテスト
+[2014-03-11 19:24]@2 todo test3 >>> ~/projects/dotfiles/.emacs.d/init.el
+
