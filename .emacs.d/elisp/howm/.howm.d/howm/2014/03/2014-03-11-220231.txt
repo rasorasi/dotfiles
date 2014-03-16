@@ -1,3 +1,0 @@
-x= テスト
-[2014-03-11 22:02] >>> ~/projects/dotfiles/.emacs.d/init.el
-

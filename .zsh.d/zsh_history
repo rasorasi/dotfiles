@@ -1056,162 +1056,246 @@ p
 py q31.py
 p
 py q31.py
-: 1394890746:0;ls
-: 1394890764:0;emacs &
-: 1394890923:0;i
-: 1394890924:0;ls
-: 1394890927:0;ls -a
-: 1394890937:0;hi
-: 1394890950:0;1053
-: 1394891778:0;i
-: 1394892241:0;hi
-: 1394892250:0;1059
-: 1394892325:0;i
-: 1394892328:0;1059
-: 1394892340:0;i
-: 1394892358:0;hi
-: 1394892365:0;1059
-: 1394892392:0;i
-: 1394892396:0;1059
-: 1394892447:0;i
-: 1394892451:0;test
-: 1394893472:0;emacs &
-: 1394893603:0;.emacs.d
-: 1394893605:0;ls
-: 1394893611:0;elisp
-: 1394893612:0;ls
-: 1394893625:0;howm
-: 1394893627:0;ls
-: 1394893950:0;grep "/howm" *.el
-: 1394894071:0;grep "~/howm/" *.el
-: 1394894087:0;ls -a
-: 1394894118:0;ls -a | grep howm
-: 1394894189:0;.howm
-: 1394894202:0;grep "~/.howm" *.el
-: 1394894597:0;cd
-: 1394894668:0;mkdir test
-: 1394894670:0;test
-: 1394894674:0;cd test
-: 1394894686:0;touch test
-: 1394894687:0;ls
-: 1394894696:0;rm test
-: 1394894711:0;touch marisa
-: 1394894712:0;ls
-: 1394894718:0;chmod marisa
-: 1394894738:0;ls -l
-: 1394894774:0;chmod marisa -w
-: 1394894777:0;ls -l
-: 1394894815:0;ls
-: 1394894855:0;sudo chmod {howm-vars.el howm-common.el} +w
-: 1394894869:0;sudo chmod {howm-vars.el +w
-: 1394894893:0;sudo chmod howm-vars.el  +w
-: 1394894933:0;sudo chmod "howm-vars.el"  +w
-: 1394894952:0;chmod howm-view.el +w
-: 1394895000:0;chmod +w howm-view.el 
-: 1394895016:0;sudo chmod +w howm-view.el 
-: 1394895028:0;ls -l
-: 1394895177:0;ls
-: 1394895182:0;cd ..
-: 1394895183:0;ls
-: 1394895188:0;cd ..
-: 1394895189:0;ls
-: 1394895203:0;conf
-: 1394895205:0;ls
-: 1394895234:0;..
-: 1394895241:0;elisp/howm
-: 1394895263:0;mkdir .howm.d
-: 1394895338:0;mkdir howmd
-: 1394895349:0;sudo mkdir howmd
-: 1394895353:0;ls
-: 1394895375:0;sudo mv howmd .howm.d
-: 1394895377:0;ls
-: 1394895379:0;ls -a
-: 1394895382:0;.howm.d
-: 1394895430:0;mkdir .howm-keys
-: 1394895434:0;sudo mkdir .howm-keys
-: 1394895437:0;ls -a
-: 1394895550:0;sudo mkdir .howm-history
-: 1394895582:0;rm {.howm-keys .howm-history}
-: 1394895604:0;rm -rf [.howm-keys .howm-history]
-: 1394895612:0;rm -rf (.howm-keys .howm-history)
-: 1394895620:0;rm -rf .howm-keys
-: 1394895627:0;sudo rm -rf .howm-keys
-: 1394895632:0;sudo rm -rf .howm-history
-: 1394895635:0;ls -a
-: 1394895707:0;mv ~/.howm-keys ~/.emacs.d/elisp/howm/.howm.d/.howm-keys
-: 1394895711:0;sudo mv ~/.howm-keys ~/.emacs.d/elisp/howm/.howm.d/.howm-keys
-: 1394895715:0;ls -a
-: 1394895735:0;cd
-: 1394895751:0;ls -a | grep .howm
-: 1394895777:0;cd -9
-: 1394895785:0;hi
-: 1394895831:0;sudo mv ~/.howm-history ~/.emacs.d/elisp/howm/.howm.d/.howm-history
-: 1394895833:0;ls -a
-: 1394896003:0;..
-: 1394896044:0;hi
-: 1394896052:0;hi1134
-: 1394896055:0;hi 1134
-: 1394896064:0;hi 1120
-: 1394896074:0;hi 1120 1134
-: 1394896097:0;hi 100 1120 
-: 1394896101:0;hi 1000 1120 
-: 1394896117:0;hi grep
-: 1394896124:0;hi "grep"
-: 1394896180:0;hi -m 'grep'
-: 1394896186:0;hi -m 'grep *'
-: 1394896208:0;hi -m 'grep*'
-: 1394896219:0;hi -m '*grep*'
-: 1394896369:0;grep "~/howm/" *.el
-: 1394896502:0;ls
-: 1394896517:0;grep "~/howm" *.el
-: 1394896607:0;.howm.d
-: 1394896643:0;sudo mv ~/howm ./howm
-: 1394896648:0;ls
-: 1394896650:0;howm
-: 1394896652:0;ls
-: 1394896660:0;2014
-: 1394896662:0;ls
-: 1394896671:0;ls -a
-: 1394896678:0;03
-: 1394896678:0;ls
-: 1394896687:0;cd
-: 1394896895:0;emacs -Q -batch -f batch-byte-compile ~/.emacs.d/elisp/howm/*
-: 1394896912:0;emacs -Q -batch -f batch-byte-compile ~/.emacs.d/elisp/howm/*.el
-: 1394896927:0;emacs -Q -batch -f batch-byte-compile ~/.emacs.d/elisp/howm/*.el$
-: 1394896939:0;emacs -Q -batch -f batch-byte-compile ~/.emacs.d/elisp/howm/*.el
-: 1394897036:0;.emacs.d/elisp
-: 1394897038:0;ls
-: 1394897052:0;howm
-: 1394897055:0;ls -l
-: 1394897112:0;sudo emacs -Q -batch -f batch-byte-compile ~/.emacs.d/elisp/howm/*.el
-: 1394897130:0;ls -l
-: 1394897215:0;emacs -Q -batch -f batch-byte-compile ~/.emacs.d/elisp/howm/*.el
-: 1394897363:0;sudo chmod a+w howm-vars.el
-: 1394897366:0;ls -a
-: 1394897370:0;ls -l
-: 1394897402:0;emacs -Q -batch -f batch-byte-compile ~/.emacs.d/elisp/howm/*.el
-: 1394897413:0;ls -l
-: 1394897425:0;emacs -Q -batch -f batch-byte-compile ~/.emacs.d/elisp/howm/*.el
-: 1394897430:0;sudo emacs -Q -batch -f batch-byte-compile ~/.emacs.d/elisp/howm/*.el
-: 1394897435:0;ls -l
-: 1394897450:0;emacs &
-: 1394898050:0;ls -l
-: 1394898182:0;ls -l | grep howm-vars/elc
-: 1394898186:0;ls -l | grep howm-vars.elc
-: 1394898227:0;rm -rf *.elc
-: 1394898234:0;sudo rm -rf *.elc
-: 1394898239:0;ls
-: 1394898250:0;emacs &
-: 1394898488:0;cd
-: 1394898495:0;cd ~
-: 1394898620:0;i
-: 1394898625:0;hi
-: 1394898780:0;i
-: 1394898783:0;emacs &
-: 1394899087:0;ls -l
-: 1394899105:0;ls
-: 1394899243:0;cd
-: 1394899275:0;projects/dotfiles
-: 1394899282:0;git add *
-: 1394899286:0;git add .
-: 1394899296:0;git add --all
+ls
+emacs &
+i
+ls
+ls -a
+hi
+1053
+i
+hi
+1059
+i
+1059
+i
+hi
+1059
+i
+1059
+i
+test
+emacs &
+.emacs.d
+ls
+elisp
+ls
+howm
+ls
+grep "/howm" *.el
+grep "~/howm/" *.el
+ls -a
+ls -a | grep howm
+.howm
+grep "~/.howm" *.el
+cd
+mkdir test
+test
+cd test
+touch test
+ls
+rm test
+touch marisa
+ls
+chmod marisa
+ls -l
+chmod marisa -w
+ls -l
+ls
+sudo chmod {howm-vars.el howm-common.el} +w
+sudo chmod {howm-vars.el +w
+sudo chmod howm-vars.el  +w
+sudo chmod "howm-vars.el"  +w
+chmod howm-view.el +w
+chmod +w howm-view.el 
+sudo chmod +w howm-view.el 
+ls -l
+ls
+cd ..
+ls
+cd ..
+ls
+conf
+ls
+..
+elisp/howm
+mkdir .howm.d
+mkdir howmd
+sudo mkdir howmd
+ls
+sudo mv howmd .howm.d
+ls
+ls -a
+.howm.d
+mkdir .howm-keys
+sudo mkdir .howm-keys
+ls -a
+sudo mkdir .howm-history
+rm {.howm-keys .howm-history}
+rm -rf [.howm-keys .howm-history]
+rm -rf (.howm-keys .howm-history)
+rm -rf .howm-keys
+sudo rm -rf .howm-keys
+sudo rm -rf .howm-history
+ls -a
+mv ~/.howm-keys ~/.emacs.d/elisp/howm/.howm.d/.howm-keys
+sudo mv ~/.howm-keys ~/.emacs.d/elisp/howm/.howm.d/.howm-keys
+ls -a
+cd
+ls -a | grep .howm
+cd -9
+hi
+sudo mv ~/.howm-history ~/.emacs.d/elisp/howm/.howm.d/.howm-history
+ls -a
+..
+hi
+hi1134
+hi 1134
+hi 1120
+hi 1120 1134
+hi 100 1120 
+hi 1000 1120 
+hi grep
+hi "grep"
+hi -m 'grep'
+hi -m 'grep *'
+hi -m 'grep*'
+hi -m '*grep*'
+grep "~/howm/" *.el
+ls
+grep "~/howm" *.el
+.howm.d
+sudo mv ~/howm ./howm
+ls
+howm
+ls
+2014
+ls
+ls -a
+03
+ls
+cd
+emacs -Q -batch -f batch-byte-compile ~/.emacs.d/elisp/howm/*
+emacs -Q -batch -f batch-byte-compile ~/.emacs.d/elisp/howm/*.el
+emacs -Q -batch -f batch-byte-compile ~/.emacs.d/elisp/howm/*.el$
+emacs -Q -batch -f batch-byte-compile ~/.emacs.d/elisp/howm/*.el
+.emacs.d/elisp
+ls
+howm
+ls -l
+sudo emacs -Q -batch -f batch-byte-compile ~/.emacs.d/elisp/howm/*.el
+ls -l
+emacs -Q -batch -f batch-byte-compile ~/.emacs.d/elisp/howm/*.el
+sudo chmod a+w howm-vars.el
+ls -a
+ls -l
+emacs -Q -batch -f batch-byte-compile ~/.emacs.d/elisp/howm/*.el
+ls -l
+emacs -Q -batch -f batch-byte-compile ~/.emacs.d/elisp/howm/*.el
+sudo emacs -Q -batch -f batch-byte-compile ~/.emacs.d/elisp/howm/*.el
+ls -l
+emacs &
+ls -l
+ls -l | grep howm-vars/elc
+ls -l | grep howm-vars.elc
+rm -rf *.elc
+sudo rm -rf *.elc
+ls
+emacs &
+cd
+cd ~
+i
+hi
+i
+emacs &
+ls -l
+ls
+cd
+projects/dotfiles
+git add *
+git add .
+git add --all
+git commit -m "howm dirctory arrange "
+git push origin master
+ls
+cd
+hi
+hi 1000
+.emacs.d/elisp
+howm/.howm.d/
+howm
+..
+howm
+ls
+..
+mv howm ~/Dropbox/howm
+dropbox
+Dropbox
+ls
+ls -a
+ls
+sudo mv howm ~/Dropbox/howm
+ls -a
+ln -s howm ~/.emacs.d/elisp/howm/.howm.d/howm
+sudo ln -s howm ~/.emacs.d/elisp/howm/.howm.d/howm
+ls
+emacs &
+howm
+ls
+cd howm
+rm howm
+sudo rm howm
+sudo ln -s howm ~/.emacs.d/elisp/howm/.howm.d/
+ls
+howm
+cd howm
+sudo cd howm
+cd howm
+sudo rm howm
+ls
+ls -a
+sudo ln -s ./howm ~/.emacs.d/elisp/howm/.howm.d/
+ls -a
+cd howm
+ls -l
+rm howm
+sudo ln -s ~/Dropbox/howm ~/.emacs.d/elisp/howm/.howm.d/
+ls
+rm howm
+sudo rm howm
+sudo ln -s ~/Dropbox/howm ~/.emacs.d/elisp/howm/.howm.d/
+ls
+howm
+emacs &
+ls
+2014
+ls
+03
+ls
+cat 2014-03-15-232322.txt
+emacs &
+/.emacs.d/elisp/ibus.el
+/.emacs.d/elisp/
+.emacs.d/elisp/
+ls
+grep "map" ibus.el
+grep "keymap" ibus.el
+: 1394943528:0;emacs &
+: 1394943882:0;projects/dotfiles
+: 1394943886:0;git log
+: 1394943925:0;git revert "howm dirctory arragne"
+: 1394943954:0;git revert "howm dirctory arrage"
+: 1394943972:0;git revert "howm dirctory arrange"
+: 1394944007:0;git revert "howm dirctory arrange "
+: 1394944014:0;git revert "howm dirctory arrange"
+: 1394944028:0;git reset "howm dirctory arrange"
+: 1394944076:0;git commit
+: 1394944083:0;git log
+: 1394944109:0;git status
+: 1394944120:0;git diff
+: 1394944152:0;git recet
+: 1394944155:0;git reset
+: 1394944167:0;emacs &
+: 1394944255:0;git log
+: 1394944391:0;git revert "4430390ed6d47f1a8fb8f099d0fd172889bba820"
+: 1394944413:0;git add --all

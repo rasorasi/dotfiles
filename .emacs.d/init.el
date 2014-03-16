@@ -110,7 +110,9 @@
 (require 'mozc)
 (set-language-environment "Japanese")
 (setq default-input-method "japanese-mozc")
-(set-default-coding-systems 'utf-8)
+
+
+
 
 
 ;; ;; yatex
@@ -248,17 +250,8 @@
   (ac-config-default))
  
 
-;;recentf-ext
-(when (require 'recentf-ext nil t)
-  (setq recentf-max-saved-items 2000)
-  (setq recentf-exclude '(".recentf"))
-  (setq recentf-auto-cleanup 10)
-  (setq recentf-auto-save-timer (run-with-idle-timer 30 t 'recentf-save-list))
-  (recentf-mode 1))
-
 ;; 起動画面で recentf を開く
-(add-hook 'after-init-hook (lambda()
-    (recentf-open-files)))
+
 
 
 ;; auto save and restore scratch buffer
@@ -311,7 +304,7 @@
 (autoload 'howm-menu "howm-mode" "Hitori Otegaru Wiki Modoki" t)
 
 (define-key howm-mode-map (kbd "C-x C-s")
-  (lambda()(interactive) (save-buffer) (kill-buffer nil) (howm-menu)))
+  (lambda()(interactive)(save-buffer) (kill-buffer nil) (howm-menu)))
 
 
 (require 'tramp)
