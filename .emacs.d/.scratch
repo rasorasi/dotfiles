@@ -63,7 +63,7 @@ test
 
 (let (ril) ril)
 nil
- 
+
 (setq nil (cons 1 nil))
 
 (let ((n 3))
@@ -88,7 +88,7 @@ nil
     arst))
 repl
 
-      
+
 
     alst))
 repl
@@ -138,8 +138,8 @@ t
 t
 (< 1 0)
 nil
-     
-	      
+
+
 (defun make-lst (n x)
   (cond
    ((zerop n) nil)
@@ -211,7 +211,7 @@ nil
 
 
 
-      
+
 
 (setq a (cons 1 nil))
 (1)
@@ -242,9 +242,9 @@ Delq
 Delq
 
 (Delq '(1 2 3) 1)
+
 (2 3)
 
-
-abcdefghijklm
-nopqrstuvwxyz\
-
+(/ 16000000 256)
+(/ 62500 12500)
+5

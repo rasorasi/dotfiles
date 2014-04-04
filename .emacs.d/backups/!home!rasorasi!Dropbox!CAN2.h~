@@ -1,0 +1,297 @@
+
+
+typedef unsigned char BYTE;	
+
+//#define	SS		LATBbits.LATB15
+#define	SS		LATBbits.LATB9
+
+#define  Read(adrs)  			  change(0x03, adrs, 0, 0)
+#define  Write(adrs, data)  	  change(0x02, adrs, data, 0)
+#define  BitMod(adrs, msk, data)  change(0x05, adrs, msk, data)
+#define  StRead()  				  change(0xa0, 0, 0 ,0)
+#define  Reset()				  change(0xc0, 0, 0, 0)
+#define  RXStRead()  			change(0xb0, 0, 0 ,0)
+#define  SendStart()
+
+
+BYTE MsgBuf[13];
+
+
+union {
+	BYTE byte;
+	struct {
+		unsigned char TXP :2;	//優先順位 0(低)~3(高)
+		unsigned char  :1;
+		unsigned char  TXREQ :1; 
+		unsigned char  :4; 		//Read only
+		
+	}bits;
+
+}TXB0CTRL; 
+BYTE aTXB0CTRL = 0x30;
+
+union {
+	BYTE byte;
+	struct {
+		unsigned char TXP :2;	
+		unsigned char  :1;
+		unsigned char  TXREQ :1; 
+		unsigned char  :4; 		
+		
+	}bits;
+
+}TXB1CTRL; 
+BYTE aTXB1CTRL = 0x40;
+
+union {
+	BYTE byte;
+	struct {
+		unsigned char TXP :2;
+		unsigned char  :1;
+		unsigned char  TXREQ :1; 
+		unsigned char  :4; 	
+		
+	}bits;
+
+}TXB2CTRL; 
+BYTE aTXB2CTRL = 0x50;
+
+////TXBnDLC
+union{
+	BYTE byte;
+	struct {
+		unsigned char DLC :4;	//DLC(0~8)
+		unsigned char  :2;
+		unsigned char RTR :1;
+		unsigned char  :1;
+		
+	}bits;
+
+}TXB0DLC; 
+BYTE aTXB0DLC = 0x35;
+
+union{
+	BYTE byte;
+	struct {
+		unsigned char DLC :4;
+		unsigned char  :2;
+		unsigned char RTR :1;
+		unsigned char  :1;
+		
+	}bits;
+
+}TXB1DLC; 
+BYTE aTXB1DLC = 0x45;
+
+union{
+	BYTE byte;
+	struct {
+		unsigned char DLC :4;
+		unsigned char  :2;
+		unsigned char RTR :1;
+		unsigned char  :1;
+		
+	}bits;
+
+}TXB2DLC; 
+BYTE aTXB2DLC = 0x55;
+
+union{
+	BYTE byte;
+	struct {
+		unsigned char BRP :5;	
+		unsigned char  SJW:4; 	
+	}bits;
+
+}CNF1; 
+BYTE aCNF1 = 0x2a;
+
+
+union {
+	BYTE byte;
+	struct {
+		unsigned char PRSEG :3;	
+		unsigned char  PHSEG1 :3;
+		unsigned char  SAM :1;
+		unsigned char  BTLMODE :1;
+		
+		 	
+	}bits;
+
+}CNF2; 
+BYTE aCNF2 = 0x29;
+
+union {
+	BYTE byte;
+	struct {
+		unsigned char PHSEG2 :3;	
+		unsigned char   :3;
+		unsigned char  WAKFIL :1;
+		unsigned char  SOF :1; 
+		
+		 	
+	}bits;
+
+}CNF3; 
+BYTE aCNF3 = 0x28;
+
+union{
+	BYTE byte;
+	struct {
+		unsigned char CLKPRE :2;	
+		unsigned char  CLKEN :1;
+		unsigned char  OSM :1;
+		unsigned char  ABAT :1;
+		unsigned char REQOP :3;
+		// 000 =  ノーマル・オペレーション・モード
+		// 001 = スリープ・モード
+		// 010 = ループバック・モード
+		// 011 = リスン・オンリ・モード
+		// 100 = コンフィギュレーション・モード　(デフォルト)
+	}bits;
+
+}CANCTRL; 
+BYTE aCANCTRL = 0x0f;
+
+union{
+	BYTE byte;
+	struct{
+		unsigned char FILHIT0 :1; //RO
+		unsigned char :1;
+		unsigned char BUKT :1; //ロールオーバー
+		unsigned char RXRTR :1; //RO
+		unsigned char :1; 
+		unsigned char RXM :2; // 11 = マスク、フィルタを使用しない
+		unsigned char :1; 
+	}bits;
+}RXB0CTRL;
+aRXB0CTRL = 0x60;
+
+union{
+	BYTE byte;
+	struct{
+		unsigned char FILHIT :3; //RO
+		unsigned char RXRTR:1; //RO
+		unsigned char :1; 
+		unsigned char RXM :2; // 11 = マスク、フィルタを使用しない
+		unsigned char :1; 
+	}bits;
+}RXB1CTRL;
+aRXB1CTRL = 0x70;
+
+union{
+    BYTE byte;
+    struct{
+        
+
+void SPI1Init(void)
+{
+	void SPI1PortInit();
+	
+    //config SPI1
+    
+    SPI1STATbits.SPIEN 		= 0;	// disable SPI port
+    SPI1STATbits.SPISIDL 	= 0; 	// Continue module operation in Idle mode
+    
+    SPI1BUF 				= 0;   	// clear SPI buffer
+    
+    IFS0bits.SPI1IF 		= 0;	// clear interrupt flag
+    IEC0bits.SPI1IE 		= 0;	// disable interrupt
+    
+    SPI1CON1bits.DISSCK		= 0;	// Internal SPIx clock is enabled
+    SPI1CON1bits.DISSDO		= 0;	// SDOx pin is controlled by the module
+    SPI1CON1bits.MODE16 	= 0;	// set in 16-bit mode, clear in 8-bit mode
+    SPI1CON1bits.SMP		= 1;	// Input data sampled at middle of data output time
+    SPI1CON1bits.CKP 		= 0;	// CKP and CKE is subject to change ...
+    SPI1CON1bits.CKE 		= 1;	// ... based on your communication mode.
+	SPI1CON1bits.MSTEN 		= 1; 	// 1 =  Master mode; 0 =  Slave mode
+	SPI1CON1bits.SPRE 		= 4; 	// Secondary Prescaler = 4:1
+	SPI1CON1bits.PPRE 		= 2; 	// Primary Prescaler = 4:1
+	
+    SPI1CON2 				= 0;	// non-framed mode
+
+	
+    SPI1STATbits.SPIEN 		= 1; 	// enable SPI port, clear status
+
+
+}
+
+
+BYTE writeSPI1( BYTE data )
+{
+	SPI1BUF = data;			// write to buffer for TX
+	while(!SPI1STATbits.SPIRBF);	// wait for transfer to complete
+	return SPI1BUF;    			// read the received value
+}//writeSPI1
+
+BYTE change(BYTE inst, BYTE adrs, BYTE arg1, BYTE arg2)
+{
+	SS = 0;
+	BYTE read_data;
+	writeSPI1(inst);
+	writeSPI1(adrs);
+	read_data = writeSPI1(arg1);
+	if(arg2 != 0)
+		writeSPI1(arg2);
+	SS = 1;
+	
+	return read_data;
+}
+
+
+void C_Write(BYTE *data)
+{	
+	int i;
+	SS = 0;
+	writeSPI1(0x40);
+	for(i = 0; i < 13; i++){
+		writeSPI1(*(data + i));
+		
+	}	 
+	SS = 1;
+		
+}	
+	
+void C_Read(BYTE *data)
+{	
+	int i;
+	SS = 0;
+	writeSPI1(0x90);
+	for(i = 0; i < 13; i++){
+		*(data + i) = writeSPI1(0);	
+	}	 
+	SS = 1;
+		
+}	
+BYTE RxCheck(BYTE num)
+{
+	if((StRead() & (0x01 + num)) == (0x01 + num)) return 1;
+	else return 0;
+}	 
+	
+
+
+void CANInit()
+{
+	
+	CNF1.bits.BRP = 4;
+	CNF2.bits.PRSEG = 1;
+	CNF2.bits.PHSEG1 = 6;
+	RXB0CTRL.bits.RXM = 3;
+	RXB1CTRL.bits.RXM = 3;
+	CANCTRL.byte = 0x07;			 //ノーマルモードに設定
+	
+	Reset();
+	
+	BitMod(0x0c, 0x14, 0x14);
+	Write(aCNF1, CNF1.byte);
+	Write(aCNF2, CNF2.byte);
+	BitMod(aRXB0CTRL, RXB0CTRL.byte, RXB0CTRL.byte);
+	BitMod(aRXB1CTRL, RXB1CTRL.byte, RXB1CTRL.byte);
+	
+	
+	Write(aCANCTRL, CANCTRL.byte);
+	
+	
+}
+

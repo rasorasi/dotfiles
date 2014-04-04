@@ -1,0 +1,280 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+import sys, random
+from PyQt4 import QtCore, QtGui
+from copy import deepcopy
+
+class Button(QtGui.QPushButton):
+
+    def __init__(self, title):
+        super(Button, self).__init__(title)
+
+class PieceWidget(QtGui.QPainter):
+   
+    def __init__(self, xleft, yup, xright, ydown, col, parent):
+    
+        super(PieceWidget, self).__init__(parent)
+
+        self.x1 = xleft 
+        self.y1 = yup
+        self.x2 = xright 
+        self.y2 = ydown
+        self.color = col
+
+        self.fillRect(self.x1, self.y1, self.x2, self.y2, self.color)
+
+        self.panelmake(parent)
+        
+    def panelmake(self, parent):
+        
+        panel = QtGui.QLabel(parent)
+        panel.move(0,0)
+        QtGui.QWidget.connect(panel, SIGNAL('clicked()'), self.labelclicked)
+
+    def labelclicked(self):
+        pass
+        
+
+
+
+
+class Lifegame(QtGui.QWidget):
+
+    def __init__(self):
+        super(Lifegame, self).__init__()
+
+        self.initUI()
+
+    def initUI(self):
+
+        self.lboard = Board(self)
+        
+        self.isStarted = False
+
+  #      self.statusbar = self.statusBar()
+
+        self.hbox = QtGui.QHBoxLayout()
+        self.vbox = QtGui.QVBoxLayout()
+        
+        
+        self.bact = QtGui.QPushButton("start")
+        self.bback = QtGui.QPushButton("back")        
+        self.bnext = QtGui.QPushButton("next")
+        self.bexit = QtGui.QPushButton("exit")
+
+        self.bact.clicked.connect(self.actcmd)
+        self.bback.clicked.connect(self.lboard.back)
+        self.bnext.clicked.connect(self.lboard.newgeneration)
+        self.bexit.clicked.connect(self.close)
+
+
+        self.hbox.addWidget(self.bact)
+        self.hbox.addWidget(self.bback)
+        self.hbox.addWidget(self.bnext)
+        self.hbox.addWidget(self.bexit)
+        
+        self.vbox.addWidget(self.lboard)
+        self.vbox.addLayout(self.hbox)
+
+        self.setLayout(self.vbox)
+
+        self.resize(1000, 1000)
+        self.center()
+        self.show()
+
+
+    def center(self):
+        
+        screen = QtGui.QDesktopWidget().screenGeometry()
+        size = self.geometry()
+        self.move((screen.width()-size.width())/2, 
+            (screen.height()-size.height())/2)
+    
+    def actcmd(self):
+        if self.isStarted:
+            self.isStarted = False
+            self.lboard.stop()
+            self.bact.setText("start")
+            
+
+        else:
+            self.isStarted = True
+            self.lboard.start()
+            self.bact.setText("stop")
+    
+   
+   
+
+    def keyPressEvent(self, e):
+        if e.key() == QtCore.Qt.Key_Escape:
+            self.close()
+
+class Board(QtGui.QFrame):
+
+    nWidth = 100
+    nHeight = 100
+    Speed = 10
+        
+    def __init__(self, parent):
+        super(Board, self).__init__(parent)
+
+        self.initBoard()
+
+    def initBoard(self):
+
+        self.timer = QtCore.QBasicTimer()
+
+        self.piece =[[0 for i in range(Board.nWidth)] for j in range(Board.nHeight)]
+   
+        self.testset()
+
+        self.backupnum = 0
+        self.backups = [[[0 for i in range(Board.nWidth)] for j in range(Board.nHeight)] for m in range(100)]
+        self.isbackup100over = False
+        self.backup()
+        self.setFocusPolicy(QtCore.Qt.StrongFocus)
+
+      
+    
+    def backup(self):
+        
+        self.backups[self.backupnum] = deepcopy(self.piece)
+ 
+        if self.backupnum < 99:
+            self.backupnum += 1
+        else:
+            self.backupnum = 0
+            self.isbackup100over = True
+        
+       
+        
+
+    def pieceWidth(self):
+        return self.contentsRect().width() / Board.nWidth
+
+    def pieceHeight(self):
+        return self.contentsRect().height() / Board.nHeight
+        
+    def lifeset(self, x, y,life = 2):
+
+        if life == 2:
+            if self.piece[y][x] == 0:
+                self.piece[y][x] = 1
+            else:
+                self.piece[y][x] = 0
+        
+        else:
+            self.piece[y][x] = life
+
+    def reset(self):
+        for i in range(Board.nHeight):
+            for j in range(Board.nWidth):
+                self.piece[i][j] = 0
+        
+    def testset(self):
+        
+        for i in range(int(Board.nHeight * Board.nWidth / 5)):
+            
+            self.piece[random.randint(0, Board.nHeight - 1)][random.randint(0, Board.nWidth - 1)] = 1
+
+    def roundied(self):
+
+        for i in range(Board.nWidth):
+            self.piece[0][i] = 0
+            self.piece[Board.nHeight - 1][i] = 0
+
+        for i in range(Board.nHeight):
+            self.piece[i][0] = 0
+            self.piece[i][Board.nWidth - 1] = 0
+
+    def newgeneration(self):
+
+        self.backup()
+        self.roundied()
+
+        newlife = [[0 for i in range(Board.nWidth)] for j in range(Board.nHeight)]
+        
+        
+        for i in range(1, Board.nHeight - 1):
+            for j in range(1, Board.nWidth - 1):
+                sum = 0
+                sum = self.piece[i-1][j-1] + self.piece[i-1][j] + self.piece[i-1][j+1] + self.piece[i][j-1] + self.piece[i][j+1] + self.piece[i+1][j-1] + self.piece[i+1][j] + self.piece[i+1][j+1]
+                
+                if self.piece[i][j] == 1:
+                    if sum > 3 or sum < 2:
+                        pass
+                    else:
+                        newlife[i][j] = 1
+                else:
+                    if sum == 3:
+                        newlife[i][j] = 1
+        
+        self.piece = deepcopy(newlife)
+        self.update()
+      
+
+    def draw(self, x, y, qp, life):
+
+
+        colors = [0x000000, 0x00ff00]
+        color = QtGui.QColor(colors[life])
+        self.wid = PieceWidget(x, y, self.pieceWidth()-1, self.pieceHeight()-1, color, self)
+#        qp.fillRect(x, y, self.pieceWidth()-1, self.pieceHeight()-1, color)
+        
+
+    def paintEvent(self, event):
+        
+        painter = QtGui.QPainter(self)
+        
+        for i in range(Board.nHeight):
+            for j in range(Board.nWidth):
+                self.draw(j * self.pieceWidth(), i * self.pieceHeight(),
+                          painter, self.piece[i][j])
+        
+
+    def timerEvent(self, event):
+        
+        if event.timerId() == self.timer.timerId():
+            
+            self.newgeneration()
+            
+            
+        else:
+            super(Board, self).timerEvent(event)
+
+    
+    def start(self):
+        
+        self.timer.start(Board.Speed, self)
+        
+
+    def stop(self):
+
+        self.timer.stop()
+
+    def back(self):
+         
+        if self.backupnum == 0:
+            if self.isbackup100over:
+                self.backupnum = 99
+            else:
+                return 
+        else:
+            self.backupnum -= 1
+
+        self.piece = deepcopy(self.backups[self.backupnum])
+        
+        self.update()
+
+def main():
+
+    app = QtGui.QApplication([])
+    lifegame = Lifegame()
+    sys.exit(app.exec_())
+    
+
+        
+if __name__ == '__main__':
+    main()
+    print Board.pieceHeight()

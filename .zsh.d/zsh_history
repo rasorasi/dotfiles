@@ -806,46 +806,704 @@ py q24.py
 py q24'.py
 py q245.py
 py q24.py
-: 1394423502:0;p
-: 1394423506:0;q24.py
-: 1394423512:0;py q24.py
-: 1394430084:0;p
-: 1394430088:0;py q25.py
-: 1394517992:0;p
-: 1394517996:0;py q25.py
-: 1394518151:0;py q25.py\\
+p
+q24.py
+py q24.py
+p
+py q25.py
+p
+py q25.py
+py q25.py\\
 
-: 1394518163:0;py q25.py
-: 1394520668:0;wgetd
-: 1394520676:0;cd
-: 1394520682:0;cd Downloads
-: 1394520684:0;ls
-: 1394520704:0;mv howm-1.4.2.tar.gz ~/wgetd
-: 1394520708:0;cd
-: 1394520710:0;wgetd
-: 1394520713:0;ls
-: 1394520735:0;tar xvfz howm-1.4.2.tar.gz
-: 1394520748:0;cd howm-1.4.2
-: 1394520754:0;./configure
-: 1394520759:0;make
-: 1394520764:0;sudo make install
-: 1394520905:0;cd
-: 1394520914:0;usr/share
-: 1394520947:0;usr
-: 1394520953:0;cd /usr
-: 1394520961:0;share/emacs
-: 1394520964:0;ls
-: 1394520967:0;site-lisp
-: 1394520968:0;ls
-: 1394521580:0;howm
-: 1394521581:0;ls
-: 1394521589:0;cd ..
-: 1394521604:0;mv howm ~/.emacs.d/elisp
-: 1394521632:0;.emacs.d/elisp
-: 1394521632:0;ls
-: 1394521726:0;sudo mv howm ~/.emacs.d/elisp
-: 1394522081:0;ls
-: 1394523371:0;emacs 
-: 1394534431:0;emacs
-: 1394544337:0;projects/dotfiles
-: 1394544341:0;git add --all
+py q25.py
+wgetd
+cd
+cd Downloads
+ls
+mv howm-1.4.2.tar.gz ~/wgetd
+cd
+wgetd
+ls
+tar xvfz howm-1.4.2.tar.gz
+cd howm-1.4.2
+./configure
+make
+sudo make install
+cd
+usr/share
+usr
+cd /usr
+share/emacs
+ls
+site-lisp
+ls
+howm
+ls
+cd ..
+mv howm ~/.emacs.d/elisp
+.emacs.d/elisp
+ls
+sudo mv howm ~/.emacs.d/elisp
+ls
+emacs 
+emacs
+projects/dotfiles
+git add --all
+git commit -m "add howm"
+git push origin master
+wgetd
+wget fujimishobo.page-view.jp/MokushirokuAlic/pageview/pageview.html
+cd
+wgetd
+ls
+cat pageview.html
+p
+q26.py
+py q26.py
+py q27.py
+p
+q27.py
+py q27.py
+py q28.py
+p
+py q29.py
+py q30.py
+Downloads
+ls
+man
+man tar
+tar -xvfz
+tar --help
+man tar
+unzip CE322M\ SPI\ Master.zip
+ls
+py
+cd
+Downloads/
+ls
+*.c
+ls
+ls SPI_master.c
+vim SPI_master.c
+cat SPI_master.c
+ls
+emacs
+cd
+ls
+emacs
+ls
+cd
+ls
+cd
+ls
+py
+test
+ls
+test
+ls
+\
+
+cd
+ls
+.emacs.d/elisp
+ls
+rm multi-term.el*
+ls
+p
+cd
+ls
+ls -af
+ls -al
+ls -av
+ls -ap
+sudo apt-get install gnome-tweak-tool
+gnome-tweak-tool
+sudo gnome-tweak-tool
+gnome-tweak-tool
+sudo gnome-tweak-tool
+su
+sudo gnome-tweak-tool
+sudo zsh
+gnome-tweak-tool
+tweak-tool
+gnome-tweak-tool
+bash
+ sudo cp ~/.local/share/gnome-shell/extensions/user-theme@gnome-shell-extensions.gcampax.github.com/schemas/org.gnome.shell.extensions.user-theme.gschema.xml /usr/share/glib-2.0/schemas
+sudo glib-compile-schemas /usr/share/glib-2.0/schemas
+/usr/bin/gnome-tweak-tool
+sudo cp ~/.local/share/gnome-shell/extensions/user-theme@gnome-shell-extensions.gcampax.github.com/schemas/org.gnome.shell.extensions.user-theme.gschema.xml /usr/share/glib-2.0/schemas
+sudo glib-compile-schemas /usr/share/glib-2.0/schemas
+/usr/bin/gnome-tweak-tool
+sudo add-apt-repository ppa:tualatrix/ppa
+sudo apt-get update
+gnome-tweak-tool
+sudo apt-get install ubuntu-tweak
+ubuntu-tweak
+test
+cd
+uninstall terminater
+cd
+;s
+ls -as
+ls -aF
+rm .zshrc
+cd projects/dotfiles
+ls
+ls -a
+cat .zshrc
+rm .zshrc
+cd .zsh.d
+ls
+mv .zshrc ~/projects/dotfiles
+cd ..
+ls
+ls -a
+ln -s .zshrc ~/
+ls
+cd
+cat .zshrc
+ls
+emacs .zshrc
+ls 
+ls -a
+cat .zshrc
+rm .zshrc
+cd
+cd projects/dotfiles
+ls
+ls -a
+cat .zsh
+cat .zshrc
+ln -s .zshrc ~/.zshrc
+cd
+cat .zshrc
+cd
+rm .zshrc
+rm .zshrc
+ls -a
+ls -aF
+ln -s ~/projects/dotfiles/.zshrc ~/.zshrc
+ls -aF
+cat .zshrc
+ls
+source
+sources
+source ~/.zshrc
+ls
+ls -aF
+projects
+dotfiles/
+ls
+i
+test
+projects
+ls
+i
+ls
+i
+ls
+i
+ls
+cd
+ls
+i
+ls
+uname
+i
+ls
+i
+ls
+i
+l
+ls
+ls --color=auto
+hi
+his
+h
+ls -a --color=auto
+i
+ls
+i
+ls
+i
+ls
+i
+ls
+i
+ls
+sudo apt-get install command-not-found
+i
+ls
+i
+ls
+ls -a
+i
+ls
+i
+projects
+i
+su
+sudo
+su
+su -
+su root
+su raso
+su rasorasi
+cd
+sudo su -
+i
+p
+py q31.py
+p
+py q31.py
+ls
+emacs &
+i
+ls
+ls -a
+hi
+1053
+i
+hi
+1059
+i
+1059
+i
+hi
+1059
+i
+1059
+i
+test
+emacs &
+.emacs.d
+ls
+elisp
+ls
+howm
+ls
+grep "/howm" *.el
+grep "~/howm/" *.el
+ls -a
+ls -a | grep howm
+.howm
+grep "~/.howm" *.el
+cd
+mkdir test
+test
+cd test
+touch test
+ls
+rm test
+touch marisa
+ls
+chmod marisa
+ls -l
+chmod marisa -w
+ls -l
+ls
+sudo chmod {howm-vars.el howm-common.el} +w
+sudo chmod {howm-vars.el +w
+sudo chmod howm-vars.el  +w
+sudo chmod "howm-vars.el"  +w
+chmod howm-view.el +w
+chmod +w howm-view.el 
+sudo chmod +w howm-view.el 
+ls -l
+ls
+cd ..
+ls
+cd ..
+ls
+conf
+ls
+..
+elisp/howm
+mkdir .howm.d
+mkdir howmd
+sudo mkdir howmd
+ls
+sudo mv howmd .howm.d
+ls
+ls -a
+.howm.d
+mkdir .howm-keys
+sudo mkdir .howm-keys
+ls -a
+sudo mkdir .howm-history
+rm {.howm-keys .howm-history}
+rm -rf [.howm-keys .howm-history]
+rm -rf (.howm-keys .howm-history)
+rm -rf .howm-keys
+sudo rm -rf .howm-keys
+sudo rm -rf .howm-history
+ls -a
+mv ~/.howm-keys ~/.emacs.d/elisp/howm/.howm.d/.howm-keys
+sudo mv ~/.howm-keys ~/.emacs.d/elisp/howm/.howm.d/.howm-keys
+ls -a
+cd
+ls -a | grep .howm
+cd -9
+hi
+sudo mv ~/.howm-history ~/.emacs.d/elisp/howm/.howm.d/.howm-history
+ls -a
+..
+hi
+hi1134
+hi 1134
+hi 1120
+hi 1120 1134
+hi 100 1120 
+hi 1000 1120 
+hi grep
+hi "grep"
+hi -m 'grep'
+hi -m 'grep *'
+hi -m 'grep*'
+hi -m '*grep*'
+grep "~/howm/" *.el
+ls
+grep "~/howm" *.el
+.howm.d
+sudo mv ~/howm ./howm
+ls
+howm
+ls
+2014
+ls
+ls -a
+03
+ls
+cd
+emacs -Q -batch -f batch-byte-compile ~/.emacs.d/elisp/howm/*
+emacs -Q -batch -f batch-byte-compile ~/.emacs.d/elisp/howm/*.el
+emacs -Q -batch -f batch-byte-compile ~/.emacs.d/elisp/howm/*.el$
+emacs -Q -batch -f batch-byte-compile ~/.emacs.d/elisp/howm/*.el
+.emacs.d/elisp
+ls
+howm
+ls -l
+sudo emacs -Q -batch -f batch-byte-compile ~/.emacs.d/elisp/howm/*.el
+ls -l
+emacs -Q -batch -f batch-byte-compile ~/.emacs.d/elisp/howm/*.el
+sudo chmod a+w howm-vars.el
+ls -a
+ls -l
+emacs -Q -batch -f batch-byte-compile ~/.emacs.d/elisp/howm/*.el
+ls -l
+emacs -Q -batch -f batch-byte-compile ~/.emacs.d/elisp/howm/*.el
+sudo emacs -Q -batch -f batch-byte-compile ~/.emacs.d/elisp/howm/*.el
+ls -l
+emacs &
+ls -l
+ls -l | grep howm-vars/elc
+ls -l | grep howm-vars.elc
+rm -rf *.elc
+sudo rm -rf *.elc
+ls
+emacs &
+cd
+cd ~
+i
+hi
+i
+emacs &
+ls -l
+ls
+cd
+projects/dotfiles
+git add *
+git add .
+git add --all
+git commit -m "howm dirctory arrange "
+git push origin master
+ls
+cd
+hi
+hi 1000
+.emacs.d/elisp
+howm/.howm.d/
+howm
+..
+howm
+ls
+..
+mv howm ~/Dropbox/howm
+dropbox
+Dropbox
+ls
+ls -a
+ls
+sudo mv howm ~/Dropbox/howm
+ls -a
+ln -s howm ~/.emacs.d/elisp/howm/.howm.d/howm
+sudo ln -s howm ~/.emacs.d/elisp/howm/.howm.d/howm
+ls
+emacs &
+howm
+ls
+cd howm
+rm howm
+sudo rm howm
+sudo ln -s howm ~/.emacs.d/elisp/howm/.howm.d/
+ls
+howm
+cd howm
+sudo cd howm
+cd howm
+sudo rm howm
+ls
+ls -a
+sudo ln -s ./howm ~/.emacs.d/elisp/howm/.howm.d/
+ls -a
+cd howm
+ls -l
+rm howm
+sudo ln -s ~/Dropbox/howm ~/.emacs.d/elisp/howm/.howm.d/
+ls
+rm howm
+sudo rm howm
+sudo ln -s ~/Dropbox/howm ~/.emacs.d/elisp/howm/.howm.d/
+ls
+howm
+emacs &
+ls
+2014
+ls
+03
+ls
+cat 2014-03-15-232322.txt
+emacs &
+/.emacs.d/elisp/ibus.el
+/.emacs.d/elisp/
+.emacs.d/elisp/
+ls
+grep "map" ibus.el
+grep "keymap" ibus.el
+emacs &
+projects/dotfiles
+git log
+git revert "howm dirctory arragne"
+git revert "howm dirctory arrage"
+git revert "howm dirctory arrange"
+git revert "howm dirctory arrange "
+git revert "howm dirctory arrange"
+git reset "howm dirctory arrange"
+git commit
+git log
+git status
+git diff
+git recet
+git reset
+emacs &
+git log
+git revert "4430390ed6d47f1a8fb8f099d0fd172889bba820"
+git add --all
+git commit -m "bug"
+git push origin master
+hi
+git revert "4430390ed6d47f1a8fb8f099d0fd172889bba820"
+git revert 4430390ed6d47f1a8fb8f099d0fd172889bba820
+git  revert  --all 4430390ed6d47f1a8fb8f099d0fd172889bba820
+git  revert  --force 4430390ed6d47f1a8fb8f099d0fd172889bba820
+git  revert  -x 4430390ed6d47f1a8fb8f099d0fd172889bba820
+git  revert  -X 4430390ed6d47f1a8fb8f099d0fd172889bba820
+git revert --strategy 4430390ed6d47f1a8fb8f099d0fd172889bba820
+git revert --continue 4430390ed6d47f1a8fb8f099d0fd172889bba820
+git revert 4430390ed6d47f1a8fb8f099d0fd172889bba820
+git revert -f 4430390ed6d47f1a8fb8f099d0fd172889bba820
+git push -f origin HEAD^:master
+git push origin master:master_bak
+git push origin :master
+git push -f origin HEAD^:master
+.emacs.d
+cat init.el
+git push origin :master
+projects/dotfiles
+git push origin :master
+git log
+git push -f origin HEAD^:master
+.emacs.d/
+cat init.el | grep "recentf"
+cat init.el 
+git push -f origin HEAD^:master
+git reset --soft HEAD^
+cat init.el 
+git reset --soft HEAD^
+git log
+cat init.el
+py q31.py
+p
+py q31.py
+p
+grep "Silder" *.py
+grep "Slider" *.py
+py q13.py
+py q31.py
+emacs
+py
+p
+grep "drawline" *.py
+grep "drawLine" *.py
+py q29.py
+[[0, 0] for i in range(4)
+[[0, 0] for i in range(4)]
+py
+p
+tetris.py
+py tetris.py
+p
+py tetris.py
+py qlife.py
+p
+py tetris.py
+p
+py qlife.py
+p
+py qlife.py
+py q28.py
+py qlife.py
+p
+py qlife.py
+p
+py qlife.py
+py
+py tetris.py
+py qlife.py
+yy
+: 1395754065:0;py
+: 1395754068:0;p
+: 1395754075:0;python qlife.py
+: 1395754138:0;p
+: 1395754141:0;py qlife.py
+: 1395754403:0;p
+: 1395754407:0;py qlife.py
+: 1395754693:0;py
+: 1395754746:0;py qlife.py
+: 1395808880:0;p
+: 1395808884:0;py qlife.py
+: 1395817773:0;py tetris.py
+: 1395841272:0;py qlife.py
+: 1395847774:0;py test.py
+: 1395900368:0;p
+: 1395900373:0;py qlife.py
+: 1396097305:0;p
+: 1396097308:0;py qlife.py
+: 1396097363:0;p
+: 1396097366:0;py qlife.py
+: 1396100051:0;.emacs.d
+: 1396100057:0;elisp
+: 1396100058:0;ls
+: 1396100072:0;ac-python
+: 1396189314:0;py
+: 1396189840:0;pyqt
+: 1396190020:0;Downloads
+: 1396190021:0;ls
+: 1396190034:0;tar -xvf py2app-0.8.tar.gz
+: 1396190039:0;ls
+: 1396190046:0;py2app-0.8
+: 1396190049:0;ls
+: 1396190175:0;..
+: 1396190190:0;rm -rf py2app-0.8
+: 1396190193:0;rm -rf py2app-0.8.tar.gz
+: 1396190958:0;mv Pictures/
+: 1396190979:0;mv Downloads/*.jpg Pictures/
+: 1396190985:0;mv Downloads/*.bin Pictures/
+: 1396191046:0;rm *.msi
+: 1396191056:0;rm *.tar.gz
+: 1396191060:0;ls
+: 1396343926:0;task
+: 1396343937:0;network
+: 1396343940:0;net
+: 1396344101:0;gnome-system-monitor
+: 1396346384:0;trancert
+: 1396346389:0;tracert
+: 1396510690:0;Downloads
+: 1396510707:0;unzip _prj003.zip
+: 1396510709:0;ls
+: 1396510732:0;_Prj003A
+: 1396510734:0;ls
+: 1396510752:0;219-N1
+: 1396510754:0;ls
+: 1396510938:0;echo path
+: 1396510947:0;path
+: 1396510958:0;echo $PATH
+: 1396511006:0;pwd
+: 1396511512:0;i
+: 1396511522:0;E 
+: 1396511537:0;E |pwd
+: 1396511551:0;pwd > E
+: 1396511564:0;pwd
+: 1396511577:0;ce
+: 1396511579:0;cd
+: 1396511587:0;test
+: 1396511590:0;ls
+: 1396511601:0;test
+: 1396511604:0;cd test
+: 1396511608:0;ls
+: 1396511615:0;vi marisa
+: 1396511656:0;cd test
+: 1396511670:0;cat marisa
+: 1396511681:0;pwd > marisa
+: 1396511695:0;pwd | cat marisa
+: 1396511698:0;cat marisa
+: 1396512409:0;pwd >> cat marisa
+: 1396512414:0;pwd >> marisa
+: 1396512425:0;pwd > marisa
+: 1396512439:0;echo pwd
+: 1396512554:0;e
+: 1396512611:0;e --reverse
+: 1396512662:0;e
+: 1396512683:0;E marisa
+: 1396512764:0;cat marisa
+: 1396512769:0;ls -l
+: 1396512784:0;E reimu.tex
+: 1396512818:0;E reimu.txt
+: 1396512981:0;ls
+: 1396512989:0;cd
+: 1396512997:0;cd -0
+: 1396513027:0;cd
+: 1396513043:0;Downloads
+: 1396513054:0;_Prj003A
+: 1396513056:0;ls
+: 1396513063:0;219-N1
+: 1396513065:0;ls
+: 1396513069:0;rm e
+: 1396513073:0;rm E
+: 1396513090:0;E 219_Main.c
+: 1396533066:0;e
+: 1396580206:0;cd test
+: 1396580213:0;gcc sakuya.c
+: 1396580218:0;./a.out
+: 1396580334:0;gcc sakuya.c
+: 1396580336:0;./a.out
+: 1396580369:0;cd test
+: 1396580377:0;gcc sakuya.c
+: 1396580380:0;./a.out
+: 1396585222:0;cd
+: 1396585227:0;projects
+: 1396585231:0;git add .
+: 1396585275:0;git commit -m "emacsclient add"
+: 1396585283:0;git push origin master
+: 1396585329:0;git pull
+: 1396585339:0;ls
+: 1396585346:0;dotfiles
+: 1396585348:0;ls
+: 1396585351:0;ls -a
+: 1396585359:0;cat .zshrc
+: 1396585372:0;cd
+: 1396585382:0;cd -1
+: 1396585384:0;ls
+: 1396585388:0;git add .
+: 1396585392:0;git commit -m "emacsclient add"
+: 1396585405:0;git push origin master
+: 1396585604:0;git status
+: 1396585657:0;git diff
+: 1396585679:0;git log
+: 1396585740:0;git branch
+: 1396585752:0;git push --help
+: 1396585788:0;git push origin master
+: 1396585798:0;git push -f origin master
+: 1396585818:0;git master
+: 1396585979:0;dotfiles
+: 1396585982:0;git add .

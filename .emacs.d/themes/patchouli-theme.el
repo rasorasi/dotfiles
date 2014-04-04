@@ -4,7 +4,7 @@
 (custom-theme-set-faces
  'patchouli
  ;; 背景・文字・カーソル
- '(cursor ((t (:foreground "#F8F8F2"))))
+ '(cursor ((t (:foreground "#f8f8f2"))))
  '(default ((t (:background "#141014" :foreground "#00ff00"))))
  '(fringe ((t (:background "#201020"))))
  ;; 選択範囲
@@ -18,7 +18,7 @@
                            :box (:line-width 1 :color "#7f1184")))))
 
  ;; ハイライト
-;; '(highlight ((t (:background "#FFFFFF")))) ;:foreground "#30ff30" 
+;; '(highlight ((t (:background "#FFFFFF")))) ;:foreground "#30ff30"
  '(hl-line ((t (:background "#120412"))))
 
  ;; 関数名

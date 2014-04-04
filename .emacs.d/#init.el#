@@ -22,12 +22,14 @@
       '((top . 10) (left . 1000) (width . 98) (height . 52)))
 
 
-(set-default-coding-systems 'utf-8-unix)
+(set-coding-system-priority 'utf-8-unix)
+(set-default-coding-systems 'utf-8)
+(set-buffer-file-coding-system 'utf-8)
 (setq default-file-name-coding-system 'utf-8-unix)
-(set-coding-system-priority 'utf-8)
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
-(set-buffer-file-coding-system 'utf-8)
+
+(modify-coding-system-alist 'file "\\.tex\\'" 'euc-japan-unix)
 
 
 ;; 最後に改行を入れる

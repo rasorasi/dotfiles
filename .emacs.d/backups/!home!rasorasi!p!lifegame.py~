@@ -1,25 +1,108 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-import sys
-from PyQt4 import QtGui
+from numpy import *
 
-def main():
+def out(lst):
+    x = "+"
+    o = "o"
+    r = range(8)
+    for j in r:
+        for t in r:
+            if lst[j][t] == 0:
+                print o,
+            else:
+                print x,
+        print ""
+    print "--------------------------"
 
-    bt1 = QtGui.QPushButton('test')
-    bt2 = QtGui.QPushButton('test2')
-    
-    layout = QtGui.QGridLayout()
-    layout.addWidget(bt1,0,0)
-    layout.addWidget(bt2,0,1)
-    
-    main_window = QtGui.QMainWindow()
+def input(lst):
+    x = int(raw_input('x: '))
+    y = int(raw_input('y: '))
 
-    
-    main_window.setCentralWidget(layout)
+    if lst[y-1][x-1] == 0:
+        lst[y-1][x-1] = 1
+    else:
+        lst[y-1][x-1] = 0
 
+def ask_ok(prompt, retries=4, complaint='Yes or no, please!'):
+    while True:
+        ok = raw_input(prompt)
+        if ok in ('y', 'ye', 'yes'):
+            return True
+        if ok in ('n', 'no', 'nop', 'nope'):
+            return False
+        retries = retries - 1
+        if retries < 0:
+            raise IOError('refusenik user')
+        print complaint
+
+
+def lound_died(lst):
+    for t in range(8):
+        lst[0][t],lst[7][t],lst[t][0],lst[t][7] = 0,0,0,0
+
+def life(lst):
+
+    lr = range(1,7)
+    tlst = [[0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0]]
     
-    main_window.show()
+    st = '\n'
+    for j in lr:
+        
+        for t in lr:
+            sum = 0
+            sum = lst[j-1][t-1] + lst[j-1][t] + lst[j-1][t+1] + lst[j][t-1] + lst[j][t+1] + lst[j+1][t-1] + lst[j+1][t] + lst[j+1][t+1]
+
+            
+            
+            #print lst[j][t],
+            #st += str(sum) + ' '
+            
+            if lst[j][t] == 0:
+                if sum == 3:
+                    tlst[j][t] = 1
+            else:
+                if sum == 2 | sum == 3:
+                    tlst[j][t] = 1
+                else:
+                    tlst[j][t] = 0
+            
+            
+                    
+        #print ""     
+        #st += '\n'
+
+    #print st
+    return tlst
+    
+   
+
+
 
 if __name__ == '__main__':
-    main()
+ 
+    l0 = [0,0,0,0,0,0,0,0,] 
+    l1 = [1,0,0,0,1,0,0,0,] 
+    l2 = [0,0,0,1,0,0,0,0,] 
+    l3 = [0,0,0,1,1,1,0,0,] 
+    l4 = [1,0,0,0,0,0,0,0,] 
+    l5 = [0,0,0,0,0,0,0,0,] 
+    l6 = [0,0,0,0,0,0,0,0,] 
+    l7 = [0,0,1,0,0,0,0,0,] 
+
+    lst = [l0,l1,l2,l3,l4,l5,l6,l7]
+
+    for i in range(5):
+        out (lst)
+        lound_died(lst)
+        lst = life(lst)
+        out(lst)
+    
