@@ -1,0 +1,26 @@
+from __future__ import unicode_literals
+
+import cv2
+
+def main():
+    img = cv2.imread("ia.jpg", 1)
+    if img is None:
+        print "nopicture"
+        return 0
+
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+        
+    cv2.imshow("test", img)
+    cv2.imshow("test2", gray)
+    k = cv2.waitKey()
+    if k == 27:
+        cv2.destroyAllWindows()
+    elif k == ord('s'):
+        cv2.imwrite('messigray.png', img)
+        cv2.destroyAllWindows()
+ 
+ 
+
+if __name__ == '__main__':
+    main()

@@ -1,0 +1,84 @@
+\documentclass[a4j,11pt]{jarticle}
+\setlength{\topmargin}{-20mm}
+\setlength{\textheight}{250mm}
+ 
+\title{}
+%\author{t13f445a  加藤 匠}
+%\date{\today}
+\begin{document}
+
+
+\section{ソースファイル}
+\begin{verbatim}
+#include <stdio.h>
+
+int main()
+{
+	int n, i, j;
+	double c = 0;
+	double x[11] = {0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0};
+	double an[11] = { 0.0 };
+
+	do{
+		printf("次数を入力してください: ");
+		scanf("%d", &n);
+		if(n > 100) puts("100以下にしてください");
+	}while(n > 100);
+
+	printf("係数を入力してください\n");
+
+	for(i=0; i<n; i++){
+		printf("C%d:", n-i);
+		scanf("%lf", &c);
+		
+		for(j=0; j<11; j++){
+			an[j] += c;
+			an[j] *= x[j];
+		}
+	}
+	
+	printf("C0:");
+	scanf("%lf", &c);
+
+	for(j=0; j<11; j++){
+		an[j] += c;	
+		printf("f(%1.1f) = %f\n", x[j], an[j]);
+	}
+		
+	return 0;
+}	
+
+
+\end{verbatim}
+
+\newpage
+\section{コンパイル・実行結果}
+\begin{verbatim}
+% gcc 14416.c
+% ./a.out    
+次数を入力してください: 102
+100以下にしてください
+次数を入力してください: 3
+係数を入力してください
+C3:2
+C2:3
+C1:5
+C0:1
+f(0.0) = 1.000000
+f(0.1) = 1.532000
+f(0.2) = 2.136000
+f(0.3) = 2.824000
+f(0.4) = 3.608000
+f(0.5) = 4.500000
+f(0.6) = 5.512000
+f(0.7) = 6.656000
+f(0.8) = 7.944000
+f(0.9) = 9.388000
+f(1.0) = 11.000000
+
+\end{verbatim}
+%\section{プログラムの説明}
+
+%\section{考察}
+
+\end{document}

@@ -27,7 +27,7 @@ setopt correct_all
 # 例 : mkdir {1-3} で フォルダ1, 2, 3を作れる
 setopt brace_ccl
 
-ctex() { platex $1.tex | dvipdfmx $1.dvi | evince $1.pdf}
+ctex() { platex $1.tex && dvipdfmx $1.dvi && evince $1.pdf}
 
 
 

@@ -22,7 +22,7 @@
       '((top . 10) (left . 1000) (width . 98) (height . 52)))
 
 
-(set-default-coding-systems 'utf-8-unix)
+
 (setq default-file-name-coding-system 'utf-8-unix)
 (set-coding-system-priority 'utf-8)
 (set-terminal-coding-system 'utf-8)
@@ -77,7 +77,7 @@
              
 
 ;; keybinds
-(global-set-key (kbd "C-m") 'newline)
+;(global-set-key (kbd "C-m") 'newline)
 (global-set-key (kbd "C-c p") 'windmove-up)
 (global-set-key (kbd "C-c n") 'windmove-down)
 (global-set-key (kbd "C-c b ") 'windmove-left)
@@ -89,6 +89,7 @@
 (global-set-key (kbd "C-c <left> ") 'windmove-left)
 (global-set-key (kbd "C-c <right>") 'windmove-right)
 
+;(global-set-key (kbd "C-j"))
 (global-set-key [f5] 'kmacro-end-and-call-macro)
 
 (keyboard-translate ?\C-h ?\C-?)
@@ -102,17 +103,19 @@
 
 (global-set-key (kbd "C-!") (lambda()(interactive)(find-file '"~/.emacs.d/init.el")))
 (global-set-key (kbd "C-m") 'newline)
-(global-set-key (kbd "M-#") 'newline-and-indent)
-(keyboard-translate ?\C-m ?\M-#)
+;(global-set-key (kbd "M-#") 'newline-and-indent)
+;(keyboard-translate ?\C-m ?\M-#)
 (global-set-key (kbd "C-x C-b") (lambda()(interactive)(ibuffer-list-buffers)(switch-to-buffer-other-window '"*Ibuffer*")))
 
 (global-set-key (kbd "C-t") 'query-replace-regexp)
 (global-set-key (kbd "M-z") 'term)
-
-
+(global-set-key (kbd "C-x C-c") 'helm-M-x)
+;(global-set-key (kbd "C-x C-z") 'your-favorite-command)
+(defalias 'exit 'save-buffers-kill-emacs)
 
 ;; 初期画面設定
 (setq inhibit-startup-message t)
+
 
 
 ;; change theme
@@ -136,11 +139,13 @@
 (ibus-define-common-key ?\C-\s nil)
 (setq ibus-cursor-color '("firebrick" "dark orange" "royal blue"))
 
+
+
 (require 'mozc)
 (set-language-environment "Japanese")
 (setq default-input-method "japanese-mozc")
-
-
+(global-set-key (kbd "C-\\") 'mozc-mode)
+(set-default-coding-systems 'utf-8)
 
 
 
@@ -265,7 +270,6 @@
 (global-set-key (kbd "M-y") 'anything-show-kill-ring)
 (global-set-key (kbd "M-s") 'anything-c-moccur-occur-by-moccur)
 
-
 ;; cua-mode
 (cua-mode t)
 (setq cua-enable-cua-keys nil)
@@ -339,12 +343,31 @@
 
 (setq howm-menu-lang 'ja)
 (require 'howm-mode)
-(global-set-key (kbd "C-c , ,") 'howm-menu)
+;;(global-set-key (kbd "C-c , ,") 'howm-menu)
 (autoload 'howm-menu "howm-mode" "Hitori Otegaru Wiki Modoki" t)
 
 (define-key howm-mode-map (kbd "C-x C-s")
   (lambda()(interactive)(save-buffer) (kill-buffer nil) (howm-menu)))
 
+(define-key howm-view-summary-mode-map "D" 'delete-howm-file)
+
+(defun delete-howm-file ()
+  (interactive)
+  (let (filename year month pnt)
+    (setq pnt (point))
+    (beginning-of-line)
+    (re-search-forward "\\(\\([0-9]+\\)-\\([0-9]+\\).*howm\\)" nil t)
+    (setq filename (buffer-substring (match-beginning 1) (match-end 1)))
+    (setq year (buffer-substring (match-beginning 2) (match-end 2)))
+    (setq month (buffer-substring (match-beginning 3) (match-end 3)))
+    (when (y-or-n-p "Delete this file? ")
+      (delete-file (concat howm-directory year "/" month "/" filename))
+      (message "Delete!")
+      (howm-list-all)
+      (goto-char pnt)
+      )
+    )
+  )
 
 (require 'tramp)
 (setq tramp-default-method "ssh")
@@ -357,3 +380,14 @@
 (require 'server)
 (unless (server-running-p)
   (server-start))
+
+
+(setq migemo-dictionary "/usr/local/share/migemo/utf-8/migemo-dict")
+(setq migemo-command "cmigemo")
+(setq migemo-options '("-q" "--emacs"))
+(setq migemo-user-dictionary nil)
+(setq migemo-coding-system 'utf-8)
+(setq migemo-regex-dictionary nil)
+(load-library "migemo")
+(migemo-init)
+

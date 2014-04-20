@@ -1371,139 +1371,726 @@ py
 py tetris.py
 py qlife.py
 yy
-: 1395754065:0;py
-: 1395754068:0;p
-: 1395754075:0;python qlife.py
-: 1395754138:0;p
-: 1395754141:0;py qlife.py
-: 1395754403:0;p
-: 1395754407:0;py qlife.py
-: 1395754693:0;py
-: 1395754746:0;py qlife.py
-: 1395808880:0;p
-: 1395808884:0;py qlife.py
-: 1395817773:0;py tetris.py
-: 1395841272:0;py qlife.py
-: 1395847774:0;py test.py
-: 1395900368:0;p
-: 1395900373:0;py qlife.py
-: 1396097305:0;p
-: 1396097308:0;py qlife.py
-: 1396097363:0;p
-: 1396097366:0;py qlife.py
-: 1396100051:0;.emacs.d
-: 1396100057:0;elisp
-: 1396100058:0;ls
-: 1396100072:0;ac-python
-: 1396189314:0;py
-: 1396189840:0;pyqt
-: 1396190020:0;Downloads
-: 1396190021:0;ls
-: 1396190034:0;tar -xvf py2app-0.8.tar.gz
-: 1396190039:0;ls
-: 1396190046:0;py2app-0.8
-: 1396190049:0;ls
-: 1396190175:0;..
-: 1396190190:0;rm -rf py2app-0.8
-: 1396190193:0;rm -rf py2app-0.8.tar.gz
-: 1396190958:0;mv Pictures/
-: 1396190979:0;mv Downloads/*.jpg Pictures/
-: 1396190985:0;mv Downloads/*.bin Pictures/
-: 1396191046:0;rm *.msi
-: 1396191056:0;rm *.tar.gz
-: 1396191060:0;ls
-: 1396343926:0;task
-: 1396343937:0;network
-: 1396343940:0;net
-: 1396344101:0;gnome-system-monitor
-: 1396346384:0;trancert
-: 1396346389:0;tracert
-: 1396510690:0;Downloads
-: 1396510707:0;unzip _prj003.zip
-: 1396510709:0;ls
-: 1396510732:0;_Prj003A
-: 1396510734:0;ls
-: 1396510752:0;219-N1
-: 1396510754:0;ls
-: 1396510938:0;echo path
-: 1396510947:0;path
-: 1396510958:0;echo $PATH
-: 1396511006:0;pwd
-: 1396511512:0;i
-: 1396511522:0;E 
-: 1396511537:0;E |pwd
-: 1396511551:0;pwd > E
-: 1396511564:0;pwd
-: 1396511577:0;ce
-: 1396511579:0;cd
-: 1396511587:0;test
-: 1396511590:0;ls
-: 1396511601:0;test
-: 1396511604:0;cd test
-: 1396511608:0;ls
-: 1396511615:0;vi marisa
-: 1396511656:0;cd test
-: 1396511670:0;cat marisa
-: 1396511681:0;pwd > marisa
-: 1396511695:0;pwd | cat marisa
-: 1396511698:0;cat marisa
-: 1396512409:0;pwd >> cat marisa
-: 1396512414:0;pwd >> marisa
-: 1396512425:0;pwd > marisa
-: 1396512439:0;echo pwd
-: 1396512554:0;e
-: 1396512611:0;e --reverse
-: 1396512662:0;e
-: 1396512683:0;E marisa
-: 1396512764:0;cat marisa
-: 1396512769:0;ls -l
-: 1396512784:0;E reimu.tex
-: 1396512818:0;E reimu.txt
-: 1396512981:0;ls
-: 1396512989:0;cd
-: 1396512997:0;cd -0
-: 1396513027:0;cd
-: 1396513043:0;Downloads
-: 1396513054:0;_Prj003A
-: 1396513056:0;ls
-: 1396513063:0;219-N1
-: 1396513065:0;ls
-: 1396513069:0;rm e
-: 1396513073:0;rm E
-: 1396513090:0;E 219_Main.c
-: 1396533066:0;e
-: 1396580206:0;cd test
-: 1396580213:0;gcc sakuya.c
-: 1396580218:0;./a.out
-: 1396580334:0;gcc sakuya.c
-: 1396580336:0;./a.out
-: 1396580369:0;cd test
-: 1396580377:0;gcc sakuya.c
-: 1396580380:0;./a.out
-: 1396585222:0;cd
-: 1396585227:0;projects
-: 1396585231:0;git add .
-: 1396585275:0;git commit -m "emacsclient add"
-: 1396585283:0;git push origin master
-: 1396585329:0;git pull
-: 1396585339:0;ls
-: 1396585346:0;dotfiles
-: 1396585348:0;ls
-: 1396585351:0;ls -a
-: 1396585359:0;cat .zshrc
-: 1396585372:0;cd
-: 1396585382:0;cd -1
-: 1396585384:0;ls
-: 1396585388:0;git add .
-: 1396585392:0;git commit -m "emacsclient add"
-: 1396585405:0;git push origin master
-: 1396585604:0;git status
-: 1396585657:0;git diff
-: 1396585679:0;git log
-: 1396585740:0;git branch
-: 1396585752:0;git push --help
-: 1396585788:0;git push origin master
-: 1396585798:0;git push -f origin master
-: 1396585818:0;git master
-: 1396585979:0;dotfiles
-: 1396585982:0;git add .
+py
+p
+python qlife.py
+p
+py qlife.py
+p
+py qlife.py
+py
+py qlife.py
+p
+py qlife.py
+py tetris.py
+py qlife.py
+py test.py
+p
+py qlife.py
+p
+py qlife.py
+p
+py qlife.py
+.emacs.d
+elisp
+ls
+ac-python
+py
+pyqt
+Downloads
+ls
+tar -xvf py2app-0.8.tar.gz
+ls
+py2app-0.8
+ls
+..
+rm -rf py2app-0.8
+rm -rf py2app-0.8.tar.gz
+mv Pictures/
+mv Downloads/*.jpg Pictures/
+mv Downloads/*.bin Pictures/
+rm *.msi
+rm *.tar.gz
+ls
+task
+network
+net
+gnome-system-monitor
+trancert
+tracert
+Downloads
+unzip _prj003.zip
+ls
+_Prj003A
+ls
+219-N1
+ls
+echo path
+path
+echo $PATH
+pwd
+i
+E 
+E |pwd
+pwd > E
+pwd
+ce
+cd
+test
+ls
+test
+cd test
+ls
+vi marisa
+cd test
+cat marisa
+pwd > marisa
+pwd | cat marisa
+cat marisa
+pwd >> cat marisa
+pwd >> marisa
+pwd > marisa
+echo pwd
+e
+e --reverse
+e
+E marisa
+cat marisa
+ls -l
+E reimu.tex
+E reimu.txt
+ls
+cd
+cd -0
+cd
+Downloads
+_Prj003A
+ls
+219-N1
+ls
+rm e
+rm E
+E 219_Main.c
+e
+cd test
+gcc sakuya.c
+./a.out
+gcc sakuya.c
+./a.out
+cd test
+gcc sakuya.c
+./a.out
+cd
+projects
+git add .
+git commit -m "emacsclient add"
+git push origin master
+git pull
+ls
+dotfiles
+ls
+ls -a
+cat .zshrc
+cd
+cd -1
+ls
+git add .
+git commit -m "emacsclient add"
+git push origin master
+git status
+git diff
+git log
+git branch
+git push --help
+git push origin master
+git push -f origin master
+git master
+dotfiles
+git add .
+git commit -m "emacsclient add"
+git push origin master
+git push -f origin master
+e
+sudo sed -i "s/NoDisplay=true/NoDisplay=False/g"
+sudo sed -i "s/NoDisplay=true/NoDisplay=False/g" /etc/xdg/autostart/*.desktop
+Downloads
+unzip opencv-2.4.8.zip
+cd opencv-2.4.8
+ls
+cat README.md
+ls
+apps
+ls
+cd ..
+fined
+find python
+find * python
+find * *.pyd
+find * *.py
+find * pyd
+ls
+cmake
+ls
+..
+ls
+include
+ls
+opencv2
+ls
+..
+ls
+..
+ls
+opencv-2.4.8
+ls
+modules
+ls
+pythone
+python
+cd python
+ls
+..
+ls
+cd -a
+ls -a
+3rdparty
+ls
+..
+module
+cd modules
+ls
+cd python
+ls
+scr2
+src2
+ls
+cd
+sudo apt-get -yV install build-essential
+sudo apt-get -yV install libboost1.53-all-dve
+sudo apt-get -yV install libboost1.53-all-dev
+cd -1
+ls
+templates
+ls
+..
+ls
+cmake .
+sudo apt-get install cmake
+cmake cmake
+ls
+cmake .
+ls
+opencv2
+ls
+cd
+cd -10
+ls
+unix-install
+ls
+..
+ls
+CMakeFiles
+ls
+..
+/usr/local/
+ls
+lib
+ls
+python2.7
+cd python2.7
+ls
+site-packages
+ls
+ls -a
+ls
+..
+ls
+dist-packages
+ls
+ls -a
+..
+ls
+lib
+ls
+cd python3.3
+ls
+dist-packages
+ls
+..
+ls
+cd python2.7
+ls
+cd -
+cd Downloads
+cd opencv-2.4.8
+ls
+lib
+ls
+ls -a
+cd ..
+bin/
+ls
+..
+ls
+cat CMakeLists.txt
+E CMakeLists.txt
+make
+make install
+ls
+site-packages
+ls
+cd /usr/local/include
+ls
+sudo make install
+ls
+opencv2
+ls
+python 
+e
+Pictures
+ls
+*.jpg
+echo *.jpg
+ls *.jpg
+e557aa74.jpg
+open e557aa74.jpg
+gnome- open e557aa74.jpg
+gnome-open e557aa74.jpg
+ls *.jpg
+view r.jpg
+Pictures
+ls *.jpg
+display r.jpg
+sudo apt-get install imagemagick
+display r.jpg
+display saki.png
+display r.jpg
+display ANIME-PICTURES.NET_-_332199-2400x1500-original-bai+yemeng-long+hair-single-highres-brown+hair.jpg
+display ia.jpg
+p2
+move ia.jpg ~/p2
+mv ia.jpg ~/p2
+py test.py
+sudo apt-get install libgtk2.0-dev
+p2
+python test.py
+sudo apt-get install libgtk2.0-dev
+pkg-config
+cmake libgtk2.0-dev
+python test.py
+pkg-config libgtk2.0-dev
+python test.py
+cmake libgtk2.0-dev
+sudo apt-get -yV install build-essential
+sudo apt-get install subversion
+cd trunk/opencv
+ls
+cd trunk
+cd /trunk
+cd /
+cd /usr/local
+opencv
+ls
+cd bin
+ls
+..
+lib/
+ls
+opencv
+cd opencv
+pkgconfig
+ls
+opencv.pc
+cd p2
+cd
+p2
+svn co https://code.ros.org/svn/opencv/trunk
+sudo svn co https://code.ros.org/svn/opencv/trunk
+trunk
+cd trunk
+cmake libgtk2.0-dev
+Downloads
+ls
+opencv-2.4.8
+ls
+make install BUILD_PYTHON_SUPPORT=ON
+cmake BUILD_PYTHON_SUPPORT=ON .
+cmake -BUILD_PYTHON_SUPPORT=ON -DBUILD_DOCS=ON -DBUILD_EXAMPLES=ON -DCMAKE_BUILD_TYPE=RELEASE -DWITH_TBB=ON -DWITH_GTK=ON -DWITH_OPENGL=ON -DWITH_QT=ON -DINSTALL_C_EXAMPLES=ON -DWITH_OPENCL=OFF -DWITH_CUDA=OFF -DWITH_OPENNI=ON -DWITH_UNICAP=ON -DWITH_V4L=ON -DWITH_XINE=ON .
+cmake BUILD_PYTHON_SUPPORT=ON .
+cmake -BUILD_PYTHON_SUPPORT=ON .
+cmake -DBUILD_DOCS=ON -DBUILD_EXAMPLES=ON -DCMAKE_BUILD_TYPE=RELEASE -DWITH_TBB=ON -DWITH_GTK=ON -DWITH_OPENGL=ON -DWITH_QT=ON -DINSTALL_C_EXAMPLES=ON -DWITH_OPENCL=OFF -DWITH_CUDA=OFF -DWITH_OPENNI=ON -DWITH_UNICAP=ON -DWITH_V4L=ON -DWITH_XINE=ON  .
+ccmake .
+sudo apt-get install cmake-curses-gui
+ccmake .
+cd
+cd -1
+cmake -DBUILD_DOCS=ON -DBUILD_EXAMPLES=ON -DCMAKE_BUILD_TYPE=RELEASE -DWITH_TBB=ON -DWITH_GTK=ON -DWITH_OPENGL=ON -DWITH_QT=ON -DINSTALL_C_EXAMPLES=ON -DWITH_OPENCL=OFF -DWITH_CUDA=OFF -DWITH_OPENNI=ON -DWITH_UNICAP=ON -DWITH_V4L=ON -DWITH_XINE=ON  .
+cmake .
+make
+cmake .
+ccmake
+ccmake .
+py test.py
+cmake .
+sudo apt-get install libcv2.1
+sudo apt-get install libcv-dev
+py test.py
+sudo apt-get install libcv2.0
+sudo apt-get install libcvaux2.0
+sudo apt-get install libcvaux2.1
+sudo apt-get install libhighgui-dev
+sudo apt-get install opencv-doc
+sudo apt-get install swig
+python-sip
+sudo apt-get install python-sip
+sudo apt-get install sip4
+py test.py
+cd /path/to/opencv
+cd /path/to
+cd /path
+path
+opencv.sh
+chmod u+x opencv.sh
+opencv.sh
+./opencv.sh
+cd p2
+py test.py
+dpkg -i
+cd
+dpkg -i
+dpkg 
+dpkg -i
+dpkg --help
+dpkg --install
+dpkg -I
+dpkg -l
+py
+ccmake .
+cmake .
+make
+sudo make install
+lib
+cd /usr/
+local
+ls
+cd lib
+ls
+cd ..
+local
+cd local
+ls
+bin
+ls
+rm -rf opencv*
+rm  opencv*
+cd opencv
+rm -rf opencv_createsamples
+rm -rf opencv_createsamples*
+sudo rm -rf opencv_createsamples*
+ls
+sudo rm -rf opencv*
+ls
+..
+ls
+lib
+ls
+sudo rm -rf libopen*
+ls
+..
+ls
+share
+ls
+rm -rf OpenCV
+sudo rm -rf OpenCV
+ls
+cd ..
+py
+cd
+Downloads
+rm opencv-2.4.8.zip
+rm -rf opencv-2.4.8
+sudo rm -rf opencv-2.4.8
+mv opencv-2.4.8\ \(1\).zip opencv-2.4.8.zip
+unzip opencv-2.4.8.zip
+opencv-2.4.8
+ccmake.
+ccmake .
+cd
+sudo apt-get install libopencv-dev
+py
+/usr/
+ls
+local
+cd local
+ls
+lib
+ls
+python2.7
+cd python2.7
+ls
+cd dis
+cd dist-packages
+ls
+cat cv.py
+ls
+..
+ls
+pkgconfig
+ls
+cd
+sudo apt-get install build-essential cmake pkg-config
+sudo apt-get install libjpeg62-dev libtiff4-dev libjasper-dev
+sudo apt-get install libgtk2.0-dev
+sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
+cmake -D CMAKE_BUILD_TYPE=RELEASE -D MAKE_INSTALL_PREFIX=/usr/local -D  WITH_TBB=ON -D BUILD_NEW_PYTHON_SUPPORT=ON -D WITH_V4L=ON -D INSTALL_C_EXAMPLES=ON -D INSTALL_PYTHON_EXAMPLES=ON -D BUILD_EXAMPLES=ON -D WITH_QT=ON -D WITH_OPENGL=ON ..
+make
+cd Downloads
+cmake -D CMAKE_BUILD_TYPE=RELEASE -D MAKE_INSTALL_PREFIX=/usr/local -D  WITH_TBB=ON -D BUILD_NEW_PYTHON_SUPPORT=ON -D WITH_V4L=ON -D INSTALL_C_EXAMPLES=ON -D INSTALL_PYTHON_EXAMPLES=ON -D BUILD_EXAMPLES=ON -D WITH_QT=ON -D WITH_OPENGL=ON ..
+opencv-2.4.8
+ls
+cmake -D CMAKE_BUILD_TYPE=RELEASE -D MAKE_INSTALL_PREFIX=/usr/local -D  WITH_TBB=ON -D BUILD_NEW_PYTHON_SUPPORT=ON -D WITH_V4L=ON -D INSTALL_C_EXAMPLES=ON -D INSTALL_PYTHON_EXAMPLES=ON -D BUILD_EXAMPLES=ON -D WITH_QT=ON -D WITH_OPENGL=ON ..
+cmake/
+cmake -D CMAKE_BUILD_TYPE=RELEASE -D MAKE_INSTALL_PREFIX=/usr/local -D  WITH_TBB=ON -D BUILD_NEW_PYTHON_SUPPORT=ON -D WITH_V4L=ON -D INSTALL_C_EXAMPLES=ON -D INSTALL_PYTHON_EXAMPLES=ON -D BUILD_EXAMPLES=ON -D WITH_QT=ON -D WITH_OPENGL=ON ..
+make
+sudo make
+..
+make
+sudo make install
+cd
+p2
+py test.py
+cd
+man cmake
+e
+p2
+py test.py
+kill
+pr
+ps
+kill -9 2583
+py test.py
+kill -9 2583
+py test.py
+cd
+univ
+gcc 14416.c
+gcc -W 14416.c
+gcc 14416.c
+./a.out
+gcc 14416.c
+./a.out
+gcc 14416.c
+./a.out
+gcc 14416.c
+./a.out
+.
+..
+texd
+dvpd 14416.tex
+ctex 14416.tex
+platex 14416.tex
+ctex 14416.tex
+ctex 14416
+texd
+ctex 14416
+p2
+py test.py
+ls
+messigray.png
+show messigray.png
+cd
+cd -0
+gimv
+gimp
+ls
+display
+display messigray.png
+py
+sudo apt-get install python-numpy
+sudo apt-get install numpy
+sudo apt-get install python-numpy python-scipy
+py
+ls
+opencv.sh
+E opencv.sh
+rm -rf opencv.sh
+mv p2 ~/p/
+p
+ls
+mkdir dpython
+mv *.py dpython
+ls
+rm *.py~
+ls
+display yukkuri.png
+p2
+..
+mv p2 dopencv
+dopencv
+ls
+op2.py
+E op2.py
+py test.py
+py op2.py
+Downloads
+bzip2 -c jlisting.sty.bz2
+ls
+bzip2 -dc jlisting.sty.bz2
+jlisting.sty
+cat jlisting.sty
+ls
+bzip2 -dc jlisting.sty.bz2
+jlisting.sty
+cat jlisting.sty
+bzip2 -c jlisting.sty.bz2
+bunzip2 -c jlisting.sty.bz2
+ls
+bunzip2 -c jlisting.sty.bz2
+bunzip2 -fc jlisting.sty.bz2
+ls
+bunzip2 jlisting.sty.bz2
+ls
+cd
+ls
+ls -a
+/usr/share/texmf/web2c/
+cat texmf.cnf
+E texmf.cnf
+grep ".sty" *
+cd
+texd
+ls
+cd
+ls -a *tex*
+locate .sty
+/usr/share/texmf/tex/latex
+ls
+mkdir jlisting
+mkdir test
+sudo mkdir jlisting
+ls
+jlisting
+mv ~/Downloads/jlisting.sty .
+sudo mv ~/Downloads/jlisting.sty .
+ls
+sudo mktexlsr
+cd
+cd univ
+ls
+mv 14416.c ~/texd
+cd
+texd
+ctex 14416
+py op2.py
+mv -f 14416.pdf UABMEMORY
+ls
+dvesg
+dmesg
+sudo parted -l
+/dev/sdb
+ls
+/dev
+ls
+sdb
+sudo sdb
+sudo cd sdb
+cd sdb
+sudo parted -l
+cd /dev/sdb
+ls
+usb
+ls
+hiddev0
+..
+dis
+disk
+ls
+by-path
+ls
+cd
+/media
+ls
+rasorasi
+ls
+US
+cd USBMEMORY
+ls
+cd
+/
+ls
+cd -cd
+cd 
+texd
+mv -f 14416.pdf /media/rasorasi/USBMEMORY
+ctex 14416
+mv -f 14416.pdf /media/rasorasi/USBMEMORY
+cd /media/rasorasi/USBMEMORY
+ls
+evince 14416.pdf
+cd
+git clone https://github.com/koron/cmigemo
+cd cmigemo
+./configure
+ls
+./configure
+qkc
+cd
+qkc
+_nkf
+test
+ls
+cd test
+ls
+_nkf reimu.txt
+cd
+wget http://hp.vector.co.jp/authors/VA000501/qkcc100.zip
+ls
+unzip qkcc100.zip
+rm *qkc*
+ls
+qkcc100.zip
+wgetd
+wget http://hp.vector.co.jp/authors/VA000501/qkcc100.zip
+unzip qkcc100.zip
+make
+sudo make install
+qkc
+ls
+make
+make install
+sudo make install
+cd
+cmigemo
+ls
+./configure
+sudo apt-get install nkf
+nkf
+nkf --version
+./configure
+make gcc
+make gcc-dict
+make gcc-install
+sudo make gcc-dict
+sudo make gcc-install
+.emacs.d
+elsp
+elisp
+rm migemo.el
+git clone https://github.com/emacs-jp/migemo/blob/master/migemo.el
+cd
+Downloads
+unzip migemo-master.zip
+mv migemo.el ~/.emacs.d/elisp
+cd migemo-master
+mv migemo.el ~/.emacs.d/elisp
+e
+ee
+e
+test
+cd
+ls
+: 1397966415:0;projects
+: 1397966415:0;ls
+: 1397966418:0;dotfiles
+: 1397966423:0;git add .
+: 1397966439:0;git add -A

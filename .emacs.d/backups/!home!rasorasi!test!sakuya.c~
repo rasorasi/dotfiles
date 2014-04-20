@@ -11,10 +11,107 @@ int main(){
 	
 	int i;
 	int a[3] = { 0 };
-	write(a);
+	write(&a[1]);
 
 	for(i=0; i<3; i++) printf("%d\n", a[i]);
 
 	return 0;
 
 }
+
+test
+
+;; cua-mode
+(cua-mode t)
+(setq cua-enable-cua-keys nil)
+
+
+;;auto-complete
+(when (require 'auto-complete-config nil t)
+  (add-to-list 'ac-dictionary-directories
+ 	       "~/.emacs.d/elisp/ac-dict")
+  (global-set-key  (kbd "C-x C-a") 'auto-complete-mode)
+  (ac-config-default))
+
+
+;; recentf-ext
+(when (require 'recentf-ext nil t)
+  (setq recentf-max-saved-items 2000)
+  (setq recentf-exclude '(".recentf"))
+  (setq recentf-auto-cleanup 10)
+  (setq recentf-auto-save-timer (run-with-idle-timer 30 t 'recentf-save-list))
+  (recentf-mode 1))
+
+;; 起動画面で recentf を開く
+(add-hook 'after-init-hook (lambda()
+    (recentf-open-files)))
+
+
+;; auto save and restore scratch buffer
+(defun save-scratch-data ()
+  (let ((str (progn
+               (set-buffer (get-buffer "*scratch*"))
+               (buffer-substring-no-properties
+                (point-min) (point-max))))
+        (file "~/.emacs.d/.scratch"))
+    (if (get-file-buffer (expand-file-name file))
+        (setq buf (get-file-buffer (expand-file-name file)))
+      (setq buf (find-file-noselect file)))
+    (set-buffer buf)
+    (erase-buffer)
+    (insert str)
+    (save-buffer)
+    (kill-buffer buf)))
+
+(defadvice save-buffers-kill-emacs
+  (before save-scratch-buffer activate)
+  (save-scratch-data))
+
+(defun read-scratch-data ()
+  (let ((file "~/.emacs.d/.scratch"))
+    (when (file-exists-p file)
+      (set-buffer (get-buffer "*scratch*"))
+      (erase-buffer)
+      (insert-file-contents file))
+    ))
+
+
+(read-scratch-data)
+
+;;後ろから大文字に変換
+(global-set-key (kbd "M-j") 'upcase-backward-word)
+(defun upcase-backward-word (arg)
+  "Convert previous word (or arg words) to upper case."
+  (interactive "p")
+  (upcase-word (- arg)))
+
+(require 'point-undo)
+(global-set-key (kbd "C-;") 'point-undo)
+(global-set-key (kbd "C-M-;") 'point-redo)
+
+(when (require 'undo-tree nil t)
+  (global-undo-tree-mode))
+
+(setq howm-menu-lang 'ja)
+(require 'howm-mode)
+(global-set-key (kbd "C-c , ,") 'howm-menu)
+(autoload 'howm-menu "howm-mode" "Hitori Otegaru Wiki Modoki" t)
+
+(define-key howm-mode-map (kbd "C-x C-s")
+  (lambda()(interactive)(save-buffer) (kill-buffer nil) (howm-menu)))
+
+
+(require 'tramp)
+(setq tramp-default-method "ssh")
+
+(require 'zlc)
+(setq zlc-select-completion-immediately t)
+
+(require 'ac-python)
+
+(require 'server)
+(unless (server-running-p)
+  (server-start))
+
+
+
