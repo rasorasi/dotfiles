@@ -29,5 +29,6 @@ setopt brace_ccl
 
 ctex() { platex $1.tex && dvipdfmx $1.dvi && evince $1.pdf}
 
-
+c++() { g++ $1 && ./a.out}
+cco() { gcc $1 && ./a.out}
 

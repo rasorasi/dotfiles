@@ -21,18 +21,11 @@
 (setq initial-frame-alist
       '((top . 10) (left . 1000) (width . 98) (height . 52)))
 
-
-
-(setq default-file-name-coding-system 'utf-8-unix)
-(set-coding-system-priority 'utf-8)
-(set-terminal-coding-system 'utf-8)
-(set-keyboard-coding-system 'utf-8)
-(set-buffer-file-coding-system 'utf-8)
-
-
 ;; 最後に改行を入れる
 (setq require-final-newline t)
 
+;;can use copy and past clipboard with
+(setq x-select-enable-clipboard t)
 
 ;;load-pathを追加
 (defun add-to-load-path (&rest paths)
@@ -132,21 +125,33 @@
 
 (global-set-key (kbd "C-c 0")(lambda()(interactive)(disable-theme ntheme)))
 
+(defun kill-region-or-delete-window (beg end)
+  (interactive "r")
+  (if mark-active 
+      (kill-region beg end)
+    (delete-window)))
+(global-set-key (kbd "C-w") 'kill-region-or-delete-window)
 
-;;input method "mozc" and utf-8
+
+
+;input method "mozc" and utf-8
 (require 'ibus)
 (add-hook 'after-init-hook 'ibus-mode-on)
 (ibus-define-common-key ?\C-\s nil)
 (setq ibus-cursor-color '("firebrick" "dark orange" "royal blue"))
 
 
-
 (require 'mozc)
 (set-language-environment "Japanese")
 (setq default-input-method "japanese-mozc")
 (global-set-key (kbd "C-\\") 'mozc-mode)
-(set-default-coding-systems 'utf-8)
 
+
+(setq default-file-name-coding-system 'utf-8)
+(prefer-coding-system 'utf-8)
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+(set-buffer-file-coding-system 'utf-8)
 
 
 ;; ;; yatex
@@ -351,31 +356,17 @@
 
 (define-key howm-view-summary-mode-map "D" 'delete-howm-file)
 
-(defun delete-howm-file ()
-  (interactive)
-  (let (filename year month pnt)
-    (setq pnt (point))
-    (beginning-of-line)
-    (re-search-forward "\\(\\([0-9]+\\)-\\([0-9]+\\).*howm\\)" nil t)
-    (setq filename (buffer-substring (match-beginning 1) (match-end 1)))
-    (setq year (buffer-substring (match-beginning 2) (match-end 2)))
-    (setq month (buffer-substring (match-beginning 3) (match-end 3)))
-    (when (y-or-n-p "Delete this file? ")
-      (delete-file (concat howm-directory year "/" month "/" filename))
-      (message "Delete!")
-      (howm-list-all)
-      (goto-char pnt)
-      )
-    )
-  )
 
 (require 'tramp)
 (setq tramp-default-method "ssh")
 
+
 (require 'zlc)
 (setq zlc-select-completion-immediately t)
 
+
 (require 'ac-python)
+
 
 (require 'server)
 (unless (server-running-p)
@@ -391,3 +382,5 @@
 (load-library "migemo")
 (migemo-init)
 
+(require 'edit-server)
+(edit-server-start)

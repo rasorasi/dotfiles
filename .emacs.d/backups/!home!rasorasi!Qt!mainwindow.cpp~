@@ -1,0 +1,18 @@
+MainWindow::MainWindow(QWidget *parent) :
+    QMainWindow(parent),
+    ui(new Ui::MainWindow)//uiにはＧＵＩ部品に関する記述
+{
+    ui->setupUi(this);//uiのＧＵＩ部品の初期化
+}
+ 
+MainWindow::~MainWindow()
+{
+    delete ui;
+}
+ 
+void MainWindow::paintEvent(QPaintEvent *)//←重要！ペイントイベント
+{
+    QPainter painter(this);
+    painter.setRenderHint(QPainter::Antialiasing, true);
+    painter.drawImage(50, 50, QImage("//home//ubuntu001//ShadesOfBlue.jpg"));
+}

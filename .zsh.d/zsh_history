@@ -2089,8 +2089,177 @@ e
 test
 cd
 ls
-: 1397966415:0;projects
-: 1397966415:0;ls
-: 1397966418:0;dotfiles
-: 1397966423:0;git add .
-: 1397966439:0;git add -A
+projects
+ls
+dotfiles
+git add .
+git add -A
+git commit -m "cmigemo add"
+git push origin master
+c
+gcc test.cpp
+./a.out
+ls
+gcc test.cpp
+g++ test.cpp
+ls
+./a.out
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+c++
+i
+c++
+c++ test.cpp
+chrome-extension://ljobjlafonikaiipfkggjbhkghgicgoh/servers/edit-server.el
+wget chrome-extension://ljobjlafonikaiipfkggjbhkghgicgoh/servers/edit-server.el
+cd c
+gcc pi.c
+./a.out
+gcc pi.c
+./a.out
+gcc pi.c
+./a.out
+gcc pi.c
+./a.out
+gcc pi.c
+./a.out
+i
+cco pi.c
+gcc pi.c
+./a.out
+cco pi.c
+./a.out
+cco pi.c
+cd
+test 
+cco sakuya.c
+cd test
+cco sakuya.c
+texd
+ls
+platex 14416.tex ./test
+ls
+cd ..
+cd test
+ls
+cd ..
+texd
+platex 14416.tex ~/test
+cd ..
+cd test
+ls
+cd ..
+platex --hel
+platex --help
+platex -help
+man platex
+texd
+ls
+ctex 140501.tex
+ctex 140501
+q
+ctex 140501
+ls
+/media
+ls
+rasorasi
+ls
+cp ~/texd/140501.pdf ./USBMEMORY/大学/
+cd ./USBMEMORY/大学/
+ls
+cd ..
+ls
+rm *.url
+ls
+rm *.txt
+ls
+rm *.zip
+ls
+cd
+cd texd
+ls
+cp 140501.pdf /media/rasorasi/USBMEMORY
+evince 140501.pdf
+cd c
+qmake-project
+qmake
+qmake -project
+qmake
+make
+ls
+./a.out
+ls
+./qt1.o
+sudo ./qt1.o
+ls
+qmake qt1.cpp
+..
+mkdir Qt
+cd Qt
+cp ../c/qt1.cpp ./
+qmake -project
+qmake
+make
+ls
+./Qt
+qmake
+make
+ls
+rm qt1.*
+ls
+make
+qmake
+qmake -project
+qmake
+make
+qmake
+make
+cd ../c
+gcc test.c
+./a.out
+ls
+./a.out
+sudo ./a.out
+./a.out
+: 1399647575:0;c
+: 1399647579:0;gcc test.c
+: 1399647580:0;ls
+: 1399647583:0;./a.out
+: 1399647605:0;rm *.o
+: 1399647607:0;./a.out
+: 1399647609:0;ls
+: 1399647614:0;rm Makefile
+: 1399647614:0;ls
+: 1399647619:0;./a.out
+: 1399647626:0;bush ./a.out
+: 1399647653:0;sudo  ./a.out
+: 1399647665:0;./a.out
+: 1399647677:0;ls -l ./a.out
+: 1399647736:0;..
+: 1399647743:0;cd tes
+: 1399647746:0;cd test
+: 1399647747:0;ls
+: 1399647749:0;./a.out
+: 1399647775:0;cp ../c/test.cpp
+: 1399647790:0;cp ../c/test.cpp ../
+: 1399647796:0;cd ..
+: 1399647800:0;E test.cpp
+: 1399648494:0;e
+: 1399648507:0;E test.cpp
+: 1399648680:0;e
+: 1399648793:0;E test.cpp
+: 1399649241:0;rm test.cpp
+: 1399649395:0;ls
+: 1399649939:0;cp Dropbox/Pictures/* Pictures
+: 1399650107:0;cd projects
+: 1399650115:0;ls
+: 1399650118:0;cd dotfiles
+: 1399650123:0;git add .
+: 1399650149:0;git add -all
+: 1399650155:0;git add . --all
