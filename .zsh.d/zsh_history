@@ -2227,39 +2227,159 @@ ls
 ./a.out
 sudo ./a.out
 ./a.out
-: 1399647575:0;c
-: 1399647579:0;gcc test.c
-: 1399647580:0;ls
-: 1399647583:0;./a.out
-: 1399647605:0;rm *.o
-: 1399647607:0;./a.out
-: 1399647609:0;ls
-: 1399647614:0;rm Makefile
-: 1399647614:0;ls
-: 1399647619:0;./a.out
-: 1399647626:0;bush ./a.out
-: 1399647653:0;sudo  ./a.out
-: 1399647665:0;./a.out
-: 1399647677:0;ls -l ./a.out
-: 1399647736:0;..
-: 1399647743:0;cd tes
-: 1399647746:0;cd test
-: 1399647747:0;ls
-: 1399647749:0;./a.out
-: 1399647775:0;cp ../c/test.cpp
-: 1399647790:0;cp ../c/test.cpp ../
-: 1399647796:0;cd ..
-: 1399647800:0;E test.cpp
-: 1399648494:0;e
-: 1399648507:0;E test.cpp
-: 1399648680:0;e
-: 1399648793:0;E test.cpp
-: 1399649241:0;rm test.cpp
-: 1399649395:0;ls
-: 1399649939:0;cp Dropbox/Pictures/* Pictures
-: 1399650107:0;cd projects
-: 1399650115:0;ls
-: 1399650118:0;cd dotfiles
-: 1399650123:0;git add .
-: 1399650149:0;git add -all
-: 1399650155:0;git add . --all
+c
+gcc test.c
+ls
+./a.out
+rm *.o
+./a.out
+ls
+rm Makefile
+ls
+./a.out
+bush ./a.out
+sudo  ./a.out
+./a.out
+ls -l ./a.out
+..
+cd tes
+cd test
+ls
+./a.out
+cp ../c/test.cpp
+cp ../c/test.cpp ../
+cd ..
+E test.cpp
+e
+E test.cpp
+e
+E test.cpp
+rm test.cpp
+ls
+cp Dropbox/Pictures/* Pictures
+cd projects
+ls
+cd dotfiles
+git add .
+git add -all
+git add . --all
+git gc
+ls
+cd ..
+ls
+cd dotfiles
+ls
+cd projects/dotfiles
+ls
+ls -a
+cd .
+cd .emacs.d
+ls
+git commit -m "revision charcter code"
+git push origin master
+ls
+mv session* ~/test
+ls
+e
+ls
+e
+ls
+e
+Qt
+cd Downloads
+ls *.run
+sudo sh qt-opensource-linux-x64-5.2.1.run
+chmod +x qt-opensource-linux-x64-5.2.1.run
+sudo sh qt-opensource-linux-x64-5.2.1.run
+cp Downloads/140510.c univ
+cd univ
+E 140510.c
+gcc 1405010.c
+gcc 140510.c
+./a.out
+gcc 140510.c
+./a.out
+gcc 140510.c
+./a.out
+gcc 140510.c
+./a.out
+gcc 140510.c
+./a.out
+gcc 140510.c
+./a.out
+gcc 140510.c
+./a.out
+gcc 140510.c
+./a.out
+gcc 140510.c
+./a.out
+gcc 140510.c
+./a.out
+gcc 140510.c
+./a.out
+gcc 140510.c
+./a.out
+gcc 140510.c
+./a.out
+gcc 140510.c
+./a.out
+gcc 140510.c
+./a.out
+gcc 140510.c
+./a.out
+gcc 140510.c
+./a.out
+gcc 140510.c
+./a.out
+: 1399792853:0;gcc 140510.c
+: 1399792954:0;./a.out
+: 1399792973:0;gcc 140510.c
+: 1399792974:0;./a.out
+: 1399793095:0;gcc 140510.c
+: 1399793096:0;./a.out
+: 1399793758:0;gcc 140511.c
+: 1399793784:0;mv 1405011.c 140511.c
+: 1399793804:0;ls
+: 1399793810:0;gcc 140511.c
+: 1399793814:0;./a.out
+: 1399812120:0;cd ../test
+: 1399812124:0;make
+: 1399812128:0;ls
+: 1399812141:0;rm session*
+: 1399812142:0;ls
+: 1399812159:0;./hello
+: 1399812165:0;hello
+: 1399812205:0;./hello
+: 1399812310:0;make
+: 1399812313:0;ls
+: 1399812318:0;./hello
+: 1399812740:0;man make
+: 1399813092:0;make
+: 1399813100:0;touch hello.c
+: 1399813102:0;make
+: 1399813121:0;ls
+: 1399813126:0;cat
+: 1399813143:0;LS
+: 1399813147:0;ls
+: 1399813155:0;hello
+: 1399813158:0;./hello
+: 1399818500:0;cd .emacs.d
+: 1399818501:0;ls
+: 1399818504:0;cd
+: 1399818506:0;.emacs.d
+: 1399818507:0;ls
+: 1399818514:0;cd elisp
+: 1399818548:0;git clone http://emacs-helm.github.com/helm
+: 1399818615:0;git clone https://github.com/emacs-helm/helm
+: 1399818886:0;ls
+: 1399819332:0;e
+: 1399821493:0;git clone https://github.com/emacs-helm/helm-descbinds
+: 1399821584:0;e
+: 1399823769:0;cd
+: 1399823779:0;projects/dotfiles
+: 1399823781:0;git add .
+: 1399823786:0;git gc
+: 1399823789:0;git add
+: 1399823792:0;git add .
+: 1399823811:0;git add --ignore-removal
+: 1399823824:0;git add . --ignore-removal

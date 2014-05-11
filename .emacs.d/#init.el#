@@ -91,8 +91,10 @@
 (global-set-key(kbd "M-+") 'goto-line)
 (keyboard-translate ?\C-i ?\M-+)
 (global-set-key (kbd "C-o") 'forward-char)
-
 (global-set-key (kbd "M-o") 'forward-word)
+(global-set-key (kbd "M-p") 'backward-sentence)
+(global-set-key (kbd "M-n") 'forward-sentence)
+
 (global-set-key (kbd "C-<tab>") 'dabbrev-expand)
 
 (global-set-key (kbd "C-!") (lambda()(interactive)(find-file '"~/.emacs.d/init.el")))
@@ -104,7 +106,7 @@
 (global-set-key (kbd "C-t") 'query-replace-regexp)
 (global-set-key (kbd "M-z") 'term)
 ;(global-set-key (kbd "C-x C-c") 'helm-M-x)
-;(global-set-key (kbd "C-x C-z") 'your-favorite-command)
+;(global-set-key (kbd "C-x C-z") 'change-favorite-command)
 (defalias 'exit 'save-buffers-kill-emacs)
 
 ;; 初期画面設定
@@ -130,7 +132,7 @@
   (interactive "r")
   (if mark-active 
       (kill-region beg end)
-    (delete-window)))
+    (delete-window)))                    ;; change favorit command
 (global-set-key (kbd "C-w") 'kill-region-or-delete-window)
 
 

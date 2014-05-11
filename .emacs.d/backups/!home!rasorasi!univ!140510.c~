@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+typedef struct node *Tree;
+typedef struct node {
+	int data;
+	Tree left_subtree;
+	Tree right_subtree;
+}Node;
+
+int main()
+{
+	Node a, b, c, d;
+	a.data = 1;
+	b.data=c.data = 2;
+	d.data = 3;
+	a.left_subtree = &b;
+	a.right_subtree = NULL;
+	b.left_subtree = &d;
+	c.left_subtree = c.right_subtree = NULL;
+	d.left_subtree = d.right_subtree = NULL;
+	printf("sub
