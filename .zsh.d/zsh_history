@@ -2331,55 +2331,69 @@ gcc 140510.c
 ./a.out
 gcc 140510.c
 ./a.out
-: 1399792853:0;gcc 140510.c
-: 1399792954:0;./a.out
-: 1399792973:0;gcc 140510.c
-: 1399792974:0;./a.out
-: 1399793095:0;gcc 140510.c
-: 1399793096:0;./a.out
-: 1399793758:0;gcc 140511.c
-: 1399793784:0;mv 1405011.c 140511.c
-: 1399793804:0;ls
-: 1399793810:0;gcc 140511.c
-: 1399793814:0;./a.out
-: 1399812120:0;cd ../test
-: 1399812124:0;make
-: 1399812128:0;ls
-: 1399812141:0;rm session*
-: 1399812142:0;ls
-: 1399812159:0;./hello
-: 1399812165:0;hello
-: 1399812205:0;./hello
-: 1399812310:0;make
-: 1399812313:0;ls
-: 1399812318:0;./hello
-: 1399812740:0;man make
-: 1399813092:0;make
-: 1399813100:0;touch hello.c
-: 1399813102:0;make
-: 1399813121:0;ls
-: 1399813126:0;cat
-: 1399813143:0;LS
-: 1399813147:0;ls
-: 1399813155:0;hello
-: 1399813158:0;./hello
-: 1399818500:0;cd .emacs.d
-: 1399818501:0;ls
-: 1399818504:0;cd
-: 1399818506:0;.emacs.d
-: 1399818507:0;ls
-: 1399818514:0;cd elisp
-: 1399818548:0;git clone http://emacs-helm.github.com/helm
-: 1399818615:0;git clone https://github.com/emacs-helm/helm
-: 1399818886:0;ls
-: 1399819332:0;e
-: 1399821493:0;git clone https://github.com/emacs-helm/helm-descbinds
-: 1399821584:0;e
-: 1399823769:0;cd
-: 1399823779:0;projects/dotfiles
-: 1399823781:0;git add .
-: 1399823786:0;git gc
-: 1399823789:0;git add
-: 1399823792:0;git add .
-: 1399823811:0;git add --ignore-removal
-: 1399823824:0;git add . --ignore-removal
+gcc 140510.c
+./a.out
+gcc 140510.c
+./a.out
+gcc 140510.c
+./a.out
+gcc 140511.c
+mv 1405011.c 140511.c
+ls
+gcc 140511.c
+./a.out
+cd ../test
+make
+ls
+rm session*
+ls
+./hello
+hello
+./hello
+make
+ls
+./hello
+man make
+make
+touch hello.c
+make
+ls
+cat
+LS
+ls
+hello
+./hello
+cd .emacs.d
+ls
+cd
+.emacs.d
+ls
+cd elisp
+git clone http://emacs-helm.github.com/helm
+git clone https://github.com/emacs-helm/helm
+ls
+e
+git clone https://github.com/emacs-helm/helm-descbinds
+e
+cd
+projects/dotfiles
+git add .
+git gc
+git add
+git add .
+git add --ignore-removal
+git add . --ignore-removal
+git commit -m "helm add"
+git push original master
+git push origin master
+ls
+cd ..
+e
+: 1400158060:0;cp .emacs.d/init.el sinit.el
+: 1400159977:0;e
+: 1400161915:0;mv sinit.el projects/dotfiles
+: 1400161927:0;cd projects/dotfiles
+: 1400161930:0;git add .
+: 1400161933:0;ls
+: 1400162053:0;git add --ignore-removal 
+: 1400162058:0;git add . --ignore-removal 

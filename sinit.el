@@ -109,45 +109,54 @@
 ;(global-set-key (kbd "C-x C-z") 'change-favorite-command)
 (defalias 'exit 'save-buffers-kill-emacs)
 
+
+;;後ろから大文字に変換
+(global-set-key (kbd "M-j") 'upcase-backward-word)
+(defun upcase-backward-word (arg)
+  "Convert previous word (or arg words) to upper case."
+  (interactive "p")
+  (upcase-word (- arg)))
+
+
 ;; 初期画面設定
 (setq inhibit-startup-message t)
 
 
 
 ;; change theme
-(setq custom-theme-directory "~/.emacs.d/themes/")
-(setq ntheme nil)
-(defun conf_theme(theme now)
-  (disable-theme now)
-  (load-theme theme t))
-
-(global-set-key (kbd "C-c 1") (lambda()(interactive)(conf_theme 'molokai ntheme)(setq ntheme 'molokai)))
-(global-set-key (kbd "C-c 2") (lambda()(interactive)(conf_theme 'patchouli ntheme)(setq ntheme 'patchouli)))
-(global-set-key (kbd "C-c 3") (lambda()(interactive)(conf_theme 'jpaper ntheme)(setq ntheme 'jpaper)))
-(global-set-key (kbd "C-c 4") (lambda()(interactive)(conf_theme 'subdued ntheme)(setq ntheme 'subdued)))
-
-(global-set-key (kbd "C-c 0")(lambda()(interactive)(disable-theme ntheme)))
-
-(defun kill-region-or-delete-window (beg end)
-  (interactive "r")
-  (if mark-active 
-      (kill-region beg end)
-    (delete-window)))                    ;; change favorit command
-(global-set-key (kbd "C-w") 'kill-region-or-delete-window)
+;(setq custom-theme-directory "~/.emacs.d/themes/")
+;(setq ntheme nil)
+;(defun conf_theme(theme now)
+;  (disable-theme now)
+;  (load-theme theme t))
+; 
+;(global-set-key (kbd "C-c 1") (lambda()(interactive)(conf_theme 'molokai ntheme)(setq ntheme 'molokai)))
+;(global-set-key (kbd "C-c 2") (lambda()(interactive)(conf_theme 'patchouli ntheme)(setq ntheme 'patchouli)))
+;(global-set-key (kbd "C-c 3") (lambda()(interactive)(conf_theme 'jpaper ntheme)(setq ntheme 'jpaper)))
+;(global-set-key (kbd "C-c 4") (lambda()(interactive)(conf_theme 'subdued ntheme)(setq ntheme 'subdued)))
+; 
+;(global-set-key (kbd "C-c 0")(lambda()(interactive)(disable-theme ntheme)))
+; 
+;(defun kill-region-or-delete-window (beg end)
+;  (interactive "r")
+;  (if mark-active 
+;      (kill-region beg end)
+;    (delete-window)))                    ;; change favorit command
+;(global-set-key (kbd "C-w") 'kill-region-or-delete-window)
 
 
 
 ;input method "mozc" and utf-8
-(require 'ibus)
-(add-hook 'after-init-hook 'ibus-mode-on)
-(ibus-define-common-key ?\C-\s nil)
-(setq ibus-cursor-color '("firebrick" "dark orange" "royal blue"))
-
-
-(require 'mozc)
-(set-language-environment "Japanese")
-(setq default-input-method "japanese-mozc")
-(global-set-key (kbd "C-\\") 'mozc-mode)
+;(require 'ibus)
+;(add-hook 'after-init-hook 'ibus-mode-on)
+;(ibus-define-common-key ?\C-\s nil)
+;(setq ibus-cursor-color '("firebrick" "dark orange" "royal blue"))
+; 
+; 
+;(require 'mozc)
+;(set-language-environment "Japanese")
+;(setq default-input-method "japanese-mozc")
+;(global-set-key (kbd "C-\\") 'mozc-mode)
 
 
 (setq default-file-name-coding-system 'utf-8)
@@ -180,49 +189,10 @@
  	  'executable-make-buffer-file-executable-if-script-p)
 
 
-;;auto-install
-(when (require 'auto-install nil t)
-  (setq auto-install-directory "~/.emacs.d/elisp")
-  (auto-install-update-emacswiki-package-name t)
-  (auto-install-compatibility-setup))
-
-
-
 ;;redo+
 (when (require 'redo+ nil t)
    (global-set-key (kbd "C-M-/") 'redo))
 
-;;ELPA
-(when (require 'package nil t)
-  (add-to-list 'package-archives
-	       '("marmalade"."http://marmalade-repo.org/packages/"))
- (add-to-list 'package-archives '("ELPA"."http://tromey.com/elpa/"))
-  (package-initialize))
-
-
-
-;;direx
-(require 'direx)
-(require 'direx-project)
-
-(defun my/dired-jump()
-  (interactive)
-  (cond (current-prefix-arg
-	 (dired-jump))
-	((not (one-window-p))
-	 (or (ignore-errors
-	       (direx-project:jump-to-project-root) t)
-	     (direx:jump-to-directory)))
-	(t
- 	 (or (ignore-errors
- 	       (direx-project:jump-to-project-root-other-windwo) t)
- 	     (direx:jump-to-directory-other-window)))))
-
-(global-set-key (kbd "C-c C-j") 'my/dired-jump)
-
-(require 'popwin)
-(push '(direx:direx-mode :position left :windth 40 :dedicated t)
-      popwin:special-display-config)
 
 
 ;;anything
@@ -246,24 +216,11 @@
     ;;
     (setq anything-su-or-sudo "sudo"))
 
-  (require 'anything-match-plugin nil t)
-
-  (when (and (executable-find "cmigemo")
- 	     (require 'migemo nil t))
-    (require 'anything-migemo nil t))
-
   (when (require 'anything-complete nil t)
     ;;
     (anything-lisp-complete-symbol-set-timer 150))
 
-  (require 'anything-show-completion nil t)
-
-  (when (require 'auto-install nil t)
-      (require 'anything-auto-install nil t))
-
-  (when (require 'descbinds-anything nil t)
-    ;;
-    (descbinds-anything-install)))
+  (require 'anything-show-completion nil ))
 
 (require 'color-moccur)
 
@@ -294,57 +251,6 @@
 
 
 
-;; recentf-ext
-(when (require 'recentf-ext nil t)
-  (setq recentf-max-saved-items 2000)
-  (setq recentf-exclude '(".recentf"))
-  (setq recentf-auto-cleanup 10)
-  (setq recentf-auto-save-timer (run-with-idle-timer 30 t 'recentf-save-list))
-  (recentf-mode 1))
- 
-;; 起動画面で recentf を開く
-(add-hook 'after-init-hook (lambda()
-    (recentf-open-files)))
-
-
-;; auto save and restore scratch buffer
-(defun save-scratch-data ()
-  (let ((str (progn
-               (set-buffer (get-buffer "*scratch*"))
-               (buffer-substring-no-properties
-                (point-min) (point-max))))
-        (file "~/.emacs.d/.scratch"))
-    (if (get-file-buffer (expand-file-name file))
-        (setq buf (get-file-buffer (expand-file-name file)))
-      (setq buf (find-file-noselect file)))
-    (set-buffer buf)
-    (erase-buffer)
-    (insert str)
-    (save-buffer)
-    (kill-buffer buf)))
-
-(defadvice save-buffers-kill-emacs
-  (before save-scratch-buffer activate)
-  (save-scratch-data))
-
-(defun read-scratch-data ()
-  (let ((file "~/.emacs.d/.scratch"))
-    (when (file-exists-p file)
-      (set-buffer (get-buffer "*scratch*"))
-      (erase-buffer)
-      (insert-file-contents file))
-    ))
-
-
-(read-scratch-data)
-
-;;後ろから大文字に変換
-(global-set-key (kbd "M-j") 'upcase-backward-word)
-(defun upcase-backward-word (arg)
-  "Convert previous word (or arg words) to upper case."
-  (interactive "p")
-  (upcase-word (- arg)))
-
 (require 'point-undo)
 (global-set-key (kbd "C-;") 'point-undo)
 (global-set-key (kbd "C-M-;") 'point-redo)
@@ -353,31 +259,8 @@
   (global-undo-tree-mode))
 
 
-(setq howm-menu-lang 'ja)
-(require 'howm-mode)
-;;(global-set-key (kbd "C-c , ,") 'howm-menu)
-(autoload 'howm-menu "howm-mode" "Hitori Otegaru Wiki Modoki" t)
-
-(define-key howm-mode-map (kbd "C-x C-s")
-  (lambda()(interactive)(save-buffer) (kill-buffer nil) (howm-menu)))
-
-(define-key howm-view-summary-mode-map "D" 'delete-howm-file)
-
-
 (require 'tramp)
 (setq tramp-default-method "ssh")
-
-
-(require 'zlc)
-(setq zlc-select-completion-immediately t)
-
-
-(require 'ac-python)
-
-
-(require 'server)
-(unless (server-running-p)
-  (server-start))
 
 
 (setq migemo-dictionary "/usr/local/share/migemo/utf-8/migemo-dict")
@@ -389,35 +272,4 @@
 (load-library "migemo")
 (migemo-init)
 
-(require 'edit-server)
-(edit-server-start)
 
-(flymake-mode t)
-
-(require 'helm-config)
-(require 'helm-descbinds)
-(global-set-key (kbd "C-z") 'helm-mini)
-(helm-mode 1)
-(custom-set-variables '(helm-ff-auto-update-initial-value nil))
-(define-key helm-read-file-map (kbd "C-h") 'delete-backward-char)
-;(define-key helm-c-read-file-map (kbd "TAB") 'helm-execute-persistent-action)
-(define-key helm-find-files-map (kbd "TAB") 'helm-execute-persistent-action)
-(define-key helm-read-file-map (kbd "TAB") 'helm-execute-persistent-action)
-
-
-;(run-with-idle-timer 2 t ')
-
-(when (require 'session nil t)
-(setq session-save-file-coding-system 'utf-8-unix)
-  (setq session-save-file (expand-file-name "~/.emacs.d/sessions"))
-  (setq session-initialize '(session places))
-  (setq session-globals-max-size 1024)
-  (setq session-globals-max-string (* 1024 1024))
-  (setq session-globals-include '((kill-ring 512)
-                                  (session-file-alist 512)
-                                  (file-name-history 512)
-                                  (tags-table-set-list 128)
-                                  (tags-table-list 128)))
-(add-hook 'after-init-hook 'session-initialize)
-  ;; Save session info every 30 minutes
-  (setq my-timer-for-session-save-session (run-at-time t 1800 'session-save-session)))

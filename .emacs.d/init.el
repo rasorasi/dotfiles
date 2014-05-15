@@ -91,8 +91,10 @@
 (global-set-key(kbd "M-+") 'goto-line)
 (keyboard-translate ?\C-i ?\M-+)
 (global-set-key (kbd "C-o") 'forward-char)
-
 (global-set-key (kbd "M-o") 'forward-word)
+(global-set-key (kbd "M-p") 'backward-sentence)
+(global-set-key (kbd "M-n") 'forward-sentence)
+
 (global-set-key (kbd "C-<tab>") 'dabbrev-expand)
 
 (global-set-key (kbd "C-!") (lambda()(interactive)(find-file '"~/.emacs.d/init.el")))
@@ -104,7 +106,7 @@
 (global-set-key (kbd "C-t") 'query-replace-regexp)
 (global-set-key (kbd "M-z") 'term)
 ;(global-set-key (kbd "C-x C-c") 'helm-M-x)
-;(global-set-key (kbd "C-x C-z") 'your-favorite-command)
+;(global-set-key (kbd "C-x C-z") 'change-favorite-command)
 (defalias 'exit 'save-buffers-kill-emacs)
 
 ;; 初期画面設定
@@ -130,7 +132,7 @@
   (interactive "r")
   (if mark-active 
       (kill-region beg end)
-    (delete-window)))
+    (delete-window)))                    ;; change favorit command
 (global-set-key (kbd "C-w") 'kill-region-or-delete-window)
 
 
@@ -272,7 +274,7 @@
    anything-c-moccur-enable-auto-look-flag t
    anything-c-moccur-enable-initial-pattern t))
 
-;;(global-set-key (kbd "C-z") 'anything)
+(global-set-key (kbd "C-z") 'anything)
 (global-set-key (kbd "M-y") 'anything-show-kill-ring)
 (global-set-key (kbd "M-s") 'anything-c-moccur-occur-by-moccur)
 
@@ -392,11 +394,29 @@
 
 (flymake-mode t)
 
-(require 'helm-config)
-(require 'helm-descbinds)
-(global-set-key (kbd "C-z") 'helm-mini)
-(helm-mode 1)
+;(require 'helm-config)
+;(require 'helm-descbinds)
+;(global-set-key (kbd "C-z") 'helm-mini)
+;(helm-mode 1)
+;;(custom-set-variables '(helm-ff-auto-update-initial-value nil))
+;(define-key helm-read-file-map (kbd "C-h") 'delete-backward-char)
 ;(custom-set-variables '(helm-ff-auto-update-initial-value nil))
-(define-key helm-read-file-map (kbd "C-h") 'delete-backward-char)
-;(define-key helm-read-file-map (kbd "<tab>") 'helm-execute-persistent-action)
+;(define-key helm-c-read-file-map (kbd "TAB") 'helm-execute-persistent-action)
 
+
+;(run-with-idle-timer 2 t ')
+
+(when (require 'session nil t)
+(setq session-save-file-coding-system 'utf-8-unix)
+  (setq session-save-file (expand-file-name "~/.emacs.d/sessions"))
+  (setq session-initialize '(session places))
+  (setq session-globals-max-size 1024)
+  (setq session-globals-max-string (* 1024 1024))
+  (setq session-globals-include '((kill-ring 512)
+                                  (session-file-alist 512)
+                                  (file-name-history 512)
+                                  (tags-table-set-list 128)
+                                  (tags-table-list 128)))
+(add-hook 'after-init-hook 'session-initialize)
+  ;; Save session info every 30 minutes
+  (setq my-timer-for-session-save-session (run-at-time t 1800 'session-save-session)))
