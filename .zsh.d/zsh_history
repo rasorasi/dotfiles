@@ -2389,11 +2389,381 @@ git push origin master
 ls
 cd ..
 e
-: 1400158060:0;cp .emacs.d/init.el sinit.el
-: 1400159977:0;e
-: 1400161915:0;mv sinit.el projects/dotfiles
-: 1400161927:0;cd projects/dotfiles
-: 1400161930:0;git add .
-: 1400161933:0;ls
-: 1400162053:0;git add --ignore-removal 
-: 1400162058:0;git add . --ignore-removal 
+cp .emacs.d/init.el sinit.el
+e
+mv sinit.el projects/dotfiles
+cd projects/dotfiles
+git add .
+ls
+git add --ignore-removal 
+git add . --ignore-removal 
+ls
+git commit -m "sinit.el add"
+ls
+git push origin master
+git fsck
+e
+halt
+sudo halt
+e
+cd /etc/sudoers.d
+ls
+E README
+sudo E README
+sudo cat README
+sudo nano ../sudoers
+halt
+sudo halt
+i
+sudo halt
+ls
+.emacs.d
+ls
+cd eshell
+ls
+cd ..
+ls
+cd elisp
+ls
+cd ..
+ls
+cd elpa
+ls
+rm -rf session-2.2.1
+ls
+cd ..
+lks
+ls
+ploce
+pg
+ps
+ps -a
+ps -l
+ps -man
+ps --man
+man ps
+ps -e
+kill -9 1715
+kill -9 1751
+e
+ls
+rm session*
+ls
+sudo apt-get install python-pygame
+/etc/sudoers
+/etc/
+sudo nano sudoers
+su
+#usermod -G wheel rasorasi
+usermod -G wheel rasorasi
+wheel
+sudo su
+ls
+sudo
+su
+su -
+id
+cat /etc/pam.d/su
+usermod
+usermod -G wheel rasorasi
+id
+usermod -G sudo rasorasi
+sudo usermod -G sudo rasorasi
+pkexec visudo
+sudo usermod -G sudo rasorasi
+su
+sudo usermod -G wheel rasorasi
+pkexec visudo
+sudo apt-get install python-pygame
+py
+sudo nano sudoers
+cd p/dpython/
+mkdir game
+cd game
+py test.py
+e
+py test.py
+cd ..
+p/dpython/game
+py test.py
+py rasp.py
+py test.py
+py rasp.py
+cd
+cd .emacs.d
+ls
+e
+rm init.elc
+ls
+e
+ls
+nano init.el
+e
+ls
+ls -a
+mv init.el
+mv init.el ~/
+ls
+e
+mv ~/init.el ./
+ls
+e
+py rasp.py
+py test.py
+py kagi.py
+py kagi2.py
+ls
+p
+ls
+cd dopencv
+ls
+cd ..
+ls
+cd dopencv
+cd
+Pictures
+cp 0856845.jpg saki.jpg
+display saki.
+display saki.jpg
+Downloads/
+ls
+unzip PICSYS24-0.91.zip
+PICSYS24
+ls
+E pic24serial.c
+ls
+cd .emacs.d
+grep ./ "session" *.el
+grep "session" *.el
+grep ./*"session" *.el
+grep ./* "session" *.el
+grep "session" ./*.el
+grep "session" *.el
+grep -r "session" *.el
+grep -rw "session" *.el
+grep -r "session" *.el
+grep -r *.el
+grep -r session
+grep -r session *.el
+grep -r session 
+grep -r "session"
+grep -r "session" *.el
+grep -r 'session' ./*
+grep -rl 'session' ./*
+ld
+ls
+cd backups
+ls
+cd .
+ls
+cd ..
+ls
+cd ..
+cd univ
+ls
+mv practice.tex ../texd
+cd ../texd
+ls
+E practice.tex
+e
+gnome-system-moniter
+gnome-system-monitor
+e
+mv Pictures/sinku.png .emacs.d
+cd .emacs.d
+ls
+mv sinku.png themes
+e
+sudo apt-get install gthumb
+cd themes
+gthumb sinku.png
+ls
+mv sinku.png ~/Pictures
+cd
+cd Desktop/
+rm sinku.png
+cp sinku.jpeg ../.emacs.d/themes
+cd texd
+ctex practice.tex
+ls
+ctex practice
+ls
+cp practice.pdf /media/rasorasi/USBMEMORY
+cd
+ls
+cd univ
+ls
+sudo find / -name CAN
+sudo find ../ -name CAN
+sudo find ../ -name CAN*
+sudo find ../ -name CAN.h
+cd
+ls
+cd /media/rasorasi/USBMEMORY
+ls
+cd can
+ls
+cd
+Pictures
+sudo apt-get update
+sudo apt-get install gimp
+cp Pictures/saki2.jpg .emacs.d/themes
+cp Pictures/saki.jpg .emacs.d/themes/saki2.jpg
+cp Pictures/sinku2.jpg .emacs.d/themes/
+sudo halt
+ls
+cd p/dopencv
+ls
+mv test.py main.cpp
+make
+sudo apt-get install libcv-dev libhighgui-dev libcvaux-dev
+sudo apt-get install opencv-doc
+ld
+ls
+cd p/dopencv
+ls
+display ia.jpg
+make ia.jpg
+E main.cpp
+mv main.cpp test.cpp
+ls
+make
+/usr/local
+ls
+cd lib
+ls
+cd 
+ls
+cd /p/
+cd p/dopencv
+ls
+make
+ls
+make
+/usr/local/share/OpenCV/samples/
+display fruits.jpg
+ls
+cd cpp
+ls
+make
+cd -3
+make
+ls
+make
+ls
+./main
+shutdown -now
+sudo shutdown -now
+sudo shutdown -n
+sudo shutdown --now
+sudo shutdown 
+sudo shutdown --help
+shutdown now
+sudo shutdown now
+ls
+cd p/dopencv
+ls
+make main
+rm main
+make main
+make
+make main
+ls
+make main.cpp
+make main
+make main.cpp
+make main
+make
+rm main
+make main
+make main.cpp
+make
+cd
+cd univ
+make
+ls
+./exe1
+make
+ls
+./exe2
+cd ../texd
+rm program_2.c
+cp ../univ/Makefile ./
+cd univ
+gcc 140510.c
+./a.out
+cp 140510.c ../texd/
+cd ../texd
+ls
+ctex program_2.tex
+ctex program_2
+cd ../univ
+make
+ls
+rm exe*
+ls
+rm *.o
+ls
+make
+ls
+cp program_2.pdf /media/rasorasi/USBMEMORY
+ls
+kcmshell4 kgamma
+kcmshellkgamma
+kcmshell4 kgamma
+sudo apt-get insatll kgamma
+kgamma
+xgamma
+kgamma
+cd
+ls
+cd p/dopencv
+make
+main ia.jpg
+./main ia.jpg
+cp ../../Pictures/sinku2.jpg ./
+./main sinku2.jpg
+cp ../../Pictures/sinku2.jpg ./
+make
+./main sinku2.jpg
+make
+./main sinku2.jpg
+make
+./main sinku2.jpg
+make
+./main
+make
+./main
+make
+main
+./main
+make
+./main
+make
+./main
+make
+./main
+make
+./main
+make
+main
+./main
+main
+make
+./main
+: 1401107268:0;gsettings set org.gnome.desktop.interface gtk-key-theme Emacs
+: 1401108303:0;pkill emacs
+: 1401108305:0;e
+: 1401111234:0;cd 
+: 1401111242:0;projects/dotfiles
+: 1401111244:0;git add .
+: 1401111251:0;ls
+: 1401111267:0;cd .emacs.d
+: 1401111268:0;ls
+: 1401111274:0;rm ses*
+: 1401111274:0;ls
+: 1401111277:0;cd ..
+: 1401111278:0;ls
+: 1401111286:0;git add .
+: 1401111299:0;git add --ignore-removal
+: 1401111304:0;git add --ignore-removal .

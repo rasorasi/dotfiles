@@ -1,0 +1,17 @@
+exe1: main1.o aaa.o
+	gcc -o exe1 main1.o aaa.o
+
+exe2: main2.o aaa.o bbb.o
+	gcc -o exe2 main2.o aaa.o bbb.o -lm
+
+main1.o: main1.c
+	gcc -c main.c
+
+main2.o: main2.c
+	gcc -c main.c
+
+aaa.o: aaa.c
+	gcc -c aaa.c
+
+bbb.o: bbb.c
+	gcc -c bbb.c

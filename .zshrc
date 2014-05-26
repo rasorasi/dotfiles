@@ -8,7 +8,7 @@ PS1=" %B%F{cyan}%~%f%b %h %F{green}%*%f
 %# "
 
 alias dvpd='dvipdfmx' hi='history' e='emacs &' E='emacsclient -nt' i='source ~/.zshrc' py='python'
-alias mpic='python ~/p/q22.py' 
+alias mpic='python ~/p/q22.py'
 
 bindkey -e
 

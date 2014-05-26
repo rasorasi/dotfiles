@@ -1,0 +1,3 @@
+void pri(char[] str){
+	printf(str);
+}

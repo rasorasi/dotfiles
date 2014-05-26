@@ -7,6 +7,8 @@
  '(cua-mode t nil (cua-base))
  '(display-time-mode t)
  '(global-linum-mode t)
+ '(helm-ff-auto-update-initial-value nil)
+ '(scroll-bar-mode nil)
  '(show-paren-mode t)
  '(size-indication-mode t)
  '(tool-bar-mode nil))
@@ -18,8 +20,10 @@
  )
 
 
+
 (setq initial-frame-alist
       '((top . 10) (left . 1000) (width . 98) (height . 52)))
+
 
 
 ;; 最後に改行を入れる
@@ -43,6 +47,8 @@
 
 ;;ファイルサイズを表示
 (size-indication-mode t)
+
+(fset 'yes-or-no-p 'y-or-n-p)
 
 ;;時刻
 (setq display-time-day-and-date t) ;曜日、月、日を表示
@@ -96,19 +102,31 @@
 (global-set-key (kbd "M-n") 'forward-sentence)
 
 (global-set-key (kbd "C-<tab>") 'dabbrev-expand)
-
+(global-set-key (kbd "M-h") 'backward-kill-word)
 (global-set-key (kbd "C-!") (lambda()(interactive)(find-file '"~/.emacs.d/init.el")))
 (global-set-key (kbd "C-m") 'newline)
 ;(global-set-key (kbd "M-#") 'newline-and-indent)
 ;(keyboard-translate ?\C-m ?\M-#)
 (global-set-key (kbd "C-x C-b") (lambda()(interactive)(ibuffer-list-buffers)(switch-to-buffer-other-window '"*Ibuffer*")))
 
-(global-set-key (kbd "C-t") 'query-replace-regexp)
+(global-set-key (kbd "M-q") 'query-replace-regexp)
 (global-set-key (kbd "M-z") 'term)
+(global-set-key (kbd "C-M-p") 'cua-scroll-down)
+(global-set-key (kbd "C-M-n") 'cua-scroll-up)
+
 ;(global-set-key (kbd "C-x C-c") 'helm-M-x)
 ;(global-set-key (kbd "C-x C-z") 'change-favorite-command)
 (defalias 'exit 'save-buffers-kill-emacs)
 
+;(global-set-key (kbd "M-r") ')
+;(global-set-key (kbd "M-i") ')
+;(global-set-key (kbd "M-v") ')
+;(global-set-key (kbd "C-v") ')
+;(global-set-key (kbd "M-z") ')
+;(global-set-key (kbd "M-t") ')
+;(global-set-key (kbd "M-l") ')
+
+;(global-set-key (kbd "C-x") ')
 ;; 初期画面設定
 (setq inhibit-startup-message t)
 
@@ -127,6 +145,8 @@
 (global-set-key (kbd "C-c 4") (lambda()(interactive)(conf_theme 'subdued ntheme)(setq ntheme 'subdued)))
 
 (global-set-key (kbd "C-c 0")(lambda()(interactive)(disable-theme ntheme)))
+
+(conf_theme 'molokai ntheme)
 
 (defun kill-region-or-delete-window (beg end)
   (interactive "r")
@@ -147,7 +167,7 @@
 (require 'mozc)
 (set-language-environment "Japanese")
 (setq default-input-method "japanese-mozc")
-(global-set-key (kbd "C-\\") 'mozc-mode)
+(global-set-key (kbd "C-\\") 'toggle-input-method)
 
 
 (setq default-file-name-coding-system 'utf-8)
@@ -171,13 +191,14 @@
 ;;backup
 (setq make-back-files t)
 (add-to-list 'backup-directory-alist
- 	     (cons ".""~/.emacs.d/backups/"))
+ 	     (cons ".*""~/.emacs.d/backups/"))
 ;;autosave
 (setq auto-save-default t)
 
 ;;when a file begins #!, I add +x and save it
 (add-hook 'after-save-hook
  	  'executable-make-buffer-file-executable-if-script-p)
+
 
 
 ;;auto-install
@@ -292,6 +313,9 @@
   (global-set-key  (kbd "C-x C-a") 'auto-complete-mode)
   (ac-config-default))
 
+(require 'recentf)
+(setq recentf-exclude '(".scratch$"))
+
 
 
 ;; recentf-ext
@@ -300,7 +324,7 @@
   (setq recentf-exclude '(".recentf"))
   (setq recentf-auto-cleanup 10)
   (setq recentf-auto-save-timer (run-with-idle-timer 30 t 'recentf-save-list))
-  (recentf-mode 1))
+   (recentf-mode 1))
  
 ;; 起動画面で recentf を開く
 (add-hook 'after-init-hook (lambda()
@@ -388,28 +412,31 @@
 (setq migemo-regex-dictionary nil)
 (load-library "migemo")
 (migemo-init)
-
+ 
 (require 'edit-server)
 (edit-server-start)
-
+ 
 (flymake-mode t)
-
+ 
 (require 'helm-config)
 (require 'helm-descbinds)
 (global-set-key (kbd "C-z") 'helm-mini)
 (helm-mode 1)
-(custom-set-variables '(helm-ff-auto-update-initial-value nil))
+ 
 (define-key helm-read-file-map (kbd "C-h") 'delete-backward-char)
 ;(define-key helm-c-read-file-map (kbd "TAB") 'helm-execute-persistent-action)
 (define-key helm-find-files-map (kbd "TAB") 'helm-execute-persistent-action)
 (define-key helm-read-file-map (kbd "TAB") 'helm-execute-persistent-action)
-
-
+ 
+ 
 ;(run-with-idle-timer 2 t ')
-
+ 
+ 
+; session.el
+;; http://emacs-session.sourceforge.net/
 (when (require 'session nil t)
-(setq session-save-file-coding-system 'utf-8-unix)
-  (setq session-save-file (expand-file-name "~/.emacs.d/sessions"))
+  (setq session-save-file-coding-system 'utf-8-unix)
+  (setq session-save-file (expand-file-name "~/.session/.session.ntemacs"))
   (setq session-initialize '(session places))
   (setq session-globals-max-size 1024)
   (setq session-globals-max-string (* 1024 1024))
@@ -418,6 +445,18 @@
                                   (file-name-history 512)
                                   (tags-table-set-list 128)
                                   (tags-table-list 128)))
-(add-hook 'after-init-hook 'session-initialize)
+  (add-hook 'after-init-hook 'session-initialize)
   ;; Save session info every 30 minutes
   (setq my-timer-for-session-save-session (run-at-time t 1800 'session-save-session)))
+ 
+(run-with-idle-timer (* 60 30) t (lambda()(interactive)(find-file '"~/.emacs.d/themes/sinku2.jpg")(message "進捗どうですか？")))
+
+
+
+(defun my-copy-file-path ()
+  "show the full path file name in the minibuffer and copy to kill ring."
+  (interactive)
+  (when buffer-file-name
+    (kill-new (file-truename buffer-file-name))
+    (message (buffer-file-name))))
+

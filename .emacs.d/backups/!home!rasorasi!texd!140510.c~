@@ -1,0 +1,51 @@
+#include <stdio.h>
+
+
+typedef struct node *Tree;
+typedef struct node {
+	int data;
+	Tree left_subtree;
+	Tree right_subtree;
+}Node;
+
+
+int sum2_data(Tree t)
+{
+	int sum = 0;
+	if(t == NULL)
+		return 0;
+	else{
+		sum += (t->data)*(t->data);
+	
+		if(t->left_subtree != NULL)
+			sum += (t->left_subtree->data)*(t->left_subtree->data);
+	
+		if(t->right_subtree != NULL)
+			sum += (t->right_subtree->data)*(t->right_subtree->data);
+		
+		return sum;
+	}
+}
+
+
+int main()
+{
+	Node a, b, c, d;
+	a.data = 1;
+	b.data=c.data = 2;
+	d.data = 3;
+	a.left_subtree = &b;
+	a.right_subtree = NULL;
+	b.left_subtree = &c;
+	b.right_subtree = &d;
+	c.left_subtree = c.right_subtree = NULL;
+	d.left_subtree = d.right_subtree = NULL;
+
+	printf("sum2_data(&a)=%d\n", sum2_data(&a));
+	printf("sum2_data(&b)=%d\n", sum2_data(&b));
+	printf("sum2_data(&c)=%d\n", sum2_data(&c));
+	printf("sum2_data(&d)=%d\n", sum2_data(&d));
+	printf("sum2_data(NULL)=%d\n", sum2_data(NULL));
+
+	return 0;
+}				
