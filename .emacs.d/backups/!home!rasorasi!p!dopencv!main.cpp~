@@ -1,20 +1,45 @@
+#include <iostream>
 #include <opencv2/core/core.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 #include <opencv2/highgui/highgui.hpp>
 
 using namespace cv;
+using namespace std;
 
 int main( int argc, char** argv )
 {
-  Mat rgb, gray; 
+	char szWindName[128] = "camera view";
+	CvCapture* capture;
+	IplImage* img;
+	CvVideoWriter* rec;
+	int frames = 1000;
 
-  rgb = imread( "ia.jpg", /* 3-channel color image */ 1 );
-  cvtColor(rgb, gray, CV_BGR2GRAY);
+	capture = cvCaptureFromCAM(0);
 
-  namedWindow( "Display Image", CV_WINDOW_AUTOSIZE | CV_WINDOW_FREERATIO );
-  imshow( "Display Image", gray );
+	capture=cvCaptureFromCAM(1);  //input video
+	if(capture==NULL)
+	{
+		cout << "no found camera\n";
+		return -1;
 
-  waitKey(0);
+	}
 
-  return 0;
+	cvNamedWindow(szWindName);
+
+	while(1){
+		img = cvQueryFrame(capture);
+		cvShowImage(szWindName, img);
+
+			if(cvWaitKey(1) >= 0)
+				break;
+	}
+
+	cvDestroyWindow(szWindName);
+	cvReleaseCapture(&capture);
+
+	return 0;
+	
 }
+
+
+

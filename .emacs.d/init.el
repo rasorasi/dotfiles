@@ -21,8 +21,8 @@
 
 
 
-(setq initial-frame-alist
-      '((top . 10) (left . 1000) (width . 98) (height . 52)))
+;(setq initial-frame-alist
+;      '((top . 10) (left . 1000) (width . 98) (height . 52)))
 
 
 
@@ -315,7 +315,8 @@
 
 (require 'recentf)
 (setq recentf-exclude '(".scratch$"
-			".recentf$"))
+			".recentf$"
+			".framesize.el$"))
 
 ;; recentf-ext
 (when (require 'recentf-ext nil t)
@@ -434,7 +435,7 @@
 ;; http://emacs-session.sourceforge.net/
 (when (require 'session nil t)
   (setq session-save-file-coding-system 'utf-8-unix)
-  (setq session-save-file (expand-file-name "~/.session/.session.ntemacs"))
+  (setq session-save-file (expand-file-name "~/.emacs.d/.session"))
   (setq session-initialize '(session places))
   (setq session-globals-max-size 1024)
   (setq session-globals-max-string (* 1024 1024))
@@ -447,7 +448,10 @@
   ;; Save session info every 30 minutes
   (setq my-timer-for-session-save-session (run-at-time t 1800 'session-save-session)))
  
-(run-with-idle-timer (* 60 30) t (lambda()(interactive)(find-file '"~/.emacs.d/themes/sinku2.jpg")(message "進捗どうですか？")))
+(run-with-idle-timer (* 60 30) t
+		     (lambda()(interactive)
+		       (find-file '"~/.emacs.d/themes/sinku2.jpg")
+		       (message "進捗どうですか？")))
 
 
 
@@ -458,3 +462,49 @@
     (kill-new (file-truename buffer-file-name))
     (message (buffer-file-name))))
 
+;;; 終了時のフレームサイズを記憶する
+(defun my-window-size-save ()
+  (let* ((rlist (frame-parameters (selected-frame)))
+         (ilist initial-frame-alist)
+         (nCHeight (frame-height))
+         (nCWidth (frame-width))
+         (tMargin (if (integerp (cdr (assoc 'top rlist)))
+                      (cdr (assoc 'top rlist)) 0))
+         (lMargin (if (integerp (cdr (assoc 'left rlist)))
+                      (cdr (assoc 'left rlist)) 0))
+         buf
+         (file "~/.emacs.d/.framesize.el"))
+    (if (get-file-buffer (expand-file-name file))
+        (setq buf (get-file-buffer (expand-file-name file)))
+      (setq buf (find-file-noselect file)))
+    (set-buffer buf)
+    (erase-buffer)
+    (insert (concat
+             ;; 初期値をいじるよりも modify-frame-parameters
+             ;; で変えるだけの方がいい?
+             "(delete 'width initial-frame-alist)\n"
+             "(delete 'height initial-frame-alist)\n"
+             "(delete 'top initial-frame-alist)\n"
+             "(delete 'left initial-frame-alist)\n"
+             "(setq initial-frame-alist (append (list\n"
+             "'(width . " (int-to-string nCWidth) ")\n"
+             "'(height . " (int-to-string nCHeight) ")\n"
+             "'(top . " (int-to-string tMargin) ")\n"
+             "'(left . " (int-to-string lMargin) "))\n"
+             "initial-frame-alist))\n"
+             ;;"(setq default-frame-alist initial-frame-alist)"
+             ))
+    (save-buffer)
+    ))
+
+(defun my-window-size-load ()
+  (let* ((file "~/.emacs.d/.framesize.el"))
+    (if (file-exists-p file)
+        (load file))))
+
+(my-window-size-load)
+
+;; Call the function above at C-x C-c.
+(defadvice save-buffers-kill-emacs
+  (before save-frame-size activate)
+  (my-window-size-save))

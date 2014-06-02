@@ -2751,19 +2751,145 @@ main
 main
 make
 ./main
-: 1401107268:0;gsettings set org.gnome.desktop.interface gtk-key-theme Emacs
-: 1401108303:0;pkill emacs
-: 1401108305:0;e
-: 1401111234:0;cd 
-: 1401111242:0;projects/dotfiles
-: 1401111244:0;git add .
-: 1401111251:0;ls
-: 1401111267:0;cd .emacs.d
-: 1401111268:0;ls
-: 1401111274:0;rm ses*
-: 1401111274:0;ls
-: 1401111277:0;cd ..
-: 1401111278:0;ls
-: 1401111286:0;git add .
-: 1401111299:0;git add --ignore-removal
-: 1401111304:0;git add --ignore-removal .
+gsettings set org.gnome.desktop.interface gtk-key-theme Emacs
+pkill emacs
+e
+cd 
+projects/dotfiles
+git add .
+ls
+cd .emacs.d
+ls
+rm ses*
+ls
+cd ..
+ls
+git add .
+git add --ignore-removal
+git add --ignore-removal .
+git commit -m "fix recentf"
+git push origin master
+e
+ls
+cd .emacs.d
+ls
+e
+cd .emacs.d
+touch .framesize.el
+ls
+e
+cd 
+p/dopencv
+ls
+make
+make main
+ls
+make main.cpp
+rm main*
+ls
+make
+ls
+make
+make main
+ls
+E Makefile
+make main
+ls
+: 1401168461:0;sudo pm-suspend -quirk-vbemode-restore
+: 1401169063:0;cd /etc/pm/config.d
+: 1401169070:0;ls
+: 1401169073:0;ls -a
+: 1401169089:0;sudo nano defaults
+: 1401169737:0;sudo rmmod tpm-tis tpm tpm_bios tpm_infineon
+: 1401169755:0;sudo rmmod tpm_tis tpm tpm_bios tpm_infineon
+: 1401170791:0;cat /var/log/kern.log
+: 1401170795:0;sudo cat /var/log/kern.log
+: 1401170840:0;sudo E /var/log/kern.log
+: 1401170848:0;sudo emacsclaiant /var/log/kern.log
+: 1401170855:0;sudo nano /var/log/kern.log
+: 1401189403:0;cd p/dopencv/
+: 1401189405:0;ls
+: 1401189406:0;make
+: 1401189414:0;ls
+: 1401189442:0;make
+: 1401189444:0;ls
+: 1401189486:0;make main.cpp
+: 1401189488:0;make
+: 1401189559:0;ls
+: 1401190020:0;ma
+: 1401190021:0;make
+: 1401190653:0;ma
+: 1401190654:0;make
+: 1401190659:0;ls
+: 1401190662:0;./main
+: 1401190840:0;make
+: 1401190850:0;./main
+: 1401192205:0;make
+: 1401192208:0;./main
+: 1401195630:0;e
+: 1401196776:0;p/dopencv
+: 1401196776:0;ls
+: 1401196918:0;make
+: 1401196924:0;./main
+: 1401196964:0;ls
+: 1401196972:0;movie.avi
+: 1401196975:0;./movie.avi
+: 1401196988:0;show movie.avi
+: 1401197044:0;videos movie.avi
+: 1401197166:0;sudo apt-get install vlc
+: 1401197348:0;vlc movie.avi
+: 1401197384:0;make
+: 1401197425:0;ls
+: 1401197429:0;./make
+: 1401197432:0;./main
+: 1401197450:0;ls
+: 1401197457:0;vlc movie.avi
+: 1401197480:0;make
+: 1401197485:0;./main
+: 1401197517:0;vlc m
+: 1401197526:0;vlc movie.avi
+: 1401200413:0;make
+: 1401200419:0;./main movie.avi
+: 1401200503:0;ls
+: 1401200510:0;./main
+: 1401200523:0;./main movie.avi
+: 1401200916:0;make main.cpp
+: 1401691094:0;ls
+: 1401691118:0;.emacs.d
+: 1401691119:0;ls
+: 1401691339:0;ls -a
+: 1401691360:0;mkdir .session
+: 1401691401:0;rm session*
+: 1401691401:0;ls
+: 1401691448:0;git add .
+: 1401691454:0;cd ..
+: 1401691454:0;ls
+: 1401691465:0;projects/dotfiles
+: 1401691467:0;git add .
+: 1401691617:0;cd .emacs.d
+: 1401691631:0;git rm session*
+: 1401691639:0;git rm session
+: 1401691646:0;git rm session.1025a5ba4349e72beb139417102386194600000011980048
+: 1401691653:0;git rm session.102efdd14c3461cc25139796154262292300000013230038
+: 1401691657:0;git rm session.103f09bffb247d03aa139999485311147100000013190038
+: 1401691662:0;git rm session.1077d6594f3950b6c1139844202750189900000013250038
+: 1401691666:0;git rm session.107b39d6bf298a3695139618848455335100000012440035
+: 1401691674:0;git rm session
+: 1401691676:0;git rm session.10a4bca603d7f5b80d139634481674121600000013340036
+: 1401691679:0;git rm session.10b734bdb3b7732b7b140092590521249700000013340055
+: 1401691683:0;git rm session.10ce5ee7ca3c3454ff140056074582402900000013260038
+: 1401691686:0;git rm session.10db9e94737a6364e139887417234966700000013270038
+: 1401691689:0;git rm session.10e6a3f3bab87ded4f139892948361178400000013280039
+: 1401691693:0;git rm .session
+: 1401691704:0;git rm session.10f4a7d0a063f9f1c4139856677011845200000013240038
+: 1401691712:0;git rm session
+: 1401691720:0;git rm session.10f8d2a1b1213638b813955642293289000000012030035
+: 1401691725:0;git rm session.10ff6fc9e4cadcca20140100105482303400000013490038
+: 1401691761:0;lsls
+: 1401691762:0;ls
+: 1401691771:0;git add .
+: 1401691780:0;..
+: 1401691781:0;ls
+: 1401691794:0;git add .
+: 1401691804:0;git add -A
+: 1401691809:0;git add -A .
