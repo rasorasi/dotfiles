@@ -1,22 +1,19 @@
 TARGET = main  # コンパイルしたいプログラム名
-OBJS = main.cpp # プログラムのソースコードの拡張子を.oにしたやつ
+OBJS = main.o # プログラムのソースコードの拡張子を.oにしたやつ
+#OBJS2 = main.cpp
 
 CXX = g++      # 好きなコンパイラ
 CXXFLAGS = -Wall -O2 # この辺は適当
 
 # OpenCV のライブラリを指定
-OPENCVINCl = `pkg-config --cflags opencv`
-OPENCVLIB = `pkg-config --libs opencv`
+#OPENCVINC = `pkg-config --cflags opencv`
+#OPENCVLIB = `pkg-config --libs opencv`
+
+
+$(OBJS): $(OBJS2)
+	g++ -o ./main ./$(OBJS2) -I/usr/local/include/opencv2 -I/usr/local/include/opencv -L/usr/local/lib -lopencv_highgui -lopencv_core
 
 $(TARGET):$(OBJS)
-	$(CXX) -o $@ $(OBJS) $(OPENCVLIB)
-
-.cpp.o:
-	$(CXX) -c -o $@ $< $(OBJINCS)
-
-
-#main: main.cpp
-# 	g++ -o ./main ./main.cpp -I/usr/local/include/opencv2 -I/usr/local/include/opencv -L/usr/local/lib -lopencv_highgui -lopencv_core
-
+	$(CXX) -o $@  $(OPENCVLIB)
 
 

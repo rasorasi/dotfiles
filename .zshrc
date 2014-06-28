@@ -7,8 +7,10 @@ compinit
 PS1=" %B%F{cyan}%~%f%b %h %F{green}%*%f
 %# "
 
+gconftool-2 --set /apps/gnome-terminal/profiles/Default/font --type string "Ricty Regular 12"
+
 alias dvpd='dvipdfmx' hi='history' e='emacs &' E='emacsclient -nt' i='source ~/.zshrc' py='python'
-alias mpic='python ~/p/q22.py'
+alias mpic='python ~/p/q22.py' gth='gthumb' mn='gnome-system-monitor'
 
 bindkey -e
 
@@ -31,4 +33,8 @@ ctex() { platex $1.tex && dvipdfmx $1.dvi && evince $1.pdf}
 
 c++() { g++ $1 && ./a.out}
 cco() { gcc $1 && ./a.out}
+
+# WINEPREFIXは任意パス(自分はwine32にしている)
+export WINEPREFIX=$HOME/wine32
+export WINEARCH=win32
 

@@ -2795,101 +2795,2118 @@ ls
 E Makefile
 make main
 ls
-: 1401168461:0;sudo pm-suspend -quirk-vbemode-restore
-: 1401169063:0;cd /etc/pm/config.d
-: 1401169070:0;ls
-: 1401169073:0;ls -a
-: 1401169089:0;sudo nano defaults
-: 1401169737:0;sudo rmmod tpm-tis tpm tpm_bios tpm_infineon
-: 1401169755:0;sudo rmmod tpm_tis tpm tpm_bios tpm_infineon
-: 1401170791:0;cat /var/log/kern.log
-: 1401170795:0;sudo cat /var/log/kern.log
-: 1401170840:0;sudo E /var/log/kern.log
-: 1401170848:0;sudo emacsclaiant /var/log/kern.log
-: 1401170855:0;sudo nano /var/log/kern.log
-: 1401189403:0;cd p/dopencv/
-: 1401189405:0;ls
-: 1401189406:0;make
-: 1401189414:0;ls
-: 1401189442:0;make
-: 1401189444:0;ls
-: 1401189486:0;make main.cpp
-: 1401189488:0;make
-: 1401189559:0;ls
-: 1401190020:0;ma
-: 1401190021:0;make
-: 1401190653:0;ma
-: 1401190654:0;make
-: 1401190659:0;ls
-: 1401190662:0;./main
-: 1401190840:0;make
-: 1401190850:0;./main
-: 1401192205:0;make
-: 1401192208:0;./main
-: 1401195630:0;e
-: 1401196776:0;p/dopencv
-: 1401196776:0;ls
-: 1401196918:0;make
-: 1401196924:0;./main
-: 1401196964:0;ls
-: 1401196972:0;movie.avi
-: 1401196975:0;./movie.avi
-: 1401196988:0;show movie.avi
-: 1401197044:0;videos movie.avi
-: 1401197166:0;sudo apt-get install vlc
-: 1401197348:0;vlc movie.avi
-: 1401197384:0;make
-: 1401197425:0;ls
-: 1401197429:0;./make
-: 1401197432:0;./main
-: 1401197450:0;ls
-: 1401197457:0;vlc movie.avi
-: 1401197480:0;make
-: 1401197485:0;./main
-: 1401197517:0;vlc m
-: 1401197526:0;vlc movie.avi
-: 1401200413:0;make
-: 1401200419:0;./main movie.avi
-: 1401200503:0;ls
-: 1401200510:0;./main
-: 1401200523:0;./main movie.avi
-: 1401200916:0;make main.cpp
-: 1401691094:0;ls
-: 1401691118:0;.emacs.d
-: 1401691119:0;ls
-: 1401691339:0;ls -a
-: 1401691360:0;mkdir .session
-: 1401691401:0;rm session*
-: 1401691401:0;ls
-: 1401691448:0;git add .
-: 1401691454:0;cd ..
-: 1401691454:0;ls
-: 1401691465:0;projects/dotfiles
-: 1401691467:0;git add .
-: 1401691617:0;cd .emacs.d
-: 1401691631:0;git rm session*
-: 1401691639:0;git rm session
-: 1401691646:0;git rm session.1025a5ba4349e72beb139417102386194600000011980048
-: 1401691653:0;git rm session.102efdd14c3461cc25139796154262292300000013230038
-: 1401691657:0;git rm session.103f09bffb247d03aa139999485311147100000013190038
-: 1401691662:0;git rm session.1077d6594f3950b6c1139844202750189900000013250038
-: 1401691666:0;git rm session.107b39d6bf298a3695139618848455335100000012440035
-: 1401691674:0;git rm session
-: 1401691676:0;git rm session.10a4bca603d7f5b80d139634481674121600000013340036
-: 1401691679:0;git rm session.10b734bdb3b7732b7b140092590521249700000013340055
-: 1401691683:0;git rm session.10ce5ee7ca3c3454ff140056074582402900000013260038
-: 1401691686:0;git rm session.10db9e94737a6364e139887417234966700000013270038
-: 1401691689:0;git rm session.10e6a3f3bab87ded4f139892948361178400000013280039
-: 1401691693:0;git rm .session
-: 1401691704:0;git rm session.10f4a7d0a063f9f1c4139856677011845200000013240038
-: 1401691712:0;git rm session
-: 1401691720:0;git rm session.10f8d2a1b1213638b813955642293289000000012030035
-: 1401691725:0;git rm session.10ff6fc9e4cadcca20140100105482303400000013490038
-: 1401691761:0;lsls
-: 1401691762:0;ls
-: 1401691771:0;git add .
-: 1401691780:0;..
-: 1401691781:0;ls
-: 1401691794:0;git add .
-: 1401691804:0;git add -A
-: 1401691809:0;git add -A .
+sudo pm-suspend -quirk-vbemode-restore
+cd /etc/pm/config.d
+ls
+ls -a
+sudo nano defaults
+sudo rmmod tpm-tis tpm tpm_bios tpm_infineon
+sudo rmmod tpm_tis tpm tpm_bios tpm_infineon
+cat /var/log/kern.log
+sudo cat /var/log/kern.log
+sudo E /var/log/kern.log
+sudo emacsclaiant /var/log/kern.log
+sudo nano /var/log/kern.log
+cd p/dopencv/
+ls
+make
+ls
+make
+ls
+make main.cpp
+make
+ls
+ma
+make
+ma
+make
+ls
+./main
+make
+./main
+make
+./main
+e
+p/dopencv
+ls
+make
+./main
+ls
+movie.avi
+./movie.avi
+show movie.avi
+videos movie.avi
+sudo apt-get install vlc
+vlc movie.avi
+make
+ls
+./make
+./main
+ls
+vlc movie.avi
+make
+./main
+vlc m
+vlc movie.avi
+make
+./main movie.avi
+ls
+./main
+./main movie.avi
+make main.cpp
+ls
+.emacs.d
+ls
+ls -a
+mkdir .session
+rm session*
+ls
+git add .
+cd ..
+ls
+projects/dotfiles
+git add .
+cd .emacs.d
+git rm session*
+git rm session
+git rm session.1025a5ba4349e72beb139417102386194600000011980048
+git rm session.102efdd14c3461cc25139796154262292300000013230038
+git rm session.103f09bffb247d03aa139999485311147100000013190038
+git rm session.1077d6594f3950b6c1139844202750189900000013250038
+git rm session.107b39d6bf298a3695139618848455335100000012440035
+git rm session
+git rm session.10a4bca603d7f5b80d139634481674121600000013340036
+git rm session.10b734bdb3b7732b7b140092590521249700000013340055
+git rm session.10ce5ee7ca3c3454ff140056074582402900000013260038
+git rm session.10db9e94737a6364e139887417234966700000013270038
+git rm session.10e6a3f3bab87ded4f139892948361178400000013280039
+git rm .session
+git rm session.10f4a7d0a063f9f1c4139856677011845200000013240038
+git rm session
+git rm session.10f8d2a1b1213638b813955642293289000000012030035
+git rm session.10ff6fc9e4cadcca20140100105482303400000013490038
+lsls
+ls
+git add .
+..
+ls
+git add .
+git add -A
+git add -A .
+git commit -m "small fix"
+git push origin master
+ls
+cd ..
+cd dotfiles/.emacs.d
+ls -a
+rm -r .session
+mkdir .session
+e
+.emacs.d
+cd .session
+ls
+cd ..
+ls
+e
+rm session.10fbfb2c35f18bec88140169227685875500000013360040
+ls
+cd .emacs.d
+ls
+cd elpa
+ls
+cd all
+cd all-1.0
+ls
+cd ..
+cd archives
+ls
+cd ..
+ls
+cd dash-2.5.0
+ls
+cd ..
+ls
+cd ..
+mv -r elpa ~/Desktop
+e
+ls
+rm session.10211ead683c004a72140169262422394300000013340040
+ls
+cd elpa
+ls
+cd ..
+mv elpa ~/D
+ls
+cd
+cd D
+ls
+e
+cd ../.emacs.d
+ls
+cd auto-save-list
+ls
+cd ..
+e
+ls
+cd .emacs.d
+ls
+rm session.10d59d80aa3648e271140169307435840100000013410043
+mv init.el ~/Desktop
+cd .emacs.d/
+ls
+mv ~/Desktop/init.el ./
+ls
+rm session.10d74bd4068e0b5077140169317485904300000013440038
+rm \#session.10d59d80aa3648e271140169307435840100000013410043\#
+ls
+mv ~/D ./elpa
+e
+ls
+e
+cd p/dopencv
+make TARGET=main
+ls
+cp main main2
+ls
+rm main2
+make
+make OBJS=cap.cpp
+make OBJS2=cap.cpp
+ls
+./main
+make OBJS2=cap.cpp
+ls
+./main
+make OBJS2=cap.cpp
+make OBJS2=main.cpp
+ls
+rm main.o
+make OBJS2=main.cpp
+./main
+make OBJS2=cap.cpp
+./main
+q
+ls
+vpe movie.avi
+vel movie.avi
+video movie.avi
+vidos movie.avi
+videos movie.avi
+Videos movie.avi
+vlc movie.avi
+rm movie.avi
+ls
+make OBJS=cap.cpp
+make OBJS2=cap.cpp
+ls
+./main
+ls
+vlc movie.avi
+p/dopencv
+make OBJS2=cap.cpp
+./main
+make OBJS2=cap.cpp
+./main
+make OBJS2=cap.cpp
+./main
+make OBJS2=cap.cpp
+./main
+make OBJS2=cap.cpp
+./main
+make OBJS2=cap.cpp
+./main
+ls
+display test.jpg
+make OBJS2=cap.cpp
+./main
+ls
+display img000000.jpg$'\n'
+display img000200.jpg$'\n'
+display img000000.jpg$'\n'
+ls
+rm img*
+ls
+make OBJS2=cap.cpp
+./main
+la
+ls
+pl
+pg
+ps
+ps -a
+ps -e
+kill -9 4961
+kill -9 rhythmbox-clien
+kill -9 bamfdaemon
+kill -9 4414
+ps -e
+kill -9 4358
+ps -e
+pkill gvfsd-afc
+e
+ls
+cd .emacs.d
+eli
+elisp
+ls
+cd ..
+ls
+cd elpa
+ls
+cd ..
+ls
+cd elisp
+ls
+e
+cd
+p/dopencv/make OBJ2=flip.cpp
+p/dopencv/
+make OBJ2=flip.cpp
+ls
+rm img*
+ls
+make OBJ2=flip.cpp
+make
+ls
+E Makefile
+make
+make OBJS2=flip.cpp
+ls
+mv filp.cpp filp.cpp
+mv filp.cpp flip.cpp
+E flip.cpp
+ls
+cd 
+cd .emacs.d
+rm -r .session
+touch .session
+ls
+/media/rasorasi/USBMEMORY
+ls
+e
+make flip.cpp
+make OBJS2=flip.cpp
+cd
+cd p/dopencv
+make OBJS2=flip.cpp
+cd
+make OBJS2=flip.cpp
+cd -1
+make OBJS2=flip.cpp
+cd p/dopencv
+ls
+make OBJS2=flip.cpp
+/usr/local/include
+ls
+cd opencv2
+ls
+cd ..
+ls
+cd opencv
+ls
+cd cvver.h
+cat cv.hpp
+sudo find -name cvver.h
+sudo find / -name cvver.h
+ls
+cat cv.h
+ls
+cat cvcore.hpp
+cat cxcore.hpp
+ls
+zsh opencv.sh
+ls
+cd
+p/dopencv
+make OBJS2=flip.cp
+make OBJS2=flip.cpp
+cd /usr/local
+ls
+cd lib
+ls
+rm 2.4.8$
+rm *2.4.8
+ls
+sudo rm *2.4.8
+ls
+make OBJS2=flip.cpp
+py
+/media/rasorasi/USBMEMORY
+py kagi.py
+Q
+qQUIT
+Q
+py kagi.py
+ls
+gcc kadai23.c
+./a.out
+ls
+gcc kadai23.c
+ls
+./a.out
+sudo ./a.out
+ls
+mv kadai23.c ~/Desktop
+cd ~/Desktop
+ls
+gcc kadai23.c
+ls
+./a.out
+gcc kadai23.c
+./a.out
+gcc kadai23.c
+E kadai23.c
+gcc kadai23.c
+./a.out
+gcc kadai23.c
+./a.out
+mv kadai23.c ../texd
+cd ../texd
+ls
+E program_2.
+E program_2.tex
+ctex program_2
+cd texd
+ctex program_2.
+ctex program_2
+cp program_2.pdf /media/rasorasi/USBMEMORY
+cd /media/rasorasi/USBMEMORY/
+evince program_2.pdf
+cd -1
+ctex program_2
+cp program_2.pdf /media/rasorasi/USBMEMORY
+cd /media/rasorasi/USBMEMORY/
+evince program_2.pdf
+p/dopencv/make OBJS@=test.cpp
+p/dopencv/
+make OBJS@=test.cpp
+p/dopencv/
+make OBJS@=test.cpp
+make OBJS2=test.cpp
+E Makefile
+make OBJS2=test.cpp
+./main
+make OBJS2=flip.cpp
+wine --version
+sudo apt-get install wine1.7
+wine
+wine --version
+sudo apt-get uninstall wine
+sudo apt-get remove
+sudo apt-get remove wine
+sudo apt-get install wine
+sudo apt-get install wine1.7
+wine
+sudo add-apt-repository ppa:ubuntu-wine/ppa
+sudo apt-get update
+sudo apt-get install wine
+wine --version
+sudo apt-get update
+sudo apt-get install wine1.7
+wine --version
+sudo apt-get install winetricks
+winecfg
+winetricks directx9
+winetricks devenum
+winetricks dinput
+winetricks dirac
+winetricks directmusic
+winetricks directplay
+winetricks dmsynth
+dxdiag
+winetricks dxdiag
+winetricks ffdshow
+winetricks ffdshowvcrun20003
+winetricks vcrun20003
+winetricks vcrun2003
+winetricks vcrun2005
+winetricks vcrun2010
+winetricks wmp9
+wine dxdiag
+winecfg
+make OBJS2=flip.cpp
+make OBJS2=test.cpp
+make OBJS2=flip.cpp
+ls
+./main
+make OBJS2=flip.cpp
+./main
+./main test.avi
+./main test
+./main camera
+ls
+./main camera
+./main camera test.avi
+ls
+vlc test.avi
+./main camera test.avi
+vlc test.avi
+make OBJS2=flip.cpp
+ls
+p/dopencv
+make OBJS2=flip.cpp
+make OBJS2=threshold.cpp
+./main
+make OBJS2=threshold.cpp
+./main
+make OBJS2=threshold.cpp
+./main
+make OBJS2=threshold.cpp
+./main
+make OBJS2=threshold.cpp
+./main
+make OBJS2=threshold.cpp
+./main
+make OBJS2=threshold.cpp
+./main
+./main 2
+./main 1
+./main 3
+./main 4
+ls
+p/dopencv
+ls
+make OBJS2=split.cpp
+./make
+./main
+make OBJS2=split.cpp
+./main
+make OBJS2=split.cpp
+./main
+make OBJS2=split.cpp
+./main
+make OBJS2=split.cpp
+./main
+ls
+make OBJS2=split.cpp
+ls
+./main
+make OBJS2=split.cpp
+./main
+make OBJS2=split.cpp
+./main
+make OBJS2=split.cpp
+./main
+ifconfig
+sudo nano /etc/network/interfaces
+ls
+p/dopencv
+cd 
+cd Downloads
+ls ^em
+ls em
+ls $em
+ls lsem
+enume ^em
+ls ^em
+ls em
+ps -e
+pkill cairo-dock
+ls
+ps -e
+sudo apt-get remove cairo-dock
+ls
+pkill cairo-dock
+sudo apt-get remove cairo-dock
+sudo apt-get remove ubuntu-tweek
+sudo apt-get remove tweek
+sudo apt-get remove tweek-tool
+sudo apt-get remove tweak-tool
+sudo apt-get remove tweak
+ls
+e
+w
+e
+Ricty-3.2.3
+ls
+./ricty_generator.sh
+sudo ./ricty_generator.sh
+ls
+cat README.md
+cd Ricty-3.2.3
+./ricty_generator.sh auto
+sudo apt-get install fontforeg
+sudo apt-get install fontforge
+./ricty_generator.sh auto
+cd ..
+ls
+cd Do
+cd Downloads
+ls
+cat README.md
+ls
+ls Inconsolata.otf
+cd ../Ricty-3.2.3
+./ricty_
+./ricty_generator.sh auto
+E README.md
+./ricty_generator.sh auto
+ls
+cp ../Downloads/migu-1m-* ./
+cp -r ../Downloads/migu-1m-* ./
+ls
+rm migu-1m-20130617.zip
+rm -r migu-1m-20130617
+ls
+cp -r ../Downloads/migu-1m-* ./
+ls
+rm -r migu-1m-2*
+ls
+./ricty_generator.sh auto
+cp -f Ricty*.ttf ~/.fonts/
+cd ..
+mkdir .fonts
+cd Ricty-3.2.3
+cp -f Ricty*.ttf ~/.fonts/
+fc-cache -vf
+cd ..
+ls
+cd .fonts
+ls
+e
+~/.gconf/apps/gnome-terminal/profiles/Default
+ls
+nano %gconf.xml
+E %gconf.xml
+emacs %gconf.xml
+~/.gconf/apps/gnome-terminal/profiles/Default
+emacs %gconf.xml
+~/.gconf/apps/gnome-terminal/profiles/Default
+i
+ls
+E .zshrc
+y
+i
+ls
+i
+ls
+i
+ls
+i
+ls
+i
+ls
+i
+ls
+i
+ls
+i
+ls wgeti
+i
+ls
+ls wgeti
+i
+ls
+ls wgetls
+i
+ls wget
+i
+ls
+i
+ls
+gconftool-2 --set /apps/gnome-terminal/profiles/Default/font --type string "Ricty Regular 12"
+ls
+cd p/dopencv
+ls
+make OBJS2=sub.cpp
+./main
+make OBJS2=sub.cpp
+./main
+make OBJS2=sub.cpp
+./main
+make OBJS2=sub.cpp
+./main
+make OBJS2=sub.cpp
+./main
+make OBJS2=sub.cpp
+./main
+ps -e
+pkill main
+make OBJS2=sub.cpp
+./main
+make OBJS2=sub.cpp
+./main
+ps -e
+./main
+make OBJS2=sub.cpp
+./main
+make OBJS2=sub.cpp
+./main
+make OBJS2=sub.cpp
+./main
+make OBJS2=sub.cpp
+./main
+make OBJS2=sub.cpp
+./main
+make OBJS2=sub.cpp
+./main
+cp Downloads/em* /media/rasorasi/USBMEMORY
+cd
+Downloads
+enume em111EX.pdf
+evince em111EX.pdf
+evince em111EX.pdf &
+evince em111EXSol.pdf &
+p/dopencv
+ls
+make OBJS2=sub.cpp
+./main
+make OBJS2=sub.cpp
+./main
+make OBJS2=sub.cpp
+./main
+make OBJS2=sub.cpp
+./main
+make OBJS2=sub.cpp
+./main
+make OBJS2=sub.cpp
+./main
+make OBJS2=sub.cpp
+./main
+make OBJS2=sub.cpp
+./main
+df
+p/dopencv
+make OBJS2=test2.cpp
+ls
+display test.jpg 
+./main test.jpg
+p/dopencv
+ls
+make OBJS2=sub.cpp
+./main
+make OBJS2=sub.cpp
+make OBJS2=histo.cpp
+make OBJS2=histogram.cpp
+./main
+make OBJS2=histogram.cpp
+./main
+ls
+p/d
+p/dopencv
+make OBJS2=histogram.cpp
+./main
+make OBJS2=histogram.cpp
+./main
+make OBJS2=histogram.cpp
+./main
+make OBJS2=histogram.cpp
+./main
+make OBJS2=histogram.cpp
+./main
+make OBJS2=test3.cpp
+./main
+make OBJS2=test3.cpp
+./main
+make OBJS2=test3.cpp
+./main
+make OBJS2=test3.cpp
+./main
+make OBJS2=test3.cpp
+./main
+ãƒ¨
+e
+p/dopencv
+make OBJS2=sub.cpp
+./main
+make OBJS2=sub.cpp
+./main
+ls
+make OBJS2=histogram.cpp
+./main
+ls
+make OBJS2=threshold.cpp
+./main
+ls
+make OBJS2=cap.cpp
+./main
+ls
+rm img*
+ls
+make OBJS2=test2.cpp
+./main
+ls
+make OBJS2=test.cpp
+make OBJS2=flip.cpp
+./main
+make OBJS2=sub.cpp
+./main
+make OBJS2=sub.cpp
+./main
+make OBJS2=sub.cpp
+./main
+make OBJS2=sub.cpp
+./main
+make OBJS2=sub.cpp
+./main
+make OBJS2=sub.cpp
+./main
+make OBJS2=sub.cpp
+./main
+make OBJS2=sub.cpp
+./main
+make OBJS2=sub.cpp
+./main
+make OBJS2=sub.cpp
+./main
+make OBJS2=sub.cpp
+./main
+./main %
+./main &
+./main 
+ps -e
+pkill main
+./main
+ls
+cd p
+ls
+mv -r dopencv ./dcv
+mv -v dopencv ./dcv
+ls
+mv -v dopencv ./dpy
+mv -v dpython ./dpy
+ls
+dpy
+ls
+/usr
+/env
+env
+ls
+cd bin
+ls
+cd
+p/dpy
+py joy.py
+ls
+cd Pictures
+ls
+display saki.png
+xli *
+display *
+gthumb ./
+gth
+display sample-796397ff8b65bb617a1c125a27397035.jpg
+gth
+i
+gth
+display yande.re\ 2
+display yande.re
+display yande.re\ 278914\ sample.jpg
+display yande.re\ 235628\ sample.png
+mv yande.re\ 235628\ sample.png saki4.png
+ls
+cp saki4.png ../p/dcv
+../p/dcv
+make OBJS2=countour.cpp
+make OBJS2=contour.cpp
+./main
+ls
+display messigray.png
+ls
+cd ../../Pictures
+mv yande.re\ 235628\ sample.jpg ./saki4.jpg
+cp saki4.jpg ../p/dcv
+cd ../p/dcv
+make OBJS2=contour.cpp
+./main
+make OBJS2=contour.cpp
+./main
+make OBJS2=contour.cpp
+./main
+make OBJS2=contour.cpp
+./main
+make OBJS2=contour.cpp
+./main
+make OBJS2=contour.cpp
+./main
+make OBJS2=contour.cpp
+./main
+make OBJS2=contour.cpp
+./main
+./main 185
+./main 180
+./main 190
+./main 186
+./main 170
+./main 160
+./main 200
+./main 180
+make OBJS2=contour.cpp
+./main 180
+make OBJS2=contour.cpp
+./main 180
+make OBJS2=contour.cpp
+./main 180
+make OBJS2=contour.cpp
+./main 180
+make OBJS2=contour.cpp
+./main 180
+make OBJS2=contour.cpp
+./main 180
+make OBJS2=contour.cpp
+make OBJS2=syasin.cpp
+./main
+ls
+gth picture.jpg
+make OBJS2=syasin.cpp
+gth picture.jpg
+./main
+ls
+gthumb picture.jpg
+gth picture.jpg
+make OBJS2=syasin.cpp
+./main
+make OBJS2=contour.cpp
+./main 180
+./main 170
+./main 150
+./main 100
+./main 120
+./main 200
+./main 90
+./main 100
+./main 110
+./main 100
+gth keylms.png
+winetricks wenquanyi
+wine
+.wine
+ls
+cd dosdevices
+ls
+cd d:
+ls
+cd ..
+ls
+cd z:
+ls
+cd ..
+ls
+cd c:
+ls
+cd windows
+ls
+cd Installer
+ls
+cd ..
+ls
+ ln -s /usr/share/fonts/ipamonafont/ipagui-mona.ttf ~/.wine/drive_c/windows/Fonts/
+ls
+sudo fined -name *exe
+sudo fined --name *exe
+sudo fined --name 
+sudo fined / -name *exe 
+sudo found / -name *.exe 
+ps -e
+pkill kworker/u9:0
+winetricks --gui
+winetricks tahoma
+wine
+wine --version
+sudo apt-get update
+sudo apt-get install 1.7.19
+sudo apt-get install wine-1.7.19
+sudo apt-get install wine1.7.19
+sudo apt-get install wine1.7
+wine --version
+sudo add-apt-repository ppa:ubuntu-wine/ppa
+sudo apt-get update
+sudo apt-get install wine1.7 winetricks
+wine --version
+ls
+V
+sudo apt-get install flex bison qt4-qmake
+wget http://prdownloads.sourceforge.net/wine/wine-1.7.19.tar.bz2
+tar -xjvf wine-1.7.*
+cd wine-1.7.19
+ls
+make
+./configure
+cd tools; ./wineinstall
+./configure --enable-win64
+cd..
+ls
+cd ..
+./configure --enable-win64
+cd..
+wine --version
+make
+make install
+sudo make install
+wine --version
+ls
+cd ..
+sudo apt-get uninstall wine1.7
+sudo apt-get remove wine1.7
+ls
+wine -version
+wine --version
+cd /
+ls
+cd bin
+ls
+cd ..
+ls
+cd usr
+ls
+cd src
+ls
+cd ..
+sudo fined / -name wine
+sudo fined /* -name wine
+sudo fined /* --name wine
+sudo find / -name wine
+sudo find / -name wine1.7.19
+ls
+cd /usr/local
+ls
+cd include
+ls
+cd wine
+ls
+cd ..
+cd
+ls
+cd wine-1.7.19
+ls
+make
+sudo make install
+wine --version
+sudo apt-get remove wine1.6
+wine --version
+rm wine-1.7
+rm wine1.7
+sudo apt-get remove wine1.7
+wine --version
+sudo make install
+ls
+wine --version
+make
+sudo make install
+wine --version
+wine
+cd ..
+ls
+rm -r wine-1.7.19
+rm -r wine-1.7.19.tar.bz2
+ls
+sudo add-apt-repository ppa:ubuntu-wine/ppa
+sudo apt-get update
+sudo apt-get install wine1.7 winetricks
+wine --version
+i
+wine --version
+winetricks ie8
+winetricks d3dx9
+run-help winetricks
+winetricks dotnet20
+winetricks corefonts
+winetricks dotnet40
+ls
+cd D
+cd Downloads
+ls
+UnitySetup-4.5.1.exe
+./UnitySetup-4.5.1.exe
+sudo \./UnitySetup-4.5.1.exe
+sudo ./UnitySetup-4.5.1.exe
+ls
+wine UnitySetup-4.5.1.exe
+wine 
+cd Downloads
+ls
+wine UnitySetup-4.5.1.exe
+cd 
+cd .wine
+ls
+cd drive_c
+ls
+cd Program\ Files
+cd ..
+cd Program\ Files\ \(x86\)
+ls
+rm Unity
+rm -r Unity
+ls
+rm Internet\ Explorer
+rm -r Internet\ Explorer
+ls
+sudo sutdown -h now
+sudo shutdown -h now
+mkdir wine32
+winecfg
+i
+winecfg
+winetricks --gui
+gnome-system-monitor
+winetricks tohoma
+winetricks d3dx9
+winetricks dotnet20
+winetricks corefonts
+winetricks dotnet40
+winetricks forcemono
+winetricks -gui
+winetricks --gui
+sudo winetricks --gui
+winetricks --gui
+wine --version
+wine d3dx9
+winetricks d3dx9
+cd Downloads
+wine UnitySetup-4.3.4.exe
+sys
+i
+mn
+i
+i
+mn
+ls
+wine UnitySetup-4.3.4.exe
+winetricks --gui
+winetricks registry
+cd ..
+cd wine32
+ls
+cat system.reg
+winetricks --gui
+su
+sudo winetricks --gui
+sudo wine winetricks --gui
+sudo winetricks
+winetricks --gui
+wine regedit
+sudo wine regedit
+wine regedit
+cd .emacs.d
+elisp
+ls
+mkdir ac-dict
+vim
+cd ..
+ls
+rm sess*
+ls
+vi
+ls
+rm test
+cd
+ls
+vi
+vimtutor ja
+sudo apt-get install vim-runtime
+vimtutor ja
+gvim
+sudo apt-get install vim
+gvim
+sudo apt-get install vim-gnome
+emacs -nw
+vim test.c
+ãƒ¨
+e
+cd .emacs.d
+ls
+e
+emacs
+ls
+import matplotlib.mlab as mlab
+wgetd
+svn co  https://matplotlib.svn.sourceforge.net/svnroot/matplotlib/trunk/matplotlib
+cd matplotlib
+python setup.py build
+python setup.py install
+sudo python setup.py install
+py
+cd
+p/
+mkdir machine
+cd machine
+test.py
+E test.py
+py test.py
+mv test.py histgram.py
+py histgram.py
+python histgram.py
+ls
+py test.py
+sudo apt-get install python-scipy python-matplotlib
+py test.py
+cd
+.matplotlib
+ls
+E matplotlibrc
+cd -3
+py test.py
+cd /
+ls
+cd usr
+ls
+cd lib
+ls
+cd unity
+ls
+cd ..
+ls
+fine -name matp
+find -name matp
+cd .
+cd ..
+ls
+cd lib
+cd python2.7
+ls
+cd ..
+ls
+cd ..
+ls
+cd lib
+ls
+cd python
+cd ..
+cd usr
+cd lib
+cd python
+ls
+cd python3
+ls
+cd dist-packages
+ls
+ls mat
+ls mat*
+cd ..
+ls
+cd python3.3
+ls
+cd ..
+cd python2.7
+ls
+cd ../..
+cd local
+cd lib
+cd python3.3
+ls
+cd dist-packages
+ls
+cd ../..
+cd python
+cd python2.7
+ls
+cd dist-packages
+ls
+py
+cd
+cd p/machine
+ls
+python3 histgram.py
+python histgram.py
+cd
+wgetd
+ls
+cd matplotlib
+ls
+sudo python setup.py uninstall
+sudo python setup.py remove
+E setup.py
+sudo apt-get install python-pyvenv
+sudo apt-get install pyvenv
+sudo apt-get install python python-dev
+sudo apt-get install python-numpy python-scipy python-matplotlib
+cd
+cd p/machine
+py test.py
+cd p/machine
+py test.py
+cd /media/rasorasi/USBMEMORY/CAN_kato
+ls
+cd pic24fj64GA002
+ls
+cp CAN.c CAN2.c
+cp CAN.h CAN2.h
+e
+cd
+e
+cd Desktop
+gcc main.c
+gcc main.c -I./
+ls
+a.ou
+./a.out
+ls
+rm A*
+ls
+rm main.c
+e
+cd Downloads
+ls solarus_1.2.0-4_i386.deb
+dpkg -i solarus_1.2.0-4_i386.deb
+dpkg -i solarus_1.2.0-3_amd64.deb
+sudo apt-get install solarus
+dpkg -i solarus_1.2.0-3_amd64.deb
+dpkg  solarus_1.2.0-3_amd64.deb
+dpkg -I solarus_1.2.0-3_amd64.deb
+dpkg -i solarus_1.2.0-3_amd64.deb
+sudo dpkg -i solarus_1.2.0-3_amd64.deb
+sudo dpkg -i solarus_1.2.0-4_i386.deb
+e
+cd .emacs.d
+ls
+rm session.10
+rm session.10*
+cd ..
+ls .saves
+cd .emacs.d
+ls
+cd backups
+ls
+cd ..
+ls
+cd ..
+mv -r .emacs.d Desktop
+mv -d .emacs.d Desktop
+rm .emacs
+rm .emacs.d
+e
+mkdir .emacs.d
+ls
+cd .emacs.d
+ls
+ls -a
+cd ..
+e
+.emacs.d
+ls
+cd projects/dotfiles
+ln -n .emacs.d ~/
+ln -nr .emacs.d ~/
+ln -nv .emacs.d ~/
+ln --hel
+ln --help
+ln -s .emacs.d ~/
+cd 
+rm -r .emacs.d
+cd projects/dotfiles
+ln -s .emacs.d ~/
+ls
+e
+ls
+cd .emacs.d
+ls
+cap init.el
+cat init.el
+cd 
+rm -r .emacs.d
+cd projects/dotfiles
+ln -s .emacs.d ~/.emacs.d
+e
+ls
+cd
+rm .emacs.d
+cd projects/dotfiles
+ln -s .emacs.d /home/rasorasi/.emacs.d
+e
+ln -sdf .emacs.d /home/rasorasi/.emacs.d
+e
+ls -a
+ln -sd .emacs.d /home/rasorasi/.emacs.d
+cd ../..
+ls
+rm .emacs
+rm .emacs.d
+cd -1
+ln -sd .emacs.d /home/rasorasi/.emacs.d
+e
+cd 
+rm -r .emacs.d
+ls
+rm -r .emacs.d
+ln -s ~/projects/dotfiles/.emacs.d  ~/.emacs.d
+e
+cd projects/dotfiles
+git add .
+cd .emacs.d
+ls
+git gc .
+ls
+cd ..
+ls -a
+cd ..
+ls
+ls -a
+cd dotfiles
+ls
+ls -a
+E .gitignore
+git rm -f session.*
+git rm -f . session.*
+git rm -f . session.
+git log .
+git add .
+git rm --cached -f session.*
+git rm --cached -f . session.*
+git status .
+cd .emacs.d
+git rm session.*
+git add .
+git add --all .
+git add -m "add theme etc"
+git push origin master
+cd p/machine
+py histgram.py
+sudo apt-get update
+sudo apt-get -yV upgrade
+sudo apt-get --reinstall -yV install openjdk-7-jre
+sudo apt-get --reinstall -yV install openjdk-7-jdk
+if [ -d /usr/lib/jvm/java-7-openjdk-i386/jre/lib/i386/jamvm ]; then \
+    fgrep -v "openjdk" /etc/ld.so.conf > /tmp/ld.so.conf.$$\
+    echo "/usr/lib/jvm/java-7-openjdk-i386/jre/lib/i386/jamvm" >> /tmp/ld.so.conf.$$\
+    sudo cp /tmp/ld.so.conf.$$ /etc/ld.so.conf\
+    sudo /sbin/ldconfig\
+elif [ -d /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/jamvm ]; then \
+    fgrep -v "openjdk" /etc/ld.so.conf > /tmp/ld.so.conf.$$\
+    echo "/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/jamvm" >> /tmp/ld.so.conf.$$\
+    sudo cp /tmp/ld.so.conf.$$ /etc/ld.so.conf\
+    sudo /sbin/ldconfig\
+fi 
+sudo apt-get -yV install libopenni-dev
+sudo apt-get -yV install libopenni-java
+sudo apt-get -yV install libopenni-nite-dev
+sudo apt-get -yV install libopenni-sensor-primesense-dev
+sudo apt-get -yV install libopenni-sensor-primesense0
+sudo apt-get -yV install libopenni0
+sudo apt-get -yV install openni-dev
+sudo apt-get -yV install openni-doc
+sudo apt-get -yV install openni-sensor-primesense-bin
+sudo apt-get -yV install openni-utils
+sudo apt-get -yV install ps-engine
+sudo apt-get -yV install libopenni-dev
+sudo apt-get -yV install libopenni2-0
+sudo apt-get -yV install libopenni2-dev
+sudo apt-get -yV install openni2-doc
+sudo apt-get -yV install openni2-utils
+sudo apt-get install git-core cmake freeglut3-dev pkg-config build-essential libxmu-dev libxi-dev libusb-1.0-0-dev doxygen graphviz mono-complete --fix-missing
+mkdir kinect
+cd kinect/OpenNI-unstable/Platform/Linux/CreateRedist
+./RedistMaker
+cd kinect/OpenNI-unstable/Platform/Linux
+ls
+./RedistMaker
+cd ..
+ls
+cd CreateRedist
+ls
+./install.sh
+ls
+./Redist
+./RedistMaker
+sudo apt-get install g++
+sudo apt-get install libusb-1.0-0-dev
+sudo apt-get install freeglut3-dev
+sudo apt-get install doxygen
+sudo apt-get install graphviz
+sudo apt-get install doxygen
+sudo apt-get -f install doxygen
+sudo apt-get  install python
+sudo apt-get  install mono-complete
+sudo apt-get update
+sudo apt-get  install mono-complete
+sudo apt-get -f install mono-complete
+sudo apt-get  install mono-complete
+sudo apt-get install libusb-1.0-0-dev
+sudo apt-get install freeglut3-dev
+sudo apt-get install doxygen
+sudo apt-get install graphviz
+cd kinect/OpenNI-unstable/Platform/Linux/CreateRedist
+ls
+./RedistMaker
+cd ..
+ls
+cd Redist
+ls
+cd ..
+ls
+cd Redist
+ls
+cd OpenNI-Bin-Dev-Linux-x64-v1.5.8.5
+ls
+./install.sh
+sudo ./install.sh
+cd ..
+ls
+..
+ls
+cd bu
+cd Build
+ls
+make
+NiViewer
+sudo add-apt-repository ppa:v-launchpad-jochen-sprickerhof-de/pcl
+sudo apt-get install libpcl-all
+Niviewer
+ls
+sudo make install
+NiViewer
+cd ..
+ls
+cd Redist
+ls
+cd OpenNI-Bin-Dev-Linux-x64-v1.5.8.5
+ls
+./install.sh
+cd Samples
+ls
+./NiViewer
+sudo apt-get -yV install libopenni-dev
+sudo apt-get -yV install libopenni-java
+sudo apt-get -yV install libopenni-nite-dev
+sudo apt-get -yV install libopenni-sensor-primesense-dev
+sudo apt-get -yV install libopenni-sensor-primesense0
+sudo apt-get -yV install libopenni0
+sudo apt-get -yV install openni-dev
+sudo apt-get -yV install openni-doc
+sudo apt-get -yV install openni-sensor-primesense-bin
+sudo apt-get -yV install openni-utils
+sudo apt-get -yV install ps-engine
+cd 
+cd kinect
+ls
+cd SensorKinect-unstable
+ls
+cd Platform/Linux/CreateRedist
+ls
+./RedistMaker
+cd ..
+ls
+cd CreateRedist
+ls
+./install.sh
+cd ..
+ls
+cd Install
+ls
+cd ..
+cd Build
+ls
+cd ..
+ls
+cd Install
+ls
+cd ..
+ls
+cd Bin
+ls
+cdc x64-Release
+cd x64-Release
+ls
+cd ../..
+ls
+cd CreateRedist
+ls
+./RedistMaker
+sudo port install libtool
+sudo apt-get install freeglut3-dev
+OpneNI
+cd kinect/OpenNI-unstable
+ls
+cd Platform
+cd Linux
+ls
+cd 
+ls
+cd -2
+ls
+cd Build
+ls
+cd ..
+ls
+cd 
+cd kinect/OpenNI-unstable/Platform/Linux/Redist
+ls
+cd OpenNI-Bin-Dev-Linux-x64-v1.5.8.5
+ls
+sudo ./install.sh
+cd ..
+ls
+cd ..
+ls
+cd CreateRedist
+ls
+Final
+ls
+cd ..
+cd..
+ls
+cd ..
+ls
+cd Build
+ls
+cd Samples
+ls
+./NiViewer
+cd ..
+cd 
+cd kinect/SensorKinect-unstable/Platform/Linux
+ls
+cd CreateRedist
+ls
+./RedistMaker
+cd ..
+ls
+cd B
+cd Build
+ls
+make
+cd ..
+ls
+cd Install
+ls
+cd ..
+cd CreateRedist
+ls
+sudo ./install.sh
+sudo apt-get install libpcl-all
+sudo add-apt-repository ppa:v-launchpad-jochen-sprickerhof-de/pcl
+sudo apt-get install
+sudo apt-get update
+sudo apt-get install libpcl-all
+sudo apt-get install libopenni-dev
+ls
+./RedistMaker
+ls
+cd ..
+ls
+cd Redist
+ls
+cd Sensor-Bin-Linux-x64-v5.1.2.1
+ls
+./install.sh
+sudo ./install.sh
+cd ..
+ls
+cd B
+cd Build
+ls
+make
+sudo make install
+ls
+cd ..
+ls
+./NiViewer
+ls
+NiViewer
+./NiViewer
+NiViewer
+ls
+cd Install
+ls
+cd ..
+cd Redist
+ls
+cd Sensor-Bin-Linux-x64-v5.1.2.1
+ls
+./install.sh
+sudo ./install.sh
+NiViewer
+sudo apt-get install git-core cmake freeglut3-dev pkg-config build-essential libxmu-dev libxi-dev libusb-1.0-0-dev doxygen graphviz mono-complete --fix-missing
+NiViewer
+cd ..
+ls ..
+ls
+cd ..
+ls
+cd CreateRedist
+ls
+./RedistMaker
+sudo ./RedistMaker
+..
+ls
+cd Redist
+ls
+cd OpenNI-Bin-Dev-Linux-x64-v1.5.8.5
+ls
+sudo sh install.sh
+..
+ls
+cd Redist
+cd ..
+cd CreateRedist
+ls
+sudo ./RedistMaker
+ls
+cd ..
+ls
+cd Redist
+ls
+cd ..
+ls
+cd CreateRedist
+ls
+./RedistMaker
+cd..
+cd ..
+ls
+cd Redist
+ls
+ls -a
+..
+cd Build
+ls
+make
+ls
+cd ..
+ls
+cd ..
+ls
+cd ..
+ls
+cd Build
+ls
+make
+sudo make install
+cd ..
+ls
+cd Redist
+ls
+cd OpenNI-Bin-Dev-Linux-x64-v1.5.8.5
+ls
+sudo ./install.sh
+ls
+cd Redist
+ls
+cd ..
+ls
+rm -r Redist
+cd CreateRedist
+ls
+./RedistMaker
+cd ..
+ls
+sudo apt-get install libpcl-all
+NiViewer
+ls
+cd Build
+ls
+make
+cd ..
+ls
+cd Build
+ls
+cd XnDeviceFileV2
+cd XnDeviceSensorV2
+ls
+make
+cd ..
+ls
+cd ..
+ls
+cd Install
+ls
+cd ..
+ls
+NiViewer
+ls
+cd CreateRedist
+ls
+./install.sh
+sudo ./install.sh
+sudo ./RedistMaker
+ls
+cd ..
+ls
+cd ..
+ls
+cd ..
+ls
+cd ..
+ls
+cd -16
+ls
+./install.sh
+sudo ./install.sh
+ls
+cd Linux
+ls
+cd CreateRedist
+ls
+sudo ./RedistMaker
+ls
+cd ..
+ls
+sudo apt-get install git-core cmake freeglut3-dev pkg-config build-essential libxmu-dev libxi-dev libusb-1.0-0-dev doxygen graphviz mono-complete --fix-missing
+sudo apt-get install git-core cmake freeglut3-dev pkg-config build-essential libxmu-dev libxi-dev libusb-1.0-0-dev doxygen graphviz mono-complete
+cd ../../..
+ls
+cd OpenNI-unstable
+ls
+cd Platform/Linux
+ls
+cd CreateRedist
+ls
+./Redist
+./RedistMaker
+sudo ./RedistMaker
+ls
+cd ..
+ls
+cd Redist
+ls
+cd OpenNI-Bin-Dev-Linux-x64-v1.5.8.5
+ls
+sudo ./install.sh
+cd
+cd kinect/SensorKinect-unstable/Platform/Linux
+cd CreateRedist
+./RedistMaker
+cd ..
+ls
+cd ..
+ls
+cd /
+ls
+cd /usr/lib
+ls
+rm *openni*
+rm -r *openni*
+rm -v *openni*
+rm -rf *openni*
+sudo rm -rf *openni*
+ls
+cd ..
+cd /usr/bin
+ls
+rm -rf *openni*
+sudo rm -rf *openni*
+ls
+cd /usr/include
+rm -rf ni
+sudo rm -rf ni
+ls
+cd /var/lib
+ls
+rm -rf ni
+sudo rm -rf ni
+ls
+cd ..
+ls
+cd OpenNI-Bin-Dev-Linux-x64-v1.5.8.5
+ls
+sudo ./install.sh
+cd Desktop
+mv -r ver2 ./ver3
+mv -v ver2 ./ver3
+ls
+mv -v ver3 ./ver2
+cp -v ver2 ./ver3
+cp -r ver2 ./ver3
+ls
+kinect
+ls
+cd OpenNI-unstable
+ls
+cd Platform/Linux
+ls
+cd Build
+ls
+cd ..
+cd CreateRedist
+ls
+./RedistMaker
+sudo ./RedistMaker
+cd 
+ls
+cd -
+cd ..
+cd Redist
+ls
+cd
+cd -
+cd OpenNI-Bin-Dev-Linux-x64-v1.5.8.5
+ls
+i
+ls
+i
+ls
+i
+ls
+i
+ls
+i
+ls
+i
+ls
+./install.sh
+sudo ./install.sh
+cd kinect/SensorKinect-unstable
+ls
+cd P
+cd Platform/Linux
+ls
+cd CreateRedist
+sudo ./RedistMaker
+ls
+cd ..
+ls
+sudo apt-get install libusb-1.0-0-dev
+sudo apt-get install g++
+ls
+sudo apt-get install pyhton
+sudo atp-get update
+sudo apt-get update
+sudo apt-get install sudo apt-get install g++
+cd CreateRedist
+ls
+./install.sh
+./RedistMaker
+cd ..
+cd ../../..
+ls
+rm -rf *
+ls
+rm -rf OpenNI-unstable
+ls
+: 1403873858:0;cd ../kinect
+: 1403873859:0;ls
+: 1403873863:0;rm -rf OpenNI-unstable
+: 1403873864:0;ls
+: 1403873871:0;sudo rm -rf OpenNI-unstable
+: 1403873873:0;ls
+: 1403873948:0;cd ../Downloads
+: 1403873948:0;ls
+: 1403873984:0;unzip OpenNI-unstable.zip 
+: 1403873998:0;mv -v OpenNI-unstable ../kinect
+: 1403874008:0;unzip SensorKinect-unstable.zip
+: 1403874033:0;mv -v SensorKinect-unstable ../kinect
+: 1403874037:0;cd ../kinect
+: 1403874037:0;ls
+: 1403874039:0;cd OpenNI-unstable
+: 1403874039:0;ls
+: 1403874048:0;cd Platform/Linux
+: 1403874048:0;ls
+: 1403874050:0;cd CreateRedist
+: 1403874050:0;ls
+: 1403874055:0;i
+: 1403874057:0;ls
+: 1403874064:0;./RedistMaker
+: 1403874274:0;ls
+: 1403874282:0;cd ..
+: 1403874282:0;ls
+: 1403874285:0;cd Re
+: 1403874285:0;ls
+: 1403874289:0;cd Redist
+: 1403874289:0;ls
+: 1403874291:0;cd OpenNI-Bin-Dev-Linux-x64-v1.5.8.5
+: 1403874292:0;ls
+: 1403874297:0;sudo ./install.sh
+: 1403874303:0;cd ../../..
+: 1403874304:0;ls
+: 1403874307:0;cd ../..
+: 1403874308:0;ls
+: 1403874312:0;cd SensorKinect-unstable
+: 1403874312:0;ls
+: 1403874318:0;cd Platform/Linux
+: 1403874319:0;ls
+: 1403874328:0;cd CreateRedist/ls
+: 1403874331:0;cd CreateRedist/
+: 1403874332:0;ls
+: 1403874338:0;./RedistMaker
+: 1403874366:0;ls
+: 1403874367:0;cd ..
+: 1403874367:0;ls
+: 1403874370:0;cd Install
+: 1403874371:0;ls
+: 1403874375:0;cd ..
+: 1403874511:0;NiViewer
+: 1403874632:0;sudo apt-get install freeglut3-dev
+: 1403874787:0;ls
+: 1403874793:0;cd CreateRedist
+: 1403874793:0;ls
+: 1403875525:0;cd ..
+: 1403875525:0;ls
+: 1403875528:0;cd Build
+: 1403875529:0;ls
+: 1403875536:0;make
+: 1403875703:0;sudo apt-get install git-core cmake freeglut3-dev pkg-config build-essential libxmu-dev libxi-dev libusb-1.0-0-dev doxygen graphviz mono-complete 
+: 1403875844:0;cd ..
+: 1403875845:0;ls
+: 1403875856:0;cd kinect/OpenNI-unstable/Platform/Linux
+: 1403875857:0;ls
+: 1403875864:0;cd Redist
+: 1403875868:0;OpenNI-Bin-Dev-Linux-x64-v1.5.8.5
+: 1403875869:0;ls
+: 1403875871:0;make
+: 1403875875:0;cd ..
+: 1403875876:0;ls
+: 1403875879:0;cd Build
+: 1403875879:0;ls
+: 1403875882:0;sudo make install
+: 1403875975:0;ls
+: 1403875979:0;cd ..
+: 1403875984:0;ls
+: 1403875989:0;cd CreateRedist
+: 1403875992:0;cd ..
+: 1403875993:0;ls
+: 1403875994:0;cd B
+: 1403875995:0;ls
+: 1403875999:0;cd Build
+: 1403876000:0;ls
+: 1403876002:0;make
+: 1403876074:0;ls
+: 1403876082:0;make
+: 1403876126:0;cd ..
+: 1403876127:0;ls
+: 1403876129:0;cd Install
+: 1403876130:0;ls
+: 1403876138:0;cat 55-primesense-usb.rules
+: 1403876192:0;sudo add-apt-repository ppa:v-launchpad-jochen-sprickerhof-de/pcl
+: 1403876258:0;sudo apt-get update
+: 1403876305:0;sudo apt-get install libpcl-all
+: 1403876337:0;ls
+: 1403876351:0;sudo apt-get -yV install libopenni-dev
+: 1403876352:0;sudo apt-get -yV install libopenni-java
+: 1403876368:0;sudo apt-get -yV install libopenni-dev
+: 1403876369:0;sudo apt-get -yV install libopenni-java
+: 1403876370:0;sudo apt-get -yV install libopenni-nite-dev
+: 1403876370:0;sudo apt-get -yV install libopenni-sensor-primesense-dev
+: 1403876383:0;sudo apt-get -yV install libopenni2-0
+: 1403876406:0;sudo apt-get --reinstall -yV install openjdk-7-jre
+: 1403876435:0;NiViewer
+: 1403876478:0;ls
+: 1403876532:0;cd ..
+: 1403876532:0;ls
+: 1403876534:0;cd Build
+: 1403876535:0;ls
+: 1403876539:0;make
+: 1403876542:0;cd ..
+: 1403876552:0;cd ../../..
+: 1403876554:0;ls
+: 1403876557:0;rm SensorKinect-unstable
+: 1403876565:0;sudo rm -rf SensorKinect-unstable
+: 1403876566:0;ls
+: 1403876693:0;cd ../Downloads
+: 1403876702:0;unzip SensorKinect-master.zip
+: 1403876723:0;mv -v SensorKinect-master ../kinect
+: 1403876724:0;ls
+: 1403876736:0;cd ../
+: 1403876737:0;ls
+: 1403876741:0;cd kinect
+: 1403876742:0;ls
+: 1403876746:0;cd SensorKinect-master
+: 1403876747:0;ls
+: 1403876751:0;cd Platform/Linux
+: 1403876752:0;ls
+: 1403876754:0;cd CreateRedist
+: 1403876759:0;sudo ./RedistMaker
+: 1403876774:0;cd ..
+: 1403876775:0;ls
+: 1403876778:0;cd Build
+: 1403876779:0;ls
+: 1403876780:0;make
+: 1403876818:0;sudo make
+: 1403876878:0;ls
+: 1403876883:0;cd ../../../..
+: 1403876884:0;ls
+: 1403876890:0;rm -rf SensorKinect-master
+: 1403876899:0;sudo rm -rf SensorKinect-master
+: 1403876900:0;ls
+: 1403876902:0;cd ..
+: 1403876903:0;ls
+: 1403876909:0;cd Downloads
+: 1403876917:0;unzip SensorKinect-12ad25d5e665dc061b0b7f1820d37af2fea43224.zip
+: 1403876926:0;mv -v SensorKinect-12ad25d5e665dc061b0b7f1820d37af2fea43224 ../kinect
+: 1403876930:0;cd ../kinect
+: 1403876957:0;mv -v SensorKinect-12ad25d5e665dc061b0b7f1820d37af2fea43224 SensorKinect
+: 1403876959:0;ls
+: 1403876960:0;cd SensorKinect
+: 1403876961:0;ls
+: 1403876964:0;cd Platform/Linux-x86
+: 1403876965:0;ls
+: 1403876967:0;cd CreateRedist
+: 1403876968:0;ls
+: 1403876970:0;./RedistMaker
+: 1403877001:0;cd ..
+: 1403877002:0;ls
+: 1403877326:0;sudo apt-get update 
+: 1403877380:0;sudo apt-get -yV upgrade
+: 1403877805:0;sudo apt-get -yV install libopenni-dev
+: 1403877806:0;sudo apt-get -yV install libopenni-java
+: 1403877806:0;sudo apt-get -yV install libopenni-nite-dev
+: 1403877807:0;sudo apt-get -yV install libopenni-sensor-primesense-dev
+: 1403877808:0;sudo apt-get -yV install libopenni-sensor-primesense0
+: 1403877808:0;sudo apt-get -yV install libopenni0
+: 1403877809:0;sudo apt-get -yV install openni-dev
+: 1403877810:0;sudo apt-get -yV install openni-doc
+: 1403877918:0;sudo apt-get --reinstall -yV install openjdk-7-jre
+: 1403885260:0;sudo apt-get -yV install libopenni2-0
+: 1403885261:0;sudo apt-get -yV install libopenni2-dev
+: 1403885279:0;NiViewer
+: 1403885546:0;ls
+: 1403885548:0;cd CreateRedist
+: 1403885549:0;ls
+: 1403885555:0;sudo ./install.sh
+: 1403885692:0;cd ..
+: 1403885695:0;cd /
+: 1403885739:0;la
+: 1403885747:0;cd usr/lib
+: 1403885748:0;ls
+: 1403886377:0;sudo apt-get install update-manager-core
+: 1403886395:0;do-release-upgrade
+: 1403886538:0;sudo apt-get dist-upgrade
+: 1403886769:0;do-release-upgrade
+: 1403888614:0;cd /etc/dpkg/dpkg.cfg.d/
+: 1403888615:0;ls
+: 1403888627:0;ls -a
+: 1403889280:0;sudo apt-get update 
+: 1403889320:0;sudo apt-get -yV upgrade
+: 1403889381:0;sudo apt-get --reinstall -yV install openjdk-7-jre
+: 1403889407:0;sudo apt-get -yV install libopenni-dev
+: 1403889408:0;sudo apt-get -yV install libopenni-java
+: 1403889409:0;sudo apt-get -yV install libopenni-nite-dev
+: 1403889410:0;sudo apt-get -yV install libopenni-sensor-primesense-dev
+: 1403889410:0;sudo apt-get -yV install libopenni-sensor-primesense0
+: 1403889411:0;sudo apt-get -yV install libopenni0
+: 1403889412:0;sudo apt-get -yV install openni-dev
+: 1403889412:0;sudo apt-get -yV install openni-doc
+: 1403889413:0;sudo apt-get -yV install openni-sensor-primesense-bin
+: 1403889414:0;sudo apt-get -yV install openni-utils
+: 1403889416:0;sudo apt-get -yV install ps-engine
+: 1403889435:0;NiViewer
+: 1403889443:0;ds
+: 1403889522:0;lsusb
+: 1403889653:0;cd
+: 1403889822:0;sudo apt-get install git-core cmake libglut3-dev pkg-config build-essential libxmu-dev libxi-dev libusb-1.0-0-dev doxygen graphviz
+: 1403889858:0;sudo apt-get install
+: 1403889864:0;sudo apt-get update
+: 1403890005:0;git clone https://github.com/ros-pkg-git/Sensor.git
+: 1403890041:0;ls
+: 1403890049:0;ls Sensor
+: 1403890059:0;cd Sensor
+: 1403890060:0;ls
+: 1403890065:0;cd Platform/Linux-x86
+: 1403890065:0;ls
+: 1403890068:0;cd CreateRedist
+: 1403890068:0;ls
+: 1403890071:0;./RedistMaker
+: 1403890074:0;sudo ./RedistMaker
+: 1403890086:0;ls
+: 1403890097:0;cd ../../../
+: 1403890097:0;ls
+: 1403890099:0;cd ..
+: 1403890104:0;rm -rf Sensor
+: 1403890107:0;cd kinect
+: 1403890108:0;ls
+: 1403890110:0;cd SensorKinect
+: 1403890113:0;cd ..
+: 1403890116:0;rm -rf SensorKinect
+: 1403952389:0;/path
+: 1403959727:0;cd .emacs.d
+: 1403959727:0;ls
+: 1403959733:0;rm sessI
+: 1403959735:0;rm sess*
+: 1403959739:0;cd el
+: 1403959743:0;elpa
+: 1403959745:0;ls
+: 1403962617:0;cd ..
+: 1403962617:0;ls
+: 1403962621:0;cd ..
+: 1403962622:0;ls
+: 1403962631:0;cd projects/dotfiles
+: 1403962635:0;git add .
+: 1403962647:0;git add -A .

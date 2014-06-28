@@ -1,0 +1,43 @@
+#include <iostream>
+#include <opencv2/core/core.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/highgui/highgui.hpp>
+
+using namespace cv;
+using namespace std;
+
+int main( int argc, char** argv )
+{
+	
+	CvCapture* capture;
+	IplImage* img;
+	CvVideoWriter* rec;
+	int frames = 1000;
+
+	capture = cvCaptureFromCAM(1);
+
+	if(capture == NULL){
+		cout << "not found camera\n"<< endl;
+		return -1;
+	}
+
+	img=cvQueryFrame(capture);
+		
+
+	rec = cvCreateVideoWriter("movie.avi",CV_FOURCC('M','J','P','G'),
+							  30, cvSize(img->width,
+										  img->height));
+
+
+	while(frames-->0)
+	{
+		img=cvQueryFrame(capture);
+		cvWriteFrame(rec, img);
+	}
+
+	cvReleaseCapture(&capture);
+	cvReleaseVideoWriter(&rec);
+
+
+	return 0;
+}

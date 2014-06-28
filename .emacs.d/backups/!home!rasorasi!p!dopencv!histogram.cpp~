@@ -1,0 +1,133 @@
+#include <stdio.h>
+#include <iostream>
+#include <iomanip>
+#include <opencv2/opencv.hpp>
+#include <opencv2/core/core.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/highgui/highgui.hpp>
+
+#define B 0
+#define G B+1
+#define R G+1
+
+
+using namespace cv;
+using namespace std;
+
+Mat effect(Mat min_img, Mat mout_img, int type)
+{
+	const int th_type[] = {CV_THRESH_BINARY,
+						   CV_THRESH_BINARY_INV,
+						   CV_THRESH_TRUNC,
+						   CV_THRESH_TOZERO,
+						   CV_THRESH_TOZERO_INV,};
+
+	cvtColor(min_img, mout_img, CV_BGR2GRAY);
+
+	threshold(mout_img, mout_img, 150, 255, th_type[type]);
+
+	return mout_img;
+
+}
+
+
+
+int main( int argc, char** argv )
+{
+	CvCapture* capture=NULL;
+	IplImage  *in_img= NULL;
+	IplImage *write_img[3]={NULL,NULL,NULL};
+
+	char sz_before[256] = "before";
+	const char sz_after[256] = "after";
+	CvVideoWriter* rec=NULL;
+
+	const char* sz_ttl[3] = {"blue", "grenn", "red"};
+
+	Mat cppMat, out_img[3], split_img[3];
+	
+	int wait=1;
+
+	if(argc<2 || strcmp("camera", argv[1]) == 0)
+	   capture=cvCaptureFromCAM(1);
+	
+	else{
+		capture=cvCaptureFromAVI(argv[1]);
+		strcpy(sz_before, argv[1]);
+		wait=33;
+
+	}
+
+	if(capture==NULL){
+		cout<<"not found camera"<<endl;
+		return -1;
+	}
+
+	in_img = cvQueryFrame(capture);
+//	out_img = cvCreateImage(cvGetSize(in_img), IPL_DEPTH_8U, 1);
+
+	
+/*
+	if(argc>2){
+
+//		strcpy(szWriteAviName[i], argv[2]);
+
+			rec = cvCreateVideoWriter(argv[2],
+								  CV_FOURCC('M','J','P','G'),
+									  30, cvSize(in_img->width, in_img->height));
+
+			write_img = cvCreateImage(cvGetSize(in_img), IPL_DEPTH_8U, 1);
+			
+	}
+*/
+
+//	cvNamedWindow(sz_before,CV_WINDOW_AUTOSIZE | CV_WINDOW_FREERATIO);
+//	cvNamedWindow(sz_after, CV_WINDOW_AUTOSIZE | CV_WINDOW_FREERATIO );
+
+	while(1)
+	{
+		in_img = cvQueryFrame(capture);
+		if(in_img==NULL)
+			break;
+
+		cppMat=cvarrToMat(in_img);
+
+		split(cppMat,split_img);
+		threshold(split_img[1], out_img[1], 150, 255, CV_THRESH_BINARY_INV);
+		
+		
+		
+	
+		imshow(sz_before, cppMat);
+		imshow(sz_ttl[1], out_img[1]);
+		
+		
+
+/*
+		for(int i=0; i<3; i++)
+		{
+			imshow(sz_ttl[i], split_img[i]);
+		
+		}
+*/
+
+		if(cvWaitKey(wait)>=0)
+			break;
+
+	}
+
+	cvDestroyAllWindows();
+	cvReleaseCapture(&capture);
+//	cvReleaseImage(&out_img);
+		
+
+		if(rec==NULL){
+			//cvReleaseImage(&write_img);
+			cvReleaseVideoWriter(&rec);
+		}
+
+		return 0;		
+
+	
+}
+

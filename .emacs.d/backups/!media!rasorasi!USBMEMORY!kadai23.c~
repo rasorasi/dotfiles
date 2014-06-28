@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+#define cube(x) ((x)*(x)*(x))
+
+int main(void)
+{
+	int i;
+	double x;
+
+	printf("x     1/cube(x)\n"
+		   "---- ---------\n");
+	for(i=1; i<=5; ++i){
+		x = (double)i;
+		printf("%4.1f    %g\n",
+			   x, 1/cube(x));
+	}
+
+		return 0;
+}

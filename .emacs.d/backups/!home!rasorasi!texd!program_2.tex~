@@ -29,36 +29,23 @@
 %\date{\today}
 \begin{document}
 \section{ソースファイル}
-\lstinputlisting[]{14416.c}
+\lstinputlisting[]{140510.c}
 
-\newpage
-\section{コンパイル・実行結果}
+
+\section{サンプルメイン関数のコンパイル・実行結果}
 \begin{verbatim}
-% gcc 14416.c
-% ./a.out    
-次数を入力してください: 102
-100以下にしてください
-次数を入力してください: 3
-係数を入力してください
-C3:2
-C2:3
-C1:5
-C0:1
-f(0.0) = 1.000000
-f(0.1) = 1.532000
-f(0.2) = 2.136000
-f(0.3) = 2.824000
-f(0.4) = 3.608000
-f(0.5) = 4.500000
-f(0.6) = 5.512000
-f(0.7) = 6.656000
-f(0.8) = 7.944000
-f(0.9) = 9.388000
-f(1.0) = 11.000000
+% gcc 140510.c
+% ./a.out
+sum2_data(&a)=5
+sum2_data(&b)=17
+sum2_data(&c)=4
+sum2_data(&d)=9
+sum2_data(NULL)=0
 
 \end{verbatim}
-%\section{プログラムの説明}
+\newpage
+\section{メイクファイル}
+\lstinputlisting[]{Makefile}
 
-%\section{考察}
 
 \end{document}

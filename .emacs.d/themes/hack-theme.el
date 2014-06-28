@@ -1,8 +1,8 @@
-(deftheme molokai
-  "Molokai color theme")
+(deftheme hack
+  "Hack color theme")
 
 (custom-theme-set-faces
- 'molokai
+ 'hack
  ;; 背景・文字・カーソル
  '(cursor ((t (:foreground "#F8F8F0"))))
  '(default ((t (:background "#1B1D1E" :foreground "#F8F8F2"))))
@@ -29,7 +29,7 @@
  '(font-lock-string-face ((t (:foreground "#E6DB74"))))
 
  ;; 特定キーワード
- '(font-lock-keyword-face ((t (:foreground "#F92672"))))
+ '(font-lock-keyword-face ((t (:foreground "#f93042"))))
 
  ;; Boolean
  '(font-lock-constant-face((t (:foreground "#AE81BC"))))
@@ -39,7 +39,7 @@
  '(paren-face ((t (:foreground "#A6E22A" :background nil))))
 
  ;; コメント
- '(font-lock-comment-face ((t (:foreground "#74715D"))))
+ '(font-lock-comment-face ((t (:foreground "#209020"))))
 
  ;;行番号
  '(linum ((t (:foreground "#404040"))))
@@ -63,6 +63,8 @@
  '(dired-directory ((t (:foreground "#A6E22A"))))
  '(dired-symlink ((t (:foreground "#66D9EF"))))
 
+
+
  ;; MMM-mode
  '(mmm-default-submode-face ((t (:foreground nil :background "#000000")))))
 
@@ -71,5 +73,7 @@
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
-(provide-theme 'molokai)
+
+(provide-theme 'hack)
 (set-frame-font "ricty-12")
+

@@ -1,0 +1,26 @@
+// 画像を読み込む
+cv::Mat bgrImage = cv::imread("saki4.png");
+
+// グレースケール画像に変換
+cv::Mat grayImage;
+cv::cvtColor(bgrImage, grayImage, CV_BGR2GRAY);
+
+// 二値画像に変換
+cv::Mat binaryImage;
+const double threshold = 100.0;
+const double maxValue = 255.0;
+cv::threshold(grayImage, binaryImage, threshold, maxValue, cv::THRESH_BINARY);
+
+// 輪郭を抽出
+// CV_RETR_EXTERNAL：最も外側の輪郭のみ抽出
+// CV_CHAIN_APPROX_NONE：輪郭の全部の点を出力
+vector< vector<cv::Point> > contours;
+cv::findContours(binaryImage, contours, CV_RETR_EXTERNAL, CV_CHAIN_APPROX_NONE);
+
+// 抽出した輪郭を描画
+cv::Mat contourImage(binaryImage.size(), CV_8U, cv::Scalar(255));
+const int drawAllContours = -1;
+cv::drawContours(contourImage, contours, drawAllContours, cv::Scalar(0));
+
+// 画像の表示
+cv::imshow("Contour Image", contourImage);

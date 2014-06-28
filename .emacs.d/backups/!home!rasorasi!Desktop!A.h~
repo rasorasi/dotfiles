@@ -1,0 +1,16 @@
+#ifndef A_H
+#define A_H
+
+typedef union
+{
+	unsinged char byte;
+	struct{
+		unsinged cahr a1	:1;
+		unsinged cahr a1 :1;
+		unsinged cahr a1 :1;
+		unsinged cahr a1 :1;
+		unsinged cahr a1 :1;
+		unsinged cahr a1 :1;
+		unsinged cahr a1 :1;
+		unsinged cahr a1 :1;
+		 			   1	

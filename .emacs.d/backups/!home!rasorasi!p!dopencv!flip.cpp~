@@ -1,0 +1,91 @@
+#include <stdio.h>
+#include <iostream>
+#include <iomanip>
+#include <opencv2/opencv.hpp>
+#include <opencv2/core/core.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/highgui/highgui.hpp>
+
+using namespace cv;
+using namespace std;
+
+int main( int argc, char** argv )
+{
+	CvCapture* capture=NULL;
+	IplImage  *in_img=NULL;
+	IplImage *write_img=NULL;
+	char sz_before[256] = "before";
+	const	char sz_after[256] = "after";
+	CvVideoWriter* rec=NULL;
+
+	Mat cppMat, out_img;
+	
+	int wait=1;
+
+	if(argc<2 || strcmp("camera", argv[1]) == 0)
+	   capture=cvCaptureFromCAM(1);
+	
+	else{
+		capture=cvCaptureFromAVI(argv[1]);
+		strcpy(sz_before, argv[1]);
+		wait=33;
+	}
+
+	if(capture==NULL){
+		cout<<"not found camera"<<endl;
+		return -1;
+	}
+
+	in_img = cvQueryFrame(capture);
+//	out_img = cvCreateImage(cvGetSize(in_img), IPL_DEPTH_8U, 1);
+
+	if(argc>2){
+		rec = cvCreateVideoWriter(argv[2],
+								  CV_FOURCC('M','J','P','G'),
+								  30, cvSize(in_img->width, in_img->height));
+
+			write_img = cvCreateImage(cvGetSize(in_img), IPL_DEPTH_8U, 1);
+								  
+	}
+
+	cvNamedWindow(sz_before,CV_WINDOW_AUTOSIZE | CV_WINDOW_FREERATIO);
+	cvNamedWindow(sz_after, CV_WINDOW_AUTOSIZE | CV_WINDOW_FREERATIO );
+
+	while(1)
+	{
+		in_img = cvQueryFrame(capture);
+		if(in_img==NULL)
+			break;
+		//Ptr<IplImage>in_img=cvLoadImage("image.bmp", CV_LOAD_IMAGE_COLOR);
+		cppMat=cvarrToMat(in_img);
+
+		cvtColor(cppMat, out_img, CV_BGR2GRAY);
+
+		imshow(sz_before, cppMat);
+		imshow(sz_after, out_img);
+
+		if(rec!=NULL){
+			cvMerge(out_img, out_img, out_img, NULL, write_img);
+			cvWriteFrame(rec ,write_img);
+		}
+
+		if(cvWaitKey(wait)>=0)
+			break;
+
+	}
+
+	cvDestroyAllWindows();
+	cvReleaseCapture(&capture);
+//	cvReleaseImage(&out_img);
+		
+
+		if(rec==NULL){
+			cvReleaseImage(&write_img);
+			cvReleaseVideoWriter(&rec);
+		}
+
+		return 0;		
+
+	
+}
+

@@ -1,0 +1,168 @@
+#include"p24FJ64GA002.h"
+#include"CAN.h"
+
+//メインファイルで定義
+#define	SS 
+
+BYTE MsgBuf[14] = {0};
+
+
+union txb0ctrl TXB0CTRL; 
+union txb1ctrl TXB1CTRL;
+union txb2ctrl TXB2CTRL; 
+union txb0dlc TXB0DLC;
+union txb1dlc TXB1DLC; 
+union txb2dlc TXB2DLC;
+union cnf1 CNF1; 
+union cnf2 CNF2; 
+union canctrl CANCTRL; 
+union rxb0ctrl RXB0CTRL; 
+union rxb1ctrl RXB1CTRL;
+
+void SPI1Init(void)
+{
+	//SPIポート設定
+	//TRISBbits.TRISB0 = 0; //SS_out	
+	//RPOR1bits.RP2R = 7; // SDO
+	//RPINR20bits.SDI1R = 1; //SDI 
+	//RPOR1bits.RP3R = 8; // SCK
+	
+    //config SPI1
+    
+	SPI1STATbits.SPIEN 		= 0;	// disable SPI port
+	SPI1STATbits.SPISIDL 	= 0; 	// Continue module operation in Idle mode
+    
+	SPI1BUF 				= 0;   	// clear SPI buffer
+    
+	IFS0bits.SPI1IF 		= 0;	// clear interrupt flag
+	IEC0bits.SPI1IE 		= 0;	// disable interrupt
+    
+	SPI1CON1bits.DISSCK		= 0;	// Internal SPIx clock is enabled
+	SPI1CON1bits.DISSDO		= 0;	// SDOx pin is controlled by the module
+	SPI1CON1bits.MODE16 	= 0;	// set in 16-bit mode, clear in 8-bit mode
+	SPI1CON1bits.SMP		= 1;	// Input data sampled at middle of data output time
+	SPI1CON1bits.CKP 		= 0;	// CKP and CKE is subject to change ...
+	SPI1CON1bits.CKE 		= 1;	// ... based on your communication mode.
+	SPI1CON1bits.MSTEN 		= 1; 	// 1 =  Master mode; 0 =  Slave mode
+	SPI1CON1bits.SPRE 		= 4; 	// Secondary Prescaler = 4:1
+	SPI1CON1bits.PPRE 		= 2; 	// Primary Prescaler = 4:1
+	
+	SPI1CON2 				= 0;	// non-framed mode
+
+	
+	SPI1STATbits.SPIEN 		= 1; 	// enable SPI port, clear status
+
+
+}
+
+BYTE writeSPI1( BYTE data )
+{
+	SPI1BUF = data;			// write to buffer for TX
+	while(!SPI1STATbits.SPIRBF);	// wait for transfer to complete
+	return SPI1BUF;    			// read the received value
+}//writeSPI1
+
+
+
+/******************************************************/
+//		change is MCP2515 Data Trans
+//		adrs	CAN_Adrres
+//		arg1	Data
+//		inst	MCP2515Command
+//		arg2	Mask for Data
+/******************************************************/
+BYTE change(BYTE inst, BYTE adrs, BYTE arg1, BYTE arg2)
+{
+	SS = 0;
+	BYTE read_data;
+	writeSPI1(inst);
+	writeSPI1(adrs);
+	read_data = writeSPI1(arg1);
+	if(arg2 != 0)
+		writeSPI1(arg2);
+	SS = 1;
+	
+	return read_data;
+}
+
+/*****************************************************/
+//		C_Write is continuity Data Trans
+//		data		Data
+/*****************************************************/
+void C_Write(BYTE *data)
+{	
+	int i;
+	SS = 0;
+	writeSPI1(0x40);
+	for(i = 0; i < 13; i++){
+		writeSPI1(*(data + i));
+		
+	}	 
+	SS = 1;
+		
+}	
+
+void C_Read(BYTE *data)
+{	
+	int i;
+	SS = 0;
+	writeSPI1(0x90);
+	for(i = 0; i < 13; i++){
+		*(data + i) = writeSPI1(0);	
+	}	 
+	SS = 1;
+		
+}	
+
+//受信バッファ（0, 1）を確認して、フルだったら1を返す（受信したら1を返す)
+int RxCheck(BYTE num)
+{
+	if(StRead() & (0x01 + num)) return 1;
+	else return 0;
+}	 
+
+void IDSet(BYTE *id, BYTE msg){
+	id[0] = (msg >> 3);
+	id[1] = (msg << 5);
+}
+
+void ErrorCheck(){
+	if((Read(0x2d)&0x3f)>0)
+		BitMod(0x0c, 0x28,0x28);
+}
+
+//使えません
+void SetFilter(BYTE flt){
+	
+	RXB0CTRL.bits.RXM = 1;
+	Write(A_RXB0CTRL, RXB0CTRL.byte);
+	
+	Write(0x00, (flt >> 3));
+	Write(0x01, (flt << 5));
+
+}
+
+void CANInit()
+{
+	
+	CNF1.bits.BRP = 4;		//ボーレートプリスケーラ
+	CNF2.bits.PRSEG = 1;		//PropSegビット長
+	CNF2.bits.PHSEG1 = 6;	//PH1ビット長
+	RXB0CTRL.bits.RXM = 3;	//マスク、フィルタ
+	RXB1CTRL.bits.RXM = 3;	//・・・を使用しない
+	CANCTRL.byte = 0x07;			 //ノーマルモードに設定
+	
+	Reset();
+	
+	BitMod(0x0c, 0x14, 0x14);	//RX0BFに接続したLEDを点灯
+	Write(A_CNF1, CNF1.byte);
+	Write(A_CNF2, CNF2.byte);
+	BitMod(A_RXB0CTRL, RXB0CTRL.byte, RXB0CTRL.byte);
+	BitMod(A_RXB1CTRL, RXB1CTRL.byte, RXB1CTRL.byte);
+	
+	
+	Write(A_CANCTRL, CANCTRL.byte);
+	
+	
+}
+

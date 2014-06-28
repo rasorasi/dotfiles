@@ -78,3 +78,4 @@
                (file-name-as-directory (file-name-directory load-file-name))))
 
 (provide-theme 'jpaper)
+(set-frame-font "ricty-12")

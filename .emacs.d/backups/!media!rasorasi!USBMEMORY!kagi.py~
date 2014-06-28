@@ -1,0 +1,42 @@
+import pygame
+from pygame.locals import *
+import spidev
+import time
+
+def main():
+    pygame.init()
+
+    spi = spidev.SpiDev()
+    spi.open(0, 0)
+
+    while True:
+    	
+    	for e in pygame.event.get():
+    	
+    		if (e.type == KEYDOWN and e.key == K_ESCAPE):
+    			return
+    		
+    		if e.type == pygame.locacls.JOYBUTTONDOWN:
+    			
+    		if e.type == pygame.locacls.JOYBUTTONUP:
+   
+   
+    
+    
+	print map(lambda x : x.button,eventlist))
+	
+	
+                
+	
+        time.sleep(0.1)
+
+if __name__ == '__main__':
+    pygame.joystick.init()
+    
+    try:
+        joys = pygame.joystick.Joystick(0)
+        joys.init()
+        main()
+
+    except pygame.error:
+        print 'joystick stick'

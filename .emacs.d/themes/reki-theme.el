@@ -1,21 +1,22 @@
-(deftheme patchouli
-  "Patchouli color theme")
+(deftheme reki
+  "Reki color theme")
 
 (custom-theme-set-faces
- 'patchouli
+ 'reki
  ;; 背景・文字・カーソル
  '(cursor ((t (:foreground "#f8f8f2"))))
- '(default ((t (:background "#141014" :foreground "#00ff00"))))
- '(fringe ((t (:background "#201020"))))
+ '(default ((t (:background "#10101a" :foreground "#78ff00"))))
+ '(fringe ((t (:background "#10101a"))))
  ;; 選択範囲
- '(region ((t (:background "#403D3D"))))
+ '(region ((t (:background "#203D3D"))))
 
  ;; モードライン
- '(mode-line ((t (:foreground "#9b72b0" :background "#7f1184"
-                  :box (:line-width 1 :color "#000000" :style released-button)))))
+ '(mode-line ((t (:foreground "#200000" :background "#00fa9a"
+;                  :box (:line-width 0 :color "#ffffff" :style released-button)
+			      ))))
  '(mode-line-buffer-id ((t (:foreground nil :background nil))))
- '(mode-line-inactive ((t (:foreground "#7f1184" :background "#040004"
-                           :box (:line-width 1 :color "#7f1184")))))
+ ;'(mode-line-inactive ((t (:foreground "#7f1184" :background "#040004"
+  ;                         :box (:line-width 1 :color "#7f1184")))))
 
  ;; ハイライト
 ;; '(highlight ((t (:background "#FFFFFF")))) ;:foreground "#30ff30"
@@ -29,7 +30,7 @@
  '(font-lock-string-face ((t (:foreground "#fad09e"))))
 
  ;; 特定キーワード
- '(font-lock-keyword-face ((t (:foreground "#f6ae54"))))
+ '(font-lock-keyword-face ((t (:foreground "#00aef4"))))
 
  ;; Boolean
  '(font-lock-constant-face((t (:foreground "#9079b6"))))
@@ -39,10 +40,10 @@
  '(paren-face ((t (:foreground "#A6E22A" :background nil))))
 
  ;; コメント
- '(font-lock-comment-face ((t (:foreground "#618e34"))))
+ '(font-lock-comment-face ((t (:foreground "#217e74"))))
 
  ;;行番号
- '(linum ((t (:foreground "#47266e"))))
+ '(linum ((t (:foreground "#006046"))))
 
  ;; CSS
  '(css-selector ((t (:foreground "#66D9EF"))))
@@ -70,5 +71,5 @@
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
-(provide-theme 'patchouli)
+(provide-theme 'reki)
 (set-frame-font "ricty-12")
