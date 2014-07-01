@@ -4662,251 +4662,465 @@ rm -rf *
 ls
 rm -rf OpenNI-unstable
 ls
-: 1403873858:0;cd ../kinect
-: 1403873859:0;ls
-: 1403873863:0;rm -rf OpenNI-unstable
-: 1403873864:0;ls
-: 1403873871:0;sudo rm -rf OpenNI-unstable
-: 1403873873:0;ls
-: 1403873948:0;cd ../Downloads
-: 1403873948:0;ls
-: 1403873984:0;unzip OpenNI-unstable.zip 
-: 1403873998:0;mv -v OpenNI-unstable ../kinect
-: 1403874008:0;unzip SensorKinect-unstable.zip
-: 1403874033:0;mv -v SensorKinect-unstable ../kinect
-: 1403874037:0;cd ../kinect
-: 1403874037:0;ls
-: 1403874039:0;cd OpenNI-unstable
-: 1403874039:0;ls
-: 1403874048:0;cd Platform/Linux
-: 1403874048:0;ls
-: 1403874050:0;cd CreateRedist
-: 1403874050:0;ls
-: 1403874055:0;i
-: 1403874057:0;ls
-: 1403874064:0;./RedistMaker
-: 1403874274:0;ls
-: 1403874282:0;cd ..
-: 1403874282:0;ls
-: 1403874285:0;cd Re
-: 1403874285:0;ls
-: 1403874289:0;cd Redist
-: 1403874289:0;ls
-: 1403874291:0;cd OpenNI-Bin-Dev-Linux-x64-v1.5.8.5
-: 1403874292:0;ls
-: 1403874297:0;sudo ./install.sh
-: 1403874303:0;cd ../../..
-: 1403874304:0;ls
-: 1403874307:0;cd ../..
-: 1403874308:0;ls
-: 1403874312:0;cd SensorKinect-unstable
-: 1403874312:0;ls
-: 1403874318:0;cd Platform/Linux
-: 1403874319:0;ls
-: 1403874328:0;cd CreateRedist/ls
-: 1403874331:0;cd CreateRedist/
-: 1403874332:0;ls
-: 1403874338:0;./RedistMaker
-: 1403874366:0;ls
-: 1403874367:0;cd ..
-: 1403874367:0;ls
-: 1403874370:0;cd Install
-: 1403874371:0;ls
-: 1403874375:0;cd ..
-: 1403874511:0;NiViewer
-: 1403874632:0;sudo apt-get install freeglut3-dev
-: 1403874787:0;ls
-: 1403874793:0;cd CreateRedist
-: 1403874793:0;ls
-: 1403875525:0;cd ..
-: 1403875525:0;ls
-: 1403875528:0;cd Build
-: 1403875529:0;ls
-: 1403875536:0;make
-: 1403875703:0;sudo apt-get install git-core cmake freeglut3-dev pkg-config build-essential libxmu-dev libxi-dev libusb-1.0-0-dev doxygen graphviz mono-complete 
-: 1403875844:0;cd ..
-: 1403875845:0;ls
-: 1403875856:0;cd kinect/OpenNI-unstable/Platform/Linux
-: 1403875857:0;ls
-: 1403875864:0;cd Redist
-: 1403875868:0;OpenNI-Bin-Dev-Linux-x64-v1.5.8.5
-: 1403875869:0;ls
-: 1403875871:0;make
-: 1403875875:0;cd ..
-: 1403875876:0;ls
-: 1403875879:0;cd Build
-: 1403875879:0;ls
-: 1403875882:0;sudo make install
-: 1403875975:0;ls
-: 1403875979:0;cd ..
-: 1403875984:0;ls
-: 1403875989:0;cd CreateRedist
-: 1403875992:0;cd ..
-: 1403875993:0;ls
-: 1403875994:0;cd B
-: 1403875995:0;ls
-: 1403875999:0;cd Build
-: 1403876000:0;ls
-: 1403876002:0;make
-: 1403876074:0;ls
-: 1403876082:0;make
-: 1403876126:0;cd ..
-: 1403876127:0;ls
-: 1403876129:0;cd Install
-: 1403876130:0;ls
-: 1403876138:0;cat 55-primesense-usb.rules
-: 1403876192:0;sudo add-apt-repository ppa:v-launchpad-jochen-sprickerhof-de/pcl
-: 1403876258:0;sudo apt-get update
-: 1403876305:0;sudo apt-get install libpcl-all
-: 1403876337:0;ls
-: 1403876351:0;sudo apt-get -yV install libopenni-dev
-: 1403876352:0;sudo apt-get -yV install libopenni-java
-: 1403876368:0;sudo apt-get -yV install libopenni-dev
-: 1403876369:0;sudo apt-get -yV install libopenni-java
-: 1403876370:0;sudo apt-get -yV install libopenni-nite-dev
-: 1403876370:0;sudo apt-get -yV install libopenni-sensor-primesense-dev
-: 1403876383:0;sudo apt-get -yV install libopenni2-0
-: 1403876406:0;sudo apt-get --reinstall -yV install openjdk-7-jre
-: 1403876435:0;NiViewer
-: 1403876478:0;ls
-: 1403876532:0;cd ..
-: 1403876532:0;ls
-: 1403876534:0;cd Build
-: 1403876535:0;ls
-: 1403876539:0;make
-: 1403876542:0;cd ..
-: 1403876552:0;cd ../../..
-: 1403876554:0;ls
-: 1403876557:0;rm SensorKinect-unstable
-: 1403876565:0;sudo rm -rf SensorKinect-unstable
-: 1403876566:0;ls
-: 1403876693:0;cd ../Downloads
-: 1403876702:0;unzip SensorKinect-master.zip
-: 1403876723:0;mv -v SensorKinect-master ../kinect
-: 1403876724:0;ls
-: 1403876736:0;cd ../
-: 1403876737:0;ls
-: 1403876741:0;cd kinect
-: 1403876742:0;ls
-: 1403876746:0;cd SensorKinect-master
-: 1403876747:0;ls
-: 1403876751:0;cd Platform/Linux
-: 1403876752:0;ls
-: 1403876754:0;cd CreateRedist
-: 1403876759:0;sudo ./RedistMaker
-: 1403876774:0;cd ..
-: 1403876775:0;ls
-: 1403876778:0;cd Build
-: 1403876779:0;ls
-: 1403876780:0;make
-: 1403876818:0;sudo make
-: 1403876878:0;ls
-: 1403876883:0;cd ../../../..
-: 1403876884:0;ls
-: 1403876890:0;rm -rf SensorKinect-master
-: 1403876899:0;sudo rm -rf SensorKinect-master
-: 1403876900:0;ls
-: 1403876902:0;cd ..
-: 1403876903:0;ls
-: 1403876909:0;cd Downloads
-: 1403876917:0;unzip SensorKinect-12ad25d5e665dc061b0b7f1820d37af2fea43224.zip
-: 1403876926:0;mv -v SensorKinect-12ad25d5e665dc061b0b7f1820d37af2fea43224 ../kinect
-: 1403876930:0;cd ../kinect
-: 1403876957:0;mv -v SensorKinect-12ad25d5e665dc061b0b7f1820d37af2fea43224 SensorKinect
-: 1403876959:0;ls
-: 1403876960:0;cd SensorKinect
-: 1403876961:0;ls
-: 1403876964:0;cd Platform/Linux-x86
-: 1403876965:0;ls
-: 1403876967:0;cd CreateRedist
-: 1403876968:0;ls
-: 1403876970:0;./RedistMaker
-: 1403877001:0;cd ..
-: 1403877002:0;ls
-: 1403877326:0;sudo apt-get update 
-: 1403877380:0;sudo apt-get -yV upgrade
-: 1403877805:0;sudo apt-get -yV install libopenni-dev
-: 1403877806:0;sudo apt-get -yV install libopenni-java
-: 1403877806:0;sudo apt-get -yV install libopenni-nite-dev
-: 1403877807:0;sudo apt-get -yV install libopenni-sensor-primesense-dev
-: 1403877808:0;sudo apt-get -yV install libopenni-sensor-primesense0
-: 1403877808:0;sudo apt-get -yV install libopenni0
-: 1403877809:0;sudo apt-get -yV install openni-dev
-: 1403877810:0;sudo apt-get -yV install openni-doc
-: 1403877918:0;sudo apt-get --reinstall -yV install openjdk-7-jre
-: 1403885260:0;sudo apt-get -yV install libopenni2-0
-: 1403885261:0;sudo apt-get -yV install libopenni2-dev
-: 1403885279:0;NiViewer
-: 1403885546:0;ls
-: 1403885548:0;cd CreateRedist
-: 1403885549:0;ls
-: 1403885555:0;sudo ./install.sh
-: 1403885692:0;cd ..
-: 1403885695:0;cd /
-: 1403885739:0;la
-: 1403885747:0;cd usr/lib
-: 1403885748:0;ls
-: 1403886377:0;sudo apt-get install update-manager-core
-: 1403886395:0;do-release-upgrade
-: 1403886538:0;sudo apt-get dist-upgrade
-: 1403886769:0;do-release-upgrade
-: 1403888614:0;cd /etc/dpkg/dpkg.cfg.d/
-: 1403888615:0;ls
-: 1403888627:0;ls -a
-: 1403889280:0;sudo apt-get update 
-: 1403889320:0;sudo apt-get -yV upgrade
-: 1403889381:0;sudo apt-get --reinstall -yV install openjdk-7-jre
-: 1403889407:0;sudo apt-get -yV install libopenni-dev
-: 1403889408:0;sudo apt-get -yV install libopenni-java
-: 1403889409:0;sudo apt-get -yV install libopenni-nite-dev
-: 1403889410:0;sudo apt-get -yV install libopenni-sensor-primesense-dev
-: 1403889410:0;sudo apt-get -yV install libopenni-sensor-primesense0
-: 1403889411:0;sudo apt-get -yV install libopenni0
-: 1403889412:0;sudo apt-get -yV install openni-dev
-: 1403889412:0;sudo apt-get -yV install openni-doc
-: 1403889413:0;sudo apt-get -yV install openni-sensor-primesense-bin
-: 1403889414:0;sudo apt-get -yV install openni-utils
-: 1403889416:0;sudo apt-get -yV install ps-engine
-: 1403889435:0;NiViewer
-: 1403889443:0;ds
-: 1403889522:0;lsusb
-: 1403889653:0;cd
-: 1403889822:0;sudo apt-get install git-core cmake libglut3-dev pkg-config build-essential libxmu-dev libxi-dev libusb-1.0-0-dev doxygen graphviz
-: 1403889858:0;sudo apt-get install
-: 1403889864:0;sudo apt-get update
-: 1403890005:0;git clone https://github.com/ros-pkg-git/Sensor.git
-: 1403890041:0;ls
-: 1403890049:0;ls Sensor
-: 1403890059:0;cd Sensor
-: 1403890060:0;ls
-: 1403890065:0;cd Platform/Linux-x86
-: 1403890065:0;ls
-: 1403890068:0;cd CreateRedist
-: 1403890068:0;ls
-: 1403890071:0;./RedistMaker
-: 1403890074:0;sudo ./RedistMaker
-: 1403890086:0;ls
-: 1403890097:0;cd ../../../
-: 1403890097:0;ls
-: 1403890099:0;cd ..
-: 1403890104:0;rm -rf Sensor
-: 1403890107:0;cd kinect
-: 1403890108:0;ls
-: 1403890110:0;cd SensorKinect
-: 1403890113:0;cd ..
-: 1403890116:0;rm -rf SensorKinect
-: 1403952389:0;/path
-: 1403959727:0;cd .emacs.d
-: 1403959727:0;ls
-: 1403959733:0;rm sessI
-: 1403959735:0;rm sess*
-: 1403959739:0;cd el
-: 1403959743:0;elpa
-: 1403959745:0;ls
-: 1403962617:0;cd ..
-: 1403962617:0;ls
-: 1403962621:0;cd ..
-: 1403962622:0;ls
-: 1403962631:0;cd projects/dotfiles
-: 1403962635:0;git add .
-: 1403962647:0;git add -A .
+cd ../kinect
+ls
+rm -rf OpenNI-unstable
+ls
+sudo rm -rf OpenNI-unstable
+ls
+cd ../Downloads
+ls
+unzip OpenNI-unstable.zip 
+mv -v OpenNI-unstable ../kinect
+unzip SensorKinect-unstable.zip
+mv -v SensorKinect-unstable ../kinect
+cd ../kinect
+ls
+cd OpenNI-unstable
+ls
+cd Platform/Linux
+ls
+cd CreateRedist
+ls
+i
+ls
+./RedistMaker
+ls
+cd ..
+ls
+cd Re
+ls
+cd Redist
+ls
+cd OpenNI-Bin-Dev-Linux-x64-v1.5.8.5
+ls
+sudo ./install.sh
+cd ../../..
+ls
+cd ../..
+ls
+cd SensorKinect-unstable
+ls
+cd Platform/Linux
+ls
+cd CreateRedist/ls
+cd CreateRedist/
+ls
+./RedistMaker
+ls
+cd ..
+ls
+cd Install
+ls
+cd ..
+NiViewer
+sudo apt-get install freeglut3-dev
+ls
+cd CreateRedist
+ls
+cd ..
+ls
+cd Build
+ls
+make
+sudo apt-get install git-core cmake freeglut3-dev pkg-config build-essential libxmu-dev libxi-dev libusb-1.0-0-dev doxygen graphviz mono-complete 
+cd ..
+ls
+cd kinect/OpenNI-unstable/Platform/Linux
+ls
+cd Redist
+OpenNI-Bin-Dev-Linux-x64-v1.5.8.5
+ls
+make
+cd ..
+ls
+cd Build
+ls
+sudo make install
+ls
+cd ..
+ls
+cd CreateRedist
+cd ..
+ls
+cd B
+ls
+cd Build
+ls
+make
+ls
+make
+cd ..
+ls
+cd Install
+ls
+cat 55-primesense-usb.rules
+sudo add-apt-repository ppa:v-launchpad-jochen-sprickerhof-de/pcl
+sudo apt-get update
+sudo apt-get install libpcl-all
+ls
+sudo apt-get -yV install libopenni-dev
+sudo apt-get -yV install libopenni-java
+sudo apt-get -yV install libopenni-dev
+sudo apt-get -yV install libopenni-java
+sudo apt-get -yV install libopenni-nite-dev
+sudo apt-get -yV install libopenni-sensor-primesense-dev
+sudo apt-get -yV install libopenni2-0
+sudo apt-get --reinstall -yV install openjdk-7-jre
+NiViewer
+ls
+cd ..
+ls
+cd Build
+ls
+make
+cd ..
+cd ../../..
+ls
+rm SensorKinect-unstable
+sudo rm -rf SensorKinect-unstable
+ls
+cd ../Downloads
+unzip SensorKinect-master.zip
+mv -v SensorKinect-master ../kinect
+ls
+cd ../
+ls
+cd kinect
+ls
+cd SensorKinect-master
+ls
+cd Platform/Linux
+ls
+cd CreateRedist
+sudo ./RedistMaker
+cd ..
+ls
+cd Build
+ls
+make
+sudo make
+ls
+cd ../../../..
+ls
+rm -rf SensorKinect-master
+sudo rm -rf SensorKinect-master
+ls
+cd ..
+ls
+cd Downloads
+unzip SensorKinect-12ad25d5e665dc061b0b7f1820d37af2fea43224.zip
+mv -v SensorKinect-12ad25d5e665dc061b0b7f1820d37af2fea43224 ../kinect
+cd ../kinect
+mv -v SensorKinect-12ad25d5e665dc061b0b7f1820d37af2fea43224 SensorKinect
+ls
+cd SensorKinect
+ls
+cd Platform/Linux-x86
+ls
+cd CreateRedist
+ls
+./RedistMaker
+cd ..
+ls
+sudo apt-get update 
+sudo apt-get -yV upgrade
+sudo apt-get -yV install libopenni-dev
+sudo apt-get -yV install libopenni-java
+sudo apt-get -yV install libopenni-nite-dev
+sudo apt-get -yV install libopenni-sensor-primesense-dev
+sudo apt-get -yV install libopenni-sensor-primesense0
+sudo apt-get -yV install libopenni0
+sudo apt-get -yV install openni-dev
+sudo apt-get -yV install openni-doc
+sudo apt-get --reinstall -yV install openjdk-7-jre
+sudo apt-get -yV install libopenni2-0
+sudo apt-get -yV install libopenni2-dev
+NiViewer
+ls
+cd CreateRedist
+ls
+sudo ./install.sh
+cd ..
+cd /
+la
+cd usr/lib
+ls
+sudo apt-get install update-manager-core
+do-release-upgrade
+sudo apt-get dist-upgrade
+do-release-upgrade
+cd /etc/dpkg/dpkg.cfg.d/
+ls
+ls -a
+sudo apt-get update 
+sudo apt-get -yV upgrade
+sudo apt-get --reinstall -yV install openjdk-7-jre
+sudo apt-get -yV install libopenni-dev
+sudo apt-get -yV install libopenni-java
+sudo apt-get -yV install libopenni-nite-dev
+sudo apt-get -yV install libopenni-sensor-primesense-dev
+sudo apt-get -yV install libopenni-sensor-primesense0
+sudo apt-get -yV install libopenni0
+sudo apt-get -yV install openni-dev
+sudo apt-get -yV install openni-doc
+sudo apt-get -yV install openni-sensor-primesense-bin
+sudo apt-get -yV install openni-utils
+sudo apt-get -yV install ps-engine
+NiViewer
+ds
+lsusb
+cd
+sudo apt-get install git-core cmake libglut3-dev pkg-config build-essential libxmu-dev libxi-dev libusb-1.0-0-dev doxygen graphviz
+sudo apt-get install
+sudo apt-get update
+git clone https://github.com/ros-pkg-git/Sensor.git
+ls
+ls Sensor
+cd Sensor
+ls
+cd Platform/Linux-x86
+ls
+cd CreateRedist
+ls
+./RedistMaker
+sudo ./RedistMaker
+ls
+cd ../../../
+ls
+cd ..
+rm -rf Sensor
+cd kinect
+ls
+cd SensorKinect
+cd ..
+rm -rf SensorKinect
+/path
+cd .emacs.d
+ls
+rm sessI
+rm sess*
+cd el
+elpa
+ls
+cd ..
+ls
+cd ..
+ls
+cd projects/dotfiles
+git add .
+git add -A .
+git commit -m "theme add"
+git push master origin
+git push origin master
+ls
+cd -a
+ls -a
+E .git
+E .gitignore
+ls
+e
+t
+e
+NiViewer
+ls
+cd kinect
+ls
+cd Down
+cd
+cd Downloads
+unzip SensorKinect-12ad25d5e665dc061b0b7f1820d37af2fea43224.zip
+unzip SensorKinect-unstable.zip
+mv -v SensorKinect-unstable ../kinect
+cd .. ki
+cd ../kinect
+ls
+cd SensorKinect-unstable
+ls
+cd Platform/Linux
+ls
+cd CreateRedist
+ls
+sudo ./RedistMaker
+cd ..
+ls
+cd Install
+ls
+cap blacklist-gspca-kinect.conf
+cat blacklist-gspca-kinect.conf
+cd ..
+ls
+sudo apt-get check g++
+sudo apt-get -f install g++
+cd CreateRedist
+./RedistMaker
+sudo ./RedistMaker
+cd ..
+ls
+sudo apt-get install -f  git-core cmake freeglut3-dev pkg-config build-essential libxmu-dev libxi-dev libusb-1.0-0-dev doxygen graphviz mono-complete 
+ls
+cd CreateRedist
+sudo ./RedistMaker
+cd ..
+ls
+cd kinect/OpenNI-unstable/Platform/Linux/CreateRedist
+./RedistMaker
+sudo ./RedistMaker
+cd ..
+ls
+cd Redist
+ls
+cd OpenNI-Bin-Dev-Linux-x64-v1.5.8.5
+ls
+sudo ./install.sh
+cd CreateRedist
+ls
+sudo ./RedistMaker
+cd ..
+ls
+sudo add-apt-repository ppa:v-launchpad-jochen-sprickerhof-de/pcl
+sudo apt-get -yV install libopenni-dev
+sudo apt-get -yV install libopenni-java
+sudo apt-get -yV install libopenni-nite-dev
+sudo apt-get -yV install libopenni-sensor-primesense-dev
+sudo apt-get -yV install libopenni-sensor-primesense0
+sudo apt-get -yV install libopenni0
+sudo apt-get -yV install openni-dev
+sudo apt-get -yV install openni-doc
+sudo apt-get -yV install openni-sensor-primesense-bin
+sudo apt-get -yV install openni-utils
+sudo apt-get -yV install ps-engine
+cd CreateRedist
+ls
+sudo ./RedistMaker
+cd ..
+ls
+cd kinect
+ls
+cd SensorKinect-unstable/Platform/Linux
+ls
+cd Build
+ls
+cd XnDeviceSensorV2
+ls
+cd x64-Release
+ls
+cd ..
+ls
+cd Linux
+ls
+cd Build
+ls
+make
+sudo find -filename / XnSensorDepthGenerator 
+sudo find -name / XnSensorDepthGenerator 
+sudo find -name  XnSensorDepthGenerator /
+sudo find -name  XnSensorDepthGenerator 
+sudo find -name "XnSensorDepthGenerator" 
+sudo find / -name "XnSensorDepthGenerator" 
+sudo find ~/ -name "XnSensorDepthGenerator" 
+sudo find / -name "XnSensor"
+sudo find / -name "XnSensor*"
+sudo find ~/ -name "XnSensorDepthGenerator*" 
+ls
+E Makefile
+make
+ls
+PATH=$PATH,"/home/rasorasi/kinect/SensorKinect-unstable/Source/XnDeviceSensorV2/XnSensorDepthGenerator.h"
+export PATH
+PATH=$PATH,"/home/rasorasi/kinect/SensorKinect-unstable/Source/XnDeviceSensorV2/XnSensorDepthGenerator.cpp"
+export PATH
+PATH=$PATH,"/home/rasorasi/Downloads/SensorKinect-12ad25d5e665dc061b0b7f1820d37af2fea43224/Source/XnDeviceSensorV2/XnSensorDepthGenerator.h"
+export PATH
+PATH=$PATH,"/home/rasorasi/Downloads/SensorKinect-12ad25d5e665dc061b0b7f1820d37af2fea43224/Source/XnDeviceSensorV2/XnSensorDepthGenerator.cpp"
+export PATH
+make
+cd kinect/SensorKinect-unstable
+ls
+Source/XnDevice
+Source/XnDeviceSensorV2
+ls
+E XnSensorDepthGenerator.cpp
+ls
+cd ..
+ls
+cd CreateRedist
+ls
+sudo ./install.sh
+cd ..
+ls
+cd Linux
+cd ..
+cd Linux
+ls
+cd Bin
+ls
+cd x64-Release
+ls
+cd ../..
+ls
+cd Build
+ls
+sudo apt-get install bibtool
+sudo apt-get parge bibtool
+sudo apt-get remove bibtool
+sudo apt-get install libtool
+sudo apt-get install libusb
+cd ..
+ls
+cd CreateRedist
+./RedistMaker
+sudo ./RedistMaker
+ls
+cd ..
+ls
+sudo apt-get install -f python
+ls
+cd Build
+make
+sudo apt-get install sensor-kinect
+sudo apt-get install kinect
+sudo apt-get install kinect*
+sudo apt-get install 
+% sudo apt-get install        
+sudo apt-get -yV install libopenni-sensor-primesense-dev
+sudo apt-get -yV install libopenni-sensor-primesense0
+sudo apt-get -yV install openni-sensor-primesense-bin
+sudo apt-get -yV install openni-sensor-primesense
+sudo apt-get -yV install openni-sensor
+ls
+ls XnSensorDepcd
+sudo atp-get update
+sudo apt-get update
+sudo apt-get install -f
+sudo apt-get -f install
+cd /var/lib/apt
+ls
+cd lists
+ls
+cd ..
+ls
+sudo mv -v lists ~/Desktop
+mv -v ~/Desktop/lists ./
+sudo mv -v ~/Desktop/lists ./
+ls
+mv -v lists list_bk
+sudo mv -v lists list_bk
+mkdir lists
+sudo mkdir lists
+apt-get autoclean
+sudo apt-get autoclean
+sudo apt-get clean
+sudo atp-get update
+sudo apt-get update
+sudo mkdir lists/partial
+sudo atp-get update
+sudo apt-get update
+lsb_release -a
+mv Downloads/csharp-mode-0.8.5.el .emacs.d/elisp
+e
+python
+: 1404196514:0;cd projects/dotfiles
+: 1404196515:0;ls
+: 1404196521:0;git add .
+: 1404196526:0;git add . -A

@@ -252,3 +252,14 @@ Delq
 (/ 62500 12500)
 5
 
+	
+(progn (print "The first form")
+       (print "The second form")
+       (print "The third form"))
+
+"The first form"
+
+"The second form"
+
+"The third form"
+"The third form"
