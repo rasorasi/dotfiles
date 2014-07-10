@@ -5384,3 +5384,16 @@ exit
 : 1405009370:0;cd projects/dotfiles
 : 1405009373:0;git add .
 : 1405009389:0;git add -A .
+: 1405009409:0;git add commit -m "iroiro"
+: 1405009424:0;git  commit -m "iroiro"
+: 1405009434:0;git push origin master
+: 1405009475:0;ls
+: 1405009504:0;cd
+: 1405009505:0;ls
+: 1405009896:0;cd .emacs.d
+: 1405009904:0;mv user1.el elisp
+: 1405009979:0;cd elisp
+: 1405009989:0;E user2.el
+: 1405010035:0;cd
+: 1405010039:0;cd projects/dotfiles
+: 1405010045:0;git add -A .

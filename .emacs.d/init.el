@@ -158,8 +158,6 @@
 
 
 
-(conf_theme 'reki ntheme)
-(setq ntheme 'reki)
 
 (defun kill-region-or-delete-window (beg end)
   (interactive "r")
@@ -478,10 +476,6 @@
   ;; Save session info every 30 minutes
   (setq my-timer-for-session-save-session (run-at-time t 1800 'session-save-session)))
 
-(run-with-idle-timer (* 60 30) t
-                     (lambda()(interactive)
-                       (find-file '"~/.emacs.d/themes/sinku2.jpg")
-                       (message "進捗どうですか？")))
 
 
 (defun my-copy-file-path ()
@@ -559,3 +553,5 @@
 (global-set-key (kbd "C-x C-2") (lambda()(interactive)(make-other-buffer-below)))
 (global-set-key (kbd "C-x C-3") (lambda()(interactive)(make-other-buffer-right)))
 
+(load "user1.el")
+;;(load "user2.el")
