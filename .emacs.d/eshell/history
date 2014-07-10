@@ -8,3 +8,6 @@ grep -n "python" *.py
 ls
 cd
 python
+python
+py
+ppa:clipgrab-team/ppa

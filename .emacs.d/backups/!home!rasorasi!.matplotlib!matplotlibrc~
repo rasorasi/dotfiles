@@ -1,1 +1,1 @@
-backend : template
+backend		: Qt4Agg

@@ -22,8 +22,8 @@
 
 
 
-                                        ;(setq initial-frame-alist
-                                        ;      '((top . 10) (left . 1000) (width . 98) (height . 52)))
+;;(setq initial-frame-alist
+;;      '((top . 10) (left . 1000) (width . 98) (height . 52)))
 
 
 (set-frame-font "ricty-12")
@@ -66,7 +66,7 @@
 ;; frame titel show absolute path
 (setq frame-title-format "%f")
 
-                                        ; setting of modes
+;; setting of modes
 (defun my-c-mode-common-init ()
   "C, C++ mode set up function"
   (setq tab-width 4)
@@ -82,7 +82,7 @@
 
 
 ;; keybinds
-                                        ;(global-set-key (kbd "C-m") 'newline)
+
 (global-set-key (kbd "C-c p") 'windmove-up)
 (global-set-key (kbd "C-c n") 'windmove-down)
 (global-set-key (kbd "C-c b ") 'windmove-left)
@@ -94,7 +94,7 @@
 (global-set-key (kbd "C-c <left> ") 'windmove-left)
 (global-set-key (kbd "C-c <right>") 'windmove-right)
 
-                                        ;(global-set-key (kbd "C-j"))
+
 (global-set-key [f5] 'kmacro-end-and-call-macro)
 
 (keyboard-translate ?\C-h ?\C-?)
@@ -110,8 +110,8 @@
 (global-set-key (kbd "M-h") 'backward-kill-word)
 (global-set-key (kbd "C-!") (lambda()(interactive)(find-file '"~/.emacs.d/init.el")))
 (global-set-key (kbd "C-m") 'newline)
-                                        ;(global-set-key (kbd "M-#") 'newline-and-indent)
-                                        ;(keyboard-translate ?\C-m ?\M-#)
+;;(global-set-key (kbd "M-#") 'newline-and-indent)
+;;(keyboard-translate ?\C-m ?\M-#)
 (global-set-key (kbd "C-x C-b") (lambda()(interactive)(ibuffer-list-buffers)(switch-to-buffer-other-window '"*Ibuffer*")))
 
 (global-set-key (kbd "M-q") 'query-replace-regexp)
@@ -119,20 +119,20 @@
 (global-set-key (kbd "C-M-p") 'cua-scroll-down)
 (global-set-key (kbd "C-M-n") 'cua-scroll-up)
 
-(global-set-key (kbd "C-x C-c") 'helm-M-x)
-(global-set-key (kbd "C-x C-z") 'change-favorite-command)
+;;(global-set-key (kbd "C-x C-z") 'change-favorite-command)
 (defalias 'exit 'save-buffers-kill-emacs)
 
-(global-set-key (kbd "M-m") 'anything-imenu)
-                                        ;(global-set-key (kbd "M-r") ')
-                                        ;(global-set-key (kbd "M-v") ')
-                                        ;(global-set-key (kbd "C-v") ')
-                                        ;(global-set-key (kbd "M-z") ')
-                                        ;(global-set-key (kbd "M-t") ')
-                                        ;(global-set-key (kbd "M-l") ')
-                                        ;(global-set-key (kbd "C-'") ')
 
-                                        ; 初期画面設定
+
+;;(global-set-key (kbd "M-r") ')
+;;(global-set-key (kbd "M-v") ')
+;;(global-set-key (kbd "C-v") ')
+;;(global-set-key (kbd "M-z") ')
+;;(global-set-key (kbd "M-t") ')
+;;(global-set-key (kbd "M-l") ')
+;;(global-set-key (kbd "C-'") ')
+
+;; 初期画面設定
 (setq inhibit-startup-message t)
 
 
@@ -140,6 +140,8 @@
 ;; change theme
 (setq custom-theme-directory "~/.emacs.d/themes/")
 (setq ntheme nil)
+
+
 (defun conf_theme(theme now)
   (disable-theme now)
   (load-theme theme t))
@@ -163,12 +165,12 @@
   (interactive "r")
   (if mark-active 
       (kill-region beg end)
-    (delete-window)))			 ;; change favorit command
+    (delete-window)))			 ; change favorit command
 (global-set-key (kbd "C-w") 'kill-region-or-delete-window)
 
 
 
-                                        ;input method "mozc" and utf-8
+;;input method "mozc" and utf-8
 (when (require 'ibus nil t)
   (add-hook 'after-init-hook 'ibus-mode-on)
   (ibus-define-common-key ?\C-\s nil)
@@ -180,10 +182,10 @@
 (setq default-input-method "japanese-mozc")
 (global-set-key (kbd "C-\\") 'toggle-input-method)
 
-                                        ;(set-fontset-font
-                                        ; nil
-                                        ; 'japanese-jisx0208
-                                        ; (font-spec :family "Droid Sans Japanese")) ;; font
+;;(set-fontset-font
+;; nil
+;; 'japanese-jisx0208
+;; (font-spec :family "Droid Sans Japanese")) ;; font
 
 (setq face-font-rescale-alist
       '(("Droid Sans Japanese" . 1.2)))
@@ -195,16 +197,16 @@
 (set-buffer-file-coding-system 'utf-8)
 
 
-;; ;; yatex
-;; ;;(load "init-yatex")
+;; yatex
+;;(load "init-yatex")
 
 ;;paren-mode
 (setq show-paren-delay 0)
 (show-paren-mode t)
-                                        ;hilight in paren
+;;hilight in paren
 (setq show-parenpstyle 'expression)
-                                        ;change paren of face
-                                        ;(set-face-background 'show-paren-match-face "yellew")
+;;change paren of face
+;;(set-face-background 'show-paren-match-face "yellew")
 
 ;;backup
 (setq make-back-files t)
@@ -263,6 +265,7 @@
 (push '(direx:direx-mode :position left :windth 40 :dedicated t)
       popwin:special-display-config))
 
+(require 'color-moccur)
 
 ;;anything
 (when (require 'anything nil t)
@@ -306,16 +309,14 @@
 
   (global-set-key (kbd "C-z") 'anything)
   (global-set-key (kbd "M-y") 'anything-show-kill-ring)
-  (global-set-key (kbd "M-s") 'anything-c-moccur-occur-by-moccur))
+  (global-set-key (kbd "M-m") 'anything-imenu)
 
-(require 'color-moccur)
-
-(when (require 'anything-c-moccur nil t)
-  (setq
-   anything-c-moccur-anything-idle-delay 0.1
-   anything-c-moccur-higligt-info-line-flag t
-   anything-c-moccur-enable-auto-look-flag t
-   anything-c-moccur-enable-initial-pattern t))
+  (when (require 'anything-c-moccur nil t)
+    (setq
+     anything-c-moccur-anything-idle-delay 0.1
+     anything-c-moccur-higligt-info-line-flag t
+     anything-c-moccur-enable-auto-look-flag t
+     anything-c-moccur-enable-initial-pattern t)))
 
 
 ;; cua-mode
@@ -440,21 +441,28 @@
 
 (when (require 'helm-config nil t)
   (require 'helm-descbinds)
+  (helm-mode 1)
   (global-set-key (kbd "C-z") 'helm-mini)
-  (helm-mode 1))
+  (global-set-key (kbd "M-y") 'helm-show-kill-ring)
+  (global-set-key (kbd "M-x") 'helm-M-x)
+  (global-set-key (kbd "M-s") 'helm-c-moccur-occur)
+  (define-key helm-read-file-map (kbd "C-h") 'delete-backward-char)
+  (define-key helm-find-files-map (kbd "TAB") 'helm-execute-persistent-action)
+  (define-key helm-read-file-map (kbd "TAB") 'helm-execute-persistent-action)
+  (define-key global-map (kbd "C-x b")   'helm-buffers-list)
+  (setq helm-delete-minibuffer-contents-from-point t)
+  (defadvice helm-delete-minibuffer-contents (before helm-emulate-kill-line activate)
+    "Emulate `kill-line' in helm minibuffer"
+    (kill-new (buffer-substring (point) (field-end))))
 
-(define-key helm-read-file-map (kbd "C-h") 'delete-backward-char)
-                                        ;(define-key helm-c-read-file-map (kbd "TAB") 'helm-execute-persistent-action)
-(define-key helm-find-files-map (kbd "TAB") 'helm-execute-persistent-action)
-(define-key helm-read-file-map (kbd "TAB") 'helm-execute-persistent-action)
+  )
 
 
-                                        ;(run-with-idle-timer 2 t ')
+;;(define-key helm-c-read-file-map (kbd "TAB") 'helm-execute-persistent-action)
+;;(run-with-idle-timer 2 t ')
+;;session.el
+;; http://emacs-session.sourceforge.net/
 
-
-
-                                        ;session.el
-                                        ; http://emacs-session.sourceforge.net/
 (when (require 'session nil t)
   (setq session-save-file-coding-system 'utf-8-unix)
   (setq session-save-file (expand-file-name "~/.emacs.d/.session"))
@@ -531,3 +539,23 @@
   (my-window-size-save))
 
 (load "csharp-mode-0.8.5.el")
+
+(when (require 'highlight-symbol nil t)
+  (global-set-key (kbd "M-l") 'highlight-symbol-at-point))
+
+
+(defun make-other-buffer-below ()
+  (split-window-below)
+  (windmove-down)
+  (helm-mini))
+
+
+(defun make-other-buffer-right ()
+  (split-window-right)
+  (windmove-right)
+  (helm-mini))
+
+
+(global-set-key (kbd "C-x C-2") (lambda()(interactive)(make-other-buffer-below)))
+(global-set-key (kbd "C-x C-3") (lambda()(interactive)(make-other-buffer-right)))
+

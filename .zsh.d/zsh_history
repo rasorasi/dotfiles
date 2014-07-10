@@ -5120,7 +5120,267 @@ lsb_release -a
 mv Downloads/csharp-mode-0.8.5.el .emacs.d/elisp
 e
 python
-: 1404196514:0;cd projects/dotfiles
-: 1404196515:0;ls
-: 1404196521:0;git add .
-: 1404196526:0;git add . -A
+cd projects/dotfiles
+ls
+git add .
+git add . -A
+git commit -m "add csharp-mode"
+ls
+git push origin master
+cp Downloads/ubuntu-ja-14.04-desktop-amd64.iso /media/rasorasi/USBMEMORY
+sudo apt-get update
+sudo atp-get dist-upgrade
+sudo apt-get dist-upgrade
+sudo update-manager -d
+Dropbox
+ls
+nano http.txt
+nano /etc/apt/sources.list
+sudo nano /etc/apt/sources.list
+sudo apt-get update
+sudo apt-get dist-upgrade
+sudo apt-get update
+sudo apt-get dist-upgrade
+sudo update-manager -d
+sudo apdate-manager -d
+sudo update-manager -d
+lsb_release -a
+sudo apt-get update
+sudo apt-get install git-core cmake freeglut3-dev pkg-config build-essential libxmu-dev libxi-dev libusb-1.0-0-dev doxygen graphviz mono-complete --fix-missing
+cd kinect
+ls
+cd ..
+cd *
+cd kinect
+ls
+rm -rf OpenNI-unstable
+rm -rf SensorKinect-unstable
+ls
+cd OpenNI-unstable
+ls
+cd ..
+ls
+cd kinect
+ls
+sudo rm -rf OpenNI-unstable
+sudo rm -rf SensorKinect-unstable
+ls
+cd ..
+cd Downloads
+ls
+unzip OpenNI-unstable.zip
+unzip SensorKinect-unstable.zip
+mv OpenNI-unstable ../kinect
+mv SensorKinect-unstable ../kinect
+cd ..
+cd kinect
+ls
+cd OpenNI-unstable/Platform/Linux/CreateRedist
+./RedistMaker
+cd ..
+ls
+cd Redist/OpenNI-Bin-Dev-Linux-x64-v1.5.8.5
+ls
+sudo ./install.sh
+sudo add-apt-repository ppa:v-launchpad-jochen-sprickerhof-de/pcl
+sudo ap-get update
+sudo apt-get update
+sudo apt-get install libpcl-all
+NiViewer
+sudo apt-get -yV install libopenni-dev
+sudo apt-get -yV install libopenni-java
+sudo apt-get -yV install libopenni-nite-dev
+sudo apt-get -yV install libopenni-sensor-primesense-dev
+cd 
+cd kinect/SensorKinect-unstable/Platform/Linux/CreateRedist
+ls
+./RedistMaker
+cd ..
+ls
+NiViewer
+lsb_release -a
+e
+ls
+sudo apt-get install ibus-mozc
+sudo apt-get install chromium
+ãƒ£ƒ¦ã‚¹ãƒ£ƒ¨
+cd /etc/fonts/conf.d/
+sudo mv 65-droid-sans-fonts.conf 65-droid-sans-fonts.conf.bak
+sudo fc-cache -s -f -v /usr/share/fonts/truetype/droid/
+sudo mv 65-droid-sans-fonts.conf.bak 65-droid-sans-fonts.conf
+cd ..
+ls
+cd
+cd projects/dotfiles
+cd p/machine
+ls
+py test.py
+py histgram.py
+py test.py
+cd .matplotlib
+ls
+E matplotlibrc
+py test.py
+py histgram.py
+py test.py
+ls
+cd p/machine
+ls
+python
+sudo apdate-pepperflashplugin-nonfree
+sudo update-pepperflashplugin-nonfree
+sudo updata-pepperflashplugin-nonfree
+sudo update-pepperflashplugin-nonfree
+sudo update-pepperflashplugin-nonfree --install
+sudo update-pepperflashplugin-nonfree --status
+exit
+python binomial.py
+cd kinect
+ls
+cd OpenNI-unstable
+ls
+cd Platform/Linux
+ls
+cd Redist
+ls
+cd OpenNI-Bin-Dev-Linux-x64-v1.5.8.5
+ls
+cd
+cd kinect/SensorKinect-unstable
+ls
+cd Platform
+ls
+cd Linux
+l
+ls
+cd Cls
+cd ..
+NiViewer
+lsusb
+la
+ls
+cd ..
+cd
+cd kinect
+ls
+rm -rf SensorKinect-unstable
+ls
+cd ..
+ls
+cd Downloads
+unzip Sensor-master.zip
+ls
+cd ..
+ls
+cd kinect
+ls
+cd ../Downloads
+ls
+mv Sensor-master ../kinect
+cd ../kinect
+ls
+cd Sensor-master
+ls
+Platform/Linux
+ls
+cd CreateRedist
+ls
+./RedistMaker
+cd ..
+ls
+cd Redist
+ls
+cd Sensor-Bin-Linux-x64-v5.1.6.6
+ls
+sudo ./install.sh
+NiViewer
+sudo apt-get install libusb-1.0-0-dev
+sudo apt-get install libudev-dev
+sudo apt-get install openjdk-6-jdk
+cd p/dcv
+ls
+./main
+E Makefile
+cd /
+ls
+cd
+cd kinect
+ls
+cd OpenNI-unstable
+cd
+cd Downloads
+mv OpenNI-unstable.zip cd ..
+ls
+cd ..
+cd kinect
+ls
+cd ../Downloads
+unzip OpenNI2-master.zip
+mv OpenNI2-master ../kinect
+cd ../kinect
+ls
+cd OpenNI2-master
+ls
+make
+cd ..
+ls
+cd OpenNI
+ls
+cd OpenNI2-master
+ls
+cd Packaging
+ls
+sudo python ReleaseVersion.py
+sudo python ReleaseVersion.py x64
+ls
+cd Final
+ls
+cd ..
+cd ../..
+ls
+cd OpenNI-Linux-x64-2.2
+ls
+sudo ./install.sh
+cd Samples
+ls
+cd Bin
+ls
+./SimpleViewer
+NiViewer
+cd ..
+ls
+cd ..
+ls
+cd
+ls
+cd Dropbox
+ls
+cd p/
+ls
+cd p/dcv
+ls
+cd ..
+cp -r dcv ../Dropbox
+e
+ls
+.emacs.d
+ls
+rm sess*
+ls
+e
+ls
+cd ../..
+ls
+cd ..
+ls
+exit
+: 1405008777:0;sudo apt-add-repository ppa:clipgrab-team/ppa
+: 1405009016:0;sudo apt-get update
+: 1405009038:0;sudo apt-get install clipgrab
+: 1405009132:0;sudo apt-get install conky
+: 1405009201:0;conky2
+: 1405009204:0;conky
+: 1405009358:0;e
+: 1405009370:0;cd projects/dotfiles
+: 1405009373:0;git add .
+: 1405009389:0;git add -A .
