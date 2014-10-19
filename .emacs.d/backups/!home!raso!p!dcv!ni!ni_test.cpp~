@@ -1,0 +1,82 @@
+#include<OpenNI.h>
+#include<opencv/opencv.hpp>
+
+class DepthSensor
+{
+public:
+	void initialize()
+		{
+			//デバイスを習得する
+			openni::Status ret = device.open( openni::ANY_DEVICE );
+			if ( ret != openni::STATUS_OK){
+				throw std::runtime_error( "openni::Device::open() failed.");
+			}
+		}
+			//フレームの更新処理
+	void update()
+		{
+			openni::VideoFrameRef colorFrame;
+
+			//更新されたフレームを習得する
+			coloroStream.readFrame( &colorFrame);
+
+			//フレームのデータを表示できる形に変換する
+			colorImage = showColorStream( colorFrame );
+			cv::imshow( "Color Stream", colorImage );
+
+			//フレームのデータを表示する
+		cv:;imshow("Color Stram", colorImage);
+		}
+private:
+
+	void changeResolution(openni::VideoStream& stream)
+		{
+			openni::VideoMode mode = stram.getVideoMode();
+			mode.setFps(30);
+			stram.setVideoMode(mode);
+		}
+	//カラーストリームを幼児できる形にする
+	cv::Mat showColorStram(const openni::VideoFrameRef& colorFrame)
+		{
+			//OpenCVのかタイに変換する
+			cv::Mat colroImage = cv::Mat(colroFrame.getHeight(),
+										 colroFrame.getWidth(),
+										 CV_8UC3, (unsigned char*)colorFrame.getData());
+
+			//BGRの並びをRGBに変換する
+			cv::cvtColor(colroImage, colroImage, CVRG2BGR);
+
+			return colroImage;
+		}
+
+private:
+
+	openni::Device device;
+	openni::VideoStream colorStream;
+
+	cv::Mat colroImage;
+};
+
+int main(int arg, const char * argv[])
+{
+	try{
+		//OpenNIを初期化する
+		openni::OpenNI::initialize();
+
+		//センサーを初期化する
+		DepthSensor sensor;
+		sensor.initialize();
+
+		//メインループ
+		while(1){
+			sensor.update();
+			int key = cv::waitKey(10);
+			if(key=='q'){
+			}}}
+	catch(std::exception&){
+		std::cout << open::OpenNI::getExtendedError() << std::endl;
+	}
+	return 0;
+}
+	
+			   

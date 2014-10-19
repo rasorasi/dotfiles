@@ -1,0 +1,19 @@
+TARGET = main  # コンパイルしたいプログラム名
+OBJS = main.o # プログラムのソースコードの拡張子を.oにしたやつ
+#OBJS2 = main.cpp
+
+CXX = g++      # 好きなコンパイラ
+CXXFLAGS = -Wall -O2 # この辺は適当
+
+# OpenCV のライブラリを指定
+#OPENCVINC = `pkg-config --cflags opencv`
+#OPENCVLIB = `pkg-config --libs opencv`
+
+
+$(OBJS): $(OBJS2)
+	g++ -o ./main $(OBJS2) -I/home/raso/kinect/OpenNI-Bin-Dev-Linux-x64-v1.5.5.0/Include -I/usr/local/include/opencv2 -I/usr/local/include/opencv -L/usr/local/lib -lopencv_highgui -lopencv_imgproc -lopencv_core -L/home/raso/kinect/OpenNI-Bin-Dev-Linux-x64-v1.5.5.0/Lib 
+
+$(TARGET):$(OBJS)
+	$(CXX) -o $@  $(OPENCVLIB)
+
+

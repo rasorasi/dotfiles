@@ -1,0 +1,24 @@
+public class modules_random {
+    private long next = 1;
+
+    public void intitialize_randomizer(long seed) {
+	this.next = seed;
+    }
+
+    public int rand_int(int to){
+	int k;
+
+	k = (int) (this.rand_float() * to);
+	return (k==to ? to-1 : k);
+    }
+   
+    public double rand_float(){
+	return (double)this.random() / 32768;
+    }
+    
+    private int random()
+    {
+	next = (next*1103515245 + 12345) & 0x7fffffffffffffffL;
+	return (int)(next/65536) % 32768;
+    }
+}

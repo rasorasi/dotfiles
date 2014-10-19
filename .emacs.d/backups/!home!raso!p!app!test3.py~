@@ -1,0 +1,172 @@
+import sys
+from PyQt4 import QtGui, QtCore
+
+  
+imagepath = './shin.jpg'
+  
+
+class ImageViewScene( QtGui.QGraphicsScene ):
+    def __init__( self, *argv, **keywords ):
+        super( ImageViewScene, self ).__init__( *argv, **keywords )
+        self.__imageItem     = None
+        self.__currentPos    = None
+        self.__pressedButton = None
+  
+    def setFile( self, filepath ):
+
+        pixmap = QtGui.QPixmap( filepath )
+  
+
+        if self.__imageItem:
+            self.removeItem( self.__imageItem )
+  
+
+        item = QtGui.QGraphicsPixmapItem( pixmap )
+
+        item.setFlags(
+            QtGui.QGraphicsItem.ItemIsMovable
+        )
+        self.addItem( item )
+        self.__imageItem = item
+
+  
+        self.fitImage()
+  
+    def imageItem( self ):
+        return self.__imageItem
+  
+    def fitImage( self ):
+
+        if not self.imageItem():
+            return
+
+        boundingRect = self.imageItem().boundingRect()
+
+        sceneRect    = self.sceneRect()
+  
+        itemAspectRatio  = boundingRect.width() / boundingRect.height()
+        sceneAspectRatio = sceneRect.width() / sceneRect.height()
+  
+
+        transform        = QtGui.QTransform()
+  
+        if itemAspectRatio >= sceneAspectRatio:
+
+            scaleRatio = sceneRect.width() / boundingRect.width()
+        else:
+
+            scaleRatio = sceneRect.height() / boundingRect.height()
+  
+
+        transform.scale( scaleRatio, scaleRatio )
+
+        self.imageItem().setTransform( transform )
+  
+    def mouseDoubleClickEvent( self, event ):
+        self.fitImage()
+  
+
+    def mousePressEvent( self, event ):
+        self.__currentPos    = event.scenePos()
+        self.__pressedButton = event.button()
+  
+        if self.__pressedButton == QtCore.Qt.RightButton:
+            cursorShape = QtCore.Qt.SizeAllCursor
+        else:
+            cursorShape = QtCore.Qt.ClosedHandCursor
+        QtGui.qApp.setOverrideCursor( QtGui.QCursor( cursorShape ) )
+  
+    def mouseMoveEvent( self, event ):
+        if not self.__currentPos:
+            return
+  
+
+        cur = event.scenePos()
+  
+        value = cur - self.__currentPos
+        self.__currentPos = cur
+  
+
+        transform = self.imageItem().transform()
+  
+
+
+        localTrs = self.imageItem().mapFromScene( cur )
+  
+        if self.__pressedButton == QtCore.Qt.RightButton:
+
+            if value.x() < 0:
+                value = 0.9
+            else:
+                value = 1.1
+  
+
+            transform.translate( localTrs.x(), localTrs.y() ) \
+                .scale( value, value ) \
+                .translate( -localTrs.x(), -localTrs.y() )
+        else:
+
+            transform *= QtGui.QTransform().translate( value.x(), value.y() )
+  
+
+
+        self.imageItem().setTransform( transform )
+  
+    def mouseReleaseEvent( self, event ):
+        self.__currentPos    = None
+        self.__pressedButton = None
+        QtGui.qApp.restoreOverrideCursor()
+        super( ImageViewScene, self ).mouseReleaseEvent( event )
+
+
+
+
+  
+  
+  
+          
+  
+
+
+
+class ImageViewer( QtGui.QGraphicsView ):
+    def __init__( self ):
+        super( ImageViewer, self ).__init__( )
+  
+
+        self.setCacheMode( QtGui.QGraphicsView.CacheBackground )
+        self.setRenderHints( QtGui.QPainter.Antialiasing |
+            QtGui.QPainter.SmoothPixmapTransform |
+            QtGui.QPainter.TextAntialiasing
+        )
+
+  
+
+        scene = ImageViewScene( self )
+        scene.setSceneRect( QtCore.QRectF( self.rect() ) )
+        self.setScene( scene )
+
+
+  
+    def setFile( self, filepath ):
+
+
+        self.scene().setFile( filepath )
+          
+    def resizeEvent( self, event ):
+
+        super( ImageViewer, self ).resizeEvent( event )
+        self.scene().setSceneRect( QtCore.QRectF( self.rect() ) )
+
+
+
+  
+  
+if __name__ == '__main__':
+    app = QtGui.QApplication( sys.argv )
+    viewer = ImageViewer()
+
+    viewer.setFile( imagepath )
+    viewer.show()
+      
+    sys.exit( app.exec_() )

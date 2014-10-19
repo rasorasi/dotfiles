@@ -1,0 +1,66 @@
+#include <stdio.h>
+#include <unistd.h> //sleep, usleep用
+#include <ftdi.h> //FTDIチップ用
+
+int main(int argc, char **argv)
+{
+    struct ftdi_context ftdic; //ftdi_contextの宣言
+    int f,i;
+    char buf[1]; //入力用バッファ
+
+    ftdi_init(&ftdic); //FTDIチップの初期化
+
+    f = ftdi_usb_open(&ftdic, 0x0403, 0x6001); //FTDIチップをオープン
+
+    if(f < 0 && f != -5) { //エラーとトラップ。-5はftdi_sioが動いていた時のエラー
+        fprintf(stderr, "unable to open ftdi device: %d (%s)\n", f,  ftdi_get_error_string(&ftdic))
+        exit(-1);
+    }
+
+    printf("ftdi open succeeded: %d\n",f);
+
+    printf("enabling bitbang mode\n");
+    ftdi_enable_bitbang(&ftdic, 0xFF); //すべてのビットをbitbangに設定
+
+    sleep(3);
+
+    buf[0] = 0x0;
+    printf("turning everything off\n");
+    f = ftdi_write_data(&ftdic, buf, 1); //00を書き込み。つまりすべてOFF
+    if(f < 0) {
+        fprintf(stderr,"write failed for 0x%x, error %d (%s)\n",buf[0],f, ftdi_get_error_string(&ftdic));
+    }
+
+    sleep(3);
+
+    buf[0] = 0xFF;
+    printf("turning everything on\n");
+    f = ftdi_write_data(&ftdic, buf, 1); //FFを書き込み。つまりすべてON
+    if(f < 0) {
+        fprintf(stderr,"write failed for 0x%x, error %d (%s)\n",buf[0],f, ftdi_get_error_string(&ftdic));
+    }
+
+    sleep(3);
+
+    for(i = 0; i < 32; i++) {
+        buf[0] =  0 | (0xFF ^ 1 << (i % 8));
+        if( i > 0 && (i % 8) == 0) {
+            printf("\n");
+        }
+        printf("%02hhx ",buf[0]);
+        fflush(stdout);
+        f = ftdi_write_data(&ftdic, buf, 1);
+        if(f < 0) {
+            fprintf(stderr,"write failed for 0x%x, error %d (%s)\n",buf[0],f,  ftdi_get_error_string(&ftdic))
+        }
+        sleep(1);
+    }
+
+    printf("\n");
+
+    printf("disabling bitbang mode\n");
+    ftdi_disable_bitbang(&ftdic); //bitbangモードを終了
+
+    ftdi_usb_close(&ftdic); //デバイスを閉じる
+    ftdi_deinit(&ftdic);
+}

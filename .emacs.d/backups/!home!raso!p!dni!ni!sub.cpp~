@@ -1,0 +1,336 @@
+#include<iostream>
+#include<stdexcept>
+#include<OpenNI.h>
+#include<opencv2/opencv.hpp>
+#include <opencv2/core/core.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/highgui/highgui.hpp>
+#include <stdio.h>
+
+#define FRAME_WIDTH 320
+#define FRAME_HEIGHT 240
+
+
+using namespace cv;
+using namespace std;
+
+class DepthSensor
+{
+private:
+
+	void changeResolution(openni::VideoStream& stream)
+		{
+			openni::VideoMode mode = stream.getVideoMode();
+			mode.setResolution(FRAME_WIDTH, FRAME_HEIGHT);
+			mode.setFps(30);
+			stream.setVideoMode(mode);
+			stream.setMirroringEnabled(false);
+		}
+
+
+
+public:
+	void initialize(){
+		
+		//デバイスを習得する
+		openni::Status ret = device.open( openni::ANY_DEVICE );
+		if ( ret != openni::STATUS_OK){
+			throw std::runtime_error( "openni::Device::open() failed.");
+		}
+			
+
+
+		//カラーストリームを有効にする
+		colorStream.create(device, openni::SENSOR_COLOR);
+		//changeResolution(colorStream);
+		//colorStream.setMirroringEnabled(true);
+		colorStream.start();
+
+		//Depthストリームを有効にする
+		depthStream.create(device, openni::SENSOR_DEPTH);
+			
+		depthStream.start();
+				
+	}
+	//フレームの更新処理
+	void update()
+		{
+			openni::VideoFrameRef colorFrame;
+			openni::VideoFrameRef depthFrame;
+			
+
+			//更新されたフレームを習得する
+			colorStream.readFrame( &colorFrame );
+			depthStream.readFrame( &depthFrame );
+			
+
+			//フレームのデータを表示できる形に変換する
+			colorImage = showColorStream( colorFrame );
+			depthImage = showDepthStream( depthFrame );
+
+
+			testImage = colorImage.clone();
+			testImage = thresh(testImage, depthFrame);
+			
+			textImage = Mat::zeros(240, 320, CV_8UC3);
+			locateImage = Mat::zeros(240, 320, CV_8UC3);
+			
+
+			cvNamedWindow("Color Stream", CV_WINDOW_NORMAL);
+//			cvResizeWindow("Color Stream", FRAME_WIDTH*2 , FRAME_HEIGHT*2);
+			cvMoveWindow("Color Stream",0, 0);
+
+			cvNamedWindow("Depth Stream" ,CV_WINDOW_NORMAL);
+//			cvResizeWindow("Depth Stream", FRAME_WIDTH*2, FRAME_HEIGHT*2);
+			cvMoveWindow("Depth Stream",500, 0);
+
+			
+//			cvResizeWindow("Depth Stream", FRAME_WIDTH*2, FRAME_HEIGHT*2);
+
+
+//			openni::VideoFrameRef testFrame;
+//			testStream.readFrame( &testFrame );
+
+			cvNamedWindow("Test Stream" ,CV_WINDOW_NORMAL);			
+			cvMoveWindow("Test Stream",0, 400);
+
+			cvNamedWindow("Text Stream" ,CV_WINDOW_NORMAL);			
+			cvMoveWindow("Text Stream",500, 400);
+
+
+			//フレームのデータを表示する
+			cvtColor(testImage, testImage,  CV_BGR2GRAY); //グレースケール変換(ここでは白黒画像のチャンネルをかえているだけ）
+//			threshold(testImage, testImage, 0, 255, THRESH_BINARY|THRESH_OTSU);
+
+			testImage = get_shuttle(testImage, colorImage, textImage, depthFrame);
+
+			imshow("Color Stream", colorImage);
+			imshow("Depth Stream", depthImage);
+			imshow("Test Stream", testImage);
+			imshow("Text Stream", textImage);
+
+//			showCenterDistance(depthImage, depthFrame);
+		}
+
+
+	Mat showTestStream(const openni::VideoFrameRef& depthframe,const openni::VideoFrameRef& colorframe){
+		//距離データを画像化する(16bit)
+		unsigned short* depth = (unsigned short*)depthframe.getData();		
+	
+		Mat colorimage = Mat(colorframe.getHeight(),
+							 colorframe.getWidth(),
+							 CV_8UC3, (unsigned short*)colorframe.getData());
+
+		for(int x = 0; x < FRAME_WIDTH; x++){
+			for(int y = 0; y < FRAME_HEIGHT; y++){
+				int de = depth[(y * FRAME_WIDTH) + x];
+				if(de > 900 || de < 500){
+					colorimage.data[ y * colorimage.step + x * colorimage.elemSize() + 0] = 0;
+						colorimage.data[ y * colorimage.step + x * colorimage.elemSize() + 1] = 0;
+							colorimage.data[ y * colorimage.step + x * colorimage.elemSize() + 2] = 0;
+
+			}
+
+				else{
+
+					colorimage.data[ y * colorimage.step + x * colorimage.elemSize() + 0] = 0xff;
+						colorimage.data[ y * colorimage.step + x * colorimage.elemSize() + 1] = 0xff;
+							colorimage.data[ y * colorimage.step + x * colorimage.elemSize() + 2] = 0xff;
+		
+				}
+			}
+		}
+
+
+
+		return colorimage;
+	}
+
+	int is_white( Mat color_image ,int x,int y){
+		int white = 0x80;
+
+		if((color_image.data[ y * color_image.step + x * color_image.elemSize() + 0] > white) && 
+		   (color_image.data[ y * color_image.step + x * color_image.elemSize() + 1] > white) &&
+		   (color_image.data[ y * color_image.step + x * color_image.elemSize() + 2] > white)) 
+			return 1;
+
+		else return 0;
+	}
+
+	Mat thresh(Mat color_image, const openni::VideoFrameRef& depthframe){
+
+		unsigned short* depth = (unsigned short*)depthframe.getData();
+		
+		for(int x = 0; x < FRAME_WIDTH; x++){
+			for(int y = 0; y < FRAME_HEIGHT; y++){
+				int de = depth[(y * FRAME_WIDTH) + x];
+				if((de < 1000 && de > 500) && is_white(color_image, x, y)){
+					color_image.data[ y * color_image.step + x * color_image.elemSize() + 0] = 0xff;
+					color_image.data[ y * color_image.step + x * color_image.elemSize() + 1] = 0xff;
+					color_image.data[ y * color_image.step + x * color_image.elemSize() + 2] = 0xff;
+
+			}
+
+				else{
+
+					color_image.data[ y * color_image.step + x * color_image.elemSize() + 0] = 0;
+					color_image.data[ y * color_image.step + x * color_image.elemSize() + 1] = 0;
+					color_image.data[ y * color_image.step + x * color_image.elemSize() + 2] = 0;
+		
+				}
+			}
+		}
+
+
+
+		return color_image;
+	}
+
+
+			
+	Mat get_shuttle(Mat bin_img ,Mat color_image, Mat text_image, const openni::VideoFrameRef& depthframe){
+		
+		int cx, cy;
+		unsigned short cz;
+		stringstream ss;
+
+		vector<vector<Point> > contours;
+
+		findContours(bin_img ,contours, CV_RETR_EXTERNAL, CV_CHAIN_APPROX_SIMPLE);
+
+		for(int i = 0; i < (int)contours.size(); i++){
+			size_t count = contours[i].size();
+			if(count < 24 || count > 90) continue;
+
+			Rect rc = boundingRect(contours[i]);
+			rectangle(color_image, rc.tl(), rc.br(), Scalar(0,0,200), 2, 4);
+
+			cx = (rc.tl().x + rc.br().x) /2;
+			cy = (rc.tl().y + rc.br().y) /2;
+			cz = PointDistance(cx, cy , depthframe);
+			ss << "( " << cx <<", " << cy << ", " << cz << ")"; 
+
+			cv::putText(text_image, ss.str(), cv::Point(50, 50),
+						cv::FONT_HERSHEY_SIMPLEX, 1.0, cv::Scalar(255));
+
+		}
+
+
+		return bin_img;
+		
+	}
+
+
+	//カラーストリームを表示できる形にする
+	Mat showColorStream(const openni::VideoFrameRef& colorframe)
+		{
+			//OpenCVの形に変換する
+			Mat colorImage = Mat(colorframe.getHeight(),
+								 colorframe.getWidth(),
+								 CV_8UC3, (unsigned char*)colorframe.getData());
+
+			//BGRの並びをRGBに変換する
+			cvtColor(colorImage, colorImage, CV_RGB2BGR);
+
+			return colorImage;
+		}
+
+	Mat showDepthStream(const openni::VideoFrameRef& depthframe){
+		//距離データを画像化する(16bit)
+		Mat depthImage = Mat(depthframe.getHeight(),
+							 depthframe.getWidth(),
+							 CV_16UC1, (unsigned short*)depthframe.getData());
+
+		//0 〜 10000ミリメートルまでのデータを0〜255(8bit)にする
+		depthImage.convertTo(depthImage, CV_8U, 255.0 / 10000);
+
+		//中心点の距離を表示する
+		showCenterDistance(depthImage, depthframe);
+
+		return depthImage;
+	}
+
+	void showCenterDistance(Mat& depthImage, const openni::VideoFrameRef& depthframe){
+
+		int count = 0;
+		int px = 0;
+
+		openni::VideoMode videoMode = depthStream.getVideoMode();
+
+
+		int centerX = videoMode.getResolutionX() / 2;
+		int centerY = videoMode.getResolutionY() / 2;
+		int centerIndex = (centerY * videoMode.getResolutionX()) + centerX;
+
+		unsigned short* depth = (unsigned short*)depthframe.getData();
+
+
+		stringstream ss;
+		stringstream ss1;
+
+		ss << "Center Point: " << depth[centerIndex];
+	}
+	
+	unsigned short PointDistance(int x, int y, const openni::VideoFrameRef& depthframe){
+
+		int count = 0;
+		int px = 0;
+
+		openni::VideoMode videoMode = depthStream.getVideoMode();
+
+		int pointIndex = (y * videoMode.getResolutionX()) + x;
+
+		unsigned short* depth = (unsigned short*)depthframe.getData();
+
+		return depth[pointIndex];
+
+
+
+	}
+
+
+
+private:
+
+	openni::Device device;
+	openni::VideoStream colorStream;
+	openni::VideoStream depthStream;
+
+	
+	
+	Mat colorImage;
+	Mat depthImage;
+	Mat testImage;
+	Mat textImage;
+
+
+};
+
+int main(int arg, const char * argv[])
+{
+
+
+	try{
+		//OpenNIを初期化する
+		openni::OpenNI::initialize();
+
+		//センサーを初期化する
+		DepthSensor sensor;
+		sensor.initialize();
+
+
+
+		//メインループ
+		while(1){
+			sensor.update();
+
+			if(cv::waitKey(10) == 27)
+				break;
+		}}
+	catch(std::exception&){
+		std::cout << openni::OpenNI::getExtendedError() << std::endl;
+	}
+	return 0;
+}
+	
+			   

@@ -1,0 +1,10 @@
+等式 x+(x*y)=x がすべてのx,yに対して成り立つことの確認:
+x=false, y=false の時,左辺=false+(false*false)=false, 右辺=false
+x=false, y=true の時,左辺=false+(false*true)=false, 右辺=false
+x=true, y=false の時,左辺=true+(true*false)=true, 右辺=true
+x=true, y=true の時,左辺=true+(true*true)=true, 右辺=true
+等式 x*(x+y)=x がすべてのx,yに対して成り立つことの確認:
+x=false, y=false の時,左辺=false*(false+false)=false, 右辺=false
+x=false, y=true の時,左辺=false*(false+true)=false, 右辺=false
+x=true, y=false の時,左辺=true*(true+false)=true, 右辺=true
+x=true, y=true の時,左辺=true*(true+true)=true, 右辺=true

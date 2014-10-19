@@ -21,7 +21,6 @@
  )
 
 
-
 ;;(setq initial-frame-alist
 ;;      '((top . 10) (left . 1000) (width . 98) (height . 52)))
 
@@ -78,6 +77,13 @@
 (add-hook 'c-mode-hook 'my-c-mode-common-init)
 (add-hook 'c++-mode-hook 'my-c-mode-common-init) 
 
+;;python-mode
+(add-hook 'python-mode-hook
+      '(lambda()
+         (setq indent-tabs-mode t)
+         (setq indent-level 4)
+         (setq python-indent 4)
+         (setq tab-width 4)))
 
 
 
@@ -130,7 +136,7 @@
 ;;(global-set-key (kbd "M-z") ')
 ;;(global-set-key (kbd "M-t") ')
 ;;(global-set-key (kbd "M-l") ')
-;;(global-set-key (kbd "C-'") ')
+
 
 ;; 初期画面設定
 (setq inhibit-startup-message t)
@@ -149,12 +155,7 @@
 (global-set-key (kbd "C-c 1") (lambda()(interactive)(conf_theme 'molokai ntheme)(setq ntheme 'molokai)))
 (global-set-key (kbd "C-c 2") (lambda()(interactive)(conf_theme 'patchouli ntheme)(setq ntheme 'patchouli)))
 (global-set-key (kbd "C-c 3") (lambda()(interactive)(conf_theme 'jpaper ntheme)(setq ntheme 'jpaper)))
-;;(global-set-key (kbd "C-c 4") (lambda()(interactive)(conf_theme 'subdued ntheme)(setq ntheme 'subdued)))
-(global-set-key (kbd "C-c 5") (lambda()(interactive)(conf_theme 'hack ntheme)(setq ntheme 'hack)))
-(global-set-key (kbd "C-c 6") (lambda()(interactive)(conf_theme 'reki ntheme)(setq ntheme 'reki)))
-
-(
- global-set-key (kbd "C-c 0")(lambda()(interactive)(disable-theme ntheme)))
+( global-set-key (kbd "C-c 0")(lambda()(interactive)(disable-theme ntheme)))
 
 
 
@@ -330,7 +331,8 @@
   (define-key ac-completing-map "\t" 'ac-complete)
   (define-key ac-completing-map "\r" nil)
   (global-set-key  (kbd "C-x C-a") 'auto-complete-mode)
-  (ac-config-default))
+  (ac-config-default)
+)
 
 (when (require 'recentf nil t)
 (setq recentf-exclude '(".scratch$"
@@ -381,7 +383,7 @@
 (read-scratch-data)
 
 ;;後ろから大文字に変換
-(global-set-key (kbd "M-j") 'upcase-backward-word)
+(global-set-key (kbd "C-'") 'upcase-backward-word)
 (defun upcase-backward-word (arg)
   "Convert previous word (or arg words) to upper case."
   (interactive "p")
@@ -397,7 +399,7 @@
 
 (setq howm-menu-lang 'ja)
 (when (require 'howm-mode nil t)
-;;(global-set-key (kbd "C-c , ,") 'howm-menu)
+  ;;(global-set-key (kbd "C-c , ,") 'howm-menu)
   (autoload 'howm-menu "howm-mode" "Hitori Otegaru Wiki Modoki" t)
 
   (define-key howm-mode-map (kbd "C-x C-s")
@@ -435,7 +437,62 @@
 (when (require 'edit-server nil t)
   (edit-server-start))
 
-(flymake-mode t)
+
+
+;;;; flymakeパッケージを読み込み
+;;(when (require 'flymake nil t)
+;;  ;; 全てのファイルでflymakeを有効化
+;;  (add-hook 'find-file-hook 'flymake-find-file-hook)
+;;  
+;;  ;; miniBufferにエラーを出力
+;;  (defun flymake-show-and-sit ()
+;;    "Displays the error/warning for the current line in the minibuffer"
+;;    (interactive)
+;;    (progn
+;;      (let* ((line-no (flymake-current-line-no) )
+;; 	     (line-err-info-list (nth 0 (flymake-find-err-info flymake-err-info line-no)))
+;; 	     (count (length line-err-info-list)))
+;; 	(while (> count 0)
+;; 	  (when line-err-info-list
+;; 	    (let* ((file (flymake-ler-file (nth (1- count) line-err-info-list)))
+;; 		   (full-file
+;; 		    (flymake-ler-full-file (nth (1- count) line-err-info-list)))
+;; 		   (text (flymake-ler-text (nth (1- count) line-err-info-list)))
+;; 		   (line (flymake-ler-line (nth (1- count) line-err-info-list))))
+;; 	      (message "[%s] %s" line text)))
+;; 	  (setq count (1- count)))))
+;;    (sit-for 60.0))
+;;  (global-set-key "\C-cd" 'flymake-show-and-sit)
+;;  
+;;  ;; flymakeの色を変更
+;;  (set-face-background 'flymake-errline "red4")
+;;  (set-face-background 'flymake-warnline "dark slate blue")
+;;  
+;;;; Makefile が無くてもC/C++のチェック
+;;  (defun flymake-simple-generic-init (cmd &optional opts)
+;;    (let* ((temp-file  (flymake-init-create-temp-buffer-copy
+;; 			'flymake-create-temp-inplace))
+;; 	   (local-file (file-relative-name
+;; 			temp-file
+;; 			(file-name-directory buffer-file-name))))
+;;      (list cmd (append opts (list local-file)))))
+;;  
+;;  (defun flymake-simple-make-or-generic-init (cmd &optional opts)
+;;    (if (file-exists-p "Makefile")
+;; 	(flymake-simple-make-init)
+;;      (flymake-simple-generic-init cmd opts)))
+;;  
+;;  (defun flymake-c-init ()
+;;    (flymake-simple-make-or-generic-init
+;;     "gcc" '("-Wall" "-Wextra" "-pedantic" "-fsyntax-only")))
+;;  
+;;  (defun flymake-cc-init ()
+;;    (flymake-simple-make-or-generic-init
+;;     "g++" '("-Wall" "-Wextra" "-pedantic" "-fsyntax-only")))
+;;  
+;;  (push '("\\.c\\'" flymake-c-init) flymake-allowed-file-name-masks)
+;;  (push '("\\.\\(cc\\|cpp\\|C\\|CPP\\|hpp\\)\\'" flymake-cc-init)
+;; 	flymake-allowed-file-name-masks))
 
 (when (require 'helm-config nil t)
   (require 'helm-descbinds)
@@ -472,7 +529,7 @@
                                   (file-name-history 512)
                                   (tags-table-set-list 128)
                                   (tags-table-list 128)))
-  (add-hook 'after-init-hook 'session-initialize)
+ (add-hook 'after-init-hook 'session-initialize)
   ;; Save session info every 30 minutes
   (setq my-timer-for-session-save-session (run-at-time t 1800 'session-save-session)))
 
@@ -553,5 +610,31 @@
 (global-set-key (kbd "C-x C-2") (lambda()(interactive)(make-other-buffer-below)))
 (global-set-key (kbd "C-x C-3") (lambda()(interactive)(make-other-buffer-right)))
 
-(load "user1.el")
-;;(load "user2.el")
+;;(load "user1.el")
+(load "user2.el")
+
+
+
+(require 'python-environment)
+(setq whitespace-style
+      '(tabs tab-mark spaces space-mark))
+(setq whitespace-space-regexp "\\(\x3000+\\)")
+
+(setq tab_mode 0)
+
+(require 'whitespace)
+
+(global-set-key (kbd "C-x p") (lambda()(interactive)
+				(cond ((equal tab_mode 0)
+				       (setq whitespace-display-mappings
+					     '((space-mark ?\x3000 [?\□])
+					       (tab-mark  ?\t     [?\xBB ?\t])))
+				       (setq tab_mode 1))
+				      ((equal tab_mode 1)
+				       (setq whitespace-display-mappings
+					     '((space-mark ?\x3000 [?\x3000])
+					       (tab-mark  ?\t     [?\t])))
+				       (setq tab_mode 0)))
+				(global-whitespace-mode 1)))
+				       
+				      

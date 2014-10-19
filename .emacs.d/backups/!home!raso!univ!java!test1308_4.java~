@@ -1,0 +1,58 @@
+class A{
+    protected int a;
+    A(){
+	this(3);
+	System.out.println("A() is closed.");
+    }
+    A(int a){
+	this.a = a;
+	System.out.println("A(" + a + ") is closed.");
+    }
+    A(double x) {
+	this((int)x);
+	System.out.println("A(" + x + ") is closed.");
+    }
+    void method1(){
+	System.out.println("method1() in class A is called. a=" + a);
+    }
+    void method2(){
+	System.out.println("method2() in class A is called. a^2=" + a*a);
+    }
+}
+
+class B extends A {
+    protected int b;
+    B(int b) {
+	this.b = b;
+	System.out.println("B(" + b + ") is closed.");
+    }
+    void method1(){
+	System.out.println("method1() in class B is called. a=" + a", b=" +b);
+    }
+}
+
+class C extends B {
+    C() {
+	super(555);
+	System.out.println("c() is closed.");
+    }
+    void method2(){
+	System.out.println("method2() in class C is called. a+b=" + (a+b));
+	
+    }
+}
+
+class test1308)4 {
+    public static void main(String[] args) {
+	A obj;
+	System.out.print("(1)"); obj = new A(123.5); 
+	System.out.print("(2)"); obj = new A(3); 
+	System.out.print("(3)"); obj.method1(); 
+	System.out.print("(4)"); obj.method2();  
+
+	System.out.print("(5)"); obj = new C();
+	System.out.print("(6)"); obj.method1(); 
+	System.out.print("(7)"); obj.method2();
+    }
+} 
+

@@ -1,0 +1,52 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+class MyFile {
+public:
+        int x, y, z;
+        MyFile(int a, int b, int c)   /* コンストラクタ */
+        {
+                x = a;
+                y = b;
+                z = c;
+        }
+        friend ostream& operator << (ostream &, MyFile);
+};
+
+/* 座標の表示（演算子<<のオーバーロード）*/
+ostream & operator << (ostream &stream, MyFile point)
+{
+        stream << "   (" << point.x << ", ";
+        stream << point.y << ", ";
+        stream << point.z << ")\n";
+        return stream;
+}
+
+int main()
+{
+        int n1, n2, n3;
+    // ファイルのオープン
+        ifstream in("test1.txt");
+        if (!in) {
+                cout << "***error  入力ファイルを開けません\n";
+                exit(1);
+        }
+    
+        ofstream out("test.txt");
+        if (!out) {
+                cout << "***error  出力ファイルを開けません\n";
+                exit(1);
+        }
+    // データ入力と出力
+        while (!in.eof()) {
+                in >> n1 >> n2 >> n3;
+                MyFile a(n1, n2, n3);
+                out << a;
+        }
+    // ファイルのクローズ
+        in.close();
+        out.close();
+    
+        return 0;
+}

@@ -1,0 +1,29 @@
+abstract class BooleanBinOperator{
+    abstract boolen op(boolean x, boolean y);
+    @Override
+    public abstract String toString();}
+
+classAddition extends BooleanBinOperator{
+    boolean op(boolean x, boolean y){
+	return x || y;
+    }
+    @Override
+	public String toString(){
+	return "+";
+    }
+}
+
+class Multplication extends BooleanBinOperator{
+    bolen op(boolean x, boolean y){
+	return && y;
+    }
+    @Override
+    public String toString(){
+	return "*";
+    }
+}
+
+class TesterForAbsorptionLaw{
+    void ascertainOn(BooleanBinOperator op1, BooleanBinOperator op2){
+	boolean[] x={false, true};
+	System.out.printlen("等式 x" + op1 + "(x" + op2 + "y)=x がすべてのx,yに対してなり

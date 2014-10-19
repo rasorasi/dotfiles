@@ -1,0 +1,16 @@
+#include<iostream>
+#incluce<stdio.h>
+class MyClass {
+	int operator-(){
+		return 1;
+	}
+};
+	
+int main()
+{
+	MyClass myclass;
+	printf("%d\n", -myclass);
+	return 0;
+}
+		
+  

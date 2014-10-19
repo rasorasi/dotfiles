@@ -1,0 +1,36 @@
+\documentclass[a4j,11pt]{jarticle}
+\setlength{\topmargin}{-20mm}
+\setlength{\textheight}{250mm}
+
+\usepackage{listings,jlisting}
+
+\lstset{%
+  language={java},
+  basicstyle={\ttfamily},%
+  identifierstyle={},%
+  commentstyle={\itshape},%
+  keywordstyle={\bfseries},%
+  ndkeywordstyle={},%
+  %stringstyle={\small\ttfamily},
+  frame={tb},
+  breaklines=true,
+  columns=[l]{fullflexible},%
+  numbers=left,%
+  xrightmargin=0zw,%
+  xleftmargin=3zw,%
+  numberstyle={\scriptsize},%
+  stepnumber=1,
+  numbersep=1zw,%
+  lineskip=-0.5ex%
+}
+ 
+\title{}
+%\author{t13f445a  加藤 匠}
+%\date{\today}
+\begin{document}
+\section{レポート課題1}
+
+\lstinputlisting{../java/modules_random_main.java}
+
+
+\end{document}

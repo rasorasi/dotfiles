@@ -5374,26 +5374,2518 @@ ls
 cd ..
 ls
 exit
-: 1405008777:0;sudo apt-add-repository ppa:clipgrab-team/ppa
-: 1405009016:0;sudo apt-get update
-: 1405009038:0;sudo apt-get install clipgrab
-: 1405009132:0;sudo apt-get install conky
-: 1405009201:0;conky2
-: 1405009204:0;conky
-: 1405009358:0;e
-: 1405009370:0;cd projects/dotfiles
-: 1405009373:0;git add .
-: 1405009389:0;git add -A .
-: 1405009409:0;git add commit -m "iroiro"
-: 1405009424:0;git  commit -m "iroiro"
-: 1405009434:0;git push origin master
-: 1405009475:0;ls
-: 1405009504:0;cd
-: 1405009505:0;ls
-: 1405009896:0;cd .emacs.d
-: 1405009904:0;mv user1.el elisp
-: 1405009979:0;cd elisp
-: 1405009989:0;E user2.el
-: 1405010035:0;cd
-: 1405010039:0;cd projects/dotfiles
-: 1405010045:0;git add -A .
+sudo apt-add-repository ppa:clipgrab-team/ppa
+sudo apt-get update
+sudo apt-get install clipgrab
+sudo apt-get install conky
+conky2
+conky
+e
+cd projects/dotfiles
+git add .
+git add -A .
+git add commit -m "iroiro"
+git  commit -m "iroiro"
+git push origin master
+ls
+cd
+ls
+cd .emacs.d
+mv user1.el elisp
+cd elisp
+E user2.el
+cd
+cd projects/dotfiles
+git add -A .
+ls
+e
+ls
+cd Dropbox
+ls
+cd dcv
+ls
+make OBJS2=ni_test.cpp
+ls
+cd kinect
+ls
+cd OpenNI-Linux-x64-2.2
+ls
+cd Redist
+ls
+cd OpenNI2
+ls
+cd ..
+ls
+cd OpenNI2
+ls
+cd Drivers
+ls
+uname -a
+cd /usr/local/include
+ls ni2
+cd 
+ls
+cd  kinect/OpenNI-Linux-x64-2.2
+ls
+cd Samples
+ls
+cd Bin
+ls
+./SimpleViewer
+ls
+cd OpenNI2
+ls
+cd Drivers
+ls
+cd ~/ki`
+cd ~/kinect
+ls
+cd Sensor-Bin-Linux-x64-v5.1.4.1
+ls
+cd Bin
+ls
+cd ..
+ls
+cd Config
+ls
+cd ..
+ls
+cd Lib
+ls
+cp *.so ~/kinect/Sensor-Bin-Linux-x64-v5.1.4.1/Lib
+ls
+cd ..
+ls
+./SimpleViewer
+cd ..
+NiViewer
+ls
+cd ..
+ls
+install.sh -u
+./install.sh -u
+sudo ./install.sh -u
+E install.sh
+cd
+mkdir kinect2
+ls
+cd kinect2
+git clone https://github.com/OpenNI/OpenNI2.git
+ls
+cd OpenNI2
+ls
+make
+cd ..
+rm -rf OpenNI2
+git checout develop
+git checkout develop
+git checkout develop https://github.com/OpenNI/OpenNI2.git
+git clone https://github.com/OpenNI/OpenNI2.git
+git checkout developclone https://github.com/OpenNI/OpenNI2.git
+git checkout develop clone https://github.com/OpenNI/OpenNI2.git
+ls
+cd OpenNI2-master
+ls
+make
+ls
+cd Config
+ls
+cd OpenNI2
+ls
+cd ..
+ls
+cd ..
+ls
+E Makefile
+make
+ls
+cd ThirdParty/PSCommon/BuildSystem/
+E CommonDefs.mak
+cd ../../../..
+cd OpenNI2-master
+ls
+make -Werror
+ls
+E Makefile
+make CXX=g++ - Werror
+make CXX=g++ -Werror
+make CXX=g++
+make CXXFLAGS= -MD -MP
+make
+/home/raso/kinect2/OpenNI2-master/Source/Drivers/PSLink
+ls
+E Makefile
+ ../../../ThirdParty/PSCommon/BuildSystem/CommonCppMakefile
+ls
+cd E
+E Makefile
+cd ../../..
+ls
+make
+cd
+ls
+cd kinect
+ls
+cd OpenNI-Linux-x64-2.2
+ls
+cd Samples
+ls
+cd Bin
+ls
+./SimpleViewer
+cd
+cd kinect2
+ls
+rm -rf
+git clone git@github.com:PrimeSense/Sensor.git
+ls
+cd OpenNI2-master
+ls
+cd ..
+ls
+rm -rf OpenNI2-master
+git clone https://github.com/PrimeSense/Sensor.git
+ls
+cd Sensor
+ls
+cd Platform/Linux/CreateRedist && ./RedistMaker && cd ../../..
+ls
+cd ../../..
+ls
+cd Platform/Linux/
+ls
+cd cd
+ls
+cd CreateRedist
+ls
+./install.sh
+./RedistMaker
+ls
+cd ..
+ls
+cd Bin
+ls
+cd x64-Release
+ls
+cd ..
+ls
+cd ..
+cd
+cd kinect
+cd ..
+cd kinect2
+ls
+git clone https://github.com/occipital/OpenNI2.git
+ls
+cd OpenNI2
+ls
+lsusb
+ls
+cd S
+cd Samples
+ls
+cd SimpleViewer
+ls
+E Makefile
+E main.cpp
+ls
+ cd ..
+ls
+cd ..
+ls
+make
+ls
+cd Source/Tools/NiViewer/
+ls
+E Makefile
+cd ../../../
+ls
+make
+ls
+cd Bin
+ls
+cd x64-Release
+ls
+./SimpleViewer
+ls
+cd ..
+ls
+cd ../..
+ls
+cd ../
+ls
+cd univ
+ls
+E test1308_6.class
+e
+ls
+javac modules_random.java
+javac modules-random-main.java
+javac modules_random_main.java
+ls
+rm modules_random.java
+rm modules-random.java
+rm modules-random-main.java
+javac modules_random_main.java
+java modules_random_main
+javac modules_random_main.java
+java modules_random_main
+javac modules_random_main.java
+java modules_random_main
+javac modules_random_main.java
+java modules_random_main
+ls
+cd ~/Dropbox
+ls
+cd Dropbox
+ls
+ctex make_web
+e
+ls
+platex make_web.tex
+cd /usr
+cd /usr/share
+ls
+cd texmf/
+ls
+cd tex/latex
+ls
+mv ~/Desktop/jlisting.sty ~/Desktop/listings
+cp -r ~/Desktop/listings ./
+sudo cp -r ~/Desktop/listings ./
+ls
+cd listings
+platex *.ins
+ls
+platex *.ins
+sudo platex *.ins
+cd ~/Dropbox
+ls
+ctex make_web
+ls
+ctex make_web
+ls
+cp jlisting.sty /usr/share/texlive/texmf-dist/tex/latex/listings/
+sudo cp jlisting.sty /usr/share/texlive/texmf-dist/tex/latex/listings/
+ctex make_web
+cd /usr/share/texlive/texmf-dist/tex/latex/listing
+ls
+cd ..
+cd listings
+ls
+cp jlisting.sty ../listing
+sudo cp jlisting.sty ../listing
+ctex make_web
+/opt
+ls
+cd -4
+ls
+cd ..
+cd ../../
+cd ..
+ls
+cd ../../..
+ls
+E ls-R
+cd -2
+ls
+cd
+cd Dropbox
+ctex make_web
+sudo mktexlsr
+ctex make_web
+cd univ
+java modules_random_main
+cp make_web.tex ~/univ
+ls
+cd ~/univ
+ls
+mkdir java
+cp *java java
+mv *java java
+mv *.java java
+ls
+mv *.class java
+ls
+rm \#modules-random.java\#
+ls
+mkdir tex
+cd tex
+ls
+cd ..
+mv *.tex tex
+cd tex
+ls
+E make_web.tex
+cd ../..
+cd raso/Dropbox
+ls
+ctex make_web
+ctex practice_java
+cd
+cd univ/java
+javac modules_random_main.java
+java modules_random_main
+ctex practice_java
+cp *pdf 
+cp *pdf ~/Dropbox
+ls
+ctex practice_java
+evince practice_java.pdf
+cp practice_java.pdf ~/Dropbox
+cd ..
+ls
+java
+ls
+cd java
+ls
+javac test1308_4.java
+java test1308_4
+javac test1308_4.java
+java test1308_4
+ls
+cd
+ls
+cd kinect2
+ls
+cd OpenNI2
+ls
+cd S
+cd Samples
+ls
+cd Simple
+cd SimpleViewer
+ls
+cd ..
+mkdir ni
+cp SimpleViewer ~/ni
+ls
+cd ni
+ls
+cp SimpleViewer ~/ni
+cp -r SimpleViewer ~/ni
+ls
+cd ni
+ls
+cd SimpleViewer
+ls
+make
+cd
+cd kinect
+cd kinect2
+ls
+cd
+cd kinect2
+ls
+cd OpenNI2
+ls
+cd
+cd ni
+ls
+cd SimpleViewer
+ls
+cd -2
+ls
+cd Samples
+ls
+cd Simple
+cd SimpleViewer
+ls
+E Makefile
+cd kinect2/OpenNI2/ThirdParty/PSCommon/BuildSystem
+E CommonDefs.mak
+cd
+ls
+cd
+ls
+cd kinect2/OpenNI2
+ls
+cd S
+cd Samples
+ls
+Common
+ls
+cd ..
+ls
+mkdir ni
+ls
+cd ni
+ls
+cp ../SimpleViewer/* ./
+ls
+make
+E Makefile
+make
+cd kinect2/OpenNI2
+ls
+cd Bin
+ls
+cd x64-Release
+ls
+./Test
+ls
+cd
+rm -rf ni
+ls
+cd p
+ls
+mkdir dcv
+ls
+cd dcv
+ls
+mkdir Bin
+ln -s /home/raso/kinect2/OpenNI2/Samples/ni /home/raso/p/dcv/ni
+ls
+cd ni
+ls
+make
+ls
+cd ..
+ls
+cd Bin
+ls
+cd x64-Release
+ls
+cd ..
+ls
+cd ni
+ls
+make
+cd 
+ls
+cd p/dcv
+ls
+cd Bin
+ls
+cd Intermediate
+ls
+cd x64-Release
+ls
+cd main
+ls
+cd
+cd p/dcv
+ls
+cd ni
+make
+cd kinect2/OpenNI2
+ls
+cd Samples
+ls
+cd ..
+ls
+cd Bin
+ls
+cd i
+cd Intermediate
+ls
+cd x64-Release
+ls
+ cd SimpleViewer
+ls
+make
+ls
+cd ..
+ls
+cd
+cd kinect2/OpenNI2
+ls
+cd Bin
+ls
+cd x64-Release
+ls
+cd ..
+ls
+rm Bin
+rm -rf Bin
+cp -r Bin ~/p/dcv
+ls
+cd ni
+ls
+make
+cd Samples
+ls
+cd Simple
+vi
+cd SimpleViewer
+ls
+cat Makefile
+make
+ls
+cd ..
+cd ni
+ls
+make
+cd 
+cd p/dcv
+cd Bin
+ls
+cd x64-Release
+ls
+cd ..
+cd 
+cd p/dcv/ni
+ls
+E Makefile
+make
+ls
+make
+cd ..
+ls
+cd Bin
+ls
+cd x64-Release
+ls
+cd ../..
+ls
+cd Bin
+cd x64-Release
+ls
+cd ..
+ls
+rm -rf Bin
+ln -s /home/raso/kinect2/OpenNI2/Bin/x64-Release /home/raso/p/dcv/x64-Release
+ls
+cd ni
+ls
+cd ~/D
+cd ~/Dropbox
+ls
+cd dcv
+ls
+E Makefile
+make
+cp ni_test.cpp ~/p/dcv/ni
+ls
+cd ..
+rm ni_test.cpp
+cd ni
+ls
+mv *.cpp ../
+cd ..
+ls
+cd N
+cd ni
+ls
+../
+ls
+cd ../
+ls
+cd ..
+ls
+cd ..
+ls
+cd ../kinect
+cd ../kinect2
+ls
+cd OpenNI2
+ls
+cd Samples
+ls
+mv *.cpp ~/p/dcv/ni
+cd p/dcv/ni
+ls
+make OBJS=ni_test.cpp
+ls
+cd ~/Dropbox/dcv
+ls
+./main
+E cv_test.cpp
+ls
+E ni_test.cpp
+make
+make OBJS=ni_test.cpp
+ls
+make OBJS2=sub.cpp
+E sub.cpp
+make OBJS=ni_test.cpp
+ls
+E Makefile
+ls
+make OBJS=ni_test.cpp
+make OBJS2=sub.cpp
+make
+ls
+E Makefile
+ls
+make OBJ2=ni_test.cpp
+make OBJ2=sub.cpp
+ls
+make OBJ2=sub.cpp
+make OBJ2=cv_test.cpp
+ls
+make
+make OBJS2=cv_test.cpp
+make OBJS=ni_test.cpp
+ls
+cd ..
+ls
+cd x64-Release
+ls
+./main
+ls
+ds
+dd
+sd
+df
+sudo apt-add-repository  ppa:danielrichter2007/grub-customizer
+sudo apt-get update
+sudo apt-get install grub-customizer
+ls
+cd p/dcv
+ls
+cd ..
+ls
+mv dcv dni
+ls
+cd dni
+ls
+cd ni
+ls
+cp ni_test.cpp ~/Dropbox
+cd ~/Dropbox
+ls
+cd
+ls
+cd p/dni/
+ls
+cd ni
+ls
+E Makefile
+ls
+make
+E ni_test.cpp
+make
+make OBJS=ni_test.cpp
+cd ../..
+ls
+cdc..
+ls
+cd ../kinect2
+ls
+cd OpenNI2
+ls
+cd Bin
+ls
+cd x64-Release
+ls
+cd p
+ls
+cd dni
+ls
+cd ni
+ls
+cd make
+ls
+make OBJS=ni_test.cpp
+E Makefile
+ls
+cd ..
+ls
+cd x64-Release
+ls
+./main
+cd
+cd -3
+cd ..
+ls
+cd ni
+make OBJS=depth.cpp
+ls
+make OBJS=depth.cpp
+cd ..
+cd x64-Release
+./main
+cd 
+cd -2
+ls
+cd ni
+make OBJS=depth.cpp
+cd ..
+cd
+ls
+cd p
+dni
+cd x64-Release
+ls
+./main
+cd
+cd p/dni/ni
+ls
+make OBJS=depth.cpp
+./main
+make OBJS=depth.cpp
+./main
+make
+make OBJS=depth.cpp
+make OBJS=depth2.cpp
+make OBJS=depth.cpp
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+cd kinect2/OpenNI2
+ls
+cd Bin/x64-Release
+ls
+./SimpleViewer
+./main
+make OBJS=depth2.cpp
+./main
+make
+make OBJS=depth2.cpp
+./main
+cd kinect2/OpenNI2
+ls
+cd S
+cd Samples
+ls
+cd SimpleViewer
+ls
+E main.cpp
+ls
+E Viewer.cpp
+cd ../../Bin/x64-Release
+ls
+./SimpleViewer
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+cd p/dni/ni
+cp depth2.cpp /media/raso/0913-3451/
+cd p/dni/ni
+ls
+make OBJS=depth2.cpp
+cd p/dni/x64-Release
+./main
+make OBJS=depth2.cpp
+cd p/dni/x64-Release
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+ls
+cd p/dni/ni
+make OBJS=depth2.cpp
+cd p/dni/x64-Release
+./main
+make OBJS=depth2.cpp
+cd p/dni/x64-Release
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+cp p/dni/ni/depth2.cpp /media/raso/0913-3451/
+.emacs.d/elisp
+cd howm
+ls
+cd .howm.d
+ls
+cd howm
+ls
+cat howm
+ls
+cd howm
+cd Dropbox
+ls
+cd howm
+ls
+rm howm
+ls
+ln -s /home/raso/Dropbox/howm /home/raso/.emacs.d/elisp/howm/.howm.d/howm
+ls
+cd howm
+ls
+.emacs.d
+ls
+rm session.10
+rm session.1*
+ls
+cd
+ls
+cd p
+ls
+cd dni
+ls
+cd x64-Release
+ls
+./main
+./Test
+ls
+cd 
+cd Dropbox
+ls
+cd p
+ls
+cd Bin
+ls
+cd x64-Release
+ls
+cd ..
+ls
+cd
+cd p
+ls
+E cv_test.cpp
+cd dni
+ls
+cd ni
+ls
+E depth
+E depth2`
+E depth2.cpp
+ls
+ls -s
+ls -l
+ls
+make OBJS=depth2.cpp
+cd ..
+ls
+cd x64-Release
+ls
+./main
+e
+ls
+./main
+ls
+cd p
+ls
+cd dni
+ls
+cd ni
+ls
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+ps -e
+pkill emacs
+e
+cd p/dni
+ls
+cd x64-Release
+ls
+./main
+ls
+cd p/dni
+ls
+cd ni
+ls
+make OBJ=depth2.cpp
+make OBJS=depth2.cpp
+./main
+sudo gedit /etc/sysctl.conf
+sudo sysctl -p
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+iwconfig
+sudo ifconfig wlan0 up
+ifconfig
+sudo iwlist wlan0
+iwlist --help
+cd p
+ls
+mkdir serial
+ls
+cd serial
+ls
+E test.cpp
+ndisgtk
+sudo ndisgtk
+ifconfig
+/boot/grub
+sudo nano custom.cfg
+update-grub
+sudo update-grub
+sudo apt-get update
+sudo apt-get upgrade
+uname -r
+ndisgtk
+sudo ndisgtk
+ls
+cd p
+ls
+cd dni
+ls
+cd ni
+make OBJS=depth2.cpp
+cd ..
+ls
+cd x64-Release
+ls
+./main
+cd p/dni
+ls
+ni
+make OBJS=depth2
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+e
+ls
+cd p
+ls
+cd dni
+ls
+ni
+ls
+make OBJS=sub.cpp
+cd p
+cd dni/x64-Release
+ls
+./main
+make OBJS=sub.cpp
+./main
+make OBJS=sub.cpp
+./main
+make OBJS=sub.cpp
+./main
+make OBJS=sub.cpp
+./main
+make OBJS=sub.cpp
+./main
+make OBJS=sub.cpp
+./main
+make OBJS=sub.cpp
+./main
+make OBJS=sub.cpp
+./main
+make OBJS=sub.cpp
+./main
+make OBJS=sub.cpp
+./main
+make OBJS=sub.cpp
+./main
+make OBJS=sub.cpp
+./main
+make OBJS=sub.cpp
+./main
+make OBJS=sub.cpp
+./main
+make OBJS=sub.cpp
+./main
+make OBJS=sub.cpp
+./main
+make OBJS=sub.cpp
+./main
+make OBJS=sub.cpp
+./main
+make OBJS=sub.cpp
+./main
+make OBJS=sub.cpp
+./main
+make OBJS=sub.cpp
+./main
+make OBJS=sub.cpp
+./main
+make OBJS=sub.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+./main
+lsusb
+minicom
+sudo apt-get install minicom
+sudo minicom -s
+ls /etc/minicom
+sudo nano /minicom.dfl
+minicom
+sudo minicom
+lsusb
+ls /etc
+cd ..
+ls
+cd ..
+ls
+cd bin
+ls
+cd ..
+ls
+lsusb
+ls
+cd
+cd p
+ls
+cd serial
+ls
+test.cpp
+E test.cpp
+g++ test.cpp
+cd /
+ls
+cd dev
+ls
+lsusb
+ttyS*
+ls ttyS*
+tty
+lsusb
+tty
+ls
+tty
+echo test > /dev/pts/25
+lsusb
+ll /sys/class/tty/ttyUSB*
+ls /sys/class/tty/ttyUSB*
+ls
+ls /etc/mini*
+ls /etc/
+minicom -D /dev/ttyUSB0
+sudo minicom -D /dev/ttyUSB0
+cd
+cd .emacs.d
+ls
+rm session.1*
+cd p
+ls
+cd dni
+ls
+cd ni
+ls
+make OBJS=depth3.cpp
+ls -la /dev/ttyUSB
+ls -la /dev/ttyUSB*
+cd p/serial
+gcc -o hoge hoge.c -lftdi
+gcc -o test1 test1.c -lftdi
+rename test1.cpp test1.c
+ls
+mv test1.cpp test1.c
+ls
+gcc -o test1 test1.c -lftdi
+libconfuse
+sudo apt-get install libconfuse
+cd Downloads
+ls
+tar xzvf confuse-1.2.2.tar.gz
+cd confuse-1.2.2
+ls
+./configure
+make
+make install
+ls
+make
+make INSTALL
+make install
+sudo make install
+cd Downloads
+ls
+git clone git:://developer.intra2net.com/libftdi
+tar Ixvf libftdi1-1.0.tar.bz2
+tar Ixv libftdi1-1.0.tar.bz2
+tar Ixvf libftdi1-1.0.tar.bz2
+tar zxvf libftdi1-1.0.tar.bz2
+tar man
+man tar
+tar jxf libftdi1-1.0.tar.bz2
+ls
+cd libftdi1-1.0
+ls
+E README
+mkdir build
+cd build
+cmake -DCMAKE_INSTALL_PREFIZ="/usr" ../
+cd /usr
+ls
+make
+sudo make install
+gcc -o test1 test1.c -lftdi
+i
+gcc -o test1 test1.c -lftdi
+cd p/serial
+gcc test1 test1.c -lfidi
+gcc -o test1 test1.c -lfidi
+cd 
+cd Downloads
+ls
+cd confuse-1.2.2
+ls
+E README
+ls
+cd ..
+ls
+tar xzvf confuse-2.5.tar.gz
+cd confuse-
+cd confuse-2.5
+ls
+E README
+E INSTALL
+./configure
+make
+make check
+sudo make install
+libusb
+sudo apt-get install libusb
+rpm -qa | grep libusb
+sudo apt-get install rpm
+rpm -qa | grep libusb
+rpm -qa 
+sudo apt-get remove rpm
+apt-cache search
+apt-get search
+apt-get search libusb
+apt-cache search liubsu
+apt-cache search libusb
+sudo apt-get install libusb-1.0-0
+ls
+cd Do
+cd Downloads
+ls
+cd libftdi1-1.0
+ls
+E README
+cd build
+ls
+make
+sudo make install
+cmake -DCMAKE_INSTALL_PREFIX="/usr" ../
+make
+sudo make install
+cd ..
+ls
+E README.build
+cd examples
+ls
+E CMakeLists.txt
+ls
+cd cmake_example
+ls
+E CMakeLists.txt
+ls
+cd ..
+ls
+cd 
+cd p/serial
+ls
+gcc -o test1 test1.c -lftdi
+cd Downloads
+cd libftdi1-1.0
+ls
+cd test
+ls
+cd ..
+ls
+cd examples
+ls
+cmake
+make
+cd ..
+ls
+find ./* "ftdi.h"
+find ./ "ftdi.h"
+find ./* ftdi.h
+cd Downloads
+ls
+tar jxf libftdi1-1.1.tar.bz2
+cd libftdi1-1.1
+ls
+mkdir build
+cd build
+cd ..
+E README
+cmake -DCMAKE_INSTALL_PREFIX="/usr" ../
+cd build
+cmake -DCMAKE_INSTALL_PREFIX="/usr" ../
+make
+sudo make install
+i
+cd p/serial
+ls
+gcc -o test1 test1.c -lftdi
+libftdi
+ls -la /dev/ttyUSB*
+dialout
+sudo find / -name "ftdi.h"
+gcc -print-search-dirs
+gcc -print-search-dirs | grep /usr/local/
+gcc -print-search-dirs | grep "/usr/local/"
+gcc -print-search-dirs | grep "/usr/local"
+gcc -print-search-dirs | grep "/usr/"
+gcc -print-search-dirs | grep "/usr/include"
+gcc -print-search-dirs | grep "/usr/include"/
+gcc -print-search-dirs | grep "/usr/include/"
+cd p/serial
+ls
+gcc -o -I/usr/local/include test1 test1.c -lftdi
+gcc -o -I/usr/local/include -lftid test1 test1.c 
+ls
+gcc -o -I/usr/local/include -lftid test1.c 
+gcc  -I/usr/local/include -lftid test1.c 
+find /usr/local/ -name "ftdi.h"
+gcc  -I/usr/local/include/ -lftid test1.c 
+gcc  -I/usr/local/include/libftdi1/ -lftid test1.c 
+gcc -o  -I/usr/local/include/libftdi1/ -lftid test1 test1.c 
+gcc -o  -I/usr/local/include/libftdi1/ -lftid test1.c 
+gcc  -I/usr/local/include/libftdi1/ -lftid test1.c 
+g++  -I/usr/local/include/libftdi1/ -lftid test1.c 
+gcc  -I/usr/local/include/libftdi1/ -lftid test1.c 
+i
+gcc  -I/usr/local/include/libftdi1/ -lftid test1.c 
+gcc  -I/usr/local/include/libftdi1/ -lftdi test1.c 
+gcc test1.c  -I/usr/local/include/libftdi1/ -lftdi 
+gcc -o test1 test1.c  -I/usr/local/include/libftdi1/ -lftdi 
+gcc -o test1 test1.c  -I/usr/local/include/libftdi1/ -llibftdi
+gcc -o test1 test1.c  -I/usr/local/include/libftdi1/ -Lftdi
+find / -name "ftdi"
+sudo find / -name "ftdi"
+gcc -o test1 test1.c  -I/usr/local/include/libftdi1/ -Lf
+gcc -o test1 test1.c  -I/usr/local/include/libftdi1/ -lftdi
+gcc -o test1 test1.c  -I/usr/local/include/libftdi1/ -L/usr/src/linux-headers-3.13.0-30-generic/include/config/usb/serial/ftdi
+gcc -o test1 test1.c  -I/usr/local/include/libftdi1/ -l/usr/src/linux-headers-3.13.0-30-generic/include/config/usb/serial/ftdi
+gcc -o test1 test1.c  -I/usr/local/include/libftdi1/ -L"/usr/src/linux-headers-3.13.0-30-generic/include/config/usb/serial/ftdi"
+gcc -o test1 test1.c  -I/usr/local/include/libftdi1/ -L"/usr/src/linux-headers-3.13.0-30-generic/include/config/usb/serial/ftd"
+cd p/dni
+ls
+cd ni
+ls
+E Makefile
+gcc -o test1 test1.c  -I/usr/local/include/libftdi1/ -L/usr/src -lftdi
+cd Downloads
+ls
+cd libftdi1-1.1
+ls
+cd p
+cd packages
+ls
+cd ..
+cd packages
+ls
+sudo apt-get install build-essential
+sudo apt-get install libusb-1.0-devel
+sudo apt-get install libconfuse-dev
+sudo apt-get installswig python-dev
+sudo apt-get install swig python-dev
+sudo apt-get install libboost-all-dev
+ls
+cd ..
+ls
+cd build
+ls
+hs
+h
+history
+history 6830
+history 6830 6840
+history 68100 6840
+history 6810 6840
+history 6810 68200
+history 6810 6820
+history 6800 6820
+cmake 
+cd ..
+ls
+E README.build
+E README
+cmake -DCMAKE_INSTALL_PREFIX="/usr" ../
+cd build
+cmake -DCMAKE_INSTALL_PREFIX="/usr" ../
+make
+sudo make install
+gcc -o test1 test1.c  -I/usr/local/include/libftdi1/ -L/usr/src -lftdi
+gcc -o test1 test1.c  -I/usr/local/include/libftdi1/  -lftdi
+i
+cd p/serial
+ls
+gcc -o test1 test1.c  -I/usr/local/include/libftdi1/  -lftdi
+find / -name "ftdi.lib"
+sudo find / -name "ftdi.lib"
+sudo find / -name "ftdi"
+sudo find / -name "ftdi*"
+sudo find / -name "ftdi*" | grep "lib"
+sudo find / -name "libftdi"
+gcc -o test1 test1.c  -I/usr/local/include/libftdi1/  -llibftdi
+sudo find / -name "ftdi.a"
+nm -o /usr/lib/*.a /usr/X11R6/lib/*.a | grep ftdi
+nm -o /usr/lib/*.a /usr/lib/*.a | grep ftdi
+sudo nm -o /usr/lib/*.a /usr/lib/*.a | grep ftdi
+cd Dow
+ls
+cd Downloads
+cd libftdi1-1.1
+ls
+cd src
+ls
+cd ..
+ls
+cd packages
+ls
+e
+cd p/
+cd dni
+ls
+cd ni
+ls
+make OBJS=depth3.cpp
+cd -
+cd p/dni/x64-Release
+./main
+make OBJS=depth3.cpp
+./main
+make OBJS=depth3.cpp
+./main
+make OBJS=depth3.cpp
+./main
+make OBJS=depth3.cpp
+./main
+make OBJS=depth3.cpp
+./main
+make OBJS=depth3.cpp
+./main
+make OBJS=depth3.cpp
+./main
+make OBJS=depth3.cpp
+./main
+make OBJS=depth3.cpp
+./main
+make OBJS=depth3.cpp
+./main
+make OBJS=depth4.cpp
+./main
+make OBJS=depth4.cpp
+./main
+make OBJS=depth4.cpp
+./main
+make OBJS=depth4.cpp
+./main
+make OBJS=depth4.cpp
+./main
+make OBJS=depth4.cpp
+./main
+make OBJS=depth4.cpp
+./main
+make OBJS=depth4.cpp
+./main
+make OBJS=depth4.cpp
+./main
+make OBJS=depth4.cpp
+./main
+make OBJS=depth4.cpp
+./main
+make OBJS=depth4.cpp
+./main
+make OBJS=depth4.cpp
+./main
+make OBJS=depth4.cpp
+./main
+make OBJS=depth4.cpp
+./main
+make OBJS=depth4.cpp
+./main
+make OBJS=depth4.cpp
+./main
+make OBJS=depth4.cpp
+./main
+cd p/dni
+cd p/dni/ni
+cd ni
+ls
+make OBJS=depth4.cpp
+cd p/dni/x64-Release
+./main
+make OBJS=depth4.cpp
+./main
+make OBJS=depth4.cpp
+./main
+make OBJS=depth4.cpp
+./main
+make OBJS=depth4.cpp
+./main
+make OBJS=depth4.cpp
+./main
+make OBJS=depth4.cpp
+./main
+make OBJS=depth4.cpp
+./main
+make OBJS=depth4.cpp
+./main
+make OBJS=depth4.cpp
+./main
+make OBJS=depth4.cpp
+./main
+make OBJS=depth4.cpp
+./main
+make OBJS=depth4.cpp
+./main
+make OBJS=depth4.cpp
+./main
+make OBJS=depth4.cpp
+./main
+make OBJS=depth4.cpp
+./main
+make OBJS=depth4.cpp
+./main
+ps -e
+vmstat
+make OBJS=depth4.cpp
+./main
+make OBJS=depth4.cpp
+./main
+make OBJS=depth4.cpp
+./main
+make OBJS=depth4.cpp
+./main
+make OBJS=depth4.cpp
+./main
+ls
+cd p
+cd serial
+E test.sh
+g++ script.c
+ls
+./a.out
+cd /dev
+ls ttyU*
+echo "Test" > ttyUSB0
+sudo echo "Test" > ttyUSB0
+sudo gpasswd -a `whoami` dialout
+sudo gpasswd -a `raso` dialout
+lsmod
+echo "Test" > ttyUSB0
+sudo echo "Test" > ttyUSB0
+ls -l ttyU
+ls -l ttyU*
+echo "test" > /dev/ttyUSB0
+sudo echo "test" > /dev/ttyUSB0
+sudo gpasswd -a `whoami` dialout
+i
+sudo echo "test" > /dev/ttyUSB0
+ls -l /dev/ttyU*
+stty -F /dev/ttyUSB0 9600 cs8 cstopb
+sudo stty -F /dev/ttyUSB0 9600 cs8 cstopb
+sudo echo "test" > /dev/ttyUSB0
+bash echo "test" > /dev/ttyUSB0
+su
+sudo gpasswd -a `whoami` dialout
+lsmod
+echo "test" > /dev/ttyUSB0
+sudo echo "test" > /dev/ttyUSB0
+ls
+cd usb
+ls /dev/ttyUSB0
+sudo echo "test" > /dev/ttyUSB0
+sudo SELINUX=disabled
+sudo nano /etc/sysconfigselinux
+sudo nano /etc/sysconfig/
+sudo adduser kinneko dialout
+sudo adduser raso dialout
+sudo chmod a+rw /dev/ttyUSB0
+echo "test" > /dev/ttyUSB0
+ls -l /dev/ttyUSB0
+cd /lib/udev/rules.d
+ls
+sudo nano 50-udev-default.rules
+ls -l /dev/ttyUSB0
+sudo nano 50-udev-default.rules
+ls -l /dev/ttyUSB0
+echo "test" > /dev/ttyUSB0
+echo "test"
+cd p/serial
+ls
+g++ script.c
+./a.out
+g++ script.c
+g++ script.cpp
+./a.out
+ls
+cdd /
+cd /
+ls
+etc/grub.d
+cd /etc/grub.d
+ls
+cd p
+ls
+cd dni
+ls
+cd ni
+ls
+make OBJS=depth4.cpp
+cd p/dni/x64-Release
+./main
+make OBJS=depth5.cpp
+./main
+make OBJS=depth5.cpp
+./main
+cd /
+ls
+cd dev
+ls
+cd ..
+cd Desktop
+mkdir report_sato
+ls
+mv *.docx report_sato
+ls
+mv *.xlsx report_sato
+ls
+mv repo-to report_sato
+ls
+cd report_sato
+ls
+mv ..
+cd
+cd Desktop
+mv report_sato
+mv report_sato ~/
+ls
+cd
+cd Dropbox
+ls
+mv ~/report_sato ~/Dropbox/univ
+cd p
+ls
+cd 
+ls
+cd Documents
+ls
+rm README
+ls
+cd PyQt-x11-gpl-4.11.2
+ls
+E README
+python configure-ng.py
+ls
+cd..
+cd ..
+ls
+rm -r PyQt-x11-gpl-4.11.2
+ls
+ wget http://www.riverbankcomputing.com/static/Downloads/sip4/sip-4.16.2-snapshot-449e2866018a.tar.gz
+ls
+cd sip-4.16.3
+ls
+python configure.py
+ls
+make
+make all
+make install
+cd ..
+cd PyQt-x11-gpl-4.11.2
+python configure-ng.py
+ls
+cd ..
+ls
+cd sip-4.16.3
+ls
+make
+make all
+python configure.py
+make
+make all
+sudo apt-get install qt4
+brew install qt4
+ cd ..
+ls
+cd qt-everywhere-opensource-src-4.8.6
+ls
+./INSTALL
+sudo ./INSTALL
+ls
+E README
+./config
+./configure
+./configure -help
+./configure -opengl
+make
+sudo qmake install
+sudo make install
+cd ..
+ls
+cd sip-4.16.3
+ls
+python configure.py
+make
+make all
+sudo make all
+cd .
+ls
+cd ..
+ls
+cd py
+cd PyQt-x11-gpl-4.11.2
+ls
+python configure.py
+cd ..
+ls
+cd sip-4.16.3
+ls
+python configure.py
+ls
+make
+sudo make install
+cd ..
+cd PyQt-x11-gpl-4.11.2
+ls
+python configure.py
+make
+sudo make install
+cd .emacs.d
+ls
+rm se*
+ls
+cd
+cd p/
+ls
+rm \#app\#
+mkdir app
+ls
+cd app
+ls
+python test.py
+e
+cd .emacs.d
+ls
+cd el
+ls
+cd elsp
+cd elisp
+ls
+cd
+ls
+cd .emacs.d
+ls
+cd el
+ls
+cd elpa
+ls
+cd auto-complete-1.4
+ls
+cd ..
+ls
+cd ..
+ls
+cd ~/Documents
+ls
+rm auto-complete-1.3.1
+rm -r auto-complete-1.3.1
+cd
+cd p/app
+ls
+python test2.py
+cp Pictures/shin.jpg ~/p/app
+cd p/app
+python test3.py
+python test4.py
+mv /media/raso/USBMEMORY/q22.py ~/p/app
+cd p/app
+ls
+python q22.py
+python q22.py shin.jpg
+python q22.py shin.jpg 
+ls
+python q22.py shin.jpg 
+ls
+python q22.py shin.jpg 
+python q22.py 
+python q22.py shin.jpg 
+cd p/app
+ls
+python q22.py
+python q22.py shin.jpg
+python q22.py
+python q22.py shin.jpg
+mv ~/Desktop/hachune.png p/app
+python q22.py hachune.png
+mv /media/raso/USBMEMORY/hachune.png p/app
+mv ~/Desktop/hachune.png p/app
+python q22.py hachune.png
+cp Desktop/robo.txt Dropbox
+cp Downloads/å­¦çƒ´Ÿå€ƒ«äººãƒ£¬ãƒ£ƒ½ãƒ£¼ãƒ£ƒ¨2014.9.30.xls Dropbox
+cd p/dni/ni
+ls
+main depth4.cpp
+make depth4.cpp
+cd p/dni/x64-Release
+./main
+make depth3.cpp
+./main
+rm main
+make depth3.cpp
+./ma
+make depth3.cpp
+ls
+make depth4.cpp
+E Makefile
+make OBJS=depth4.cpp
+make depth3.cpp
+./main
+make OBJS=depth4.cpp
+make OBJS=depth6.cpp
+cd p
+ls
+g++ test2.cpp
+./a.out
+g++ test2.cpp
+./a.out
+cd p/dni/ni
+make OBJS=depth6.cpp
+./a.out
+make OBJS=depth6.cpp
+cd p/dni/ni
+ls
+make OBJS=depth6.cpp
+cd p
+g++ test.cpp
+./a
+./a.out
+make OBJS=depth6.cpp
+dni/x64-Release
+./main
+./a.out
+make OBJS=depth6.cpp
+./main
+rm test.txt
+make OBJS=depth6.cpp
+./main
+touch test.txt
+./main
+cat test.txt
+ls
+make OBJS=depth6.cpp
+cd p/dni/ni
+make OBJS=depth6.cpp
+cd p/dni/x64-Release
+./main
+make OBJS=depth6.cpp
+./main
+make OBJS=depth6.cpp
+./main
+make OBJS=depth6.cpp
+./main
+make OBJS=depth6.cpp
+./main
+make OBJS=depth6.cpp
+./main
+cd
+cd p/app
+python test4.py
+ls
+rm shin.jpg
+python test4.py
+python q22.py
+ls
+./main
+cd 
+cd p/app
+python test7.py
+cd p/app
+python test4.py
+ls
+cd p/app
+ls
+python test4.py
+ls
+python test4.py
+cd ../dni/ni
+make OBJS=depth6.cpp
+cd p/dni/x64-Release
+./main
+make OBJS=depth6.cpp
+./main
+make OBJS=depth6.cpp
+./main
+make OBJS=depth6.cpp
+./main
+make OBJS=depth6.cpp
+./main
+echo "1" > ttyUSB0
+echo "1"
+cd /
+ls
+cd tmp
+ls
+cd dev
+ls
+cd /dev
+ls
+echo "1" > ttyUSB0
+echo "0" > ttyUSB0
+echo "1" > ttyUSB0
+ls
+cd 
+cd p/serial
+g++ script.c
+g++ script.cpp
+./a.out
+./main
+cd /usr/share/gnome/autostart
+ls
+sudo gedit libcanberra-login-sound.desktop
+cd .emacs.d
+ls
+rm session.10*
+ls
+.emacs.d 
+ls
+e
+ls
+cd
+ls
+e
+cd p/app
+ls
+python test4.py
+cd 
+cd Downloads
+ls
+mv ff-logo-big_convert_20141003010440.png ff.png
+mv ff.png ~/p/app
+cd
+cd p/app
+python test4.py
+ls
+python test4.py
+cd .emacs.d/elisp
+mkdir jedi
+cd jedi
+cd .emacs.d/elisp/jedi
+git clone git://github.com/tkf/emacs-jedi
+``[3~cd .emacs.d/elisp/jedi
+git clone git://github.com/tkf/emacs-jedi
+git clone git://github.com/kiwanami/emacs-deferred
+git clone git://github.com/kiwanami/emacs-epc
+git clone git://github.com/kiwanami/emacs-ctable
+cd emacs-jedi
+virtualenv env
+sudo apt-get install python-virtualenv
+virtualenv env
+source env/bin/activate
+pip install jedi epc
+e
+cd .emacs.d/elisp
+cd jedi
+ls
+git clone git://github.com/tkf/emacs-jedi
+git clone git://github.com/kiwanami/emacs-deferred
+git clone git://github.com/kiwanami/emacs-epc
+git clone git://github.com/kiwanami/emacs-ctable
+cd .emacs.d/elisp
+cd jedi
+git clone git://github.com/tkf/emacs-jedi
+git clone git://github.com/kiwanami/emacs-deferred
+git clone git://github.com/kiwanami/emacs-epc
+git clone git://github.com/kiwanami/emacs-ctable
+e
+\
+
+virtualenv env
+aa
+source env/bin/activate
+pip install jedi epc
+e
+cd .emacs.d/elisp
+mkdir python-environment
+cd python-environment
+git clone git://github.com/tkf/emacs-python-environment
+e
+cd ..
+ls
+rm -r jedi
+ls
+rm -rf jedi
+ls
+git clone git://github.com/tkf/emacs-jedi
+e
+cd .emacs.d/elisp
+git submodule add https://github.com/dimitri/el-get.git
+cd ..
+mkdir el-get-packages
+e
+cd .emacs.d
+ls
+mv el-get-packages el-get
+ls
+cd el-get
+ls
+mkdir packages user-recipes
+ls
+mkdir recipes
+cd recipes
+mkdir emacswiki
+cd ..
+mkdir el-get-init-files
+e
+cd .
+ls
+cd ..
+ls
+rm -rf el-get
+cd ..
+ls
+rm -rf el-get
+e
+cd .emacs.d
+ls
+cd e
+ls
+cd elpa
+ls
+rm jedi-0.1.2
+rm -rf jedi-0.1.2
+cd ..
+ls
+cd elisp
+git clone git://github.com/tkf/emacs-jedi
+ls
+cd
+ls
+rm -rf emacs*
+ls
+cd .emacs.d
+cd gi
+cd elisp
+ls
+mkdir jedi
+cd jedi
+git clone git://github.com/tkf/emacs-jedi
+e
+cd p/app
+python test4.py
+cd p/app/
+python test4.py
+cd p/app
+python test4.py
+cd .emacs.d/themes
+ls
+rm *.jpeg
+rm *.jpg
+ls
+python test4.py
+python test3.py
+p
+python test3.py
+python test4.py
+python test4.py
+cd p/app
+ls
+python test4.py
+cd p/app
+ls
+python test
+python test4.py
+cd a/app
+cd p/app
+python test4.py
+ls
+cd ..
+ls
+cd app
+cd .emacs.d
+ls
+cd ..
+ls
+cd dotfiles
+ls
+git add .
+ls -a
+git add . -A
+git -m mount "add see tab"
+git commit -m "add see-tab"
+python
+python test4.py
+cd p/app
+ls
+python test4.py
+cd p/app
+python test
+python test4.py
+python
+python test4.py
+python
+sudo apt-get install python-numpy python-scipy python-matplotlib
+python 
+sudo apt-get remove lxde
+cd p/mat
+ls
+python test1.py
+mv Desktop/toki.txt /media/raso/USBMEMORY/
+cd p/mat
+ls
+py test1.py
+cd p/mat
+py test1.py
+py test2.py
+cd p/mat
+ls
+py test2.py
+ls
+py test2.py
+cd p/mat
+ls
+python test2.py
+cd ../app
+py test4.py
+hsitory
+py test4.py
+py test5.py
+py test4.py
+python
+cd p/mat
+python test7.py
+cd ../app
+python test7.py
+python
+python test6.py
+ps -e
+pkill python
+python test6.py
+python test5.py
+python
+python test6.py
+cd p/app
+python 8.py
+python test6.py
+chromium
+_elinks
+elinks
+chromium-browser
+python test6.py
+mv p/app/test6.py Dropbox
+cd p/dni/ni
+make OBJS=depth6.cpp
+cd p/dni/x64-Release
+./main
+make OBJS=depth6.cpp
+cd p/dni/x64-Release
+./main
+make OBJS=depth6.cpp
+make OBJS=lavel.cpp
+make OBJS=label.cpp
+./main
+ls
+make OBJS=label.cpp
+./main
+ls
+cd ..
+cd x64-Release
+mv input.png ~/p/dni/x64-Release
+cd x64-Release
+./main
+make OBJS=depth6.cpp
+./main
+cd p/dni
+cd p/dni/
+cd p/dni
+cd ni
+make OBJS=depth6.cpp
+cd p/dni/x64-Release
+./main
+e
+ls
+g++ test.cpp
+./a.out
+cat test.txt
+./a.out
+cat test.txt
+ls
+./a.out
+cat test.txt
+e
+touch log.txt
+make OBJS=depth6.cpp
+./main
+make OBJS=depth6.cpp
+./main
+cat log.txt
+ls
+cat log.txt
+make OBJS=depth6.cpp
+./main
+cat log.txt
+make OBJS=depth6.cpp
+./main
+make OBJS=depth6.cpp
+cat log.txt
+./main
+cat log.txt
+rm log.txt
+touch log.txt
+cat log.txt
+./main
+ls
+./main
+make OBJS=depth6.cpp
+cd /media/raso/0913-3451/CAN_kato/pic24fj64GA002
+ls
+E CAN2.c
+ls
+ls -l
+ls
+cd ..
+ls
+cd pic24fj64GA002
+ls
+cd ver2
+ls
+e
+E CAN.c
+e
+make OBJS=depth6.cpp
+./main
+cat log.txt
+nano log.txt
+dd
+du
+df
+cp log.txt ~/p/dni/ni
+ls
+E log.py
+python log.py
+python
+python log.py
+cd ..
+ls
+cd dn
+cd ni
+python log.py
+cat log.txt
+python log.py
+cd p/mat
+python test2.py
+python 
+python test2.py
+python log.py
+cp log.py ~/p/dni/x64-Release
+cd ..
+cd x64-Release
+ls
+cat log.
+cat log.txt
+rm log.txt
+touch log.txt
+rm log.txt
+touch log.txt
+cat log.txt
+./main
+cat log.txt
+./main
+python log.py
+rm log.txt
+touch log.txt
+./main
+python log.py
+cat log.
+cat log.txt
+E log.py
+python log.py
+./main
+cat log
+cat log.txt
+python log.py
+python
+python log.py
+python
+./main
+python log.py
+./main
+python log.py
+./main
+python log.py
+cd p/dni/ni
+make OBJS=depth6.cpp
+./main
+python log.py
+cd p/dni/x64-Release
+python log.py
+cd p/app
+ls
+cd ..
+cd dni/x64-Release
+ls
+./main
+ls
+cd ../
+ls
+cd ni
+ls
+make OBJS=depth2.cpp
+cd p/dni/x64-Release
+./main
+make OBJS=depth.cpp
+./main
+python
+python log.py
+make OBJS=depth6.cpp
+./main
+make OBJS=depth6.cpp
+python log.py
+./main
+python log.py
+./main
+python log.py
+./main
+python log.py
+./main
+python log.py
+./main
+python log.py
+./main
+cd p/dni/x64-Release
+python log.py
+./main
+python log.py
+./main
+python log.py
+make OBJS=depth6.cpp
+./main
+python log.py
+./main
+python log.py
+rm log.txt
+./main
+make OBJS=depth6.cpp
+./main
+touch log.txt
+rm log.txt
+touch log.txt
+./main
+python log.py
+make OBJS=depth6.cpp
+./main
+python log.py
+make OBJS=depth6.cpp
+./main
+python log.py
+./main
+python log.py
+./main
+python log.py
+./main
+python log.py
+./main
+python log.py
+ls
+./main
+python log.py
+./main
+python log.py
+: 1413720867:0;cd project
+: 1413720867:0;ls
+: 1413720871:0;cd dotfiles.git
+: 1413720872:0;ls
+: 1413720874:0;cd ..
+: 1413720875:0;ls
+: 1413720887:0;git add .
+: 1413720890:0;ls
+: 1413720894:0;ls -a
+: 1413720896:0;cd ..
+: 1413720897:0;ls
+: 1413720901:0;cd dotfiles
+: 1413720902:0;ls
+: 1413720905:0;cd add .
+: 1413720913:0;cd git add
+: 1413720915:0;git add .
+: 1413720928:0;git add -A

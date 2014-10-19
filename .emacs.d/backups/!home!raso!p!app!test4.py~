@@ -1,0 +1,239 @@
+#-*- coding:utf-8 -*-
+import sys
+from PyQt4 import QtGui, QtCore
+
+  
+imagepath = './ff-logo-big.png'
+
+class MessageBox( QtGui.QWidget ):
+	def __init__(self, x, y, bx, by):
+		super(MessageBox, self).__init__()
+		super(MessageBox, self).setWindowFlags(QtCore.Qt.FramelessWindowHint)
+
+	
+		self.x = x
+		self.y = y
+		self.bx = bx
+		self.by = by
+
+
+
+		self.initUI()
+
+
+
+	def initUI(self):
+		
+		self.line = []
+		self.setGeometry(self.x, self.y, 250, 150)
+
+
+	def TextBox(self, text):
+
+		self.hide()
+
+		self.text = text
+
+		width = 25
+		one_len = 0 
+		shrash = [0]
+		num = 0
+		
+		for c in self.text:
+			num += 1
+			if ord(c) > 225:
+				one_len += 2
+			else:
+				one_len += 1
+
+			if one_len >= width:
+				print one_len 
+				shrash.append(num)
+				one_len = 0
+
+		shrash.append(len(self.text))
+		
+		for i in range(0,len(shrash) - 1):
+			self.line.append(QtGui.QLabel(self.text[shrash[i]:shrash[i+1]], self))			
+			self.line[i].move(self.bx, self.by+(i*15))
+
+		self.show()
+		
+
+
+  
+class SubWindow(QtGui.QWidget):
+	
+	
+	def __init__(self, x, y):
+		super(SubWindow, self).__init__()
+		super(SubWindow, self).setWindowFlags(QtCore.Qt.FramelessWindowHint)
+		super(SubWindow, self).setAttribute(QtCore.Qt.WA_TranslucentBackground)
+
+		
+		self.x = x
+		self.y = y
+
+
+
+		self.initUI()
+
+	def initUI(self):
+		
+		self.exitBtn = QtGui.QPushButton("exit")
+		self.exitBtn.clicked.connect(self.Bye)
+		self.returnBtn = QtGui.QPushButton("return")
+		self.returnBtn.clicked.connect(self.SubReturn)		
+
+		vbox = QtGui.QVBoxLayout()
+		vbox.addWidget(self.exitBtn)
+		vbox.addWidget(self.returnBtn)
+		
+		self.setLayout(vbox)
+			
+		self.setGeometry(self.x, self.y, 0, 0)
+
+	def WindowShow(self):
+		self.show()
+
+	def Bye(self):
+		print "Bye"
+		QtCore.QCoreApplication(sys.argv).exec_()
+
+	def SubReturn(self):
+		self.close()
+	
+
+
+
+class ImageViewScene( QtGui.QGraphicsScene ):
+	def __init__( self, *argv, **keywords ):
+		super( ImageViewScene, self ).__init__( *argv, **keywords )
+		self.__imageItem     = None
+		self.__pressdButton = None
+
+
+  
+	def setFile( self, filepath ):
+		pixmap = QtGui.QPixmap( filepath )
+  
+
+		if self.__imageItem:
+			self.removeItem( self.__imageItem )
+  
+
+		item = QtGui.QGraphicsPixmapItem( pixmap )
+
+		item.setFlags(QtGui.QGraphicsItem.ItemIsMovable)
+		self.addItem( item )
+		self.__imageItem = item
+		
+		self.fitImage()
+
+		
+	def imageItem( self ):
+		return self.__imageItem
+		
+	def fitImage( self ):
+
+		if not self.imageItem():
+			return
+
+		boundingRect = self.imageItem().boundingRect()
+
+		sceneRect    = self.sceneRect()
+  
+		itemAspectRatio  = boundingRect.width() / boundingRect.height()
+		sceneAspectRatio = sceneRect.width() / sceneRect.height()
+  
+
+		transform        = QtGui.QTransform()
+  
+		if itemAspectRatio >= sceneAspectRatio:
+
+			scaleRatio = sceneRect.width() / boundingRect.width()
+		else:
+
+			scaleRatio = sceneRect.height() / boundingRect.height()
+  
+
+		transform.scale( scaleRatio , scaleRatio )
+		self.imageItem().setTransform( transform / 2 )
+
+	def mousePressEvent(self, event):
+		self.__pressedButton = event.button()
+		self.__currentPos = event.scenePos()
+		if self.__pressedButton == QtCore.Qt.LeftButton:
+			
+			print "click"
+
+			self.window = SubWindow(1200, 600)
+			self.window.WindowShow()
+
+
+			
+
+  
+class ImageViewer( QtGui.QGraphicsView ):
+
+
+	def __init__( self ):
+		super( ImageViewer, self ).__init__( )
+		super(ImageViewer, self).setStyleSheet(
+			"""
+			QWidget {
+			background:transparent;
+			border: none; 
+			}
+			"""
+		)
+
+		super(ImageViewer, self).setAttribute(QtCore.Qt.WA_TranslucentBackground)
+
+		super(ImageViewer, self).setWindowFlags(QtCore.Qt.FramelessWindowHint)
+  
+
+		self.setCacheMode( QtGui.QGraphicsView.CacheBackground )
+		self.setRenderHints( QtGui.QPainter.Antialiasing |
+							 QtGui.QPainter.SmoothPixmapTransform |
+							 QtGui.QPainter.TextAntialiasing
+						 )
+
+
+		scene = ImageViewScene( self )
+		scene.setSceneRect( QtCore.QRectF( self.rect() ) )
+		self.setScene( scene )
+
+	
+	
+  
+	def setFile( self, filepath ):
+
+		self.scene().setFile( filepath )
+          
+	def resizeEvent( self, event ):
+
+		super( ImageViewer, self ).resizeEvent( event )
+		self.scene().setSceneRect( QtCore.QRectF( self.rect() ) )
+
+
+
+  
+  
+if __name__ == '__main__':
+
+	test = u"明日が、今日よりもずっと、楽しいことで溢れているようにと、祈ってるよ"
+
+	app = QtGui.QApplication( sys.argv )
+	viewer = ImageViewer()
+	#window = SubWindow(300, 150)
+	viewer.resize(320, 240)	
+	viewer.setFile( imagepath )
+	viewer.move(1100, 600)
+	viewer.show()
+	#window.WindowShow()
+	box = MessageBox(800,600, 15, 15)
+	box.TextBox(test)
+
+
+	sys.exit( app.exec_() )

@@ -1,0 +1,13 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+
+int main(int argc, char* argv[]){
+	ofstream ofs("./test.txt");
+
+	ofs << "ham" << endl;
+	ofs << "egg" << endl;
+	ofs << "spam" << endl;
+
+	return 0;
+}
