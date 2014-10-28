@@ -155,6 +155,9 @@
 (global-set-key (kbd "C-c 1") (lambda()(interactive)(conf_theme 'molokai ntheme)(setq ntheme 'molokai)))
 (global-set-key (kbd "C-c 2") (lambda()(interactive)(conf_theme 'patchouli ntheme)(setq ntheme 'patchouli)))
 (global-set-key (kbd "C-c 3") (lambda()(interactive)(conf_theme 'jpaper ntheme)(setq ntheme 'jpaper)))
+(global-set-key (kbd "C-c 4") (lambda()(interactive)(conf_theme 'haker ntheme)(setq ntheme 'haker)))
+(global-set-key (kbd "C-c 5") (lambda()(interactive)(conf_theme 'reki ntheme)(setq ntheme 'reki)))
+
 ( global-set-key (kbd "C-c 0")(lambda()(interactive)(disable-theme ntheme)))
 
 
@@ -196,8 +199,37 @@
 (set-buffer-file-coding-system 'utf-8)
 
 
-;; yatex
-;;(load "init-yatex")
+;;(setq auto-mode-alist
+;;      (append '(("\\.tex$" . yatex-mode)) auto-mode-alist))
+;;(autoload 'yatex-mode "yatex" "Yet Another LaTeX mode" t)
+;;(add-hook 'yatex-mode-hook 'font-latex-setup)
+;;(add-hook 'yatex-mode-hook 'turn-on-font-lock 'append)
+;; 
+;;(cond
+;; ((featurep 'font-lock)
+;;  (defface font-latex-math-face
+;;    '((((class grayscale) (background dark)) 
+;;       (:foreground "DimGray" :underline t))
+;;      ;;(((class grayscale) (background dark)) 
+;;      ;;(:foreground "LightGray" :underline t))
+;;      ;;(((class color) (background dark)) (:foreground "SaddleBrown"))
+;;      ;;(((class color) (background dark))  (:foreground "burlywood"))
+;;      (t (:underline t)))
+;;    "Font Lock mode face used to highlight math in LaTeX."
+;;    :group 'font-latex-highlighting-faces)
+;;  
+;;  (defface font-latex-label-face
+;;    '((((class static-color)) (:foreground "yellow" :underline t))
+;;      (((type tty)) (:foreground "yellow" :underline t))
+;;      (((class color) (background dark)) (:foreground "pink"))
+;;      (((class color) (background dark)) (:foreground "ForestGreen"))
+;;      (t (:bold t :underline t)))
+;;    "Font Lock mode face used to highlight labels."
+;;    :group 'font-lock-faces)))
+;; 
+;;(setq YaTeX-font-lock-formula-face 'font-latex-math-face
+;;      YaTeX-font-lock-label-face 'font-latex-label-face)
+
 
 ;;paren-mode
 (setq show-paren-delay 0)
@@ -237,6 +269,8 @@
   (add-to-list 'package-archives
                '("marmalade"."http://marmalade-repo.org/packages/"))
   (add-to-list 'package-archives '("ELPA"."http://tromey.com/elpa/"))
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+  
   (package-initialize))
 
 
@@ -289,9 +323,9 @@
   
   (require 'anything-match-plugin nil t)
   
-  (when (and (executable-find "cmigemo")
-             (require 'migemo nil t))
-    (require 'anything-migemo nil t))
+  ;;(when (and (executable-find "cmigemo")
+  ;;           (require 'migemo nil t))
+  ;; (require 'anything-migemo nil t))
   
   (when (require 'anything-complete nil t)
     ;;
@@ -417,9 +451,6 @@
 (setq zlc-select-completion-immediately t))
 
 
-(require 'ac-python)
-
-
 (when (require 'server nil t)
 (unless (server-running-p)
   (server-start)))
@@ -433,7 +464,7 @@
 (setq migemo-regex-dictionary nil)
 (load-library "migemo")
 (migemo-init)
-
+ 
 (when (require 'edit-server nil t)
   (edit-server-start))
 
@@ -636,5 +667,10 @@
 					       (tab-mark  ?\t     [?\t])))
 				       (setq tab_mode 0)))
 				(global-whitespace-mode 1)))
-				       
-				      
+
+
+(require 'python)				       
+(require 'jedi)
+
+(add-hook 'python-mode-hook 'jedi:setup)
+(add-hook 'python-mode-hook 'jedi:install-server)

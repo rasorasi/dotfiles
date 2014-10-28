@@ -10,7 +10,7 @@ PS1=" %B%F{cyan}%~%f%b %h %F{green}%*%f
 gconftool-2 --set /apps/gnome-terminal/profiles/Default/font --type string "Ricty Regular 12"
 
 alias dvpd='dvipdfmx' hi='history' e='emacs &' E='emacsclient -nt' i='source ~/.zshrc' py='python'
-alias mpic='python ~/p/q22.py' gth='gthumb' mn='gnome-system-monitor'
+alias mpic='python ~/p/q22.py' gth='gthumb' mn='gnome-system-monitor' open='gnome-open'
 
 bindkey -e
 

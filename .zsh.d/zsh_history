@@ -7872,20 +7872,365 @@ ls
 python log.py
 ./main
 python log.py
-: 1413720867:0;cd project
-: 1413720867:0;ls
-: 1413720871:0;cd dotfiles.git
-: 1413720872:0;ls
-: 1413720874:0;cd ..
-: 1413720875:0;ls
-: 1413720887:0;git add .
-: 1413720890:0;ls
-: 1413720894:0;ls -a
-: 1413720896:0;cd ..
-: 1413720897:0;ls
-: 1413720901:0;cd dotfiles
-: 1413720902:0;ls
-: 1413720905:0;cd add .
-: 1413720913:0;cd git add
-: 1413720915:0;git add .
-: 1413720928:0;git add -A
+cd project
+ls
+cd dotfiles.git
+ls
+cd ..
+ls
+git add .
+ls
+ls -a
+cd ..
+ls
+cd dotfiles
+ls
+cd add .
+cd git add
+git add .
+git add -A
+git push origin master
+git state
+git status
+git log --gragh --color
+git log --graph --color
+git commit -m "add tab-char can see"
+git config --global user.email "raso_katoh@yahoo.co.jp"
+git config --global user.name "raso"
+git commit -m "add tab-char can see"
+git push origin master
+git config
+git master
+git push origin master
+git remote set-url origin https://github.com/rasorasi/dotfiles.git
+git push origin master
+python
+cd p/dni/ni
+make OBJS=depth6.cpp
+cd p/dni/ni
+ls
+make OBJS=depth6.cpp
+cd p/dni/x64-Release
+ls
+./main
+cd p/dni/x64-Release
+python log.py
+./main
+python log.py
+./main
+python log.py
+./main
+python log.py
+cd p/dni/ni
+g++ time.cpp
+python log.py
+g++ time.cpp
+make OBJS=depth7.cpp
+python log.py
+make OBJS=depth7.cpp
+cd /
+ls
+cd lib
+ls
+cd ../etc
+cd ..
+ls
+cd usr/
+ls
+cd include
+ls
+cd c++
+ls
+cd 4.8/
+ls
+cd ..
+cd /
+sudo find -name "contrib.hpp"
+make OBJS=depth7.cpp
+sudo find -name "contrib.hpp"
+make OBJS=depth7.cpp
+cd p/dni/ni
+ls
+make OBJS=depth7.cpp
+cd p/dni/x64-Release
+./main
+make OBJS=depth7.cpp
+./main
+make OBJS=angle.cpp
+./main
+make OBJS=angle.cpp
+./main
+make OBJS=angle.cpp
+./main 120
+make OBJS=angle.cpp
+./main 120
+make OBJS=angle.cpp
+./main 160
+make OBJS=angle.cpp
+./main 160
+python 
+python
+./main 132
+./main 240
+./main 200
+./main 108
+python 
+make OBJS=depth.cpp
+./main
+ls
+make OBJS=depth.cpp
+make OBJS=depth6.cpp
+make OBJS=depth.cpp
+make OBJS=dept~2h.cpp
+make OBJS=dept2h.cpp
+ls
+make OBJS=dept2.cpp
+make OBJS=depth2.cpp
+make OBJS=depth6.cpp
+make OBJS=depth2.cpp
+./main
+make OBJS=depth2.cpp
+E Makefile
+make OBJS=depth2.cpp
+ls
+make OBJS=depth6.cpp
+make OBJS=depth7.cpp
+ls
+./main
+rm ./main
+make OBJS=depth2.cpp
+./main
+make OBJS=depth.cpp
+rm ./main
+make OBJS=depth.cpp
+./main
+python
+cd p/dni/ni
+make OBJS=angle.cpp
+rm ./main
+make OBJS=angle.cpp
+./main 110
+python
+./main 120
+./main 115
+./main 40
+./main 115
+./main 135
+./main 130
+./main 126
+./main 132
+./main 90
+make OBJS=angle.cpp
+90
+./main 90
+python
+make OBJS=angle.cpp
+./main 90
+make OBJS=angle.cpp
+./main 100
+make OBJS=angle.cpp
+./main 100
+./main 90
+e
+xcircuit
+ps -e
+xcircuit
+ps -e
+pkill emacs
+emacs
+e
+cd univ/tex
+ctex make_web
+ctex report2_1
+cd univ/tex
+ctex report2_1.
+ctex report2_1
+cd Desktop/
+mv 2014-10-24\ 18.50.19.jpg ../univ/tex/report2_1_pic.jpg
+mv 2014-10-24\ 18.50.39.jpg ../univ/tex/report2_1_pic2.jpg
+ls
+cd ../univ/tex
+ls
+ctex report2_1
+ls
+ctex report2_1
+extractbb report2_1_pic.jpg
+extractbb report2_1_pic2.jpg
+ctex report2_1
+gimp report2_1_pic.jpg
+extractbb report2_1_pic.jpg
+gimp report2_1_pic2.jpg
+gimp report2_1_pic.jpg
+extractbb report2_1_pic.jpg
+extractbb report2_1_pic2.jpg
+ctex report2_1
+ls
+gimp IMG_0695.JPG
+gimp IMG_0696.JPG
+mv IMG_0697.JPG IMG_0697.jpg
+mv IMG_0698.JPG IMG_0698.jpg
+mv IMG_0699.JPG IMG_0699.jpg
+mv IMG_0700.JPG IMG_0700.jpg
+mv IMG_0701.JPG IMG_0701.jpg
+mv IMG_0702.JPG IMG_0702.jpg
+mv IMG_0703.JPG IMG_0703.jpg
+extractbb IMG_0*
+ctex report2_1
+cd Downloads
+rm *pdf
+ls
+ctex report2_1
+ls
+ctex report2_1
+py
+ctex report2_1
+cd univ/tex
+ctex report2_1
+python
+ctex report2_1
+e
+cd Downloads
+mv yatex1.77 ~/wget-log
+cd 
+cd Downloads
+cd yatex1.77
+make install
+sudo make install
+sudo make install Yatex
+make install-inf YaTeX
+make install-info YaTeX
+sudo make install-info YaTeX
+e
+ctex report2_1
+python
+q
+ctex report2_1
+cd Pictures/2014/10/28
+mv IMG_0704.JPG ~/univ/tex/
+cd ~/univ/tex/
+gimp IMG_0704.JPG
+extractbb IMG_0704.jpg
+ctex report2_1
+e
+im-launch IMG_0695.xbb
+im-launch IMG_0695.jpg
+pic	 IMG_0695.jpg
+fbi IMG_0695.jpg
+gnome-open IMG_0695.jpg
+ctex report2_1
+e
+ctex report2_1
+ls
+mkdir report2_1
+mv IMG_0* report2_1
+ls
+mv report2_1.* report2_1
+ls
+mv report2_1_* report2_1
+ls
+cd report2_1
+ctex report2_1
+e
+ctex report2_1
+cd univ/tex/report2_1/
+cp report2_1.pdf ~/Dropbox
+cd ~/Dropbox
+ls
+cd
+ks
+cd Downloads
+mv yatex1.77 ~/.emacs.d/elisp/yatex
+e
+cd .emacs.d/themes
+ls
+e
+pkill emacs
+e
+cd github
+ls
+git clone https://github.com/koron/cmigemo
+cd cmigemo
+./configure
+make gcc
+make gcc=dict
+make gcc-dict
+make gcc-install
+sudo make gcc-install
+e
+cd ~/p/dni/ni
+ls
+make OBJS=angle.cpp
+cd p/dni/x64-Release
+./main 100
+make OBJS=depth7.cpp
+./main
+make OBJS=depth7.cpp
+rm ./main
+make OBJS=depth7.cpp
+rm ./main
+make OBJS=depth7.cpp
+./main
+make OBJS=depth7.cpp
+./main
+make OBJS=depth7.cpp
+./main
+make OBJS=depth7.cpp
+./main
+OA
+./main
+python log.py
+make OBJS=depth7.cpp
+./main
+make OBJS=depth7.cpp
+./main
+python log.py
+./main
+python log.py
+./main
+python log.py
+E log.
+E log.py
+python log.py
+./main
+python log.py
+./main
+python log.py
+make OBJS=time.cpp
+python log.py
+make OBJS=time.cpp
+./main
+make OBJS=time.cpp
+./main
+make OBJS=time.cpp
+./main
+make OBJS=time.cpp
+./main
+make OBJS=time.cpp
+./main
+make OBJS=time.cpp
+./main
+ls
+E log.py
+cd p/dni/x64-Release
+python log.py
+cd p/dni/x64-Release/
+python log.py
+cd p/dni/x64-Release
+python log.py
+python
+cd Downloads/ls
+cd Downloads/
+ls
+rm „ÇÇ„ÅÆ„Å•„ÅÉØ„ÇÉ™„É£É∑„É£≠„Ç∏„Çß„ÇØ„É£É®„É£¨„É£ÉΩ„É£º„É£É®ÂΩ¢ÂºÉØ\(2013\).doc 
+mv „ÇÇ„ÅÆ„Å•„ÅÉØ„ÇÉ™„É£É∑„É£≠„Ç∏„Çß„ÇØ„É£É®„É£¨„É£ÉΩ„É£º„É£É®ÂΩ¢ÂºÉØ\(2013\).doc  robo_report.doc
+mv robo_report.doc ~/univ
+cd ~/univ
+i
+open robo_report.doc
+i
+open robo_report.doc
+: 1414539554:0;cd univ
+: 1414539561:0;open robo_report.doc
+: 1414540460:0;cd dotfiles
+: 1414540467:0;git add .
+: 1414540472:0;git add -A

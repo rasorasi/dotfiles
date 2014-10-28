@@ -6,5 +6,5 @@
 '(width . 79)
 '(height . 39)
 '(top . 14)
-'(left . 705))
+'(left . 704))
 initial-frame-alist))

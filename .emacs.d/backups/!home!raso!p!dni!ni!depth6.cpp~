@@ -12,7 +12,6 @@
 #include <string>
 
 
-
 #define FRAME_WIDTH 320
 #define FRAME_HEIGHT 240
 
@@ -41,7 +40,6 @@ private:
 			stream.setVideoMode(mode);
 			stream.setMirroringEnabled(false);
 		}
-
 
 public:
 	void initialize(){

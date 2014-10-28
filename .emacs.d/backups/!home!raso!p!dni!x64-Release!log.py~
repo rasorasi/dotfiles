@@ -1,17 +1,38 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+# z = 500, x = 590, y = 442.5
+
+
 import pylab as pl
 import numpy as np
 from mpl_toolkits.mplot3d import Axes3D
 
+F = 542.37
+RATIO = 0.5
 
 a = 1
 ii = 0
 nu = 0
 num = []
-log = [[] for i in range(10)]
-for line in open ('log.txt', 'r'):
+
+
+
+log_file = []
+
+for line in open('log.txt', 'r'):
+	log_file.append(line)
+
+
+lenge = len(log_file)
+print lenge
+
+if(lenge > 20):
+	lenge = 20
+
+log = [[] for i in range(lenge)]
+
+for line in log_file:
 	for c in line:
 		if c.isdigit():
 			num.append(c)
@@ -27,37 +48,42 @@ for line in open ('log.txt', 'r'):
 			
 			if c == ')':
 				break
-
+				
 	ii += 1
-	if(ii > 9):
+	if(ii >= lenge):
 		break
 	
+print log
 
+for l in log:
+	l[0] = (l[0]*2 - 320)*l[2]/F
+	l[1] = (l[1]*2 - 240)*l[2]/F
 
 
 X = [i[0] for i in log  ]
-Z = [i[1] for i in log  ]
-Y = [i[2] for i in log  ]
+Y = [i[1] for i in log  ]
+Z = [i[2] for i in log  ]
 
-print X
-print Y
-print Z
+print 'X = ' + str(X)
+print 'Y = ' + str(Y)
+print 'Z = ' + str(Z)
+
+
 
 
 fig = pl.figure()
 ax = Axes3D(fig)
-ax.scatter3D(np.ravel(X), np.ravel(Y), np.ravel(Z))
+ax.scatter3D(np.ravel(X), np.ravel(Z), np.ravel(Y))
 
 ax.set_xlabel("X-axis")
 ax.set_ylabel("Z-axis")
 ax.set_zlabel("Y-axis")
 
+ax.set_xlim(-640, 640)
+ax.set_ylim(500, 3000 )
+ax.set_zlim(480,-480 )
 
-ax.set_xlim(0, 320)
-ax.set_ylim(0, 2000)
-ax.set_zlim(0, 240)
-
-ax.plot(X, Y, Z ,"o")
+ax.plot(X, Z, Y ,"o")
 
 
 
