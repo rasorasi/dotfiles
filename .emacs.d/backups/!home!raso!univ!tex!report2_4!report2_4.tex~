@@ -1,0 +1,448 @@
+\documentclass[a4j,11pt]{ujarticle}
+\setlength{\topmargin}{-20mm}
+\setlength{\textheight}{250mm}
+
+\usepackage{amsmath}	% required for `\align' (yatex added)
+\usepackage[dvipdfmx]{graphicx, color}
+\usepackage{wrapfig}
+\usepackage{listings,jlisting}
+\usepackage{cases}
+
+%\usepackage[labelformat=empty,labelsep=none]{caption} %「図○:」を消す
+
+
+\lstset{%
+  language={java},
+  basicstyle={\ttfamily},%
+  identifierstyle={},%
+  commentstyle={\itshape},%
+  keywordstyle={\bfseries},%
+  ndkeywordstyle={},%
+  %stringstyle={\small\ttfamily},
+  frame={tb},
+  breaklines=true,
+  columns=[l]{fullflexible},%
+  numbers=left,%
+  xrightmargin=0zw,%
+  xleftmargin=3zw,%
+  numberstyle={\scriptsize},%
+  stepnumber=1,
+  numbersep=1zw,%
+  lineskip=-0.5ex%
+}
+ 
+\title{}
+%\author{t13f445a  加藤 匠}
+%\date{\today}
+
+
+
+\begin{document}
+\section{OPアンプによる増幅回路}
+\subsection*{実験の目的}
+
+OPアンプはアナログICの代表であり、様々な回路に利用できる万能ICである。この実験では、OPアンプの基本的性質と、代表的な回路である電圧フォロワ、反転増幅器、非反転増幅器、差動増幅器について理科雄を深める。
+
+
+\section* {実験}
+
+\subsection*{使用機器}
+\begin{itemize}
+ \item オペアンプ実習装置   ・・・１台
+ \item 発振器               ・・・１台
+ \item ACボルトメータ       ・・・１台
+ \item オシロスコープ       ・・・１台
+ \item デジタルマルチメータ ・・・２台
+ \item 直流安定化電源       ・・・１台
+ \item 反転増幅回路(Gain=1) ・・・１台
+       
+\end{itemize}
+
+\subsection*{有効数字の処理}
+
+計測した電圧の有効数字は二桁とする。有効数字の異なる値の計算は、最小の有効数字にあわせる。
+
+\subsection*{OPアンプの特徴}
+一般的なOPアンプは２つの入力と、ひとつの出力を持つ素子であり、２つの入力のでんえいさ$V_+ - V_-$を$K$倍に増幅し、$V_o$として出力する
+
+\begin{align}
+ V_o  = K(V_+ - V_-)  \tag{1.1}
+\end{align}
+
+
+
+
+
+また、以下のような特徴がある
+\begin{itemize}
+ \item 開ループゲインKは非常に大きい($K=\infty$)
+ \item 2つの入力$(V_+$と $V_-)$間の電圧は常に0
+ \item 2つの入力端子には電流は流れ込まない
+ \item 入力インピーダンスは無限大$(\infty)$
+ \item 出力インピーダンスは0
+\end{itemize}
+
+
+
+ \section {電圧フォロワ実験}
+
+ 電圧フォロワを図ｂに示す
+
+   %図ｂ
+ 
+  \subsection{実験方法}
+\begin{enumerate}
+ \item 電圧フォロワ[交流信号-入出力特性]
+       電圧フォロワ回路を設計し、発振器より交流電圧(1V(rms:実効値), 1kHz)を加え、入出力の波形をグラフ用紙に記録する。
+\end{enumerate}
+ 
+
+	 
+
+
+
+  
+\newpage
+
+
+  \subsection{考察事項}
+  \begin{enumerate}
+
+   \item 式(1.1)を用いて、図ｂの回路がなぜ電圧を正しく伝える動きをするか説明する. 
+	 図bより
+
+   
+   \begin{align}
+    V_- = V_o  &  \nonumber \\
+    V_+ = V_i &    \nonumber
+   \end{align}
+   
+   式(1.1)に代入すると
+
+   \begin{align}
+    V_o = K(V_i - V_o)   \nonumber
+   \end{align}
+
+   $ \lim_{K \to \infty} \frac{V_o}{K} = 0$なので
+   \begin{align}
+    V_i - V_o = 0  \nonumber \\
+    V_i = V_o  \nonumber
+   \end{align}
+
+
+   \item 電圧フォロワは、高入力インピーダンスかつ低出力インピーダンスであり、”高出力員p−ダンス$R_s$を持つ信号源”に”低出力インいーダンス$R_c$を持つ回路”を接続する時に大きく貢献する。\\
+   その理由を図ｃより説明する。$R_s$と$R_o$を直列にした時、
+
+   %図ｃ
+
+   \begin{align}
+    V_i - V_o = R_sI_c  \nonumber \\
+    V_o = R_cI_c   \nonumber
+   \end{align}
+
+   まとめると
+
+   \begin{align}
+    (\frac{R_S}{R_C} + 1)V_o = V_i \tag{2.1}
+   \end{align}
+
+   $V_o$を$V_i$に近づけるには、$R_S$を小さく,$R_C$を大きくするべき。しかし、$R_S > R_C$のとき、$V_i < 2V_o$となる。\\
+   
+   $R_S$と$R_C$の間に電圧フォロワをはさむとき、OPアンプの入力インピーダンスを$R_C'$,出力インピーダンスを$R_S'$とすると($R_i<<R_o$)、式(2.1)は次のようになる。
+
+    \begin{align}
+     (\frac{R_S + R_S'}{R_C + R_C'} + 1)V_o = V_i \tag{2.2}
+    \end{align}
+   
+   $R_i << R_o$なので式(2.2)の$V_o$の係数は式(2.1)と比べて1に近づき、$V_o$は$V_i$に近づく。
+
+  \end{enumerate}   
+
+\section {反転増幅器}
+
+ある回路から別の回路への伝達に置いて、電圧を反転させて増幅する回路を反転増幅器という。図ｄに回路図を示す。電圧フォロワほど高入力インピーダンスを得られない。
+
+%図ｄ
+
+\subsection{実験方法}
+\
+
+\begin{enumerate}
+ \item 反転増幅回路[交友信号 - 入出力特性]
+       $R_1 = 1k\Omega,R_2 = 100k\Omega$とし、反転入力端子に発振器より交流電圧(0.1V (rms:実効値), 1kHz)を加え、入出力の波形をグラフ用紙に記録する。
+
+       %図e
+
+ \item 反転増幅回路[交流信号 - 周波数特性]
+       上記の条件に置いて、入力周波数を100kHzから1MHzまでへんかさせた場合の出力電圧を測定する。
+
+
+       \begin{table}[htb]
+  \begin{center}
+    \begin{tabular}{| c| c| c||c|c|c| } \hline
+     入力周波数  & 出力電圧  & 電圧利得 &入力周波数  & 出力電圧  & 電圧利得 \\
+     (Hz) & (V) & (dB)  &(Hz) & (V) & (dB) \\ \hline \hline
+     100 & 10 & 40.0 &      10000 & 9.2 & 39.0 \\ \hline
+      200 & 10 & 40.0 &      20000 & 7.4 & 37.0 \\ \hline
+      300 & 10 & 40.0 &      30000 & 5.8 & 35.0 \\ \hline
+      400 & 10 & 40.0 &      40000 & 4.8 & 33.0 \\ \hline
+      500 & 10 & 40.0 &      50000 & 4.0 & 32.0 \\ \hline
+      600 & 10 & 40.0 &      60000 & 3.4 & 30.0 \\ \hline
+      700 & 10 & 40.0 &      70000 & 3.0 & 29.0 \\ \hline
+      800 & 10 & 40.0 &      80000 & 2.6 & 28.0 \\ \hline
+      900 & 10 & 40.0 &      90000 & 2.2 & 26.0 \\ \hline
+      1000 & 10 & 40.0 &      100000 & 2.0 & 26.0 \\ \hline
+      2000 & 10 & 40.0 &      200000 & 1.0 & 20.0 \\ \hline
+      3000 & 10 & 40.0 &      300000 & 0.72 & 17.0 \\ \hline
+      4000 & 10 & 40.0 &      400000 & 0.54 & 14.0 \\ \hline
+      5000 & 9.8 & 39.0 &      500000 & 0.42 & 12.0 \\ \hline
+      6000 & 9.8 & 39.0 &      600000 & 0.34 & 10.0 \\ \hline
+      7000 & 9.6 & 39.0 &      700000 & 0.3 & 9.0 \\ \hline
+      8000 & 9.4 & 39.0 &      800000 & 0.26 & 8.0 \\ \hline
+      9000 & 9.4 & 39.0 &      900000 & 0.24 & 7.0 \\ \hline
+     &&& 1000000 & 0.21 & 6.0 \\ \hline
+ 
+    \end{tabular}
+    \caption{反転増幅回路[交友信号 - 入出力特性]}
+  \end{center}
+       \end{table} 
+
+
+       
+ \item 反転増幅回路[直流信号 - 入出力特性]
+       反転入力端子に直流電圧1Vを入力し、$R_1 = 10k\Omega$と固定したまま、$R_2$の値を$10k\Omega,20k\Omega,30k\Omega,43k\Omega,51k\Omega$と変化せせ、出力電圧$V_o[V]$を計測する。
+
+      \begin{table}[htb]
+       \begin{center}
+	 \begin{tabular}{|c|c|} \hline
+	  $R_2(k\Omega)$ & 出力電圧(V) \\ \hline \hline
+	  10 & -1.0 \\ \hline
+	  20 & -2.0 \\ \hline
+	  30 & -3.0 \\ \hline
+	  43 & -4.4 \\ \hline
+	  51 & -5.1 \\ \hline
+	  
+	\end{tabular}
+       \end{center}
+       \caption{反転増幅回路[直流信号 - 入出力特性]}
+      \end{table}
+
+\end{enumerate}
+
+ \subsection{考察事項}
+\begin{enumerate}
+ \item 交流信号周波数特性において、電圧利得を求めグラフ化し、増幅率の周波数特性について説明する。
+       %図f
+ \item 直流信号入力特性において、$R_2$(横軸)と$V_o$(縦軸)のグラフをかき、そこから読み取れる$R_2$と$V_o$の関係式を推測する。
+       %図o
+       図oから、関係式は一次関数$Vo = -\frac{1}{10000}R_2$と推測できる。
+
+ \item 考察事項2で推測した関係式を、式(1.1)から理論的に導出し、推測が正しいことを確かめる。
+       図ｄより、条件式は
+       \begin{align}
+	V_i - V_- = R_1I \nonumber \\
+	V_- - V_o = R_2I \nonumber \\
+	V_+ = 0
+       \end{align}
+       式(1.1)より $V_+ = V_- $ なので
+       \begin{align}
+	V_i = R_1I
+	-V_o = R_2I
+	\frac{V_o}{V_i} = -\frac{R_2}{R_1}
+       \end{align}
+
+       ここで,$R_1 = 10000[\Omega],V_i = 0.1[V]$なので,$V_o = - \frac{1}{100000}R_2$となる
+       
+\end{enumerate}
+
+
+ \section {非反転増幅器}
+ ある回路と別の回路の結合部において、電圧を増幅して伝える回路を非反転増幅器という。図pに非反転増幅器の回路図を示す。
+ 
+
+   %図p
+ 
+  \subsection{実験方法}
+\begin{enumerate}
+ \item 非反転増幅回路[交流信号 - 入出力特性]
+       $R_1 = 1k\Omega,R_2 = 10k\Omega$ とし、非反転入力端子に発振器より交流電圧(0.1V(rms:実効値),1kHz)を加え、入出力の波形をグラフ用紙に記録する。
+
+       %図q
+       
+       \begin{table}[htb]
+  \begin{center}
+     \begin{tabular}{| c| c|| c| c| } \hline
+      入力(V) & 入力(dB) & 出力(V) & 出力(dB) \\ \hline \hline
+      0.10 &       -20 &       0.20 &       -14 \\ \hline
+ 
+    \end{tabular}
+    \caption{非反転増幅回路[直流信号 - 入出力特性]}
+  \end{center}
+       \end{table} 
+
+
+       
+       \item 非反転増幅回路[交流信号 - 位相特性]
+       上記の条件に置いて、入力周波数を1MHzに変化させた場合の入出力の波形をグラフ用紙に記録する。
+
+       %図r
+       
+ \item 非反転増幅回路[直流信号 - 入出力特性]
+       非反転入力端子に直流電圧1Vを入力し、$R_1 = 10k\Omega$と固定したまま、$R_2$の値を$10k\Omega,20k\Omega,30k\Omega,43k\Omega,51k\Omega$と変化せせ、出力電圧$V_o[V]$を計測する。
+
+
+      \begin{table}[htb]
+       \begin{center}
+	 \begin{tabular}{|c|c|} \hline
+	  $R_2(k\Omega)$ & 出力電圧(V) \\ \hline \hline
+	  10 & 2.0 \\ \hline
+	  20 & 3.0 \\ \hline
+	  30 & 4.0 \\ \hline
+	  43 & 5.4 \\ \hline
+	  51 & 6.0 \\ \hline
+	  
+	\end{tabular}
+       \end{center}
+       \caption{反転増幅回路[直流信号 - 入出力特性]}
+      \end{table}
+
+\end{enumerate} 
+  
+\newpage
+
+
+  \subsection{考察事項}
+  \begin{enumerate}
+
+   \item 交流信号位相特性において、グラフから読み取れる位相の変化を説明する。
+	 OPアンプ内にある半導体素子の周波数特性によるものと考えられる。
+
+   \item 直流信号入力特性において、$R_2$(横軸)と $V_o$(縦軸)のグラフを描き、そこから読み取れる$R_2$と$V_o$の関係式を推測する。
+
+   \item 考察事項の2で推測した関係式を、式(1.1)から理論的に導出し、推測が正しいことを確かめる。ここで$V_-$は$V_+$を分圧している。また、Kは$R_1 + R_2$に比べて十分大きく、近似的に$(R_1 + R_2)/K \approx 0$が成り立つものとする
+	 
+	 
+	 図pより、
+
+	 \begin{align}
+	  V_+ = V_i   \nonumber
+	  R_1I = -V_-  \nonumber \\
+	  R_2I = V_- - V_o
+	 \end{align}
+
+	 よって、
+
+	 \begin{align}
+	  \frac{V_o}{V_i} = 1 + \frac{R_2}{R_1} \nonumber \\
+	 \end{align}
+
+	 ここで,$R_1 = 10000[\Omega],V_i = 0.1[V]$なので,$V_o = 0.1 + \frac{1}{100000}R_2$となる
+	 
+	 
+	 
+
+  \end{enumerate}   
+
+  
+
+ \section {非反転増幅器}
+ 2つの入力電圧の差を増幅して出力したいときに、差動増幅器が使われる。図gに回路図を示す。
+ 
+
+   %図g
+ 
+  \subsection{実験方法}
+\begin{enumerate}
+ \item 差動増幅回路[交流信号 - 入出力特性]
+       $R_1 = R_2 = 10k\Omega$とし、発振器より2つの入力に交流電圧(1V (rms:実効値), 1kHz)を加える。
+       \begin{itemize}
+	\item $V_1$の反転端子に逆走信号を
+	\item $V_2$の批判点端子には同窓信号を加える
+       \end{itemize} 
+
+       入出力の波形をグラフ用紙に記録する。
+
+       %図h
+
+              
+       \begin{table}[htb]
+  \begin{center}
+     \begin{tabular}{| c| c|| c| c| } \hline
+      反転入力(V) & 反転入力(dB) & 出力(V) & 出力(dB) \\ \hline \hline
+      1.0 &       0 &     &      \\
+      \cline{1-2}
+      非反転入力(V)&  非反転入力(dB) &2.0 &6.0  \\
+      \cline{1-2} \cline{1-2}
+      1.0 & 0  & & \\
+      \hline
+      \end{tabular}
+      \caption{非反転増幅回路[直流信号 - 入出力特性]}
+  \end{center}
+       \end{table} 
+
+
+ \item 差動増幅回路[直流信号 - 入出力特性]
+       入力電圧$V_1=1[V]$(直流に固定し)、$R_1=R_2=10k\Omega$としたとき、$V_2=-3V,-2V,-1V,0V,1V,2V,3V$と変化させた時の$V_o[V]$を計測する(オペアンプ実習装置の電圧を使用)
+       
+
+      \begin{table}[htb]
+       \begin{center}
+	 \begin{tabular}{|c||c|} \hline
+	  $R_2(k\Omega)$ & 出力電圧(V) \\ \hline \hline
+	  -3.0 & -4.0 \\ \hline
+	  -2.0 & -3.0 \\ \hline
+	  -1.0 & -2.0 \\ \hline
+	  0.0  & -1.0 \\ \hline
+	  1.0  &  0.0   \\ \hline
+	  2.0  &  1.0 \\ \hline
+	  3.0  &  2.0 \\ \hline
+	        
+	\end{tabular}
+       \end{center}
+       \caption{差動増幅回路[直流信号 - 入出力特性]}
+      \end{table}
+
+\end{enumerate} 
+  
+\newpage
+
+
+  \subsection{考察事項}
+  \begin{enumerate}
+
+   \item 直流信号-入出力特性において,$V_2$(横軸)と$V_o$(縦軸)のグラフを描き、そこから読み取れる$V_2$と$V_o$の関係式を推測する
+	 
+
+   \item 考察事項(1)で推測した関係式を,式(1.1)から理論的に導出し,推測が正しいことを確かめる。図5の点a,bの電圧(すなわち$V_-$と$V_+$)を求め、式(1.1)に代入して式を”$V_o$ = …”と、まとめる。
+
+	 図gより
+
+	 \begin{align}
+
+	  V_1 - V_- = -R_1I
+	  V_- - V_o = -R_2I
+	  V_2 - V_+ = R_1I
+	  V_+ = R_2I
+	  
+	 \end{align}
+
+	 よって、$V-,V+$は
+
+	 \begin{align}
+	  V_- = \frac{V_1R_2 + V_oR_1}{R_1 + R_2}
+	  V_+ = \frac{V_2R_2}{R_1 + R_2}
+	 \end{align}
+
+	 式(1.1)より $V_+ = V_-$とすると
+	 \begin{align}
+	  V_o = \frac{R_2}{R_1}(V_2 - V_1)
+	 \end{align}
+
+	 $V_1 = 1[V] ,R_1 = R_2 = 10000[\Omega]$なので,$V_o = V_2 - 1$となる
+	 
+
+  \end{enumerate}   
+
+  
+
+\end{document}

@@ -1,0 +1,50 @@
+def outable(table,select = "c"):
+
+	flag_D = 1
+
+	print 	""" 
+\\begin{table}[htb]
+  \\begin{center}"""
+	print "    \\begin{tabular}{|",
+	
+	if isinstance(table[0],list):
+		flag_D = 2
+
+	if flag_D == 2:
+		t = table[0]
+	else:
+		t = table
+	
+	for a in t:
+		print select + "|" ,
+
+	print "} \hline"
+	
+	if flag_D == 2:
+		for t in table:
+			print " " * 5 ,
+			for a in t:
+
+				if(a == t[-1]):
+					print str(a) + " \\\\ \hline"
+				else:
+					print str(a) + " &",
+
+	else:
+		for a in table:
+			print " " * 5 ,
+			if(a == t[-1]):
+				print str(a) + " \\\\ \hline"
+			else:
+				print str(a) + " &",
+
+	print 	""" 
+    \end{tabular}
+    \caption{TITLE}
+  \end{center}
+\end{table} 
+	"""
+	print "\\begin{tabular}{|",
+
+
+outable([[1,2,3],[4,5,6]])

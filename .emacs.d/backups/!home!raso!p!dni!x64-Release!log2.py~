@@ -1,0 +1,147 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+# z = 500, x = 590, y = 442.5
+
+import numpy as np
+
+import pylab as pl
+import numpy as np
+import math 
+from mpl_toolkits.mplot3d import Axes3D
+from matplotlib.patches import FancyArrowPatch
+from mpl_toolkits.mplot3d import proj3d
+
+
+RATIO = 0.5
+
+
+
+#log_file =["(12,12,12,12.34)"]
+
+class Arrow3D(FancyArrowPatch):
+    def __init__(self, xs, ys, zs, *args, **kwargs):
+        FancyArrowPatch.__init__(self, (0,0), (0,0), *args, **kwargs)
+        self._verts3d = xs, ys, zs
+
+    def draw(self, renderer):
+        xs3d, ys3d, zs3d = self._verts3d
+        xs, ys, zs = proj3d.proj_transform(xs3d, ys3d, zs3d, renderer.M)
+        self.set_positions((xs[0],ys[0]),(xs[1],ys[1]))
+        FancyArrowPatch.draw(self, renderer)
+
+
+
+def FileToLog(filename):
+
+	a = 1
+	ii = 0
+	nu = 0
+	num = []
+
+	log_file = []
+	log = []
+	for line in open(filename, 'r'):
+		log_file.append(line)
+
+	lenge = len(log_file)
+
+	if(lenge > 20):
+		lenge = 20
+
+	log = [[] for i in range(lenge)]
+
+	for line in log_file:
+		for c in line:
+			if c.isdigit():
+				num.append(c)
+			if c == '.':
+				num.append('d')
+			if c == ',' or c == ')':
+				for i in reversed(num):
+					if i == 'd':
+						nu = nu / float((10 ** (int(math.log10(nu) + 1))))
+						a = 1
+					else:
+						nu += int(i) * a
+						a *= 10
+			
+				log[ii].append(nu)
+				a = 1
+				nu = 0
+				num = []
+			
+				if c == ')':
+					break
+				
+		ii += 1
+		if(ii >= lenge):
+			break
+	
+	return log
+
+def Pers(log):
+
+	F = 542.37
+
+	for l in log:
+		l[0] = int((l[0]*2 - 320)*l[2]/F)
+		l[1] = int((l[1]*2 - 240)*l[2]/F)
+
+def DisVectUP(vect):
+	pass
+
+
+def main():
+
+	log = FileToLog('log.txt')
+
+	Pers(log)
+
+	
+	X = [i[0] for i in log  ]
+	Y = [i[1] for i in log  ]
+	Z = [i[2] for i in log  ]
+	deltaT = [i[3] for i in log  ]
+
+	
+
+	print 'X = ' + str(X)
+	print 'Y = ' + str(Y)
+	print 'Z = ' + str(Z)
+	print 'deltaT = ' + str(deltaT)
+
+	vect = np.zeros([len(log)-1,3])
+
+	for i in range(0, len(log)-1):
+		for j in [0,1,2]:
+			vect[i,j] = log[i+1][j] - log[i][j] 
+
+
+	print vect
+
+	fig = pl.figure()
+
+	ax = Axes3D(fig)
+	ax.scatter3D(np.ravel(X), np.ravel(Z), np.ravel(Y))
+
+	ax.set_xlabel("X-axis")
+	ax.set_ylabel("Z-axis")
+	ax.set_zlabel("Y-axis")
+
+	ax.set_xlim(-640, 640)
+	ax.set_ylim(500, 3000 )
+	ax.set_zlim(480,-480 )
+
+
+	ax.plot(X, Z, Y ,"o",color="#ffffcc")
+	ax.plot(X, Z, Y ,"o",color="#cccc00")
+
+	arrow = Arrow3D([0,0],[0,150],[0,0],mutation_scale=20,lw=3, arrowstyle="-|>",color = "#000000")
+	ax.add_artist(arrow)
+	pl.show()
+
+	
+		
+if __name__=='__main__':
+	main()

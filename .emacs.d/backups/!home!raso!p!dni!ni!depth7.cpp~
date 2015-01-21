@@ -17,12 +17,16 @@
 #define FRAME_WIDTH 320
 #define FRAME_HEIGHT 240
 
-#define MAX_DEPTH 1500
+#define MAX_DEPTH 3000
 #define MIN_DEPTH 500
 
 
-#define WHITE_MIN 0x90
-#define WHITE_DIF 35
+#define MIN_SIZE 5
+#define MAX_SIZE 120
+
+
+#define WHITE_MIN 0x00
+#define WHITE_DIF 50
 
 #define ABS_MAX 20
 
@@ -275,7 +279,7 @@ public:
 
 		for(int i = 0; i < (int)contours.size(); i++){
 			size_t count = contours[i].size();
-			if(count < 20 || count > 120) continue;
+			if(count < MIN_SIZE || count > MAX_SIZE) continue;
 			if(max < count) {
 				max = count;
 				max_i = i;
@@ -454,6 +458,13 @@ string IntToString(int number)
   return ss.str();
 }
 
+string DoubleToString(double number)
+{
+  stringstream ss;
+  ss << number;
+  return ss.str();
+}
+
 
 
 int main(int arg, const char * argv[])
@@ -505,7 +516,7 @@ int main(int arg, const char * argv[])
 					cout << meter << endl;
 
 
-					out << "(" << IntToString(sensor.ShuttlePoint[0]) << ", " << IntToString(sensor.ShuttlePoint[1]) << ", " << IntToString(sensor.ShuttlePoint[2]) << ")" << endl;
+					out << "(" << IntToString(sensor.ShuttlePoint[0]) << ", " << IntToString(sensor.ShuttlePoint[1]) << ", " << IntToString(sensor.ShuttlePoint[2]) << ", " << DoubleToString(meter.getTimeMilli()) << ")" << endl;
 
 					meter.reset();
 					meter.start();

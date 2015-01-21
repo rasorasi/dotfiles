@@ -1,0 +1,136 @@
+#include "p24fj64GA002.h"
+#include "CAN.h"
+
+
+#ifdef __PIC24FJ128GA010__	//Defined by MPLAB when using 24FJ256GB110 device
+	// JTAG/Code Protect/Write Protect/Clip-on Emulation mode
+	// Watchdog Timer/ICD pins select
+	_CONFIG1(JTAGEN_OFF & GCP_OFF & GWRP_OFF & COE_OFF & FWDTEN_OFF & ICS_PGx2) 
+	// Disable CLK switch and CLK monitor, OSCO or Fosc/2, HS oscillator,
+	// Primary oscillator
+	_CONFIG2(FCKSM_CSDCMD & OSCIOFNC_OFF & POSCMOD_HS & FNOSC_PRIPLL)
+#endif
+
+// RB2 as SS for SPI slave MCU
+
+
+#define	LED_L	LATBbits.LATB2
+#define	LED_R	LATBbits.LATB3
+#define	LED15	LATBbits.LATB15
+
+#define	SWC_L	PORTBbits.RB5
+#define	SWC_R	PORTBbits.RB4
+#define	SWC11	PORTBbits.RB11
+
+
+
+extern BYTE TXMsgID[2];
+extern BYTE TXMsgLong;
+extern BYTE TXMsgData[8];
+
+extern BYTE RXMsgID[2];
+extern BYTE RXMsgData[8];
+
+
+
+int main (void)
+{
+	
+	
+	int i = 0,j,t;
+	BYTE msg = 0;
+
+	
+	RPOR4bits.RP8R = 7; // SDO
+ 	RPOR4bits.RP9R = 8; // SCK
+
+	TRISBbits.TRISB6 = 0; //SS_out
+
+	RPINR20bits.SDI1R = 7; //SDI 
+
+	TXB0DLC.bits.DLC = 1;
+	TXB0DLC.bits.RTR = 0;
+	TXMsgDataLong = TXB0DLC.byte;
+	
+	TXMsgData[0] = 0x03;
+	
+	TXB0CTRL.bits.TXP = 0;
+	TXB0CTRL.bits.TXREQ = 1;
+
+	
+	// Disable Watch Dog Timer
+	RCONbits.SWDTEN = 0;
+	// for LED
+	
+	TRISBbits.TRISB2 = 0;
+	TRISBbits.TRISB3 = 0;
+
+
+	
+	
+	
+	CNPU1 = 0x0002;
+	CNPU2 = 0x0800;
+	
+	
+	
+
+	SPI1Init();
+
+	 LED_L = 1;
+	  LED_R = 1;
+	//LATBbits.LATB8 = 1;
+
+	for(i=0; i<0xffff; i++);
+
+		InitCAN();
+		//SetFilter(0x01);
+
+    while (1) {
+	    
+	   // LED_L = ~SWC_L;
+	 
+	    
+
+	Error_check();
+	  if(CheckRX(0)) {
+	  	ReadMsg(RXMsgID, RXMsgData);
+	  	msg = RXMsgID[0] << 3;
+	  	msg |= RXMsgID[1] >> 5;
+	  	
+	  	
+	  	if(msg == 0x42) {
+		  	LED_R = 0;
+		  	if(TXMsgData[0] == 0x30)
+		  	LED_L = 0;
+		  	
+		  }	
+		  	
+	  	if(msg == 0x23){
+		  	LED_R = 1;
+	  		SetID(TXMsgID, 0x41);
+	  		SendMsg(TXMsgID, TXMsgLong, TXMsgData);
+		  	
+		  }	
+	  
+	  }
+
+	if(SWC_R == 0){
+		//CANInit();
+		SetID(TXMsgID, 0x40);
+		SendMsg(TXMsgID, TXMsgLong, TXMsgData);
+		Send0();
+		  
+		
+		}
+	    
+	    //__builtin_btg((unsigned int *)&LATA, 6);
+	
+	
+	
+	} 
+	
+	
+	return 0;
+}
+

@@ -6,6 +6,7 @@
 
 import pylab as pl
 import numpy as np
+import math 
 from mpl_toolkits.mplot3d import Axes3D
 
 F = 542.37
@@ -24,6 +25,8 @@ for line in open('log.txt', 'r'):
 	log_file.append(line)
 
 
+#log_file =["(12,12,12,12.34)"]
+
 lenge = len(log_file)
 print lenge
 
@@ -36,10 +39,16 @@ for line in log_file:
 	for c in line:
 		if c.isdigit():
 			num.append(c)
+		if c == '.':
+			num.append('d')
 		if c == ',' or c == ')':
 			for i in reversed(num):
-				nu += int(i) * a
-				a *= 10
+				if i == 'd':
+					nu = nu / float((10 ** (int(math.log10(nu) + 1))))
+					a = 1
+				else:
+					nu += int(i) * a
+					a *= 10
 			
 			log[ii].append(nu)
 			a = 1
@@ -63,10 +72,14 @@ for l in log:
 X = [i[0] for i in log  ]
 Y = [i[1] for i in log  ]
 Z = [i[2] for i in log  ]
+deltaT = [i[3] for i in log  ]
+
+
 
 print 'X = ' + str(X)
 print 'Y = ' + str(Y)
 print 'Z = ' + str(Z)
+print 'deltaT = ' + str(deltaT)
 
 
 

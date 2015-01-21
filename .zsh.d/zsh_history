@@ -1,280 +1,3 @@
-hsitory
-history
-history 1
-ls
-history
-history 4
-tar 
-cd p
-cd
-p
-python q8.py
-python q7.py
-python q9.py
-python lifegame.py
-python q1.py
-history
-14
-history
-mcd ~/.zsh.d/zsh_plugin/
-cd
-mkdir ~/.zsh.d/zsh_plugin/
-cd ~/.zsh.d/zsh_plugin/
-git clone git://github.com/zsh-users/zaw.git
-echo "source {PMD}/zaw/zaw.zsh" >> ~/.zsh.d/zshrc && exec $SHELL
-cd ..
-cat zshrc
-cd
-ls
-ei
-projects
-git add .
-git commit -m "toriaezu"
-dotfiles
-git add .
-git commit -m "toriaezu"
-git push origin master
-tex
-cd tex
-cd
-which rename
-rename tex d_tex
-ls
-cd tex
-platex tmp1.tex
-dvpd tmpq.dvi
-dvpd tmp1.dvi
-which ensi
-ensure
-evince tmp1.pdf
-platex tmp1.tex
-dvpd tmp1.dvi
-evince tmp1.pdf
-platex tmp1.tex
-dvpd tmp1.dvi
-evince tmp1.pdf
-platex tmp1.tex
-dvpd tmp1.dvi
-evince tmp1.pdf
-platex tmp1.tex
-dvpd tmp1.dvi
-evince tmp1.pdf
-platex tmp1.tex
-evince tmp1.pdf
-dvpd tmp1.dvi
-evince tmp1.pdf
-platex tmp1.tex
-dvpd tmp1.dvi
-evince tmp1.pdf
-platex tmp1.tex
-dvpd tmp1.dvi
-evince tmp1.pdf
-platex tmp1.tex
-dvpd tmp1.dvi
-evince tmp1.pdf
-platex tmp1.tex
-dvpd tmp1.dvi
-evince tmp1.pdf
-platex tmp1.tex
-dvpd tmp1.dvi
-evince tmp1.pdf
-platex tmp1.tex
-dvpd tmp1.dvi
-evince tmp1.pdf
-platex tmp1.tex
-dvpd tmp1.dvi
-evince tmp1.pdf
-platex tmp1.tex
-dvpd tmp1.dvi
-evince tmp1.pdf
-platex tmp1.tex
-dvpd tmp1.dvi
-evince tmp1.pdf
-platex tmp1.tex
-evince tmp1.pdf
-dvpd tmp1.dvi
-evince tmp1.pdf
-platex tmp1.tex
-dvpd tmp1.dvi
-evince tmp1.pdf
-platex tmp1.tex
-dvpd tmp1.dvi
-evince tmp1.pdf
-platex tmp1.tex
-dvpd tmp1.dvi
-evince tmp1.pdf
-platex tmp1.tex
-dvpd tmp1.dvi
-evince tmp1.pdf
-platex tmp1.tex
-dvpd tmp1.dvi
-evince tmp1.pdf
-rm memo.tex
-rm memo.txt
-ls
-rename tex texd
-mv tex texd
-texd
-cd texd
-cd
-cd -1
-history
-history -117
-man history
-evince tmp1.pdf
-history 118
-history 90
-history 90 95
-history --help
-man history
-history 'su'
-history ^s
-history^
-history ^
-man hisotry
-man histoyr
-man history
-history h
-history e
-history a 5
-history a
-history h a
-history h
-history -h
-history t
-history 16
-history 1 6
-history h 1 4
-history % 'en'
-history -% 'en'
-% 'en'
-% 'e'
-%
-platex tmp1.tex
-history]
-history
-texd
-cd
-history
-texd
-ps-fe
-ps
-ps -fe
-ps -f
-ps -e
-kill -9 2655
-kill -9 2626
-ps
-ps -e
-kill -9 2658
-cd .emacs.d
-ls -a
-rm session.10
-rm session.1012f570a831f98c713930443936495500000011610035
-rm session.10a7ca8775d43b2ce8139287469476559200000011600035
-rm session.10
-rm session.10b89d265db01d6f27139234651093605100000011590040
-rm session.10e
-rm session.10e5133d7d7809c0bb139192172950986200000011690046
-rm session.10e39edc7c707251a7139227359652476300000011990037 
-ls -a
-cd
-projects
-dotfiles
-git add .
-ls -a
-git add .
-git add .emacs.d
-cd
-projects
-git add .
-git commit -m "add saving scratch"
-git push origin master
-dotfiles
-git add .
-git add --ignore-removal .emacs.d/auto-save-list/.saves-2464-rasorasi-01\~
-history
-git commit -m "add saving scratch"
-git push origin master
-cd
-texd
-platex robocon.tex
-dvpd robocon.dvi
-evince robocon.pdf
-platex robocon.tex
-dvpd robocon.dvi
-evince robocon.pdf
-platex rp_ns.tex
-dvpd rp_ns.tex
-dvpd rp_ns.dvi
-evince rp_ns.pdf
-which wvinc
-which evince
-texd
-ls
-evince robocon.pdf
-cd Dropbox
-univ
-rm 1.txt
-cd
-his
-h
-platex robocon.tex
-texd
-platex robocon.tex
-dvpd robocon.dvi
-evince robocon.pdf
-platex robocon.tex
-evince robocon.pdf
-dvpd robocon.dvi
-evince robocon.pdf
-platex robocon.tex
-dvpd robocon.dvi
-evince robocon.pdf
-platex robocon.tex
-dvpd robocon.dvi
-evince robocon.pdf
-platex robocon.tex
-dvpd robocon.dvi
-evince robocon.pdf
-platex robocon.tex
-dvpd robocon.dvi
-evince robocon.pdf
-platex robocon.tex
-dvpd robocon.dvi
-evince robocon.pdf
-platex robocon.tex
-dvpd robocon.dvi
-evince robocon.pdf
-platex robocon.tex
-dvpd robocon.dvi
-evince robocon.pdf
-platex robocon.tex
-dvpd robocon.dvi
-evince robocon.pdf
-platex robocon.tex
-dvpd robocon.dvi
-evince robocon.pdf
-platex robocon.tex
-q
-platex robocon.tex
-dvpd robocon.dvi
-evince robocon.pdf
-man --mv
-man mv
-cp robocon.pdf UABMEMORY
-ls
-man cp
-cp q.log ~/
-cd
-ls
-USBMEMORY
-cd USBMEMORY
-cd /
-ls
-usr
-ls
-cd ..
 dev
 ls
 usb-devices
@@ -8229,8 +7952,2271 @@ i
 open robo_report.doc
 i
 open robo_report.doc
-: 1414539554:0;cd univ
-: 1414539561:0;open robo_report.doc
-: 1414540460:0;cd dotfiles
-: 1414540467:0;git add .
-: 1414540472:0;git add -A
+cd univ
+open robo_report.doc
+cd dotfiles
+git add .
+git add -A
+git commit -m "latex environment add"
+git push origin master
+cd Desktop
+rm test.p
+rm test.py
+ls
+python
+df
+ls
+cd univ
+cp robo_report.doc ~/Dropbox
+cd p/dni/ni
+make OBJS=depth7.cpp
+cd p/dni/x64-Release
+ls
+make OBJS=depth7.cpp
+./main
+python log.py
+E log.
+E log.py
+python log.py
+./main
+python log.py
+E log.py
+python log.py
+cd Dropbox
+mv -r ver3-2 /media/raso/Transcend/ 
+mv -v ver3-2 /media/raso/Transcend/ 
+ls
+cd Dropbox
+mkdir ver3-2
+mv ~/Downloads/CAN* ver3-2
+mv ~/Downloads/Node2-2.c ver3-2
+e
+sudo apt-get install openjdk-7-jre
+cd Documents
+cd arduino-1.0.6
+./arduino
+sudo ./arduino
+mv Downloads/CANArd2.ino p/
+python
+python 
+cd p/dni/x64-Release
+python log
+python log2.py
+python
+python log2.py
+e
+cd p/dni/x64-Release
+python log2.py
+cd p/dni
+ls
+cd x64-Release
+ls
+python log2.py
+cd univ/tex
+ls
+cd report2_1
+ls
+open report2_1.pdf
+cd univ/tex
+mkdir report2_2
+cd report2_2
+E report2_2.txt
+cd ~root/
+sudo cd ~root/
+sudo cd ~root
+sudo E .arduino/preferences.txt
+sudo emacscliant .arduino/preferences.txt
+sudo nano .arduino/preferences.txt
+fg
+ls
+cd mount
+ls
+cd 
+ls
+cd p/mat
+ls
+cd ..
+ls
+cd CANArd2
+ls
+cd ..
+ls
+cd ..
+ls
+sudo .arduino
+cd .arduino
+ls
+cd 
+ls
+cd github
+s
+ls
+cd ..
+ls
+cd Do
+cd Downloads
+ls
+cd ..
+ls
+cd Documents
+ls
+cd arduino-1.0.6
+ls
+sudo ./arduino
+sudo ./arduino ~/p/CANArd2/CANArd2.ino
+cd
+ls
+sudo nano .arduino/preferences.txt
+sudo ./arduino ~/p/CANArd2/CANArd2.ino
+mkdir /media/raso/0913-3451/backup
+cp ~/* /media/raso/0913-3451/backup
+cp -r  ~/* /media/raso/0913-3451/backup
+cd /media/raso/0913-3451/backup
+ls
+cd Documents
+ls
+cd ..
+ls
+cd ..
+rm -rf backup
+cd /media/raso/HD-LCU3/
+mkdir backup
+cd
+ls
+cd p/
+cd CANArd2
+ls
+cp CANArd2.ino ~/Dropbox
+chromium-browser
+cp CANArd2.ino ~/Dropbox
+cp CANArd2.ino /media/raso/USBMEMORY
+cd p/
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+cd dni/ni
+make OBJS=depth7.cpp
+./a.out
+make OBJS=depth7.cpp
+hsitory
+make OBJS=depth7.cpp
+e
+make OBJS=test2.cpp
+mv stuff.jpg ~/p/dni/x64-Release
+cd p/dni/x64-Release
+./main
+mv stuff.jpg ~/p/dni/x64-Release
+make OBJS=test2.cpp
+./main
+make OBJS=test2.cpp
+./main
+make OBJS=test2.cpp
+./main
+make OBJS=test2.cpp
+./main
+make OBJS=test2.cpp
+./main
+python
+ls
+cd /media/raso/0913-3451/1215
+ls
+cp ~/p/dni/x64-Release/
+cp ~/p/dni/x64-Release/log3.py
+cp ~/p/dni/x64-Release/
+cp log2.py ~/p/dni/x64-Release/log3.py
+ls
+cd ..
+cp depth8.cpp ~/p/dni/ni/
+cd
+cd Dropbox
+ls
+cp -r report2_3 ~/univ/tex/
+cd ~/univ/tex/report2_3
+ls
+cd report2_1
+ls
+cd Dropbox
+ls
+cd report2_3/
+ls
+cd ..
+rm -rf report2_3
+la
+ls
+cd report2_
+cd report2_3
+ls
+ctex report2_1
+ls
+cd univ/tex
+ls
+report2_3
+ls
+mv report2_1* report2_3*
+ls
+mv report2_1* report2_3
+rename report2_1* report2_3
+ls
+python report2_3.py
+ls
+python report2_3.py
+import matplotlib
+sudo 
+python
+cd mkdir .matplotlib
+mkdir .matplotlib
+cp /etc/matplotlibrc ~/.matplotlib
+echo $FONT
+cd .matplotlib
+ls
+E matplotlibrc
+e
+python report2_3.py
+python report2_3_2.py
+python
+cd 
+cd univ
+ls
+cd report_sato
+ls
+open éƒ»»æ°ƒ·åƒ»žè·¯ã€€ã‚°ãƒ£©ãƒ£ƒµ.docx
+python report2_3_2.py
+open éƒ»»æ°ƒ·åƒ»žè·¯ã€€ã‚°ãƒ£©ãƒ£ƒµ.docx
+python report2_3_2.py
+open éƒ»»æ°ƒ·åƒ»žè·¯ã€€ã‚°ãƒ£©ãƒ£ƒµ.docx
+python report2_3_2.py
+open éƒ»»æ°ƒ·åƒ»žè·¯ã€€ã‚°ãƒ£©ãƒ£ƒµ.docx
+python report2_3_2.py
+python report2_3.py
+python report2_3_2.py
+python report2_3_3.py
+cd univ/tex/
+ls
+cd report2_3
+ls
+ctex report2_1
+python report2_3_3.py
+ctex report2_1
+python report2_3_3.py
+ctex report2_1
+python report2_3_3.py
+python report2_3_4.py
+cd univ/tex/report2_3
+python report2_3_4.py
+e
+cd 
+cd univ/tex/report2_3
+ctex report2_1
+e
+ctex report2_1
+cd univ/tex/report2_3
+python report2_3_4.py
+python report2_3_5.py
+cd 
+cd p/dni
+ls
+cd x64-Release
+ls
+cd ..
+cd ni
+ls
+make OBJS=depth8.cpp
+cd ..
+ls
+cd x64-Release
+./main
+cd p/dni/ni
+make OBJS=depth8.cpp
+./main
+cd ..
+cp report2_3 /media/raso/UUI
+cp -r report2_3 /media/raso/UUI
+cd report2_3
+ls
+rm \#report2_3.py\#
+rm \#report2_1.tex\#
+ls
+cp -r report2_3 /media/raso/UUI
+cd ..
+cp -r report2_3 /media/raso/UUI
+cd tex/
+cd univ/tex/
+rm -rf report2_3
+cp /media/raso/UUI/report2_3 ./
+cp -r /media/raso/UUI/report2_3 ./
+cd report2_3
+e
+la
+ls
+ls *.tex
+cd /media/raso/UUI/report2_3
+ls
+ls *.te
+cd
+cd /media/raso/UUI
+ls
+cd re
+ls
+cd ..
+ls
+cd /media/raso/MEMORY
+ls
+cd univ/tex/
+rm -rf report2_3
+cp -r report2_3 ~/univ/tex
+cd report2_3/
+ls
+E report2_1.tex
+ls
+cd report2_1
+ls
+E report2_1
+E report2_1.tex
+ls
+extractbb figure_1.png
+ctex report2_1.tex
+ctex report2_1
+ls
+ctex report2_1
+cd ../report2_3
+ls
+extractbb figure_..png
+extractbb figure_*
+ls
+ctex report2_1
+ls
+extractbb figure_*
+ls
+extractbb figure_*
+ctex report2_1
+py report2_3_1
+py report2_3_2.py
+py report2_3_3.py
+py report2_3_4.py
+py report2_3_5.py
+E report2_3_5.py
+py report2_3_5.py
+py report2_3_6.py
+py report2_3_7.py
+rm *.xbb
+extractbb figure_*
+e
+E report2_1.tex
+ctex report2_1
+cd ..
+rm -rf report2_3
+cp -r /media/raso/MEMORY/report2_3 ./
+cd report2_3
+ls
+e
+ctex report2_1
+cd univ
+ls
+cd report_sato
+ls
+open éƒ»»æ°ƒ·åƒ»žè·¯ã€€è¡¨.docx
+cd repo-to
+ls
+open å®Ÿé¨ƒ³ï¼ƒ³.docx
+open å®Ÿé¨ƒ³ãƒ£¬ãƒ£ƒ½ãƒ£¼ãƒ£ƒ¨No1.docx
+open å®Ÿé¨ƒ³ï¼ƒ³.docx					
+open å®Ÿé¨ƒ³ï¼ƒ².docx					
+open å±±çƒ´°äº®ä»ƒ«2.docx			
+ls
+cd ..
+ls
+cd ..
+ls
+ctex report2_1
+cd tex/report2_3
+ls
+cp /media/raso/MEMORY/report2_3/report2_3_8.py ./
+E report2_3_8.py
+py report2_3_8.py
+ctex report2_1
+py report2_3_8.py
+py report2_3.py
+py report2_3_9.py
+ctex report2_1
+extractbb figure_4.png
+ctex report2_1
+py report2_3_5.py
+py report2_3_7.py
+rm *.xbb
+extractbb figure_*
+py report2_3_7.py
+extractbb figure_*
+ctex report2_1
+py report2_3_5.py
+py report2_3_6.py
+extractbb figure_*
+ctex report2_1
+py report2_3_9.py
+extractbb figure_*
+ctex report2_1
+cp -r ./ /media/raso/0913-3451/
+eject
+cd p/dni/ni
+make OBJS=depth8.cpp
+cd p/dni/x64-Release
+./main
+E depth8.cpp
+make OBJS=depth8.cpp
+./main
+stty -F /dev/ttyUSB0 ospeed 115200
+sudo stty -F /dev/ttyUSB0 ospeed 115200
+./main
+make OBJS=depth8.cpp
+./main
+ls
+cd p/dni/x64-Release
+ls
+python log3.py
+p/dni/ni
+make OBJS=depth8.cpp
+./main
+stty -F /dev/ttyUSB0
+sudo stty -F /dev/ttyUSB0 ospeed 115200
+./main
+OA
+./main
+cd 
+cd univ/tex/report2_3
+ls
+cd ..
+python my_latex.py
+./main
+python my_latex.py
+./main
+python my_latex.py
+cd p/
+ls
+test.py
+E test.py
+python test.py
+test.py
+cd 
+cd univ/tex
+py my_latex.py
+pkill emacs
+e
+pkill emacs
+ls
+ps -e
+e
+cd .emacs.d
+ls
+rm session.10*
+ls
+pkill emacs
+e
+nano kill_emacs.sh
+cd p/dni/x64-Release
+ls
+python log3.py
+cat Test
+cat log.txt
+cp log3.py ../
+cd ../
+ls
+cd x64-Release
+cp log3.py ~/p/dni
+cd ..
+ls
+cp /media/raso/0913-3451/ni/log.txt ./
+ls
+python log3.py
+E log3.py
+python log3.py
+s
+ls
+rm log.txt
+cp /media/raso/0913-3451/log.txt ./
+ls
+python log3.py
+cp /media/raso/0913-3451/log.txt ./
+python log3.py
+ls
+python log3.py
+cd p/dni
+ls
+python log3.py
+e
+cd univ
+ls
+cd tex/report2_3
+ls
+cd ..
+cp -r report2_3 /media/raso/0913-3451/
+cd github
+ls
+git clone https://github.com/tsu-nera/pdf-tools
+cd pdf-tools
+ls
+./autogen.sh
+ls
+./configure
+sudo apt-get install libpoppler-dev
+ls
+make
+./configure
+sudo apt-get install libpoppler-glib-dev
+./configure
+make
+sudo make install
+e
+pkill emacs
+e
+stty -F /dev/ttyUSB0
+cat < /dev/ttyUSB0
+echo < /dev/ttyUSB0
+cat < /dev/ttyUSB0
+stty -F /dev/ttyUSB0 ospeed 11520
+cat < /dev/ttyUSB0
+stty -F /dev/ttyUSB0 ospeed 9600
+cat < /dev/ttyUSB0
+stty -F /dev/ttyUSB0 ospeed 9600
+cat < /dev/ttyUSB0
+cat  /dev/ttyUSB0
+cat > /dev/ttyUSB0
+dmesg
+cat > /dev/ttyUSB0
+cat  /dev/ttyUSB0
+cat > /dev/ttyUSB0
+cat < /dev/ttyUSB0
+sudo cat /dev/ttyUSB0
+sudo chmod 777 /dev/ttyUSB0
+cat < /dev/ttyUSB0
+cat  /dev/ttyUSB0
+cd /lib/udev/rules.d
+sudo nano 50-udev-default.rules
+pkill emacs
+sudo nano 50-udev-default.rules
+e
+cat < /dev/ttyUSB0
+stty -F /dev/ttyUSB0
+e
+cd Documents
+ls
+cd ..
+ls
+cd github
+ls
+cd github/pdf-tools
+ls
+chmod a+x pdf-tools-0.20.tar
+chmod a+r pdf-tools-0.20.tar
+chmod a+w pdf-tools-0.20.tar
+ls -l pdf-tools-0.20.tar
+ls
+e
+sudo emacs
+e
+sudo emacs
+e
+sudo emacs
+e
+cd .emacs.d
+ls
+cd elpa
+ls
+cd pdf-tools-0.20
+ls
+chmod a+x ./*
+sudo chmod a+x ./*
+e
+cd 
+cd .emacs.d/elpa
+ls
+cd pdf-tools-0.20
+ls
+cd ..
+sudo chmod a-x ./*.el 
+sudo chmod a-x ./ *.el 
+sudo chmod a-x  *.el 
+sudo chmod a-x ./*.el 
+sudo chmod a-x ./*el 
+sudo chmod a-x ./*
+ls
+cd pdf-tools-0.20
+ls
+cd pdf-tools-0.20
+sudo a+r pdf-tools-0.20
+ls
+cd p
+cd pdf-tools-0.20
+sudo cd pdf-tools-0.20
+ls
+sudo cd pdf-tools-0.20
+cd pdf-tools-0.20
+ls -l pdf-tools-0.20
+sudo ls -l pdf-tools-0.20
+sudo chmod  a+x  pdf-tools-0.20
+cd pdf-tools-0.20
+ls
+sudo chmod a+r ./*
+ls
+e
+ls
+ls -l
+cd ..
+ls
+cd pdf-tools-0.20
+ls
+dmesg
+cp Desktop/49d504cb.jpg p/dni/ni/stuff.jpg
+cd p/dni/ni
+make OBJS=syukudai.cpp
+cd p/dni/x64-Release
+ls
+open stuff.jpg
+rm stuff.jpg
+mv stuff.jpg ~/p/dni/x64-Release
+rm stuff.jpg
+mv stuff.jpg ~/p/dni/x64-Release
+./main
+cd
+cp Desktop/49d504cb.jpg p/dni/ni/stuff.jpg
+cd -0
+mv stuff.jpg ~/p/dni/x64-Release
+./main
+make OBJS=syukudai.cpp
+./main
+emacs -debug-init
+emacs --debug-init
+cd .emacs.d
+ls
+cd .python-environments
+ls
+cd default
+ls
+cd ../..
+cd elisp/python-environment
+ls
+cd emacs-python-environment
+ls
+E python-environment.el
+ce .emacs.d
+cd .emacs.d
+ls
+ls -l el
+ls -l elpa
+cd ..
+ls
+cd .emacs.d
+ls -l 
+cd .emacs.d
+ls
+ls -l
+cd elpa
+ls -l
+chown raso:raso pdf-tools-0.20
+sudo chown raso:raso pdf-tools-0.20
+ls -l
+e
+cd ..
+ls
+cd elisp
+ls
+ls -l
+cd ..
+ls
+cd ..
+ls -l
+cd ..
+ls
+cd raso/.emacs.d
+ls
+ls -l
+ls -la
+cd .python-environments
+ls
+default
+ls
+echo $EMACS
+echo EMACS
+sudo find -name "emacs"
+sudo find / -name "emacs"
+sudo find / -name ".emacs"
+sudo find / -name ".emacs.d"
+cd /etc/emacs
+ls
+ls -l
+cd site-start.d
+ls
+cd .
+ls -l
+cd ..
+sls
+e
+cd 
+cd .emacs.d
+ls
+cd elpa
+ls
+cd pdf-tools-0.20
+ls
+chmod a-x ./*
+ls
+sudo chmod a-x ./*
+ls
+chown raso:raso ./*
+sudo chown raso:raso ./*
+ls
+ls -l
+cd images
+ls
+ls -l ./images
+sudo 
+ls -l
+cd 
+ls -l
+cd -0
+ls
+cd ../el
+cd ../elpa
+ls
+cd pdf-tools-0.20
+chmod a+xw images
+ls
+chmod a-x images
+ls
+chmod a-w images
+ls
+cd images
+chmod a+x images
+cd images
+ls
+e
+cd elp
+cd .
+cd
+cd dotfiles
+ls
+ls -al
+cd .emacs.d
+ls
+ls -l
+cd elpa
+ls
+e
+find ~/ -name "deferred.el"
+cd auto-complete-
+ls
+cd auto-complete-1.4
+ls
+sudo ls- l
+ls -l
+ls
+chmod a+x ./*
+ls
+e
+ls
+e
+ls
+cd pdf-tools-0.20
+ls
+ls -l
+cd ..
+ls
+cd elisp
+ls
+cd ..
+ls
+ls -l
+cd elpa/pdf-tools-0.20
+ls
+cd images
+ls
+ls -l
+chown raso:raso ./I
+chown raso:raso ./*
+sudo chown raso:raso ./*
+ls
+ls -l
+e
+ls
+ls -l
+cd ..
+ls
+ls -l
+cd images
+ls
+ls -l
+cd ..
+ls
+E epdfinfo
+E README.org
+pkill emacs
+e
+cd ..
+ls
+rm -rf pdf-tools-0.20
+sudo rm -rf pdf-tools-0.20
+e
+emacsclient -c
+emacs -c
+cd univ/tex
+ls
+emacsclient -c make_web.pdf
+sudo pacman -S ghostscript
+sudo apt-get install ghostscript
+e
+ls
+ls -l
+cd pdf-tools-0.20
+ls
+ls -l
+cd images
+ls
+ls -l
+e
+emacs -c &
+emacs -nw &
+emacs --help
+cd .emacs.d/elpa
+ls
+rm -rf pdf-tools-0.20
+e
+cd
+cd Documents
+ls
+cd pdf-tools-master
+ls
+./autogen.sh
+ls
+./configure
+sudo apt-get install poppler-data
+sudo apt-get install poppler-utils
+./co
+./config
+./configure
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install libpoppler-glib-dev
+sudo apt-get install libpoppler-glib8
+sudo apt-get install libpoppler-glib-doc
+./configure
+sudo apt-get install libpoppler-dev
+sudo apt-get install libpng-dev
+sudo apt-get install libpng-dev libz-dev
+sudo apt-get install libpoppler-private-dev
+sudo apt-get install imagemagick
+./configure
+sudo aptitude install libpng-dev libz-dev
+cd Do
+cd Documents
+ls
+cd poppler-0.29.0
+ls
+cat README
+cat README-XPDF
+ls
+./configure
+make
+sudo make installl
+sudo make install
+cd
+cd Do
+cd Documents
+ls
+cd pdf-tools-master
+ls
+./config
+./configure
+sudo apt-get install libpoppler-private-dev
+./configure
+./autogen.sh
+./configure
+ls
+cat README.org
+ cd
+./autogen.sh
+cd -0
+ls
+cd ..
+ls
+ cd pdf-tools-master
+ls
+cd ..
+ls
+rm pdf-tools-master
+rm -rf pdf-tools-master
+cd
+cd Downloads
+ls
+open pdf-tools-master.zip
+cd pdf-tools-master
+ls
+./autogen.sh
+./configure
+E README.org
+cat README.org
+greb "private" > cat README.org 
+grep "private" > cat README.org 
+grep private > cat README.org 
+grep p > cat README.org 
+grep "p > cat README.org \
+n
+cat README.org
+sudo aptitude install libpoppler-private-dev 
+./configure
+cd Documents/pdf-tools-master
+ls
+./autogen.sh
+./configure
+cd ..
+ls
+cd poppler-0.29.0
+ls
+./install-sh
+cd poppler
+ls
+cd ..
+ls
+cd pdf-tools-master
+ls
+./make
+./configure
+sudo apt-get remove libpoppler-private-dev
+./configure
+sudo apt-get install libpoppler-private-dev
+./configure
+cd ../poppler-0.29.0
+./configure --prefix=/usr     \\
+            --sysconfdir=/etc \\
+            --disable-static  \\
+            --enable-xpdf-headers &&\
+
+./configure --prefix=/usr     \\
+            --sysconfdir=/etc \\
+            --disable-static  \\
+            --enable-xpdf-headers \
+\
+\
+
+sudo make install
+ls
+cd ../pdf-tools-master
+ls
+./configure
+cd ../poppler-0.29.0
+ls
+cd ..
+cd pdf-tools-master
+./autogen.sh
+./configure
+cd ..
+ls
+cd Documents/poppler-0.29.0
+./configure --enable-xpdf-headers
+make
+sudo make install
+cd ../pdf-tools-master
+ls
+./autogen.sh
+./configure
+make
+sudo make install
+ls
+lse
+e
+pkill emacs
+e
+sudo apt-get install ghostscript
+cd Documents
+cd twittering-mode-master
+ls
+make
+cp twittering-mode.el ~/.emacs.d/elisp
+w
+e
+cd .emacs.d/elisp
+ls
+rm twittering-mode.el
+cp ~/Documents/twittering-mode-master/twittering-mode.el ./
+e
+cd p/dni
+ls
+python test.py
+python log3.py
+e
+python log3.py
+estimating
+cd p/dni
+python log3.py
+cd p/dni
+python log3.py
+cd p/dni
+cd ni
+make OBJS=depth8.cpp
+cp depth8.cpp depth8-1.cpp
+e
+cd ..
+python log3.py
+cd p/dni/ni
+cd .
+cd ..
+python log3.py
+chromium-browser
+python log3.py
+chromium-browser
+python log3.py
+e
+stty -p 
+stty --help
+stty -c speed
+stty -F /dev/ttyUSB0
+ls /dev
+ls /dev/ttyUSB0
+stty -F /dev/ttyUSB0
+cat < /dev/ttyUSB0
+cd p/dni/ni
+make OBJS=robominton1.cpp
+cd p/dni/x64-Release
+./main
+make OBJS=robominton1.cpp
+cd p/dni/x64-Release
+make OBJS=robominton1.cpp
+./main
+make OBJS=robominton1.cpp
+./main
+make OBJS=robominton1.cpp
+./main
+make OBJS=robominton1.cpp
+./main
+make OBJS=robominton1.cpp
+./main
+make OBJS=robominton1.cpp
+./main
+make OBJS=robominton1.cpp
+./main
+make OBJS=robominton1.cpp
+./main
+cd p/dni/ni/
+make OBJS=robominton1.cpp
+chromium-browser
+make OBJS=robominton1.cpp
+cd p/dni/ni
+ls
+make OBJS=robominton1.cpp
+cd p/dni/x64-Release
+./main
+make OBJS=depth8
+rm main
+make OBJS=depth8
+make OBJS=depth8.cpp
+./main
+make OBJS=depth8.cpp
+./main
+cat < /dev/ttyUSB0
+./main
+cat < /dev/ttyUSB0
+stty -F ospeed 11520
+stty -F /dev/ttyUSB0 ospeed 115200
+stty -F /dev/ttyUSB0 
+./main
+cat < /dev/ttyUSB0
+make OBJS=depth8.cpp
+rm main
+make OBJS=robominton1.cpp
+./main
+make OBJS=robominton1.cpp
+./main
+make OBJS=robominton1.cpp
+./main
+make OBJS=robominton1.cpp
+./main
+cat < /dev/ttyUSB0
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+make OBJS=robominton1.cpp
+./main
+g++ test.cpp
+./a.out
+e
+./a.out
+e
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+cat < /dev/ttyUSB0
+./a.out
+cat < /dev/ttyUSB0
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+cat < /dev/ttyUSB0
+./a.out
+g++ test.cpp
+./a.out
+printf("%d\n",pos);
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+e
+g++ test.cpp
+e
+./a.out
+e
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+g++ test.cpp
+cat </dev/ttyUSB0
+./a.out
+g++ test.cpp
+./a.out
+cat </dev/ttyUSB0
+g++ test.cpp
+cat </dev/ttyUSB0
+g++ test.cpp
+cat </dev/ttyUSB0
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+g++ test.cpp
+cd p/dni/ni
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+g++ test.cpp
+./a.out
+cat < /dev/ttyUSB0
+g++ test.cpp
+./a.out
+stty -F /dev/ttyUSB0
+stty -F /dev/ttyUSB0 ospeed 115200
+./a.out
+cat < /dev/ttyUSB0
+./a.out
+stty -F /dev/ttyUSB0 
+echo "A100100" > /dev/ttyUSB0
+cat < /dev/ttyUSB0
+echo "A100100" > /dev/ttyUSB0
+cat < /dev/ttyUSB0
+echo "A100100" > /dev/ttyUSB0
+./a.out
+echo "A100100" > /dev/ttyUSB0
+g++ test.cpp
+echo "A100100" > /dev/ttyUSB0
+./a.out
+cat < /dev/ttyUSB0
+stty -F /dev/ttyUSB0 9600
+cat < /dev/ttyUSB0
+stty -F /dev/ttyUSB0 115200
+cat < /dev/ttyUSB0
+echo "A100100" > /dev/ttyUSB0
+cat < /dev/ttyUSB0
+echo "A100100" > /dev/ttyUSB0
+stty -F /dev/ttyUSB0
+cat < /dev/ttyUSB0
+i
+cat < /dev/ttyUSB0
+dmesg
+cat /dev/ttyUSB0
+cat < /dev/ttyUSB0
+stty -F /dev/ttyUSB0
+stty -F /dev/ttyUSB0 ospeed 115200
+cat < /dev/ttyUSB0
+stty -F /dev/ttyUSB0
+cat < /dev/ttyUSB0
+cd p/dni/ni
+./a.out
+cd p/dni/x64-Release
+./main
+make OBJS=robominton1.cpp
+./main
+make OBJS=robominton1.cpp
+./main
+make OBJS=robominton1.cpp
+./main
+make OBJS=robominton1.cpp
+./main
+make OBJS=robominton1.cpp
+./main
+make OBJS=robominton1.cpp
+./main
+cat < /dev/ttyUSB0
+cd .emacs.d/elisp
+ls
+mkdir ac-dict
+cp ~/Desktop/auto-complete.el ./
+cp ~/Downloads/auto-complete-1.3.1
+cp ~/Downloads/auto-complete-1.3.1/*.el ./
+cd .emacs.d
+mkdir ac-dict
+cd elisp
+rm -r ac-dict
+cp ~/Downloads/auto-complete-1.3.1/dict/*-mode ../ac-dict
+cd ../ac-dict
+ls
+e
+cd ..
+cd ac-dict
+ls
+cd ../elisp
+cd
+cd ~/Downloads/auto-complete-1.3.1
+ls
+cd ..
+ls
+cd elpa
+ls
+rm -rf auto-complete-1.4
+e
+cd ..
+cd elisp
+ls
+rm auto-complete*
+d ..
+e
+ls
+cd ..
+cd elpa
+ls
+cd ..
+ls
+cd elpa
+ls
+cd ../elisp
+ls
+cp *.el ~/.emacs.d/elisp
+e
+rm auto-complete*
+cd ~/Documents
+ls
+cd auto-complete-master
+ls
+cp *.el ~/.emacs.d/elisp
+cp dict/*mode ~/.emacs.d/ac-dict
+e
+cd
+cd .emacs.d/elisp
+ls
+rm auto-complete*
+rm fuzzy.el
+ls
+cd ..
+cd elpa
+ls
+cd auto-complete-20141228.633
+ls
+cd dict
+ls
+cd ..
+e
+cd ..
+ls
+e
+cd ../
+ls
+cd conf
+ls
+cd
+cd .emacs.d/elisp
+cd ../elpa/
+ls
+rm auto-complete-auctex-readme.txt
+exit
+e
+cd ~/Documents
+ls
+git clone --recursive https://github.com/capitaomorte/yasnippet
+ls
+mv -v yasnippet ~/.emacs.d/elisp
+cd ~/.emacs.d/elisp
+cd yasnippet
+ls
+cd yasmate
+ls
+cd ..
+ls
+e
+cd -8
+ls auto-install.el
+git clone https://github.com/auto-complete/auto-complete.git
+git clone https://github.com/auto-complete/popup-el.git
+ls
+mv -v auto-complete ~/.emacs.d/elisp
+mv popup-el ~/.emacs.d/elisp
+e
+cd .emacs.d/elpa
+ls
+e
+git clone https://github.com/yasuyk/achelm/ac-helm.el
+git clone https://github.com/yasuyk/achelm.git
+git clone https://github.com/yasuyk/ac-helm.git
+ls
+cd ac-helm
+ls
+cp ac-helm.el ~/.emacs.d/elisp
+e
+cd .emacs.d
+rm init.el
+mv _init.el init.el
+e
+cd ~/D
+cd ~/Downloads
+ls
+cd ../Documents
+cd auto-complete-master/
+ls
+make install
+sudo apt-get install cask
+cask
+ls
+make
+nano README.md
+cd .emacs.d
+ls
+mv -v ac-dict elisp
+exit
+e
+cd elisp/ac-dict
+ls
+E c++-mode
+e
+cd ../..
+ls
+cd el
+cd elpa
+ls
+rm auto-complete-20141228.633/
+rm -rf auto-complete-20141228.633/
+e
+cd ..
+ls
+E auto-complete-readme.txt
+mv auto-complete-master
+mv -v auto-complete-master auto-complete
+cd auto-complete
+ls
+make byte-compile
+make
+ls
+make byte-compile
+cask
+curl -fsSkL https://raw.github.com/cask/cask/master/go | python
+cd ..
+sudo apt-get install curl
+curl -fsSkL https://raw.github.com/cask/cask/master/go | python
+cask upgrade
+export PATH="/home/raso/.cask/bin:$PATH"
+cask upgrade
+cd ..
+i
+cask init
+cd .emacs.d
+cask init
+export PATH="/home/raso/.cask/bin:$PATH"
+cask init
+ls
+cd auto-complete
+ls
+make byte-compile
+cd elisp
+ls
+cd auto-complete
+ls
+cd ..
+rm -r auto-complete
+rm -rf auto-complete
+mkdir auto-complate
+mv -v auto-complate/auto-complete
+mv -v auto-complate auto-complete
+cp *.el *.elc ~/.emacs.d/elisp/auto-complete
+cp -r dict ~/.emacs.d/elisp/auto-complete
+e
+/home/raso/.emacs.d/elisp/auto-complete/dict
+ls
+e
+cd..
+cd /
+sudo fine -name ".emacs"
+sudo find -name ".emacs"
+sudo find -name ".emacs.d"
+sudo find -name ".init-emacs"
+sudo find -name "emacs"
+cd auto-complete
+ls
+E auto-complete
+E auto-complete.el
+E auto-complete-config.el
+e
+cd 
+cd .emacs.d/elisp
+cd popup-el
+ls
+cd ..
+rm -rf popup-el
+e
+cd /
+sudo find -name ".emacs.d"
+e
+sudo find -name ".emacs.d"
+sudo find -name "init.el"
+sudo find -name ".emacs"
+cd 
+cd .emacs.d/elisp/
+rm -rf auto-complete
+cd
+cd Documents/auto-complete-1.4.0
+ls
+make byte-compile
+make 
+mkdir auto-complete
+cp *.el ~/.emacs.d/elisp/auto-complete
+cd auto-complete
+mkdir dict
+rm -r dict
+cp dict ~/.emacs.d/elisp/auto-complete
+cp -r dict ~/.emacs.d/elisp/auto-complete
+e
+cd
+cd Documents
+ls
+wget -O-  http://ftp.gnu.org/gnu/emacs/emacs-24.4.tar.xz | tar xJvf -
+./configure --disable-largefile --with-x-toolkit=motif --without-toolkit-scroll-bars \\
+  --without-xaw3d --without-xim --without-compress-info --without-sound --without-pop \\
+  --without-sync-input --without-xpm --without-tiff --without-rsvg --without-gconf \\
+  --without-gsettings --without-selinux --without-gpm --without-makeinfo --with-x && make \\
+  && sudo make install
+cd emacs-24.4
+./configure --disable-largefile --with-x-toolkit=motif --without-toolkit-scroll-bars \\
+  --without-xaw3d --without-xim --without-compress-info --without-sound --without-pop \\
+  --without-sync-input --without-xpm --without-tiff --without-rsvg --without-gconf \\
+  --without-gsettings --without-selinux --without-gpm --without-makeinfo --with-x && make \\
+  && sudo make install
+emacs24
+emacs24-x
+sudo make install
+./configure --disable-largefile --with-x-toolkit=motif --without-toolkit-scroll-bars \\
+  --without-xaw3d --without-xim --without-compress-info --without-sound --without-pop \\
+  --without-sync-input --without-xpm --without-tiff --without-rsvg --without-gconf \\
+  --without-gsettings --without-selinux --without-gpm --without-makeinfo --with-x && make \\
+ 
+motif
+Motif
+sudo apt-get install motif-clients
+./configure --disable-largefile --with-x-toolkit=motif --without-toolkit-scroll-bars \\
+  --without-xaw3d --without-xim --without-compress-info --without-sound --without-pop \\
+  --without-sync-input --without-xpm --without-tiff --without-rsvg --without-gconf \\
+  --without-gsettings --without-selinux --without-gpm --without-makeinfo --with-x && make \\
+ 
+sudo apt-get purge motif-clients
+./configure --disable-largefile --with-x-toolkit=motif --without-toolkit-scroll-bars \\
+  --without-xaw3d --without-xim --without-compress-info --without-sound --without-pop \\
+  --without-sync-input --without-xpm --without-tiff --without-rsvg --without-gconf \\
+  --without-gsettings --without-selinux --without-gpm --without-makeinfo --with-x --without-motif
+./configure --help
+./configure --help | grep motif
+./configure --help | grep Motif
+./configure --help
+./configure --help | grep Motif
+./configure --disable-largefile --with-x-toolkit=motif --without-toolkit-scroll-bars \\
+  --without-xaw3d --without-xim --without-compress-info --without-sound --without-pop \\
+  --without-sync-input --without-xpm --without-tiff --without-rsvg --without-gconf \\
+  --without-gsettings --without-selinux --without-gpm --without-makeinfo --with-x --without-motif
+./configure --help | grep Motif
+./configure --help | grep motif
+./configure --help
+./configure --help | grep -n motif
+./configure --help | grep -n gtk3
+./configure --help | sed -n '129,132p' 
+./configure --disable-largefile --with-x-toolkit=KIT --without-toolkit-scroll-bars \\
+  --without-xaw3d --without-xim --without-compress-info --without-sound --without-pop \\
+  --without-sync-input --without-xpm --without-tiff --without-rsvg --without-gconf \\
+  --without-gsettings --without-selinux --without-gpm --without-makeinfo --with-x --without-motif
+./configure --disable-largefile --without-toolkit-scroll-bars \\
+  --without-xaw3d --without-xim --without-compress-info --without-sound --without-pop \\
+  --without-sync-input --without-xpm --without-tiff --without-rsvg --without-gconf \\
+  --without-gsettings --without-selinux --without-gpm --without-makeinfo --with-x --without-motif
+./configure --disable-largefile --without-toolkit-scroll-bars \\
+  --without-xaw3d --without-xim --without-compress-info --without-sound --without-pop \\
+  --without-sync-input --without-xpm --without-tiff --without-rsvg --without-gconf \\
+  --without-gsettings --without-selinux --without-gpm --without-makeinfo --with-x --without-motif -with-gif=no
+sudo apt-get install libtinfo
+./configure --help | grep -n tputs
+./configure --help | grep -n tput
+./configure --disable-largefile --without-toolkit-scroll-bars \\
+  --without-xaw3d --without-xim --without-compress-info --without-sound --without-pop \\
+  --without-sync-input --without-xpm --without-tiff --without-rsvg --without-gconf \\
+  --without-gsettings --without-selinux --without-gpm --without-makeinfo --with-x --without-motif -with-gif=no
+sudo apt-get install libncurses5-dev
+./configure --disable-largefile --without-toolkit-scroll-bars \\
+  --without-xaw3d --without-xim --without-compress-info --without-sound --without-pop \\
+  --without-sync-input --without-xpm --without-tiff --without-rsvg --without-gconf \\
+  --without-gsettings --without-selinux --without-gpm --without-makeinfo --with-x --without-motif -with-gif=no
+naje
+make
+sudo make install
+emacs-24.4
+e
+cd
+nano .zshrc
+e
+i
+e
+i
+nano .zshrc
+i
+e
+i
+e
+cd .emacs.d/elisp/auto-complete
+ls
+rm -rf ./* 
+rm  ./* 
+ls
+rm  ./* 
+ls
+rm -rf dict
+cd Documents/auto-complete
+ls
+cp *.el *elc ~/.emacs.d/elisp/auto-complete
+cp -r dict ~/.emacs.d/elisp/auto-complete
+e
+sudo apt-get install gtk2-engines-pixbuf
+e
+cd 
+cd .emacs.d
+rm init.el
+mv _init.el init.el
+e
+ls
+E init.el
+e
+ls
+cd 
+cd .emacs.d/elisp
+ls
+cd ..
+ls
+nano init.el~
+rm init.el
+mv init.el~ init.el
+e
+nano init.el
+gedit init.el
+e
+cd elisp
+rm -rf auto-complete
+e
+.emacs.d/elisp
+rm popup.el
+cp ~/Desktop/popup.el ./
+e
+cd ../elpa
+ls
+mv -v popup-0.5 ~/Desktop
+e
+cd auto-complete-20141228.633
+ls
+cd dict
+ls
+cd Dro
+cd
+cd Dropbox
+ls
+E text.txt
+e
+cd /
+sudo fine -name "ptex2pdf"
+sudo find -name "ptex2pdf"
+cd usr/bin/
+sudo cp ptex2pdf /home/raso/.emacs.d/elisp/yatex1.77/
+e
+cd 
+cd .emacs.d/elisp/yatex1.77
+mkdir texbin
+mv ptex2pdf texbin
+e
+cd ../..
+elpa
+ls
+e
+cd pdf-tools-0.40
+ls
+e
+cd ..
+ls
+rm -rf rm pdf-tools-0.40
+ls
+cd Documents/pdf-tools-master
+ls
+make install-server-deps
+./config
+./configure
+make
+make install
+ls
+sudo make install
+ls
+e
+cd .emacs.d/elisp/yatex1.77/texbin
+rm ptex2pdf
+cp ~/Downloads/ptex2pdf.lua ./ptex2pdf
+ls
+e
+pkill emacs
+pd
+pdf
+e
+cdls
+ls
+chmod -a
+chmod -u ptex2pdf
+ls -l
+ls
+chmod -u+x ptex2pdf
+ls
+e
+chmod -u-x ptex2pdf
+ls
+chmod -a+x ptex2pdf
+ls -l
+chmod -a+x ptex2pdf
+chmod a+x ptex2pdf
+ls
+ls -l
+chmod a+r ptex2pdf
+ls
+ls -l
+cd ..
+cd ../..
+cd elpa
+ls
+cd pdf-tools-0.40
+ls
+epdfinfo	
+cd ..
+ls
+cd ..
+cd elisp/pop
+cd elisp
+cd univ/tex
+ls
+mkdir report2_4
+cp report2_3/report2_1.tex report2_4
+e
+e
+cd 
+cd Documents
+git clone git://github.com/tarao/term-plus-all.git
+ls
+cd term-plus-all
+git submodule update --init
+make emacs
+cd
+ls
+cd Documents/term-plus-all
+ls
+cd lib
+ls
+cd evil
+ls
+cd ..
+cp -r  lib ~/.emacs.d/elisp
+cd
+cd univ/tex/report2_4
+mv report2_1.tex report2_4.tex
+emacs24 report2_4.tex
+cd ~/Documents/term-plus-all
+ls
+cd lib
+ls
+cd anything-config
+ls
+cd ..
+ls
+cd ..
+ls
+cat term+mux.el
+cd main/l
+cd main/
+ls
+cd term-plus-mux-el
+ls
+cd ..
+cp -r  main ~/.emacs.d/elisp
+e
+poppler-data
+sudo apt-get install poppler-data
+sudo apt-get install poppler-utils
+sudo apt-get install poppler-dbg
+e
+cd Documents
+poppler-0.30.0
+ls
+make
+./configure
+make
+sudo make install
+ls
+e
+cd 
+cd .emacs.d/elpa
+ls
+cd ..
+cd elisp
+cd ..
+test
+ls
+e
+sudo ldconfig -n /usr/local/lib
+e
+cd Documents
+rm -rf pdf-tools-master
+cd pdf-tools-master
+make install-server-deps
+make
+cask
+export PATH="/home/raso/.cask/bin:$PATH"
+make
+ls
+sudo make install
+cd lisp
+ls
+cd ..
+ls
+cd dist
+ls
+e
+E pdf-tools-readme.txt
+ls
+cd ..
+ls
+find ./ -name "tablsit.el"
+find  -name "tablsit.el"
+find  -name ./ "tablsit.el"
+find  -name  "tablsit.el"
+find  ./* -name  "tablsit.el"
+find  ./* -name  "tablist.el"
+find  ./* -name  "tablist"
+ls
+cd lisp
+ls
+cd ..
+ls
+cd dist
+ls
+tar tvf pdf-tools-0.50.tar
+ls
+tar tvf pdf-tools-0.50.tar
+cd ../../..
+ls
+cd Documents
+ls
+cd pdf-tools-0.40
+ls
+make install-server-deps
+./autogen.sh
+ls
+make
+./configure
+ls
+make
+sudo make install
+ls
+e
+cd
+cd .emacs.d
+ls
+chromium-browser
+cd univ/tex/report2_4
+ls
+rm report2_1*
+ls
+ctex report2_4
+ls
+rm report2_4.synctex.gz\(busy\)
+ls
+cd univ/tex
+python my_latex.py
+python
+chromium-browser
+python my_latex.py
+chromium-browser
+python my_latex.py
+chromium-browser
+python my_latex.py
+echo $PYTHONSTARTUP
+i
+python
+i
+python
+ls
+i
+echo $HOME
+i
+python
+20log10(2.0)
+python
+pkill emacs
+e
+cd univ/tex
+ls
+cd report2_4
+ls
+evince report2_4.pdf
+cp report2_4.pdf /media/raso/0913-3451/
+exit
+cd p/dni/ni
+mak robominton2.cpp
+make OBJS=robominton2.cpp
+grep
+cd kinect2
+ls
+cd OpenNI2
+ls
+cd Bin
+ls
+cd x64-Release
+ls
+cd ../
+;s
+ls
+cd ..
+ls
+cd Config
+ls
+cd OpenNI2
+ls
+cd Drivers
+ls
+cd ../../
+ls
+cd ..
+ls
+cat Makefile
+ls
+cat Makefile
+grep -r "CV_L"
+grep "CFLAGS"
+grep -r "CFLAGS"
+grep -r "-Werror"
+grep -r "\-Werror"
+grep -r "+= \-Werror"
+cd ThirdParty/PSCommon/BuildSystem/
+E CommonCppMakefile
+make OBJS=robominton2.cpp
+ls
+cd
+cd p/dni/x64-Release
+ls
+./main
+make OBJS=robominton2.cpp
+cd p/dni/x64-Release
+./main
+cd p/dni
+ls
+python log3.py
+make OBJS=robominton2.cpp
+cd p/dni
+make OBJS=robominton2.cpp
+touch log.txt
+make OBJS=robominton2.cpp
+ls
+make OBJS=robominton2.cpp
+./main
+make OBJS=robominton2.cpp
+./main
+make OBJS=robominton2.cpp
+./main
+cd p/dni/ni
+cd ..
+python log3.py
+make OBJS=robominton2.cpp
+cd x64-Release
+./main
+make OBJS=robominton2.cpp
+./main
+make OBJS=robominton2.cpp
+./main
+make OBJS=robominton2.cpp
+./main
+make OBJS=robominton2.cpp
+./main
+make OBJS=robominton2.cpp
+./main
+cd p/dni
+ls
+python log3.py
+make OBJS=robominton2.cpp
+./main
+ls
+python log3.py
+make OBJS=robominton2.cpp
+./main
+python log3.py
+make OBJS=robominton2.cpp
+./main
+python log3.py
+make OBJS=robominton2.cpp
+./main
+make OBJS=robominton2.cpp
+./main
+python log3.py
+make OBJS=robominton2.cpp
+./main
+python log3.py
+make OBJS=robominton2.cpp
+./main
+make OBJS=robominton2.cpp
+python log3.py
+make OBJS=robominton2.cpp
+./main
+python log3.py
+make OBJS=robominton2.cpp
+./main
+python log3.py
+make OBJS=robominton2.cpp
+./main
+make OBJS=robominton2.cpp
+./main
+make OBJS=robominton2.cpp
+./main
+make OBJS=robominton1.cpp
+rm main 
+make OBJS=robominton1.cpp
+./main
+cat < /dev/ttyUSB0
+./main
+make OBJS=robominton1.cpp
+./main
+cat < /dev/ttyUSB0
+make OBJS=robominton1.cpp'
+make OBJS=robominton1.cpp
+./main
+make OBJS=robominton1.cpp
+./main
+make OBJS=robominton1.cpp
+./main
+make OBJS=robominton1.cpp'
+make OBJS=robominton1.cpp
+./main
+stty -F /dev/ttyUSB0 
+stty -F /dev/ttyUSB0 ospeed 115200
+./main
+make OBJS=robominton1.cpp
+./main
+cat < /dev/ttyUSB0
+./main
+make OBJS=robominton1.cpp
+./main
+make OBJS=robominton1.cpp
+./main
+cat < /dev/ttyUSB0
+./main
+cat < /dev/ttyUSB0
+make OBJS=robominton1.cpp
+./main
+make OBJS=robominton1.cpp
+./main
+cat < /dev/ttyUSB0
+./main
+cat < /dev/ttyUSB0
+./main
+cat < /dev/ttyUSB0
+./main
+: 1421799403:0;cd p/dni/ni
+: 1421799403:0;ls
+: 1421799414:0;make OBJS=robominton2.cpp
+: 1421801676:0;cd p/dni
+: 1421801679:0;python log3.py
+: 1421802480:0;make OBJS=robominton2.cpp
+: 1421802583:0;python log3.py
+: 1421802593:0;cd p/dni/x64-Release
+: 1421802597:0;./main
+: 1421802640:0;make OBJS=robominton2.cpp
+: 1421802644:0;./main
+: 1421802685:0;make OBJS=robominton2.cpp
+: 1421802688:0;./main
+: 1421802709:0;make OBJS=robominton2.cpp
+: 1421802710:0;./main
+: 1421802738:0;make OBJS=robominton2.cpp
+: 1421802743:0;rm main
+: 1421802745:0;make OBJS=robominton2.cpp
+: 1421802748:0;./main
+: 1421809122:0;make OBJS=robominton2.cpp
+: 1421809145:0;./main
+: 1421809242:0;make OBJS=robominton2.cpp
+: 1421809245:0;./main
+: 1421809560:0;make OBJS=robominton2.cpp
+: 1421809565:0;./main
+: 1421809674:0;e
+: 1421809840:0;cd 
+: 1421809846:0;cd dotfiles
+: 1421809846:0;ls
+: 1421809850:0;git add .
+: 1421809853:0;ls -l
+: 1421809856:0;cd ..
+: 1421809856:0;ls
+: 1421809863:0;cd project/dotfiles.git
+: 1421809867:0;cd ..
+: 1421809867:0;ls
+: 1421809870:0;cd dotfiles.git
+: 1421809870:0;ls
+: 1421809874:0;cd ../..
+: 1421809875:0;ls
+: 1421810000:0;cp -r .emacs.d Desktop
+: 1421810013:0;cp -r .zsh.d Desktop
+: 1421810020:0;cp r .zshrc Desktop
+: 1421810024:0;cp -r .zshrc Desktop
+: 1421810025:0;ls
+: 1421810029:0;ls .emacs.d
+: 1421810034:0;cd dotfiles
+: 1421810036:0;ls -a
+: 1421810042:0;git pull
+: 1421810105:0;cd .git
+: 1421810106:0;ls
+: 1421810119:0;E config
+: 1421810258:0;cd ..
+: 1421810258:0;ls
+: 1421810263:0;ls -a
+: 1421810701:0;git push
+: 1421810990:0;git push -u origin master
+: 1421811213:0;git add .
+: 1421811221:0;ls
+: 1421811226:0;git add .
+: 1421811539:0;git add -ALL
+: 1421811542:0;git add . -ALL
+: 1421811552:0;git add . --ignore-erroras
+: 1421811555:0;git add . --ignore-errors
+: 1421811595:0;git init
+: 1421811602:0;git add .
+: 1421811621:0;ls
+: 1421811631:0;cd .git
+: 1421811631:0;ls
+: 1421811638:0;E config
+: 1421811670:0;cd ..
+: 1421811672:0;git add .
+: 1421811678:0;git init
+: 1421811688:0;cd .emacs.d/elisp
+: 1421811688:0;ls
+: 1421811692:0;la -a
+: 1421811694:0;ls -a
+: 1421811733:0;cd ..
+: 1421811738:0;git add .
+: 1421811749:0;cd .emacs.d/elisp/main/term-plus-mode-el
+: 1421811749:0;ls
+: 1421811754:0;cd lib
+: 1421811754:0;ls
+: 1421811757:0;cd ..
+: 1421811763:0;ls
+: 1421811765:0;cd ..
+: 1421811766:0;ls
+: 1421811773:0;rm -rf .git
+: 1421811778:0;cd ../..
+: 1421811779:0;ls
+: 1421811781:0;cd ..
+: 1421811782:0;ls
+: 1421811785:0;cd dotfiles
+: 1421811788:0;git add .
+: 1421811808:0;cd .git/modules/
+: 1421811808:0;ls
+: 1421811811:0;ls -a
+: 1421811813:0;cd .emacs.d
+: 1421811814:0;ls
+: 1421811817:0;ls -a
+: 1421811827:0;cd elisp/
+: 1421811828:0;ls
+: 1421811830:0;cd el-get
+: 1421811831:0;ls
+: 1421811836:0;cd ..
+: 1421811842:0;cd ../../..
+: 1421811845:0; cd ../
+: 1421811846:0;ls
+: 1421811855:0;mv -v .git ~/Desktop
+: 1421811858:0;git init
+: 1421811863:0;ls
+: 1421811867:0;git add .
+: 1421811880:0;cd .git/
+: 1421811881:0;ls
+: 1421811885:0;cd ..
+: 1421811886:0;ls
+: 1421811889:0;git add .
+: 1421811900:0;git init
+: 1421811904:0;git add .
+: 1421811953:0;git status
+: 1421811974:0;git add .emacs.d
+: 1421811981:0;git add .zsh.d
+: 1421811989:0;git status
+: 1421812076:0;cd .git
+: 1421812076:0;ls
+: 1421812079:0;E config
+: 1421818118:0;./main
+: 1421820427:0;E config
+: 1421820430:0;e
+: 1421820436:0;E config
+: 1421820507:0;git push
+: 1421820516:0;git remote add .
+: 1421820531:0;git remote -f add .
+: 1421820545:0;git remote add -f .
+: 1421820605:0;git remote add -f . https://github.com/rasorasi/
+: 1421820611:0;git remote add -f . https://github.com/rasorasi
+: 1421820619:0;git remote add -f .. https://github.com/rasorasi
+: 1421821075:0;c ..
+: 1421821077:0;cd ..
+: 1421821084:0;E .gitignore
+: 1421821108:0;git add .
+: 1421821114:0;git init
+: 1421821123:0;cd .emacs.d/elisp/main
+: 1421821124:0;ls
+: 1421821128:0;cd term-plus-mode-el
+: 1421821129:0;ls
+: 1421821131:0;cd lib
+: 1421821131:0;ls
+: 1421821134:0;cd multi-mode
+: 1421821134:0;ls
+: 1421821142:0;ls -a
+: 1421821146:0;cd ../../../..
+: 1421821149:0;cd ..
+: 1421821167:0;find -name ./* ".git"
+: 1421821183:0;find ./*  -name  ".git"
+: 1421821208:0;cd elisp/main/term-plus-
+: 1421821213:0;cd elisp/main/term-plus-el
+: 1421821213:0;ls
+: 1421821223:0;ls -a
+: 1421821228:0;E .git
+: 1421821529:0;rm .git
+: 1421821533:0;cd ../../..
+: 1421821534:0;ls
+: 1421821545:0;rm session.10*
+: 1421821546:0;cd ..
+: 1421821547:0;ls
+: 1421821555:0;git add .
+: 1421821573:0;cd .emacs.d/elisp/main/term-plus-mode-el
+: 1421821573:0;ls
+: 1421821577:0;rm .git
+: 1421821581:0;cd ../../..
+: 1421821583:0;cd ..
+: 1421821585:0;git add .
+: 1421821599:0;cd .emacs.d/elisp/main/ls
+: 1421821602:0;cd .emacs.d/elisp/main/
+: 1421821603:0;ls
+: 1421821612:0;rm term-plus-ash-el/.git
+: 1421821623:0;rm term-plus-evil-el/.git
+: 1421821638:0;rm term-plus-el/.git
+: 1421821648:0;rm term-plus-ki-el
+: 1421821654:0;rm term-plus-ki-el/.git
+: 1421821660:0;rm term-plus-mux-el/.git
+: 1421821662:0;git add .
+: 1421821672:0;cd ../
+: 1421821673:0;ls
+: 1421821684:0;cd lib
+: 1421821742:0;rm -R .git
+: 1421821758:0;rm -R ./*.git
+: 1421821837:0;find ./ -name ".git" |rm
+: 1421821844:0;find ./ -name ".git" |xargs rm
+: 1421821852:0;git add .
+: 1421821893:0;git commit -m "add twit" 
+: 1421821914:0;git push orgin master
+: 1421821923:0;git push origin master
+: 1421822033:0;mv .git ~/
+: 1421822034:0;ls
+: 1421822039:0;ls -l
+: 1421822042:0;ls -a
+: 1421822052:0;mv ~/Desktop/.git ./
+: 1421822053:0;ls
+: 1421822056:0;ls -a
+: 1421822058:0;git add .
+: 1421822087:0;git status
+: 1421822101:0;git add .
+: 1421822120:0;git add --ignore-removal .

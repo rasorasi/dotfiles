@@ -1,0 +1,580 @@
+//
+//typedef  byte BYTE;
+//
+////アドレスadrsを読み取る
+//#define  Read(adrs)  			  	change(0x03, adrs, 0, 0)
+//
+////アドレスadrsにデータdataを書き込む
+//#define  Write(adrs, data)  	  		change(0x02, adrs, data, 0)
+//
+////アドレスadrsのマスクmskされていないビットだけにデータdataを書き込む
+//#define  BitMod(adrs, msk, data)  	change(0x05, adrs, msk, data)
+//
+////ステータスレジスタを読み取る
+//#define  ReadSt()  				change(0xa0, 0, 0 ,0)
+//
+////リセットする
+//#define  Reset()				  	change(0xc0, 0, 0, 0)
+//
+////受信ステータスレジスタを読み取る
+//#define ReadRXSt()  				change(0xb0, 0, 0 ,0)
+//
+//
+//#define Send0()					Write(A_TXB0CTRL, TXB0CTRL.byte)
+//
+//
+///*
+//レジスタアドレス
+//*/
+//#define A_TXB0CTRL 0x30
+//#define A_TXB1CTRL 0x40
+//#define A_TXB2CTRL 0x50
+//#define A_TXB0DLC  0x35
+//#define A_TXB1DLC  0x45
+//#define A_TXB2DLC  0x55
+//#define A_CNF1  0x2a
+//#define A_CNF2  0x29
+//#define A_CNF3  0x28
+//#define A_RXB1CTRL  0x70
+//#define A_RXB0CTRL  0x60
+//#define A_CANCTRL  0x0f
+//
+//// SPIポート定義
+//#define CAN_SPI_CS_BIT         5       //
+//#define CAN_SPI_SO_BIT         4       //
+//#define CAN_SPI_SCK_BIT        3        //
+//#define CAN_SPI_SI_BIT         2       //
+//
+//#define CAN_SPI_CS_DDR         DDRD     //
+//#define CAN_SPI_SO_DDR         DDRD     //
+//#define CAN_SPI_SCK_DDR        DDRD     //
+//#define CAN_SPI_SI_DDR         DDRD     //
+//
+//#define CAN_SPI_CS_PORT        PORTD    //
+//#define CAN_SPI_SO_PORT        PORTD    //
+//#define CAN_SPI_SCK_PORT       PORTD    //
+//#define CAN_SPI_SI_PORT        PIND     // 
+//
+//
+//// SPIポート ビット操作定義 (PIC、AVR共通)
+//#define CAN_SPI_CS_H    CAN_SPI_CS_PORT|=(1<<CAN_SPI_CS_BIT)
+//#define CAN_SPI_SO_H    CAN_SPI_SO_PORT|=(1<<CAN_SPI_SO_BIT)
+//#define CAN_SPI_SCK_H   CAN_SPI_SCK_PORT|=(1<<CAN_SPI_SCK_BIT)
+//
+//#define CAN_SPI_CS_L    CAN_SPI_CS_PORT&=~(1<<CAN_SPI_CS_BIT)
+//#define CAN_SPI_SO_L    CAN_SPI_SO_PORT&=~(1<<CAN_SPI_SO_BIT)
+//#define CAN_SPI_SCK_L   CAN_SPI_SCK_PORT&=~(1<<CAN_SPI_SCK_BIT)
+//
+//#define CAN_SPI_SI      (CAN_SPI_SI_PORT&(1<<CAN_SPI_SI_BIT))
+//
+//
+//
+////Define main file
+////#define	SS		LATBbits.LATB15
+//
+///********************************************************/
+////	This is list of TXBuffer and RXBuffer.
+////	TXBuffer are substituted ID , datalong and data by user.
+////  RXBuffer are substituted by Msg_c_read().
+////	
+///********************************************************/
+//
+//byte TXMsgID[2] = {0};		// ID MAX is 11bits (This used byte(8bit) for safety)
+//byte TXMsgLong = 0;		// This is set Date long (0~8)
+//byte TXMsgData[8] = {0};	// Data is usable by 8byte
+//
+//byte RXMsgID[2] = {0};     
+//byte RXMsgData[8] = {0};
+//
+///*** Copy to main file ***
+//
+//extern byte TXMsgID[2];
+//extern byte TXMsgLong;
+//extern byte TXMsgData[8];
+//
+//extern byte RXMsgID[2];
+//extern byte RXMsgData[8];
+//
+//*************************/
+//
+//union txb0ctrl{
+//	BYTE byte;
+//	struct {
+//		unsigned char TXP :2;	//優先順位 0(低)~3(高)
+//		unsigned char  :1;
+//		unsigned char  TXREQ :1; 
+//		unsigned char  :4; 		//Read only
+//		
+//	}bits;
+//
+//}TXB0CTRL;
+//
+//
+//
+//union txb1ctrl{
+//	BYTE byte;
+//	struct {
+//		unsigned char TXP :2;	
+//		unsigned char  :1;
+//		unsigned char  TXREQ :1; 
+//		unsigned char  :4; 		
+//		
+//	}bits;
+//
+//}TXB1CTRL;
+//
+//
+//
+//union txb2ctrl{
+//	BYTE byte;
+//	struct {
+//		unsigned char TXP :2;
+//		unsigned char  :1;
+//		unsigned char  TXREQ :1; 
+//		unsigned char  :4; 	
+//		
+//	}bits;
+//
+//}TXB2CTRL;
+//
+//
+//
+//////TXBnDLC
+//union txb0dlc{
+//  
+//	BYTE byte;
+//	struct {
+//		unsigned char DLC :4;	//DLC(0~8)
+//		unsigned char  :2;
+//		unsigned char RTR :1;
+//		unsigned char  :1;
+//		
+//	}bits;
+//
+//}TXB0DLC;
+//
+//
+//
+//union txb1dlc{
+//	BYTE byte;
+//	struct {
+//		unsigned char DLC :4;
+//		unsigned char  :2;
+//		unsigned char RTR :1;
+//		unsigned char  :1;
+//		
+//	}bits;
+//
+//}TXB1DLC;
+//
+//
+//
+//union txb2dlc{
+//	BYTE byte;
+//	struct {
+//		unsigned char DLC :4;
+//		unsigned char  :2;
+//		unsigned char RTR :1;
+//		unsigned char  :1;
+//		
+//	}bits;
+//
+//}TXB2DLC;
+//
+//
+//
+//union cnf1{
+//	BYTE byte;
+//	struct {
+//		unsigned char BRP :5;	
+//		unsigned char  SJW:4; 	
+//	}bits;
+//
+//}CNF1;
+//
+//
+//
+//
+//union cnf2{
+//	BYTE byte;
+//	struct {
+//		unsigned char PRSEG :3;	
+//		unsigned char  PHSEG1 :3;
+//		unsigned char  SAM :1;
+//		unsigned char  BTLMODE :1;
+//		
+//		 	
+//	}bits;
+//
+//}CNF2;
+//
+//
+//
+//union cnf3{
+//	BYTE byte;
+//	struct {
+//		unsigned char PHSEG2 :3;	
+//		unsigned char   :3;
+//		unsigned char  WAKFIL :1;
+//		unsigned char  SOF :1; 
+//		
+//		 	
+//	}bits;
+//
+//}CNF3;
+//
+//
+//
+//union canctrl{
+//	BYTE byte;
+//	struct {
+//		unsigned char CLKPRE :2;	
+//		unsigned char  CLKEN :1;
+//		unsigned char  OSM :1;
+//		unsigned char  ABAT :1;
+//		unsigned char REQOP :3;
+//		// 000 =  ノーマル・オペレーション・モード
+//		// 001 = スリープ・モード
+//		// 010 = ループバック・モード
+//		// 011 = リスン・オンリ・モード
+//		// 100 = コンフィギュレーション・モード　(デフォルト)
+//	}bits;
+//
+//}CANCTRL;
+//
+//
+//
+//union rxb0ctrl{
+//	BYTE byte;
+//	struct{
+//		unsigned char FILHIT0 :1; //RO
+//		unsigned char :1;
+//		unsigned char BUKT :1; //ロールオーバー
+//		unsigned char RXRTR :1; //RO
+//		unsigned char :1; 
+//		unsigned char RXM :2; // 11 = マスク、フィルタを使用しない
+//		unsigned char :1; 
+//	}bits;
+//}RXB0CTRL;
+//
+//
+//
+//union rxb1ctrl{
+//	BYTE byte;
+//	struct{
+//		unsigned char FILHIT :3; //RO
+//		unsigned char RXRTR:1; //RO
+//		unsigned char :1; 
+//		unsigned char RXM :2; // 11 = マスク、フィルタを使用しない
+//		unsigned char :1; 
+//	}bits;
+//}RXB1CTRL;
+//
+//
+///*
+//union txb0ctrl TXB0CTRL; 
+//
+//
+//union txb1ctrl TXB1CTRL;
+//union txb2ctrl TXB2CTRL; 
+//union txb0dlc TXB0DLC;
+//union txb1dlc TXB1DLC; 
+//union txb2dlc TXB2DLC;
+//union cnf1 CNF1; 
+//union cnf2 CNF2; 
+//union canctrl CANCTRL; 
+//union rxb0ctrl RXB0CTRL; 
+//union rxb1ctrl RXB1CTRL;
+//*/
+//
+//
+//byte msg_id = 0;
+//
+//
+//void setup()
+//{
+//	
+//  //SPIポートの初期化
+//  CAN_SPI_CS_DDR |= (1<<CAN_SPI_CS_BIT);      // output
+//  CAN_SPI_SO_DDR |= (1<<CAN_SPI_SO_BIT);      // output
+//  CAN_SPI_SCK_DDR |= (1<<CAN_SPI_SCK_BIT);    // output
+//  CAN_SPI_SI_DDR &= ~(1<<CAN_SPI_SI_BIT);     // input
+//  
+//  TXB0DLC.bits.DLC = 1;
+//  TXB0DLC.bits.RTR = 0;
+//  
+//	
+//  
+//	
+//  TXB0CTRL.bits.TXP = 0;
+//  TXB0CTRL.bits.TXREQ = 1;
+//  
+//  InitCAN();
+//  
+//  Serial.begin(9600);
+//
+//}
+//
+//    
+//
+//
+//
+//void loop(){
+//  int msg;
+//     /*
+//    	SetID( 0x00, TXMsgID);
+//	SendMsg(TXMsgID, 8, TXMsgData);
+//	Send0();
+///*
+//
+//    //Serial.println(cd,BIN);
+//    /*
+//    IDSet(&MsgBuf[1], 0x00);
+//    MsgBuf[6] = 0x01;
+//    MsgBuf[7] = 0x01;
+//    TXB0DLC.bits.DLC = 1;
+//    C_Write(MsgBuf + 1);
+//    Send0();
+//    BitMod(0x0c, 0x14, 0x14);
+//    */
+//    /*
+//   if(RxCheck(0)) {
+//      
+//     C_Read(MsgBuf + 1);
+//      msg = MsgBuf[1] << 3;
+//      msg |= MsgBuf[2] >> 5;
+//     BitMod(0x0c, 0x14, 0x14);
+//
+// 	}
+//*/	
+//  
+//    if(CheckRX(0)) {
+//	  	ReadMsg(RXMsgID, RXMsgData);
+//		msg_id = BackID(RXMsgID);
+//
+//
+//	  	 BitMod(0x0c, 0x14, 0x14);
+//	  	
+//	  	if(msg_id == 0x42) {
+//		  	BitMod(0x0c, 0x14, 0x14);
+//		  	if(TXMsgData[0] == 0x30)
+//		  	BitMod(0x0c, 0x14, 0x14);
+//		  	
+//		  }	
+//		  	
+//	  	if(msg_id == 0x23){
+//		  	BitMod(0x0c, 0x14, 0x14);
+//	  		SetID(0x41, TXMsgID);
+//	  		SendMsg(TXMsgID, TXMsgLong, TXMsgData);
+//		  	
+//		  }	
+//	  
+//	  }
+//
+//}
+//
+//
+//byte writeSPI1(byte data)
+//{
+//   byte i;  
+//  
+//   byte val = 0;  //SIportから読みだしたデータを格納しておく変数
+//   
+//   
+//  
+// //1バイト出力
+//   for(i=0;i<8;i++){
+//     
+//    
+//     //SOportから出力
+//      if(data & 0x80){
+//        //1
+//        CAN_SPI_SO_H;
+//      }else{
+//        //0
+//        CAN_SPI_SO_L;
+//        }
+//        data <<= 1;
+//        
+//        
+//        
+//        //SIportの読み取り
+//        val <<= 1;
+//        if(CAN_SPI_SI){
+//         val |= 1; 
+//        }
+//                       
+//
+//    CAN_SPI_SCK_H;
+//    CAN_SPI_SCK_L;
+//   }
+//  
+//  
+//  return(val);
+//}
+//
+//
+//
+///******************************************************/
+////		change is MCP2515 Data Trans
+////		adrs	CAN_Adrres
+////		arg1	Data
+////		inst	MCP2515Command
+////		arg2	Mask for Data
+///******************************************************/
+//byte change(byte inst, byte adrs, byte arg1, byte arg2)
+//{
+//	CAN_SPI_CS_L;
+//	byte read_data;
+//	writeSPI1(inst);
+//	writeSPI1(adrs);
+//	read_data = writeSPI1(arg1);
+//	if(arg2 != 0)
+//		writeSPI1(arg2);
+//	CAN_SPI_CS_H;
+//	
+//	return read_data;
+//}
+//
+///*****************************************************/
+////		Data_c_set is continuity Data Trans
+////		data		Data
+///*****************************************************/
+//void WriteDateC(byte *data)
+//{	
+//	int i;
+//	CAN_SPI_CS_L;
+//	writeSPI1(0x40);
+//	for(i = 0; i < 13; i++){
+//		writeSPI1(*(data + i));
+//		
+//	}	 
+//	CAN_SPI_CS_H;
+//		
+//}	
+//
+///*****************************************************/
+////		Data_c_read is continuity Data Trans
+////		data		Data
+///*****************************************************/
+//void ReadDateC(byte *data)
+//{	
+//	int i;
+//	CAN_SPI_CS_L;
+//	writeSPI1(0x90);
+//	for(i = 0; i < 13; i++){
+//		*(data + i) = writeSPI1(0);	
+//	}	 
+//	CAN_SPI_CS_H;
+//		
+//}	
+///***************************************************/
+////	  Rx_check() check that mcp2515 receive a masage
+////	  num		check buffer number
+///***************************************************/
+//
+//int CheckRX(byte num)
+//{
+//	if(ReadSt() & (0x01 + num)) return 1;
+//	else return 0;
+//}	 
+//
+//void SetID(byte msgid, byte *id){
+//	id[0] = (msgid >> 3);
+//	id[1] = (msgid << 5);
+//}
+//
+//byte BackID(byte *id){
+//	return (id[0]<<3) | (id[1]>>5);
+//}
+//
+//void ErrorCheck(){
+//	if((Read(0x2d)&0x3f)>0)
+//		BitMod(0x0c, 0x28,0x28);
+//}
+//
+////使えません orz
+//void SetFilter(byte flt){
+//	
+//	RXB0CTRL.bits.RXM = 1;
+//	Write(A_RXB0CTRL, RXB0CTRL.byte);
+//	
+//	Write(0x00, (flt >> 3));
+//	Write(0x01, (flt << 5));
+//
+//}
+//
+//void InitCAN()
+//{
+//	
+//	CNF1.bits.BRP = 4;		//baud rate prescaler
+//	CNF2.bits.PRSEG = 1;	//PropSeg bit long
+//	CNF2.bits.PHSEG1 = 6;	//PH1 bit long
+//	RXB0CTRL.bits.RXM = 3;	// Mask and Filter ...
+//	RXB1CTRL.bits.RXM = 3;	//... don't use
+//	CANCTRL.byte = 0x07;			 //set up normal mode
+//	
+//	Reset();
+//	
+//	//BitMod(0x0c, 0x14, 0x14);	//LED set a port RX0BF brigten
+//
+//
+//	Write(A_CNF1, CNF1.byte);
+//	Write(A_CNF2, CNF2.byte);
+//	BitMod(A_RXB0CTRL, RXB0CTRL.byte, RXB0CTRL.byte);
+//	BitMod(A_RXB1CTRL, RXB1CTRL.byte, RXB1CTRL.byte);
+//	
+//	
+//	Write(A_CANCTRL, CANCTRL.byte);
+//	
+//	
+//}
+///********************************************************/
+////	SendMsg() send a TXBuffer of TXMsg lists to other node 
+////  *id		TXMsgID 
+////	lng		TXMsgLong
+////	*data 	TXMsgData
+///********************************************************/
+//
+//void SendMsg(byte *id, byte lng, byte *data)
+//{
+//	int i;
+//	CAN_SPI_CS_L;
+//	writeSPI1(0x40);
+//	for(i = 0; i < 2; i++)
+//		writeSPI1(*(id + i));
+//	
+//	writeSPI1(0);	writeSPI1(0);
+//	writeSPI1(lng);
+//
+//	for(i = 0; i < 8; i++)
+//		writeSPI1(*(data + i));
+//
+//	CAN_SPI_CS_H;
+//	
+//	Send0();
+//}
+//
+///********************************************************/
+//// ReadMsg() read RXBuffer which  CAN controller receive from other node
+//// 	*id		RXMsgID
+//// 	*data	RXMsgData
+///********************************************************/
+//
+//
+//void ReadMsg(byte *id, byte *data)
+//{	
+//	int i;
+//	CAN_SPI_CS_L;
+//	writeSPI1(0x90);
+//	for(i = 0; i < 2; i++)
+//		*(id + i) = writeSPI1(0);	
+//	
+//	writeSPI1(0);writeSPI1(0);writeSPI1(0);
+//
+//	for(i = 0; i < 8; i++)
+//		*(data + i) = writeSPI1(0);
+//
+//	CAN_SPI_CS_H;
+//		
+//}	

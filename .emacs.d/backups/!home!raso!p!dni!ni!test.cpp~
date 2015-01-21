@@ -2,12 +2,59 @@
 #include <fstream>
 #include <string>
 
-int main(int argc, char* argv[]){
-	ofstream ofs("./test.txt");
+#include <stdio.h>
+#include <stdlib.h>
+#include <termio.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <getopt.h>
+#include <time.h>
+#include <errno.h>
+#include <string.h>
+#include <sys/time.h>
+#include <unistd.h>
 
-	ofs << "ham" << endl;
-	ofs << "egg" << endl;
-	ofs << "spam" << endl;
+
+using namespace std;
+
+struct termios TtyAttr;
+
+int DeviceSpeed = B115200;
+int ByteBits = CS8;
+
+fd_set ReadSetFD;
+
+int main(int argc, char* argv[]){
+
+
+	int fp = open( "/dev/ttyUSB0", O_RDWR| O_NONBLOCK );
+	fcntl(fp, F_SETFL, FNDELAY);
+
+	if ( fp < 0 )
+		printf("***SERIAL_NOT_CONNECT");
+	else
+		printf("***OK\n");
+
+	int pos;
+	
+	char row[120];
+
+	memset(&TtyAttr, 0, sizeof(struct termios));
+    TtyAttr.c_iflag = IGNPAR;
+    TtyAttr.c_cflag = DeviceSpeed | HUPCL | ByteBits | CREAD|CLOCAL;
+	TtyAttr.c_cc[VMIN] = 1;
+	
+
+	if (tcsetattr(fp, TCSANOW, &TtyAttr) < 0)
+	{
+		printf("Unable to set comm port\n");
+	}
+
+	write(fp,"A100100",7);
+
+	row = system("cat < /dev/ttyUSB0");
+
+
 
 	return 0;
 }

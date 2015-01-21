@@ -3,8 +3,8 @@
 (delete 'top initial-frame-alist)
 (delete 'left initial-frame-alist)
 (setq initial-frame-alist (append (list
-'(width . 79)
+'(width . 168)
 '(height . 39)
-'(top . 14)
-'(left . 704))
+'(top . 24)
+'(left . 0))
 initial-frame-alist))

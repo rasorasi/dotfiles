@@ -1,0 +1,4 @@
+session.*
+*.jpg
+*.png
+*.elc

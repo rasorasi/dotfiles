@@ -1,0 +1,252 @@
+#coding:utf-8
+
+
+import numpy as np
+import pylab as pl
+import numpy as np
+import math 
+from mpl_toolkits.mplot3d import Axes3D
+from matplotlib.patches import FancyArrowPatch
+from mpl_toolkits.mplot3d import proj3d
+
+#from matplotlib.font_manager import FontProperties
+
+params = {
+        "font.size": 13,
+        "font.family": "IPAGothic",
+    }
+pl.rcParams.update(params) 
+
+PI = math.pi
+
+D_100 = [  [ 2 , 100 , 0.80 , 650  , 1.95 ]    , 
+		   [ 2 , 200 , 0.83 , 650  , 3.8 ]	  , 
+		   [ 2 , 400 , 0.96 , 650  , 7.5  ]	  , 
+		   [ 2 , 700 , 1.79 , 650	 , 13	] , 
+		   [ 2 , 1000  , 2.8  , 650	 , 19	] , 
+		   [ 2 , 2000  , 11	  , 650	 , 38	] , 
+		   [ 2 , 4000  , 45	  , 700	 , 81	] , 
+		   [ 2 , 7000  , 150  , 800	 , 160	] , 
+		   [ 2 , 10000 , 380  , 1000 , 280	] , 
+		   [ 2 , 11000 , 520  , 1000 , 340	] , 
+		   [ 2 , 12000 , 740  , 1200 , 420	] , 
+		   [ 2 , 13000 , 840  , 1300 , 480	] , 
+		   [ 2 , 14000 , 1200 , 1400 , 560	] , 
+		   [ 2 , 15000 , 1300 , 1400 , 640	] , 
+		   [ 2 , 16000 , 1400 , 1300 , 650	] , 
+		   [ 2 , 17000 , 1500 , 1200 , 610	] , 
+		   [ 2 , 18000 , 1400 , 1100 , 580	] , 
+		   [ 2 , 19000 , 1400 , 900	 , 520	] , 
+		   [ 2 , 20000 , 1300 , 780	 , 490	] , 
+		   [ 2 , 21000 , 1200 , 700	 , 420	] , 
+		   [ 2 , 22000 , 1200 , 610	 , 400	] , 
+		   [ 2 , 23000 , 1100 , 540	 , 320	] , 
+		   [ 2 , 25000 , 1000 , 400	 , 300	] , 
+		   [ 2 , 30000 , 1000 , 260	 , 200	] , 
+		   [ 2 , 40000 , 800  , 130	 , 145	] , 
+		   [ 2 , 70000 , 650  , 36	 , 75	] , 
+		   [ 2 , 100000, 650  , 16	 , 20]]
+
+
+
+D_10 =[ [ 2 , 100   ,0.48  ,980	 , 0.21 ] , 
+		[ 2 , 200	,0.50  ,980	 , 0.40	] , 
+		[ 2 , 400	,0.72  ,980	 , 0.80	] , 
+		[ 2 , 700	,1.8   ,980	 , 1.4	] , 
+		[ 2 , 1000	,3.2   ,980	 , 2.0	] , 
+		[ 2 , 2000	,11	   ,700	 , 4.0	] , 
+		[ 2 , 4000	,46	   ,700	 , 8.4	] , 
+		[ 2 , 7000	,150   ,800	 , 17	] , 
+		[ 2 , 10000 ,420   ,1100 , 	31	] , 
+		[ 2 , 11000 ,610   ,1300 , 40	] , 
+		[ 2 , 12000 ,810   ,1600 , 50	] , 
+		[ 2 , 13000 ,1300  ,2000 , 70	] , 
+		[ 2 , 14000 ,2200  ,2700 , 110	] , 
+		[ 2 , 15000 ,4800  ,5200 , 215	] , 
+		[ 2 , 16000 ,9200  ,9200 , 420	] , 
+		[ 2 , 17000 ,4600  ,4000 , 200	] , 
+		[ 2 , 18000 ,2800  ,2200 , 120	] , 
+		[ 2 , 19000 ,2100  ,1500 , 87	] , 
+		[ 2 , 20000 ,1800  ,1100 , 67	] , 
+		[ 2 , 21000 ,1600  ,950	 , 53	] , 
+		[ 2 , 22000 ,1400  ,780	 , 47	] , 
+		[ 2 , 23000 ,1300  ,660	 , 41	] , 
+		[ 2 , 25000 ,1300  ,440	 , 33	] , 
+		[ 2 , 30000 ,980   ,260	 , 23	] , 
+		[ 2 , 40000 ,790   ,160	 , 15	] , 
+		[ 2 , 70000 ,700   ,38	 , 7.5	] , 
+		[ 2 , 100000,690   ,18	 , 5.0	] ]
+
+D2_100 =[]
+D2_10 =[]
+
+
+
+for l in D_100:
+	for i in range(5):
+		if(i== 2 or i == 3 or i == 4):
+			l[i] = float(l[i]) /1000
+
+for l in D_10:
+	for i in range(5):
+		if(i== 2 or i == 3 or i == 4):
+			l[i] = float(l[i]) /1000
+
+
+def Calc(A, R, L, C, Select):
+
+	ANS = []
+	
+	if Select == "I":
+	
+		for i in range(0, len(A)):
+
+			LCZI = []
+			
+			Omg = 2*PI * A[i][1]
+
+			XL = (Omg * L) * 1j
+			XC = 1/(Omg * C * 1j)
+			
+			Z = R + XL + XC
+
+
+
+			I = abs(A[i][0] / Z)
+
+			LCZI.append(I)
+			LCZI.append(XL)
+			LCZI.append(XC)
+			LCZI.append(abs(Z))
+
+
+			ANS.append(LCZI)
+
+	return ANS
+
+def Calc2(A,R):
+
+	ANS = []
+
+	
+	for a in A:
+		ILCZ = []
+		I = float(a[4])/R
+		ILCZ.append(I*1000)
+
+		XL = a[2]/I
+		XC = a[3]/I
+		ILCZ.append(XL)
+		ILCZ.append(XC)
+		ILCZ.append(R + XL + XC)
+
+		ANS.append(ILCZ)
+
+	return ANS
+		
+		
+def outable(table):
+	for t in table:
+		
+		for a in t:
+
+			if(a == t[-1]):
+				print str(round_to_2(a)) + " \\\\ \hline"
+			else:
+				print str(round_to_2(a)) + " &",
+
+
+
+def round_to_2(x):
+	
+	if x.imag != 0:
+		x = abs(x)
+		return round(x, 1-int(math.floor(math.log10(x)))) * 1j
+		
+	else:
+		return round(x, 1-int(math.floor(math.log10(x))))
+	
+
+
+def main():
+	
+	ANS10 = Calc2(D_10, 10)
+	ANS100 = Calc2(D_100, 100)
+
+	for i in range(len(ANS10)):
+		D_10[i].extend(ANS10[i])
+
+	for i in range(len(ANS100)):
+		D_100[i].extend(ANS100[i])
+
+		
+	#outable(D_10)
+
+
+	X10 = []
+	Y10 = []
+	for l in D_10:
+		X10.append(l[1])
+		Y10.append(l[5])
+
+	X100 = []
+	Y100 = []
+	for l in D_100:
+		X100.append(l[1])
+		Y100.append(l[5])
+
+		
+	Im = max(Y100)
+	Im2 = Im/math.sqrt(2)
+
+	print X100[18]
+	a_ =  (Y100[11] - Y100[10]) / (X100[11] -  X100[10] )
+	f1 = (Im2-Y100[10])/a_ + X100[10]
+
+	b_ =  (Y100[19] - Y100[18]) / (X100[19] -  X100[18] )
+	f2 = (Y100[18] - Im2)/a_ + X100[18]
+	
+
+	print "Q = " + str(16000/(f2-f1))
+	print "Q_ = " + str(1/100.0 * math.sqrt( 2.2e-3 /0.047e-6))
+
+
+	print "Im = " + str(Im)
+	print "Im/ v/2$ = " + str(Im2)
+	print "f1 = " +  str(f1)
+	print "f2 = " +  str(f2)
+
+
+	pl.plot(X100,Y100, label=u"$R=100\Omega$",color="black",linewidth=2.5)
+	#pl.plot(X100,Y100, label=u"100 $\Omega$",color="red",linewidth=2.5)
+	pl.plot([10e3,25e3], [Im2,Im2], label="$Im/\sqrt{2}[mA]$")
+
+
+	pl.plot([f1,f1],[0,Im2],color="blue",linestyle="--")
+	pl.annotate('$f1$',xy=(f1,Im2),xycoords='data',xytext=(f1-200,+5),arrowprops=dict(arrowstyle="->", connectionstyle="arc3,rad=.2"))
+
+	pl.plot([f2,f2],[0,Im2],color="red",linestyle="--")
+	pl.annotate('$f2$',xy=(f2,Im2),xycoords='data',xytext=(f2+500,+5),arrowprops=dict(arrowstyle="->", connectionstyle="arc3,rad=.2"))
+
+
+	#pl.xscale("log")
+	pl.xlim([10e3,25e3])
+
+	pl.xlabel(u'周波数Freq[Hz]')
+	pl.ylabel(u'回路電流I[mA]')
+
+	pl.legend(loc='upper right')
+
+	pl.grid(which='major', axis='y', linewidth=0.75, linestyle='-', color='0.75')
+	
+	pl.show()
+
+
+#	arrow = Arrow3D([0,0],[0,150],[0,0],mutation_scale=20,lw=3, arrowstyle="-|>",color = "#000000")
+#	ax.add_artist(arrow)
+	pl.show()
+
+
+if __name__=='__main__':
+	main()
+	

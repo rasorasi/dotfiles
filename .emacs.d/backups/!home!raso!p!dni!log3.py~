@@ -1,0 +1,278 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+# z = 500, x = 590, y = 442.5
+import numpy as np
+import pylab as pl
+import numpy as np
+import math 
+
+
+from mpl_toolkits.mplot3d import Axes3D
+from matplotlib.patches import FancyArrowPatch
+from mpl_toolkits.mplot3d import proj3d
+
+RATIO = 0.5
+
+GF = -9.8 /1000
+
+M_K = 5.0/0.24e-3
+
+Phi = lambda p: math.pi /360 *p
+
+PHI = Phi(-35)
+
+
+GY = GF * math.cos(PHI)
+GZ = GF * math.sin(PHI)
+
+CAMERA_H = 2000
+
+
+#log_file =["(12,12,12,12.34)"]
+
+class Arrow3D(FancyArrowPatch):
+    def __init__(self, xs, ys, zs, *args, **kwargs):
+        FancyArrowPatch.__init__(self, (0,0), (0,0), *args, **kwargs)
+        self._verts3d = xs, ys, zs
+
+    def draw(self, renderer):
+        xs3d, ys3d, zs3d = self._verts3d
+        xs, ys, zs = proj3d.pronj_transform(xs3d, ys3d, zs3d, renderer.M)
+        self.set_positions((xs[0],ys[0]),(xs[1],ys[1]))
+        FancyArrowPatch.draw(self, renderer)
+
+
+
+def FileToLog(filename):
+
+	a = 1
+	ii = 0
+	nu = 0
+	num = []
+
+	log_file = []
+	log = []
+	for line in open(filename, 'r'):
+		log_file.append(line)
+
+	lenge = len(log_file)
+
+	if(lenge > 20):
+		lenge = 20
+
+	log = [[] for i in range(lenge)]
+
+	for line in log_file:
+		for c in line:
+			if c.isdigit():
+				num.append(c)
+			if c == '.':
+				num.append('d')
+			if c == ',' or c == ')':
+				for i in reversed(num):
+					if i == 'd':
+						nu = nu / float((10 ** (int(math.log10(nu) + 1))))
+						a = 1
+					else:
+						nu += int(i) * a
+						a *= 10
+			
+				log[ii].append(nu)
+				a = 1
+				nu = 0
+				num = []
+			
+				if c == ')':
+					break
+				
+		ii += 1
+		if(ii >= lenge):
+			break
+	
+	return log
+
+def Pers(log):
+
+	F = 542.37
+
+	for l in log:
+		l[0] = int((l[0]*2 - 320)*l[2]/F)
+		l[1] = int((l[1]*2 - 240)*l[2]/F)
+
+        return log
+
+
+def DisVectUP(vect):
+	pass
+
+def DisToolongPath(log):
+    pass    
+
+def DisToolongTime(log):
+
+    for i in range(1,len(log)-1):
+        if(log[i][3] > 300):
+            log.pop(i-1)
+
+
+def DropTime(V0, H,Z):
+
+	t = -1*M_K * np.log(M_K*GY/(V0 + M_K*GY)) 
+
+	print "t = " + str(t)
+
+	Hmax = H + ( M_K * ((V0 + M_K * GY)*(1 - np.exp(-1 * 1 / M_K * t)) - GY * t))
+	Z_Hmax = Z + M_K * ((V0 + M_K * GZ)*(1 - np.exp(-1 * 1 / M_K * t)) - GZ * t)
+	
+	
+
+	print "H = " + str(H)
+	print "Hmax = " + str(Hmax)
+	print "Z_Hmax = " + str(Z_Hmax)
+	
+	D = abs(-math.tan(PHI) * Z_Hmax + Hmax - CAMERA_H) / math.sqrt(math.tan(PHI) **2 + 1)
+	D0 = abs(-math.tan(PHI) * Z + H - CAMERA_H) / math.sqrt(math.tan(PHI) **2 + 1)
+	
+
+	max2G = np.sqrt(-1 * M_K/GY) * math.acosh(np.exp(D/M_K))
+	max2H = np.sqrt(-1 * M_K/GY) * math.acosh(np.exp((D - D0)/math.cos(PHI)/M_K))
+
+	T = max2G - max2H
+
+	print "T = " + str(T)
+
+	R = [T,Hmax,D,Z_Hmax]
+
+	return R
+
+def MakeArch(Tlog,a0,a1):
+
+	V0 = []
+
+	for i in [0,1,2]:
+		V0.append(float(Tlog[a1][i] - Tlog[a0][i]) / Tlog[a1][3])
+
+	t = np.arange(-500,500 ,30)
+
+	print "GY = " + str(GY) + ", GZ = " + str(GZ)
+
+	X = M_K * V0[0] * (1 - np.exp(-1 / M_K * t)) + Tlog[a0][0]
+    #Z = M_K * V0[2] * (1 - np.exp(-1 / M_K * t)) + Tlog[0][2]
+	Z = M_K * ((V0[2] + M_K * GZ)*(1 - np.exp(-1 * 1 / M_K * t)) - GZ * t) + Tlog[a0][2]
+	Y = M_K * ((V0[1] + M_K * GY)*(1 - np.exp(-1 * 1 / M_K * t)) - GY * t) + Tlog[a0][1]
+
+
+
+
+	Arch = [X,Y,Z]
+
+	return Arch
+
+def MarkPoint(Tlog,a0,a1,T):
+
+	V0 = []
+
+	for i in [0,1,2]:
+		V0.append(float(Tlog[a1][i] - Tlog[a0][i]) / Tlog[a1][3])
+
+
+	X = M_K * V0[0] * (1 - np.exp(-1 / M_K * T)) + Tlog[a0][0]
+    #Z = M_K * V0[2] * (1 - np.exp(-1 / M_K * T)) + Tlog[0][2]
+	Z = M_K * ((V0[2] + M_K * GZ)*(1 - np.exp(-1 * 1 / M_K * T)) - GZ * T) + Tlog[a0][2]
+	Y = M_K * ((V0[1] + M_K * GY)*(1 - np.exp(-1 * 1 / M_K * T)) - GY * T) + Tlog[a0][1]
+
+	mark = [X,Y,Z]
+
+	return mark
+
+
+
+def main():
+
+	log = FileToLog('log.txt')
+        
+	print(log)
+       
+	DisToolongTime(log)
+
+	Tlog = Pers(log)
+
+	V0 = (Tlog[1][1] -Tlog[0][1])/Tlog[1][3]
+        
+	Arch = MakeArch(Tlog,0,1)
+
+
+	R0 = DropTime(V0,Tlog[0][1], Tlog[0][2])
+
+	T = R0[0]
+
+	Mark = MarkPoint(Tlog,0,1,T)
+
+	GroundPoint = [Mark[0], math.sqrt((Mark[1] - CAMERA_H) **2 + Mark[2] **2)]
+	print GroundPoint
+	
+	X = [i[0] for i in Tlog  ]
+	Y = [i[1] for i in Tlog  ]
+	Z = [i[2] for i in Tlog  ]
+	deltaT = [i[3] for i in Tlog]
+
+	print( 'X = ' + str(X))
+	print( 'Y = ' + str(Y))
+	print( 'Z = ' + str(Z))
+	print( 'deltaT = ' + str(deltaT))
+
+	vect = np.zeros([len(log)-1,3])
+
+	for i in range(0, len(log)-1):
+		for j in [0,1,2]:
+			vect[i,j] = log[i+1][j] - log[i][j] 
+
+	print(vect)
+
+	fig = pl.figure()
+
+	ax = Axes3D(fig)
+	ax.scatter3D(np.ravel(X), np.ravel(Z), np.ravel(Y))
+
+	ax.set_xlabel("X-axis")
+	ax.set_ylabel("Z-axis")
+	ax.set_zlabel("Y-axis")
+
+	"""
+	ax.set_xlim(-640, 640)
+	ax.set_ylim(500, 3000 )
+	ax.set_zlim(480,-480 )
+	"""
+
+	ax.set_xlim(-3640, 3640)
+	ax.set_ylim(500, 3000 )
+	ax.set_zlim(3480,-3480 )
+
+	ax.plot(X, Z, Y ,"o",color="#808080")
+	ax.plot(X[1:2], Z[1:2], Y[1:2] ,"o",color="#000000")
+
+	ax.plot(Arch[0],Arch[2],Arch[1],"o")
+	ax.plot([Mark[0]],[Mark[2]],[Mark[1]],"o",color="#ff0000")
+	ax.plot([Mark[0]],[R0[3]],R0[1],"o",color="#ff00ff")
+	ax.plot([Mark[0]],[R0[3]],R0[2]+R0[1],"o",color="#ffff00")
+
+
+	hx = np.arange(-3640,3640, 200)
+	hy = np.arange(500, 3000, 200)
+        
+	HX,HY = np.meshgrid(hx,hy)
+
+	HZ = math.tan(PHI) * HY + CAMERA_H
+
+	ax.plot_wireframe(HX,HY,HZ,color = "#00ff00")
+
+	
+
+	#arrow = Arrow3D([0,0],[0,150],[0,0],mutation_scale=20,lw=3, arrowstyle="-|>",color = "#000000")
+	#ax.add_artist(arrow)
+	pl.show()
+
+			
+if __name__=='__main__':
+	main()

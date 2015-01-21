@@ -30,13 +30,13 @@ int main()
         ifstream in("test1.txt");
         if (!in) {
                 cout << "***error  入力ファイルを開けません\n";
-                exit(1);
+				//      exit(1);
         }
     
         ofstream out("test.txt");
         if (!out) {
                 cout << "***error  出力ファイルを開けません\n";
-                exit(1);
+//                exit(1);
         }
     // データ入力と出力
         while (!in.eof()) {

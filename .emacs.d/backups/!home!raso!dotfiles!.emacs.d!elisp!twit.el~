@@ -1,0 +1,25 @@
+(require 'cl)
+(setq twittering-account-authorization 'authorized)
+(setq twittering-oauth-access-token-alist
+      '(
+	("oauth_token" . "2255964998-UO7IkFGXdkPhSTou5f3gqmEzgxWL2xORdqnI3HB")
+	("oauth_token_secret" . "h29UQIyZK7k4q0bGEq5VannNEqZ0VuwlEF3w7CfAYDC8A")
+	("user_id" . "2255964998")
+	("screen_name" . "sina_sion")))
+
+
+(setq tweet "")
+(defun getwit (username)
+  (setq topto
+	(with-temp-buffer 
+	  (insert-buffer (twittering-get-managed-buffer `(user ,username)))
+	  (buffer-substring-no-properties (point-min) ( + 200 (point-min)))))
+  (setq ctweet (split-string topto ":" ))
+  (setq ntweet (replace-regexp-in-string "\n" ""(nth 0 (split-string (nth 1 ctweet) "//"))))
+  (if (string-match "@" tweet)
+	 (setq tweet tweet)
+    (setq tweet ntweet)))
+
+;;(getwit "bot_shinku")
+
+

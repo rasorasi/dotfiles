@@ -2,3 +2,4 @@ session.*
 *.jpg
 *.png
 *.elc
+twit.el

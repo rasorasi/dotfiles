@@ -1,0 +1,265 @@
+#ifndef CAN_H
+#define CAN_H
+
+typedef unsigned char BYTE;	
+
+//#define	SS		LATBbits.LATB15
+
+//アドレスadrsを読み取る
+#define  Read(adrs)  			  	change(0x03, adrs, 0, 0)
+
+//アドレスadrsにデータdataを書き込む
+#define  Write(adrs, data)  	  		change(0x02, adrs, data, 0)
+
+//アドレスadrsのマスクmskされていないビットだけにデータdataを書き込む
+#define  BitMod(adrs, msk, data)  	change(0x05, adrs, msk, data)
+
+//ステータスレジスタを読み取る
+#define  ReadSt()  				change(0xa0, 0, 0 ,0)
+
+//リセットする
+#define  Reset()				  	change(0xc0, 0, 0, 0)
+
+//受信ステータスレジスタを読み取る
+#define ReadRXSt()  				change(0xb0, 0, 0 ,0)
+
+
+#define Send0()					Write(A_TXB0CTRL, TXB0CTRL.byte)
+
+
+/*
+レジスタアドレス
+*/
+#define A_TXB0CTRL 0x30
+#define A_TXB1CTRL 0x40
+#define A_TXB2CTRL 0x50
+#define A_TXB0DLC  0x35
+#define A_TXB1DLC  0x45
+#define A_TXB2DLC  0x55
+#define A_CNF1  0x2a
+#define A_CNF2  0x29
+#define A_CNF3  0x28
+#define A_RXB1CTRL  0x70
+#define A_RXB0CTRL  0x60
+#define A_CANCTRL  0x0f
+
+
+extern BYTE MsgBuf[14];
+/*
+  [0] 使わない
+  [1] メッセージ１
+  [2] メッセージ2
+  [3] 拡張メッセージ1
+  [4] 拡張メッセージ2
+  [5] データ長
+  [6] - [13] データ
+*/
+
+/************************
+	MCP2515レジスタ
+*************************/
+
+union txb0ctrl{
+	BYTE byte;
+	struct {
+		unsigned char TXP :2;	//優先順位 0(低)~3(高)
+		unsigned char  :1;
+		unsigned char  TXREQ :1; 
+		unsigned char  :4; 		//Read only
+		
+	}bits;
+
+};
+extern union txb0ctrl TXB0CTRL; 
+
+
+union txb1ctrl{
+	BYTE byte;
+	struct {
+		unsigned char TXP :2;	
+		unsigned char  :1;
+		unsigned char  TXREQ :1; 
+		unsigned char  :4; 		
+		
+	}bits;
+
+};
+extern union txb1ctrl TXB1CTRL; 
+
+
+union txb2ctrl{
+	BYTE byte;
+	struct {
+		unsigned char TXP :2;
+		unsigned char  :1;
+		unsigned char  TXREQ :1; 
+		unsigned char  :4; 	
+		
+	}bits;
+
+};
+extern union txb2ctrl TXB2CTRL; 
+
+
+////TXBnDLC
+union txb0dlc{
+	BYTE byte;
+	struct {
+		unsigned char DLC :4;	//DLC(0~8)
+		unsigned char  :2;
+		unsigned char RTR :1;
+		unsigned char  :1;
+		
+	}bits;
+
+};
+extern union txb0dlc TXB0DLC; 
+
+
+union txb1dlc{
+	BYTE byte;
+	struct {
+		unsigned char DLC :4;
+		unsigned char  :2;
+		unsigned char RTR :1;
+		unsigned char  :1;
+		
+	}bits;
+
+};
+extern union txb1dlc TXB1DLC; 
+
+
+union txb2dlc{
+	BYTE byte;
+	struct {
+		unsigned char DLC :4;
+		unsigned char  :2;
+		unsigned char RTR :1;
+		unsigned char  :1;
+		
+	}bits;
+
+};
+extern union txb2dlc TXB2DLC; 
+
+
+union cnf1{
+	BYTE byte;
+	struct {
+		unsigned char BRP :5;	
+		unsigned char  SJW:4; 	
+	}bits;
+
+};
+extern union cnf1 CNF1; 
+
+
+
+union cnf2{
+	BYTE byte;
+	struct {
+		unsigned char PRSEG :3;	
+		unsigned char  PHSEG1 :3;
+		unsigned char  SAM :1;
+		unsigned char  BTLMODE :1;
+		
+		 	
+	}bits;
+
+};
+extern union cnf2 CNF2; 
+
+
+union cnf3{
+	BYTE byte;
+	struct {
+		unsigned char PHSEG2 :3;	
+		unsigned char   :3;
+		unsigned char  WAKFIL :1;
+		unsigned char  SOF :1; 
+		
+		 	
+	}bits;
+
+};
+extern union cnf3 CNF3; 
+
+
+union canctrl{
+	BYTE byte;
+	struct {
+		unsigned char CLKPRE :2;	
+		unsigned char  CLKEN :1;
+		unsigned char  OSM :1;
+		unsigned char  ABAT :1;
+		unsigned char REQOP :3;
+		// 000 =  ノーマル・オペレーション・モード
+		// 001 = スリープ・モード
+		// 010 = ループバック・モード
+		// 011 = リスン・オンリ・モード
+		// 100 = コンフィギュレーション・モード　(デフォルト)
+	}bits;
+
+};
+extern union canctrl CANCTRL; 
+
+
+union rxb0ctrl{
+	BYTE byte;
+	struct{
+		unsigned char FILHIT0 :1; //RO
+		unsigned char :1;
+		unsigned char BUKT :1; //ロールオーバー
+		unsigned char RXRTR :1; //RO
+		unsigned char :1; 
+		unsigned char RXM :2; // 11 = マスク、フィルタを使用しない
+		unsigned char :1; 
+	}bits;
+};
+extern union rxb0ctrl RXB0CTRL; 
+
+
+union rxb1ctrl{
+	BYTE byte;
+	struct{
+		unsigned char FILHIT :3; //RO
+		unsigned char RXRTR:1; //RO
+		unsigned char :1; 
+		unsigned char RXM :2; // 11 = マスク、フィルタを使用しない
+		unsigned char :1; 
+	}bits;
+};
+extern union rxb1ctrl RXB1CTRL;
+
+void SPI1Init(void);
+void InitCAN();
+
+// SPI信号の送信と受信を同時に行う
+BYTE WriteSPI1( BYTE data );
+
+//mcp2515と通信する基本関数
+BYTE change(BYTE inst, BYTE adrs, BYTE arg1, BYTE arg2);
+
+//メッセージバッファに連続で書き込む
+void WriteDateC(BYTE *data);
+
+//メッセージバッファを連続で読み込む
+void ReadDateC(BYTE *data);	
+
+//受信バッファ（num = 0, 1）を確認して、フルだったら1を返す（受信したら1を返す)
+int CheckRX(BYTE num);
+
+void SetID(BYTE *id, BYTE msg);
+
+void ErrorCheck();
+
+void SetFilter(BYTE flt);
+
+void SendMsg(BYTE *id, BYTE lng, BYTE *data);
+
+void ReadMsg(BYTE *id, BYTE *data);
+
+
+
+#endif
